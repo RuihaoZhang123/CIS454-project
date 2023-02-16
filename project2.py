@@ -229,8 +229,8 @@ class Ui_MainWindow(object):
         self.pushButton_4.setIcon(icon4)
         self.pushButton_4.setIconSize(QtCore.QSize(60, 60))
         self.pushButton_4.setObjectName("pushButton_4")
-        # pushbutton 4 event
-        self.pushButton_4.clicked.connect(self.onClick_Button())
+        # pushButton4 has a quit function. Set signal.
+        self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
 
         self.horizontalLayout_2.addWidget(self.pushButton_4)
         self.horizontalLayout.addWidget(self.frame_9)
