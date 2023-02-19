@@ -19,22 +19,13 @@ def matchSearch(region, game, summonerName):
         print(match_detail['info']['participants'][0].keys())
         participants = []
         for row in match_detail['info']['participants']:
-            participants_row = {}
-            participants_row['champion'] = row['championId']
-            participants_row['spell1'] = row['spell1Casts']
-            participants_row['spell2'] = row['spell2Casts']
-            participants_row['win'] = row['win']
-            participants_row['kills'] = row['kills']
-            participants_row['deaths'] = row['deaths']
-            participants_row['assists'] = row['assists']
-            participants_row['totalDamageDealt'] = row['totalDamageDealt']
-            participants_row['goldEarned'] = row['goldEarned']
-            participants_row['champLevel'] = row['champLevel']
-            participants_row['totalMinionsKilled'] = row['totalMinionsKilled']
-            participants_row['item0'] = row['item0']
-            participants_row['item1'] = row['item1']
-            participants_row['item2'] = row['item2']
-            participants_row['role'] = row['role']
+            participants_row = {'champion': row['championId'], 'spell1': row['spell1Casts'],
+                                'spell2': row['spell2Casts'], 'win': row['win'], 'kills': row['kills'],
+                                'deaths': row['deaths'], 'assists': row['assists'],
+                                'totalDamageDealt': row['totalDamageDealt'], 'goldEarned': row['goldEarned'],
+                                'champLevel': row['champLevel'], 'totalMinionsKilled': row['totalMinionsKilled'],
+                                'item0': row['item0'], 'item1': row['item1'], 'item2': row['item2'],
+                                'role': row['role']}
             participants.append(participants_row)
         df = pd.DataFrame(data=participants)
         print(df.to_string())
@@ -42,6 +33,13 @@ def matchSearch(region, game, summonerName):
         watcher = TftWatcher(tftApiKey)
         me = watcher.summoner.by_name(region, summonerName)
         print(me)
+        my_matches = watcher.match.by_puuid(region, me['puuid'])
+        print(my_matches)
+        # fetch last match detail
+        last_match = my_matches[0]
+        match_detail = watcher.match.by_id(region, last_match)
+        print(match_detail['info']["participants"][0]["traits"])
+        print(match_detail['info']['participants'][0].keys())
 
 
 matchSearch("na1", "lol", "Llama Smoothie")
