@@ -723,7 +723,8 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
         self.pushButton_10.clicked.connect(self.display)
         self.pushButton_9.clicked.connect(self.display2)
-    #change region buttons
+
+    # change region buttons
     def display(self):
         self.stackedWidget.setCurrentIndex(1)
 
