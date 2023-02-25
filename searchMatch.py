@@ -67,34 +67,34 @@ def matchSearch(region, game, summonerName):
     if game == "lol":
         watcher = LolWatcher(lolApiKey)
         try:
-            me = watcher.summoner.by_name(region, summonerName)
+            me = watcher.summoner.by_name(translateRegion(region), summonerName)
         except requests.exceptions.HTTPError as err:
             print(err)
             return -1
         print(me)
         # print(me)
         # get a list of matches from the summoner
-        my_matches = watcher.match.matchlist_by_puuid(region, me['puuid'], 0)
+        my_matches = watcher.match.matchlist_by_puuid(translateRegion(region), me['puuid'], 0)
         # print(my_matches)
         # fetch last match detail
         last_match = my_matches[0]
-        match_detail = watcher.match.by_id(region, last_match)
+        match_detail = watcher.match.by_id(translateRegion(region), last_match)
         print(match_detail['info']['participants'][0].keys())
         matchDisplay(match_detail)
         return my_matches
     elif game == "tft":
         watcher = TftWatcher(tftApiKey)
         try:
-            me = watcher.summoner.by_name(region, summonerName)
+            me = watcher.summoner.by_name(translateRegion(region), summonerName)
         except ApiError:
             return -1
         print(me)
         # get list of tft matches of the summoner
-        my_matches = watcher.match.by_puuid(region, me['puuid'])
+        my_matches = watcher.match.by_puuid(translateRegion(region), me['puuid'])
         print(my_matches)
         # fetch last match detail
         last_match = my_matches[0]
-        match_detail = watcher.match.by_id(region, last_match)
+        match_detail = watcher.match.by_id(translateRegion(region), last_match)
         print(match_detail['info']["participants"][0]["traits"])
         print(match_detail['info']['participants'][0].keys())
         return match_detail
