@@ -99,5 +99,3 @@ def matchSearch(region, game, summonerName):
         print(match_detail['info']['participants'][0].keys())
         return match_detail
 
-
-matchSearch("na1", "lol", "llama Smoothie")
