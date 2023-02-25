@@ -26,39 +26,38 @@ def matchDisplay(match_detail):
 
 
 def translateRegion(region):
-    match region:
-        case "Brazil":
-            return "br1"
-        case "EU Nordic&East":
-            return "eun1"
-        case "EU West":
-            return "euw1"
-        case "Japan":
-            return "jp1"
-        case "Korea":
-            return "kr"
-        case "Latin America North":
-            return "la1"
-        case "Latin America South":
-            return "la2"
-        case "North America":
-            return "na1"
-        case "Oceania":
-            return "OC1"
-        case "Philippines":
-            return "PH2"
-        case "Russia":
-            return "RU"
-        case "singapore":
-            return "SG2"
-        case "Thailand":
-            return "TH2"
-        case "Turkey":
-            return "TR1"
-        case "Taiwan":
-            return "TW2"
-        case "Vietnam":
-            return "VN2"
+    if region == "Brazil":
+        return "br1"
+    if region == "EU Nordic&East":
+        return "eun1"
+    if region == "EU West":
+        return "euw1"
+    if region == "Japan":
+        return "jp1"
+    if region == "Korea":
+        return "kr"
+    if region == "Latin America North":
+        return "la1"
+    if region == "Latin America South":
+        return "la2"
+    if region == "North America":
+        return "na1"
+    if region == "Oceania":
+        return "OC1"
+    if region == "Philippines":
+        return "PH2"
+    if region == "Russia":
+        return "RU"
+    if region == "singapore":
+        return "SG2"
+    if region == "Thailand":
+        return "TH2"
+    if region == "Turkey":
+        return "TR1"
+    if region == "Taiwan":
+        return "TW2"
+    if region == "Vietnam":
+        return "VN2"
 
 
 # return a dictionary of data or -1 on failure
@@ -99,3 +98,4 @@ def matchSearch(region, game, summonerName):
         print(match_detail['info']['participants'][0].keys())
         return match_detail
 
+# matchSearch("North America", "lol", "Llama Smoothie")
