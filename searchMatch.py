@@ -18,7 +18,7 @@ def matchDisplay(match_detail):
                             'totalDamageDealt': row['totalDamageDealt'], 'goldEarned': row['goldEarned'],
                             'champLevel': row['champLevel'], 'totalMinionsKilled': row['totalMinionsKilled'],
                             'item0': row['item0'], 'item1': row['item1'], 'item2': row['item2'],
-                            'role': row['role']}
+                            'role': row['role'], 'item6': row['item6']}
         participants.append(participants_row)
     df = pd.DataFrame(data=participants)
     print(df.to_string())
@@ -102,4 +102,4 @@ def matchSearch(region, game, summonerName):
             match_list.append(match)
         return match_list
 
-matchSearch("North America", "lol", "Llama Smoothie")
+matchSearch("North America", "lol", "Flamekilla")
