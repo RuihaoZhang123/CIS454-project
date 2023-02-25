@@ -25,6 +25,42 @@ def matchDisplay(match_detail):
     return
 
 
+def translateRegion(region):
+    match region:
+        case "Brazil":
+            return "br1"
+        case "EU Nordic&East":
+            return "eun1"
+        case "EU West":
+            return "euw1"
+        case "Japan":
+            return "jp1"
+        case "Korea":
+            return "kr"
+        case "Latin America North":
+            return "la1"
+        case "Latin America South":
+            return "la2"
+        case "North America":
+            return "na1"
+        case "Oceania":
+            return "OC1"
+        case "Philippines":
+            return "PH2"
+        case "Russia":
+            return "RU"
+        case "singapore":
+            return "SG2"
+        case "Thailand":
+            return "TH2"
+        case "Turkey":
+            return "TR1"
+        case "Taiwan":
+            return "TW2"
+        case "Vietnam":
+            return "VN2"
+
+
 # return a dictionary of data or -1 on failure
 def matchSearch(region, game, summonerName):
     # identify the game mode searching for
