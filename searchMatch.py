@@ -75,12 +75,14 @@ def matchSearch(region, game, summonerName):
         # get a list of matches from the summoner
         my_matches = watcher.match.matchlist_by_puuid(translateRegion(region), me['puuid'], 0)
         # print(my_matches)
-        # fetch last match detail
-        last_match = my_matches[0]
-        match_detail = watcher.match.by_id(translateRegion(region), last_match)
-        print(match_detail['info']['participants'][0].keys())
-        matchDisplay(match_detail)
-        return my_matches
+        match_list = []
+        # fetch at most 20 match detail
+        for match in my_matches:
+            match_detail = watcher.match.by_id(translateRegion(region), match)
+            print(match_detail['info']['participants'][0].keys())
+            matchDisplay(match_detail)
+            match_list.append(match_detail)
+        return match_list
     elif game == "tft":
         watcher = TftWatcher(tftApiKey)
         try:
@@ -91,11 +93,13 @@ def matchSearch(region, game, summonerName):
         # get list of tft matches of the summoner
         my_matches = watcher.match.by_puuid(translateRegion(region), me['puuid'])
         print(my_matches)
-        # fetch last match detail
-        last_match = my_matches[0]
-        match_detail = watcher.match.by_id(translateRegion(region), last_match)
-        print(match_detail['info']["participants"][0]["traits"])
-        print(match_detail['info']['participants'][0].keys())
-        return match_detail
+        # fetch at most 20 match detail
+        match_list = []
+        for match in my_matches:
+            match_detail = watcher.match.by_id(translateRegion(region), match)
+            print(match_detail['info']["participants"][0]["traits"])
+            print(match_detail['info']['participants'][0].keys())
+            match_list.append(match)
+        return match_list
 
-# matchSearch("North America", "lol", "Llama Smoothie")
+matchSearch("North America", "lol", "Llama Smoothie")
