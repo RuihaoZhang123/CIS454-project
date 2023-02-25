@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import searchMatch
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -37,11 +38,11 @@ class Ui_MainWindow(object):
         self.frame_2.setSizePolicy(sizePolicy)
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 100))
         self.frame_2.setStyleSheet("#frame_2{\n"
-"    \n"
-"    background-color: rgb(170, 255, 255);\n"
-"    \n"
-"    border-bottom: 3px solid rgb(0, 170, 255);\n"
-"}")
+                                   "    \n"
+                                   "    background-color: rgb(170, 255, 255);\n"
+                                   "    \n"
+                                   "    border-bottom: 3px solid rgb(0, 170, 255);\n"
+                                   "}")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -66,10 +67,10 @@ class Ui_MainWindow(object):
         self.formLayout_2.setObjectName("formLayout_2")
         self.pushButton = QtWidgets.QPushButton(self.frame_6)
         self.pushButton.setStyleSheet("#pushButton{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                      "    border:none;\n"
+                                      "    \n"
+                                      "    \n"
+                                      "}")
         self.pushButton.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("picture/24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -150,19 +151,19 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("#pushButton_2{\n"
-"    color : rgb(255, 255, 255);\n"
-"    \n"
-"    background-color: rgb(170, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                        "    color : rgb(255, 255, 255);\n"
+                                        "    \n"
+                                        "    background-color: rgb(170, 255, 255);\n"
+                                        "    border : none;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_4.addWidget(self.pushButton_2)
         self.horizontalLayout.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
         self.frame_8.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_8.setStyleSheet("#frame_8{\n"
-"    border:none;\n"
-"}")
+                                   "    border:none;\n"
+                                   "}")
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
@@ -170,10 +171,10 @@ class Ui_MainWindow(object):
         self.formLayout.setObjectName("formLayout")
         self.pushButton_3 = QtWidgets.QPushButton(self.frame_8)
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_3.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("picture/23.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -185,9 +186,9 @@ class Ui_MainWindow(object):
         self.frame_9 = QtWidgets.QFrame(self.frame_2)
         self.frame_9.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_9.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                   "    padding-top:5px;\n"
+                                   "    padding-left:5px;\n"
+                                   "}")
         self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
@@ -195,10 +196,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.pushButton_6 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_6.setStyleSheet("#pushButton_6{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_6.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("picture/27.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -208,10 +209,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.pushButton_6)
         self.pushButton_5 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_5.setStyleSheet("#pushButton_5{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_5.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("picture/26.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -221,10 +222,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.pushButton_5)
         self.pushButton_4 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_4.setStyleSheet("#pushButton_4{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_4.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("picture/25.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -254,9 +255,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
         self.frame_13.setSizePolicy(sizePolicy)
         self.frame_13.setStyleSheet("#frame_13{\n"
-"    background-color:rgb(170, 255, 255);\n"
-"    border-right: 3px solid rgb(0, 170, 255);\n"
-"}")
+                                    "    background-color:rgb(170, 255, 255);\n"
+                                    "    border-right: 3px solid rgb(0, 170, 255);\n"
+                                    "}")
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_13.setObjectName("frame_13")
@@ -271,9 +272,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_15.sizePolicy().hasHeightForWidth())
         self.frame_15.setSizePolicy(sizePolicy)
         self.frame_15.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
@@ -288,13 +289,13 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_9.setFont(font)
         self.pushButton_9.setStyleSheet("#pushButton_9{\n"
-"    color:rgb(255, 255, 255);\n"
-"    border:none;\n"
-"    background-color: rgb(170, 255, 255);\n"
-"\n"
-"\n"
-"}    \n"
-"")
+                                        "    color:rgb(255, 255, 255);\n"
+                                        "    border:none;\n"
+                                        "    background-color: rgb(170, 255, 255);\n"
+                                        "\n"
+                                        "\n"
+                                        "}    \n"
+                                        "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("picture/29.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_9.setIcon(icon5)
@@ -309,9 +310,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_16.sizePolicy().hasHeightForWidth())
         self.frame_16.setSizePolicy(sizePolicy)
         self.frame_16.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
@@ -326,12 +327,12 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_10.setFont(font)
         self.pushButton_10.setStyleSheet("#pushButton_10{\n"
-"    color:rgb(255, 255, 255);\n"
-"    border:none;\n"
-"    background-color: rgb(170, 255, 255);\n"
-"\n"
-"}\n"
-"")
+                                         "    color:rgb(255, 255, 255);\n"
+                                         "    border:none;\n"
+                                         "    background-color: rgb(170, 255, 255);\n"
+                                         "\n"
+                                         "}\n"
+                                         "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("picture/30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_10.setIcon(icon6)
@@ -367,9 +368,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
         self.frame_14.setSizePolicy(sizePolicy)
         self.frame_14.setStyleSheet("#frame_14{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                    "    \n"
+                                    "    background-color: rgb(255, 255, 255);\n"
+                                    "}")
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
@@ -377,28 +378,28 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.stackedWidget = QtWidgets.QStackedWidget(self.frame_14)
         self.stackedWidget.setStyleSheet("#page{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_2{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_3{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_4{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_2{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_3{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_4{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.pushButton_11 = QtWidgets.QPushButton(self.page)
         self.pushButton_11.setGeometry(QtCore.QRect(30, 100, 281, 261))
         self.pushButton_11.setStyleSheet("\n"
-"background-color: rgb(255, 255, 255);\n"
-"border:none")
+                                         "background-color: rgb(255, 255, 255);\n"
+                                         "border:none")
         self.pushButton_11.setText("")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("picture/yasuo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -408,8 +409,8 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.page)
         self.lineEdit.setGeometry(QtCore.QRect(530, 210, 371, 71))
         self.lineEdit.setStyleSheet("\n"
-"    border : 3px solid rgb(211, 217, 255);\n"
-"")
+                                    "    border : 3px solid rgb(211, 217, 255);\n"
+                                    "")
         self.lineEdit.setObjectName("lineEdit")
         self.pushButton_12 = QtWidgets.QPushButton(self.page)
         self.pushButton_12.setGeometry(QtCore.QRect(350, 0, 461, 81))
@@ -477,11 +478,11 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_12.setFont(font)
         self.pushButton_12.setStyleSheet("#pushButton_12{\n"
-"    color : rgb(0, 0, 0);\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                         "    color : rgb(0, 0, 0);\n"
+                                         "    \n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "    border : none;\n"
+                                         "}")
         self.pushButton_12.setObjectName("pushButton_12")
         self.comboBox_3 = QtWidgets.QComboBox(self.page)
         self.comboBox_3.setGeometry(QtCore.QRect(390, 210, 141, 71))
@@ -491,7 +492,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_3.setFont(font)
         self.comboBox_3.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-"    border : 3px solid rgb(211, 217, 255);")
+                                      "    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_3.setObjectName("comboBox_3")
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
@@ -526,8 +527,8 @@ class Ui_MainWindow(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.page_2)
         self.lineEdit_2.setGeometry(QtCore.QRect(550, 220, 371, 71))
         self.lineEdit_2.setStyleSheet("\n"
-"    border : 3px solid rgb(211, 217, 255);\n"
-"")
+                                      "    border : 3px solid rgb(211, 217, 255);\n"
+                                      "")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.comboBox_2 = QtWidgets.QComboBox(self.page_2)
         self.comboBox_2.setGeometry(QtCore.QRect(410, 220, 141, 71))
@@ -537,7 +538,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_2.setFont(font)
         self.comboBox_2.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-"    border : 3px solid rgb(211, 217, 255);")
+                                      "    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_2.setObjectName("comboBox_2")
         self.comboBox_2.addItem("")
         self.comboBox_2.addItem("")
@@ -622,17 +623,17 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_13.setFont(font)
         self.pushButton_13.setStyleSheet("#pushButton_13{\n"
-"    color : rgb(0, 0, 0);\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                         "    color : rgb(0, 0, 0);\n"
+                                         "    \n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "    border : none;\n"
+                                         "}")
         self.pushButton_13.setObjectName("pushButton_13")
         self.pushButton_14 = QtWidgets.QPushButton(self.page_2)
         self.pushButton_14.setGeometry(QtCore.QRect(30, 100, 261, 251))
         self.pushButton_14.setStyleSheet("\n"
-"background-color: rgb(255, 255, 255);\n"
-"border:none")
+                                         "background-color: rgb(255, 255, 255);\n"
+                                         "border:none")
         self.pushButton_14.setText("")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("picture/TFT.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -669,9 +670,9 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.frame_4.setFont(font)
         self.frame_4.setStyleSheet("#frame_4{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                   "    \n"
+                                   "    background-color: rgb(255, 255, 255);\n"
+                                   "}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -682,20 +683,20 @@ class Ui_MainWindow(object):
         self.frame_10 = QtWidgets.QFrame(self.frame_4)
         self.frame_10.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_10.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
         self.pushButton_7 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_7.setGeometry(QtCore.QRect(30, 10, 41, 41))
         self.pushButton_7.setStyleSheet("#pushButton_7{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_7.setText("")
         icon9 = QtGui.QIcon()
         icon9.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -705,10 +706,10 @@ class Ui_MainWindow(object):
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_8.setGeometry(QtCore.QRect(80, 10, 41, 41))
         self.pushButton_8.setStyleSheet("#pushButton_8{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         self.pushButton_8.setText("")
         icon10 = QtGui.QIcon()
         icon10.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -740,7 +741,6 @@ class Ui_MainWindow(object):
 
         self.pushButton_15.clicked.connect(self.search_lol_name)
         self.pushButton_16.clicked.connect(self.search_tft_name)
-
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -787,45 +787,40 @@ class Ui_MainWindow(object):
         self.pushButton_13.setText(_translate("MainWindow", "Search for Teamfight Tactics"))
         self.pushButton_16.setText(_translate("MainWindow", "Search"))
 
-
-
     # function after user clicked search button
     def search_lol_name(self):
         # Get the sender object and print its name or text
         # push_button_15
 
-
-
         # Get the search query from the search bar
         lol_query = self.lineEdit.text()
         lol_region_text = self.comboBox_3.currentText()
-        if lol_query == "" :
-                print("False")
+        if lol_query == "":
+            print("False")
         else:
-                return_value = searchMatch.matchSearch(lol_region_text, "lol", lol_query)
-                if return_value == -1:
-                        print("wrong name entered")
-                else:
-                        print("right name entered")
-
-
-
+            return_value = searchMatch.matchSearch(lol_region_text, "lol", lol_query)
+            if return_value == -1:
+                print("wrong name entered")
+            else:
+                print("right name entered")
 
     def search_tft_name(self):
         # search function for tft
         tft_query = self.lineEdit_2.text()
         tft_region_text = self.comboBox_2.currentText()
         if tft_query == "":
-                print("False")
+            print("False")
         else:
-                return_value = searchMatch.matchSearch(tft_region_text, "tft", tft_query)
-                if return_value == -1:
-                        print("wrong name entered")
-                else:
-                        print("right name entered")
+            return_value = searchMatch.matchSearch(tft_region_text, "tft", tft_query)
+            if return_value == -1:
+                print("wrong name entered")
+            else:
+                print("right name entered")
+
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
