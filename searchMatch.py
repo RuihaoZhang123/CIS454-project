@@ -70,7 +70,6 @@ def matchSearch(region, game, summonerName):
         except requests.exceptions.HTTPError as err:
             print(err)
             return -1
-        print(me)
         rankedStatus = watcher.league.by_summoner(translateRegion(region), me['id'])
         # print(me)
         # get a list of matches from the summoner
@@ -81,7 +80,7 @@ def matchSearch(region, game, summonerName):
         for match in my_matches:
             match_detail = watcher.match.by_id(translateRegion(region), match)
             # print(match_detail['info']['participants'][0].keys())
-            print(match_detail['info'].keys())
+            print(match_detail['metadata'].keys())
             print(match_detail['info']['queueId'])
             print(match_detail['info']['gameDuration'])
             matchDisplay(match_detail)

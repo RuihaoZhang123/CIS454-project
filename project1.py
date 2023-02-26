@@ -1229,9 +1229,9 @@ class Ui_MainWindow(object):
             self.label_5.setText(_translate("MainWindow", "lv:"))
         try:
             self.label_6.setText(_translate("MainWindow",
-                                            f"{self.match_details[0]['info']['participants'][self.find_self_participant()]['kill']} "
-                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['death']} "
-                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['assist']}"))
+                                            f"{self.match_details[0]['info']['participants'][self.find_self_participant()]['kills']} "
+                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']} "
+                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
         except KeyError:
             self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
         self.label_7.setText(_translate("MainWindow", "9.0 KDA"))
