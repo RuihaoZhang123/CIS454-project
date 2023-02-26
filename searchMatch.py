@@ -71,6 +71,7 @@ def matchSearch(region, game, summonerName):
             print(err)
             return -1
         print(me)
+        rankedStatus = watcher.league.by_summoner(region, me['id'])
         # print(me)
         # get a list of matches from the summoner
         my_matches = watcher.match.matchlist_by_puuid(translateRegion(region), me['puuid'], 0)
@@ -79,7 +80,10 @@ def matchSearch(region, game, summonerName):
         # fetch at most 20 match detail
         for match in my_matches:
             match_detail = watcher.match.by_id(translateRegion(region), match)
-            print(match_detail['info']['participants'][0].keys())
+            # print(match_detail['info']['participants'][0].keys())
+            print(match_detail['info'].keys())
+            print(match_detail['info']['queueId'])
+            print(match_detail['info']['gameDuration'])
             matchDisplay(match_detail)
             match_list.append(match_detail)
         return match_list
@@ -102,4 +106,4 @@ def matchSearch(region, game, summonerName):
             match_list.append(match)
         return match_list
 
-matchSearch("North America", "lol", "Flamekilla")
+matchSearch("Korea", "lol", "hide on bush")
