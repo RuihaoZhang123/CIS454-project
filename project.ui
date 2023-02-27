@@ -1556,8 +1556,7 @@ border:none</string>
                     </sizepolicy>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">
-</string>
+                    <string notr="true"/>
                    </property>
                    <property name="widgetResizable">
                     <bool>true</bool>
@@ -1592,8 +1591,11 @@ border:none</string>
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(137, 194, 255);</string>
+                     </property>
                      <property name="title">
-                      <string>GroupBox</string>
+                      <string/>
                      </property>
                      <widget class="QFrame" name="frame_23">
                       <property name="geometry">
@@ -2065,7 +2067,7 @@ border:none</string>
                        </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="">
+                     <widget class="QWidget" name="layoutWidget">
                       <property name="geometry">
                        <rect>
                         <x>250</x>
@@ -2459,13 +2461,13 @@ border:none</string>
                        </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="">
+                     <widget class="QWidget" name="layoutWidget">
                       <property name="geometry">
                        <rect>
                         <x>10</x>
-                        <y>30</y>
+                        <y>20</y>
                         <width>191</width>
-                        <height>151</height>
+                        <height>161</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2596,15 +2598,221 @@ border:none</string>
                     <widget class="QGroupBox" name="groupBox_2">
                      <property name="geometry">
                       <rect>
-                       <x>20</x>
-                       <y>9</y>
-                       <width>931</width>
-                       <height>161</height>
+                       <x>0</x>
+                       <y>10</y>
+                       <width>941</width>
+                       <height>171</height>
                       </rect>
                      </property>
                      <property name="title">
-                      <string>GroupBox</string>
+                      <string/>
                      </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_9">
+                      <item>
+                       <widget class="QFrame" name="frame_26">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>5</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QPushButton" name="pushButton_17">
+                         <property name="geometry">
+                          <rect>
+                           <x>10</x>
+                           <y>0</y>
+                           <width>101</width>
+                           <height>101</height>
+                          </rect>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>profileicon/6.png</normaloff>profileicon/6.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>100</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                        </widget>
+                        <widget class="QLabel" name="label_18">
+                         <property name="geometry">
+                          <rect>
+                           <x>20</x>
+                           <y>110</y>
+                           <width>81</width>
+                           <height>18</height>
+                          </rect>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>lv : </string>
+                         </property>
+                        </widget>
+                        <widget class="QLabel" name="label_19">
+                         <property name="geometry">
+                          <rect>
+                           <x>120</x>
+                           <y>9</y>
+                           <width>161</width>
+                           <height>41</height>
+                          </rect>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bodoni MT Black</family>
+                           <weight>50</weight>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Hide on bush</string>
+                         </property>
+                        </widget>
+                        <widget class="QPushButton" name="pushButton_40">
+                         <property name="geometry">
+                          <rect>
+                           <x>170</x>
+                           <y>100</y>
+                           <width>112</width>
+                           <height>34</height>
+                          </rect>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bodoni MT Black</family>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(137, 194, 255);
+color : rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="text">
+                          <string>Renew</string>
+                         </property>
+                        </widget>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QFrame" name="frame_27">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>3</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QPushButton" name="pushButton_41">
+                         <property name="geometry">
+                          <rect>
+                           <x>40</x>
+                           <y>0</y>
+                           <width>101</width>
+                           <height>101</height>
+                          </rect>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>profileicon/5290.png</normaloff>profileicon/5290.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>100</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                        </widget>
+                        <widget class="QLabel" name="label_20">
+                         <property name="geometry">
+                          <rect>
+                           <x>40</x>
+                           <y>110</y>
+                           <width>151</width>
+                           <height>31</height>
+                          </rect>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bodoni MT Black</family>
+                           <pointsize>10</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Challenger</string>
+                         </property>
+                        </widget>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QFrame" name="frame_28">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>5</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QPushButton" name="pushButton_42">
+                         <property name="geometry">
+                          <rect>
+                           <x>40</x>
+                           <y>0</y>
+                           <width>131</width>
+                           <height>131</height>
+                          </rect>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>profileicon/4.png</normaloff>profileicon/4.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>150</width>
+                           <height>150</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                     <widget class="Line" name="line">
                      <property name="geometry">

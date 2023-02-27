@@ -71,7 +71,8 @@ def matchSearch(region, game, summonerName):
             print(err)
             return -1
         rankedStatus = watcher.league.by_summoner(translateRegion(region), me['id'])
-        # print(me)
+        # print(rankedStatus)
+        print(me)
         # get a list of matches from the summoner
         my_matches = watcher.match.matchlist_by_puuid(translateRegion(region), me['puuid'], 0)
         # print(my_matches)
@@ -80,12 +81,12 @@ def matchSearch(region, game, summonerName):
         for match in my_matches:
             match_detail = watcher.match.by_id(translateRegion(region), match)
             # print(match_detail['info']['participants'][0].keys())
-            print(match_detail['metadata'].keys())
-            print(match_detail['info']['queueId'])
-            print(match_detail['info']['gameDuration'])
-            matchDisplay(match_detail)
+            # print(match_detail['info']['gameEndTimestamp'])
+            # print(match_detail['info']['queueId'])
+            # print(match_detail['info']['gameDuration'])
+            # matchDisplay(match_detail)
             match_list.append(match_detail)
-        return [rankedStatus, match_list]
+        return [rankedStatus, match_list, me]
     elif game == "tft":
         watcher = TftWatcher(tftApiKey)
         try:
@@ -105,4 +106,5 @@ def matchSearch(region, game, summonerName):
             match_list.append(match)
         return match_list
 
-# matchSearch("North America", "lol", "llama smoothie")
+
+matchSearch("North America", "lol", "llama smoothie")

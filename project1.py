@@ -8,14 +8,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import searchMatch
-
+import time
+import json
 
 class Ui_MainWindow(object):
-    def __init__(self):
-        self.match_details = {}
-        self.summonerInfo = ""
-        self.summonerName = ""
-
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1265, 847)
@@ -664,8 +660,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
         self.scrollArea.setSizePolicy(sizePolicy)
-        self.scrollArea.setStyleSheet("\n"
-                                      "")
+        self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
@@ -802,13 +797,13 @@ class Ui_MainWindow(object):
         self.label_17.setMaximumSize(QtCore.QSize(90, 16777215))
         self.label_17.setObjectName("label_17")
         self.horizontalLayout_8.addWidget(self.frame_25)
-        self.widget = QtWidgets.QWidget(self.groupBox)
-        self.widget.setGeometry(QtCore.QRect(250, 20, 371, 161))
-        self.widget.setObjectName("widget")
-        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.widget)
+        self.layoutWidget = QtWidgets.QWidget(self.groupBox)
+        self.layoutWidget.setGeometry(QtCore.QRect(250, 20, 371, 161))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.frame_21 = QtWidgets.QFrame(self.widget)
+        self.frame_21 = QtWidgets.QFrame(self.layoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(5)
@@ -886,7 +881,7 @@ class Ui_MainWindow(object):
         self.pushButton_29.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_29.setObjectName("pushButton_29")
         self.verticalLayout_6.addWidget(self.frame_21)
-        self.frame_22 = QtWidgets.QFrame(self.widget)
+        self.frame_22 = QtWidgets.QFrame(self.layoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(3)
@@ -956,13 +951,13 @@ class Ui_MainWindow(object):
         self.pushButton_24.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_24.setObjectName("pushButton_24")
         self.verticalLayout_6.addWidget(self.frame_22)
-        self.widget1 = QtWidgets.QWidget(self.groupBox)
-        self.widget1.setGeometry(QtCore.QRect(10, 30, 191, 151))
-        self.widget1.setObjectName("widget1")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.widget1)
+        self.layoutWidget1 = QtWidgets.QWidget(self.groupBox)
+        self.layoutWidget1.setGeometry(QtCore.QRect(10, 20, 191, 161))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.frame_19 = QtWidgets.QFrame(self.widget1)
+        self.frame_19 = QtWidgets.QFrame(self.layoutWidget1)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(5)
@@ -986,7 +981,7 @@ class Ui_MainWindow(object):
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
         self.verticalLayout_7.addWidget(self.frame_19)
-        self.frame_20 = QtWidgets.QFrame(self.widget1)
+        self.frame_20 = QtWidgets.QFrame(self.layoutWidget1)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(5)
@@ -1014,8 +1009,95 @@ class Ui_MainWindow(object):
         self.groupBox_3.setGeometry(QtCore.QRect(10, 400, 938, 131))
         self.groupBox_3.setObjectName("groupBox_3")
         self.groupBox_2 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_2.setGeometry(QtCore.QRect(20, 9, 931, 161))
+        self.groupBox_2.setGeometry(QtCore.QRect(0, 10, 941, 171))
+        self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.groupBox_2)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.frame_26 = QtWidgets.QFrame(self.groupBox_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(5)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_26.sizePolicy().hasHeightForWidth())
+        self.frame_26.setSizePolicy(sizePolicy)
+        self.frame_26.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_26.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_26.setObjectName("frame_26")
+        self.pushButton_17 = QtWidgets.QPushButton(self.frame_26)
+        self.pushButton_17.setGeometry(QtCore.QRect(10, 0, 101, 101))
+        self.pushButton_17.setIcon(icon13)
+        self.pushButton_17.setIconSize(QtCore.QSize(100, 100))
+        self.pushButton_17.setObjectName("pushButton_17")
+        self.label_18 = QtWidgets.QLabel(self.frame_26)
+        self.label_18.setGeometry(QtCore.QRect(20, 110, 81, 18))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_18.setFont(font)
+        self.label_18.setObjectName("label_18")
+        self.label_19 = QtWidgets.QLabel(self.frame_26)
+        self.label_19.setGeometry(QtCore.QRect(120, 9, 161, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_19.setFont(font)
+        self.label_19.setObjectName("label_19")
+        self.pushButton_40 = QtWidgets.QPushButton(self.frame_26)
+        self.pushButton_40.setGeometry(QtCore.QRect(170, 100, 112, 34))
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_40.setFont(font)
+        self.pushButton_40.setStyleSheet("background-color: rgb(137, 194, 255);\n"
+                                         "color : rgb(255, 255, 255);")
+        self.pushButton_40.setObjectName("pushButton_40")
+        self.horizontalLayout_9.addWidget(self.frame_26)
+        self.frame_27 = QtWidgets.QFrame(self.groupBox_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(3)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_27.sizePolicy().hasHeightForWidth())
+        self.frame_27.setSizePolicy(sizePolicy)
+        self.frame_27.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_27.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_27.setObjectName("frame_27")
+        self.pushButton_41 = QtWidgets.QPushButton(self.frame_27)
+        self.pushButton_41.setGeometry(QtCore.QRect(40, 0, 101, 101))
+        self.pushButton_41.setText("")
+        icon21 = QtGui.QIcon()
+        icon21.addPixmap(QtGui.QPixmap("profileicon/5290.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_41.setIcon(icon21)
+        self.pushButton_41.setIconSize(QtCore.QSize(100, 100))
+        self.pushButton_41.setObjectName("pushButton_41")
+        self.label_20 = QtWidgets.QLabel(self.frame_27)
+        self.label_20.setGeometry(QtCore.QRect(40, 110, 151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_20.setFont(font)
+        self.label_20.setObjectName("label_20")
+        self.horizontalLayout_9.addWidget(self.frame_27)
+        self.frame_28 = QtWidgets.QFrame(self.groupBox_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(5)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_28.sizePolicy().hasHeightForWidth())
+        self.frame_28.setSizePolicy(sizePolicy)
+        self.frame_28.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_28.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_28.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_28.setObjectName("frame_28")
+        self.pushButton_42 = QtWidgets.QPushButton(self.frame_28)
+        self.pushButton_42.setGeometry(QtCore.QRect(40, 0, 131, 131))
+        self.pushButton_42.setText("")
+        self.pushButton_42.setIcon(icon11)
+        self.pushButton_42.setIconSize(QtCore.QSize(150, 150))
+        self.pushButton_42.setObjectName("pushButton_42")
+        self.horizontalLayout_9.addWidget(self.frame_28)
         self.line = QtWidgets.QFrame(self.scrollAreaWidgetContents)
         self.line.setGeometry(QtCore.QRect(20, 180, 931, 20))
         font = QtGui.QFont()
@@ -1072,9 +1154,9 @@ class Ui_MainWindow(object):
                                         "    \n"
                                         "}")
         self.pushButton_7.setText("")
-        icon21 = QtGui.QIcon()
-        icon21.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_7.setIcon(icon21)
+        icon22 = QtGui.QIcon()
+        icon22.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_7.setIcon(icon22)
         self.pushButton_7.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_7.setObjectName("pushButton_7")
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_10)
@@ -1085,9 +1167,9 @@ class Ui_MainWindow(object):
                                         "    \n"
                                         "}")
         self.pushButton_8.setText("")
-        icon22 = QtGui.QIcon()
-        icon22.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_8.setIcon(icon22)
+        icon23 = QtGui.QIcon()
+        icon23.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_8.setIcon(icon23)
         self.pushButton_8.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_8.setObjectName("pushButton_8")
         self.horizontalLayout_3.addWidget(self.frame_10)
@@ -1118,6 +1200,8 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
         self.pushButton_10.clicked.connect(self.display)
         self.pushButton_9.clicked.connect(self.display2)
+        self.pushButton_15.clicked.connect(self.search_lol_name)
+        self.pushButton_40.clicked.connect(self.search_lol_name)
 
     # change region buttons
     def display(self):
@@ -1151,7 +1235,7 @@ class Ui_MainWindow(object):
         self.comboBox_3.setItemText(15, _translate("MainWindow", "Taiwan"))
         self.comboBox_3.setItemText(16, _translate("MainWindow", "Vietnam"))
         self.pushButton_15.setText(_translate("MainWindow", "Search"))
-        self.lineEdit_2.setText(_translate("MainWindow", ""))
+        self.lineEdit_2.setText(_translate("MainWindow", "saosijja"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "North America"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Brazil"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "EU Nordic & East"))
@@ -1171,12 +1255,93 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(16, _translate("MainWindow", "Vietnam"))
         self.pushButton_13.setText(_translate("MainWindow", "Search for Teamfight Tactics"))
         self.pushButton_16.setText(_translate("MainWindow", "Search"))
+        self.label_8.setText(_translate("MainWindow", "sadssadsdssd"))
+        self.label_9.setText(_translate("MainWindow", "TextLabel"))
+        self.label_10.setText(_translate("MainWindow", "TextLabel"))
+        self.label_11.setText(_translate("MainWindow", "TextLabel"))
+        self.label_12.setText(_translate("MainWindow", "TextLabel"))
+        self.label_13.setText(_translate("MainWindow", "TextLabel"))
+        self.label_14.setText(_translate("MainWindow", "TextLabel"))
+        self.label_15.setText(_translate("MainWindow", "TextLabel"))
+        self.label_16.setText(_translate("MainWindow", "TextLabel"))
+        self.label_17.setText(_translate("MainWindow", "TextLabel"))
+        self.label_5.setText(_translate("MainWindow", "lv:17"))
+        self.label_6.setText(_translate("MainWindow", "12 / 0 / 11"))
+        self.label_7.setText(_translate("MainWindow", "9.0 KDA"))
+        self.label.setText(_translate("MainWindow", "hours ago"))
+        self.label_4.setText(_translate("MainWindow", "Ranked solo"))
+        self.label_2.setText(_translate("MainWindow", "Victory"))
+        self.label_3.setText(_translate("MainWindow", "40m 10s"))
+        self.groupBox_3.setTitle(_translate("MainWindow", "GroupBox"))
+        self.pushButton_40.setText(_translate("MainWindow", "Renew"))
+
+        # function after user clicked search button
+
+    def search_lol_name(self):
+        # Get the sender object and print its name or text
+        # push_button_15
+
+        # Get the search query from the search bar
+        lol_query = self.lineEdit.text()
+        lol_region_text = self.comboBox_3.currentText()
+        if lol_query == "":
+            print("False")
+        else:
+            return_value = searchMatch.matchSearch(lol_region_text, "lol", lol_query)
+            if return_value[1] == -1:
+                print("wrong name entered")
+            else:
+                self.match_details = return_value[1]
+                self.summonerName = return_value[2]['name']
+                self.summonerInfo = return_value[2]
+                self.summonerRank = return_value[0][0]['tier']
+                self.present_info()
+                self.present_img()
+                self.stackedWidget.setCurrentIndex(2)
+                print("right name entered")
+
+    def search_tft_name(self):
+        # search function for tft
+        tft_query = self.lineEdit_2.text()
+        tft_region_text = self.comboBox_2.currentText()
+        if tft_query == "":
+            print("False")
+        else:
+            return_value = searchMatch.matchSearch(tft_region_text, "tft", tft_query)
+            if return_value[1] == -1:
+                print("wrong name entered")
+            else:
+                print("right name entered")
+
+    def find_self_participant(self):
+        participants_list = self.match_details[0]['info']['participants']
+        for participant in participants_list:
+            if participant['summonerName'] == self.summonerName:
+                return participants_list.index(participant)
+
+    def win_or_lose(self, bool):
+        if bool:
+            return "Victory"
+        else:
+            return "Lost"
+
+    def time_previous(self, gameTime):
+        currentTime = time.time()
+        timeDiff = int(currentTime) - int(gameTime / 1000)
+        if timeDiff < 3600:
+            return f"{int(timeDiff / 60)} minutes ago"
+        elif timeDiff > 3600 & timeDiff < 86400:
+            return f"{int(timeDiff / 3600)} hours ago"
+        elif timeDiff > 86400:
+            return f"{int(timeDiff / 86400)} days ago"
+
+    def present_info(self):
+        _translate = QtCore.QCoreApplication.translate
         try:
             self.label_8.setText(
                 _translate("MainWindow", f"{self.match_details[0]['info']['participants'][0]['summonerName']}"))
         except KeyError:
             self.label_8.setText(_translate("MainWindow", "N/A"))
-
         try:
             self.label_9.setText(
                 _translate("MainWindow", f"{self.match_details[0]['info']['participants'][1]['summonerName']}"))
@@ -1224,7 +1389,7 @@ class Ui_MainWindow(object):
             self.label_17.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_5.setText(
-                _translate("MainWindow", f"lv:{self.match_details[0]['info']['participants'][0]['summonerLevel']}"))
+                _translate("MainWindow", f"lv:{self.match_details[0]['info']['participants'][0]['champLevel']}"))
         except KeyError:
             self.label_5.setText(_translate("MainWindow", "lv:"))
         try:
@@ -1234,64 +1399,156 @@ class Ui_MainWindow(object):
                                             f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
         except KeyError:
             self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
-        self.label_7.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label.setText(_translate("MainWindow", "hours ago"))
-        self.label_4.setText(_translate("MainWindow", "Ranked solo"))
+        try:
+            kill = self.match_details[0]['info']['participants'][self.find_self_participant()]['kills']
+            death = self.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']
+            assist = self.match_details[0]['info']['participants'][self.find_self_participant()]['assists']
+            kda = self.cal_KDA(kill, death, assist)
+            kda_text = str(kda) + " KDA"
+            self.label_7.setText(kda_text)
+        except KeyError:
+            self.label_7.setText(_translate("MainWindow", "N/A KDA"))
+
+        self.label.setText(
+            _translate("MainWindow", f"{self.time_previous(self.match_details[0]['info']['gameEndTimestamp'])}"))
+        try:
+            self.label_4.setText(_translate("MainWindow", "Ranked solo"))
+        except KeyError:
+            self.label_4.setText(_translate("MainWindow", "Ranked solo"))
         try:
             self.label_2.setText(
-                _translate("MainWindow", f"{self.win_or_lose(self.match_details[0]['info'][self.find_self_participant()]['win'])}"))
+                _translate("MainWindow",
+                           f"{self.win_or_lose(self.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}"))
         except KeyError:
             self.label_2.setText(_translate("MainWindow", "N/A"))
         try:
-            self.label_3.setText(_translate("MainWindow", f"{self.match_details[0]['info']['gameDuration'][0:2]}m {self.match_details[0]['info']['gameDuration'][2:]}s"))
+            self.label_3.setText(_translate("MainWindow",
+                                            f"{int(self.match_details[0]['info']['gameDuration'] / 60)}m {self.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_3.setText(_translate("MainWindow", "N/Am N/As"))
-        self.groupBox_3.setTitle(_translate("MainWindow", "GroupBox"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox"))
 
-    # function after user clicked search button
-    def search_lol_name(self):
-        # Get the sender object and print its name or text
-        # push_button_15
+        try:
+            self.label_18.setText(_translate("MainWindow", f"lv : {self.summonerInfo['summonerLevel']}"))
+        except KeyError:
+            self.label_18.setText(_translate("MainWindow", "lv : N/A"))
+        try:
+            self.label_19.setText(_translate("MainWindow", f"{self.summonerName}"))
+        except KeyError:
+            self.label_19.setText(_translate("MainWindow", "N/A"))
+        try:
+            self.label_20.setText(_translate("MainWindow", f"{self.summonerRank}"))
+        except KeyError:
+            self.label_20.setText(_translate("MainWindow", "N/A"))
+    def present_img(self):
+        champID = self.match_details[0]['info']['participants'][self.find_self_participant()]['championId']
+        items = []
+        champs = []
+        for i in range(7):
+            items.append(self.match_details[0]['info']['participants'][self.find_self_participant()][f'item{i}'])
+        for x in range(10):
+            champs.append(self.match_details[0]['info']['participants'][x]['championId'])
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champID}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_25.setIcon(icon)
 
-        # Get the search query from the search bar
-        lol_query = self.lineEdit.text()
-        lol_region_text = self.comboBox_3.currentText()
-        if lol_query == "":
-            print("False")
+        # set the in-game items graphics
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(f"item/{items[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_18.setIcon(icon)
+
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(f"item/{items[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_19.setIcon(icon1)
+
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(f"item/{items[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_20.setIcon(icon2)
+
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(f"item/{items[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_21.setIcon(icon3)
+
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(f"item/{items[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_22.setIcon(icon4)
+
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(f"item/{items[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_23.setIcon(icon5)
+
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(f"item/{items[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_24.setIcon(icon6)
+
+        # champions graphic on the right side
+        # left half
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_30.setIcon(icon7)
+
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_31.setIcon(icon8)
+
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_32.setIcon(icon9)
+
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_33.setIcon(icon10)
+
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_34.setIcon(icon11)
+
+        # right half
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_35.setIcon(icon12)
+
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_36.setIcon(icon13)
+
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[7]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_37.setIcon(icon14)
+
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[8]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_38.setIcon(icon15)
+
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_39.setIcon(icon16)
+
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap(f"profileicon/{self.summonerInfo['profileIconId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_17.setIcon(icon17)
+
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.summonerRank}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_41.setIcon(icon18)
+        # function to calculate KDA points
+
+    def cal_KDA(self, kill, death, assist):
+        if (death == 0):
+            return "Perfect KDA"
         else:
-            return_value = searchMatch.matchSearch(lol_region_text, "lol", lol_query)
-            if return_value == -1:
-                print("wrong name entered")
-            else:
-                self.match_details = return_value
-                self.summonerName = lol_query
-                print("right name entered")
+            return ((kill + assist) / death)
 
-    def search_tft_name(self):
-        # search function for tft
-        tft_query = self.lineEdit_2.text()
-        tft_region_text = self.comboBox_2.currentText()
-        if tft_query == "":
-            print("False")
-        else:
-            return_value = searchMatch.matchSearch(tft_region_text, "tft", tft_query)
-            if return_value[1] == -1:
-                print("wrong name entered")
-            else:
-                print("right name entered")
+    def get_queues(self):
+        with open('queues.json') as json_file:
+            self.queues = json.load(json_file)
 
-    def find_self_participant(self):
-        participants_list = self.match_details['info']['participants']
-        for participant in participants_list:
-            if participant['summonerName'] == self.summonerName:
-                return participants_list.index(participant)
+    def get_summonerSpell(self):
+        with open('summoner.json') as json_file:
+            self.summonerSpell = json.load(json_file)
 
-    def win_or_lose(self, bool):
-        if bool:
-            return "Victory"
-        else:
-            return "Lost"
+    def output(self):
+        print(self.summonerSpell['data']['SummonerBarrier'])
+        return None
 
 
 if __name__ == "__main__":
@@ -1301,5 +1558,8 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
+    ui.get_summonerSpell()
+    ui.get_queues()
+    ui.output()
     MainWindow.show()
     sys.exit(app.exec_())
