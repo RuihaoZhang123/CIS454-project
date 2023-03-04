@@ -2,6 +2,7 @@ import pyqtgraph as pg
 from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsEllipseItem
 from PyQt5.QtGui import QBrush, QColor, QPen
 
+
 class WinLoseCircleGraph:
     def __init__(self, win_rate, lose_rate):
         self.win_rate = win_rate
@@ -59,6 +60,9 @@ class WinLoseCircleGraph:
     def run(self):
         self.app.exec_()
 
+def graph_return(self, win_rates, lose_rate):
+    graph = WinLoseCircleGraph(win_rates, lose_rate)
+    return graph.plot_widget
 if __name__ == "__main__":
     win_rates = 0.5
     lose_rate = 0.5

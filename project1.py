@@ -11,7 +11,9 @@ import searchMatch
 import time
 import json
 
+
 class Ui_MainWindow(object):
+    # main window setup
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1265, 847)
@@ -1275,8 +1277,8 @@ class Ui_MainWindow(object):
         self.groupBox_3.setTitle(_translate("MainWindow", "GroupBox"))
         self.pushButton_40.setText(_translate("MainWindow", "Renew"))
 
-        # function after user clicked search button
-
+    # functions after user clicked search button
+    # retrieve information for two input bar to create searchMatch based on given information
     def search_lol_name(self):
         # Get the sender object and print its name or text
         # push_button_15
@@ -1287,19 +1289,16 @@ class Ui_MainWindow(object):
         if lol_query == "":
             print("False")
         else:
-            return_value = searchMatch.matchSearch(lol_region_text, "lol", lol_query)
-            if return_value[1] == -1:
+            self.Summoner = searchMatch.SearchMatch(lol_region_text, 'lol', lol_query)
+            if not self.Summoner.searchComplete:
                 print("wrong name entered")
             else:
-                self.match_details = return_value[1]
-                self.summonerName = return_value[2]['name']
-                self.summonerInfo = return_value[2]
-                self.summonerRank = return_value[0][0]['tier']
                 self.present_info()
                 self.present_img()
                 self.stackedWidget.setCurrentIndex(2)
                 print("right name entered")
 
+    # retrieve information for two input bar to create searchMatch based on given information
     def search_tft_name(self):
         # search function for tft
         tft_query = self.lineEdit_2.text()
@@ -1307,110 +1306,125 @@ class Ui_MainWindow(object):
         if tft_query == "":
             print("False")
         else:
-            return_value = searchMatch.matchSearch(tft_region_text, "tft", tft_query)
-            if return_value[1] == -1:
+            self.Summoner = searchMatch.SearchMatch(tft_region_text, 'tft', tft_query)
+            if self.Summoner.errorCase == -1:
                 print("wrong name entered")
             else:
                 print("right name entered")
 
+    # return the index of the in-match data of the summoner being searched
     def find_self_participant(self):
-        participants_list = self.match_details[0]['info']['participants']
+        participants_list = self.Summoner.match_details[0]['info']['participants']
         for participant in participants_list:
-            if participant['summonerName'] == self.summonerName:
+            if participant['summonerName'] == self.Summoner.summonerName:
                 return participants_list.index(participant)
 
+    # return victory or lost based on the win boolean retrieved from api
     def win_or_lose(self, bool):
         if bool:
             return "Victory"
         else:
             return "Lost"
 
+    # helper function to determine how long since the indicated game finished
     def time_previous(self, gameTime):
         currentTime = time.time()
         timeDiff = int(currentTime) - int(gameTime / 1000)
         if timeDiff < 3600:
             return f"{int(timeDiff / 60)} minutes ago"
-        elif timeDiff > 3600 & timeDiff < 86400:
+        elif 3600 < timeDiff < 86400:
             return f"{int(timeDiff / 3600)} hours ago"
         elif timeDiff > 86400:
             return f"{int(timeDiff / 86400)} days ago"
 
+    # create images relates to all text display in league of legends match history page
     def present_info(self):
         _translate = QtCore.QCoreApplication.translate
         try:
             self.label_8.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][0]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][0]['summonerName']}"))
         except KeyError:
             self.label_8.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_9.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][1]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][1]['summonerName']}"))
         except KeyError:
             self.label_9.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_10.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][2]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][2]['summonerName']}"))
         except KeyError:
             self.label_10.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_11.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][3]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][3]['summonerName']}"))
         except KeyError:
             self.label_11.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_12.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][4]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][4]['summonerName']}"))
         except KeyError:
             self.label_12.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_13.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][5]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][5]['summonerName']}"))
         except KeyError:
             self.label_13.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_14.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][6]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][6]['summonerName']}"))
         except KeyError:
             self.label_14.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_15.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][7]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][7]['summonerName']}"))
         except KeyError:
             self.label_15.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_16.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][8]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][8]['summonerName']}"))
         except KeyError:
             self.label_16.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_17.setText(
-                _translate("MainWindow", f"{self.match_details[0]['info']['participants'][9]['summonerName']}"))
+                _translate("MainWindow",
+                           f"{self.Summoner.match_details[0]['info']['participants'][9]['summonerName']}"))
         except KeyError:
             self.label_17.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_5.setText(
-                _translate("MainWindow", f"lv:{self.match_details[0]['info']['participants'][0]['champLevel']}"))
+                _translate("MainWindow",
+                           f"lv:{self.Summoner.match_details[0]['info']['participants'][0]['champLevel']}"))
         except KeyError:
             self.label_5.setText(_translate("MainWindow", "lv:"))
         try:
             self.label_6.setText(_translate("MainWindow",
-                                            f"{self.match_details[0]['info']['participants'][self.find_self_participant()]['kills']} "
-                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']} "
-                                            f"/ {self.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
+                                            f"{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']} "
+                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']} "
+                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
         except KeyError:
             self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
         try:
-            kill = self.match_details[0]['info']['participants'][self.find_self_participant()]['kills']
-            death = self.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']
-            assist = self.match_details[0]['info']['participants'][self.find_self_participant()]['assists']
+            kill = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']
+            death = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']
+            assist = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['assists']
             kda = self.cal_KDA(kill, death, assist)
             kda_text = str(kda) + " KDA"
             self.label_7.setText(kda_text)
         except KeyError:
             self.label_7.setText(_translate("MainWindow", "N/A KDA"))
-
         self.label.setText(
-            _translate("MainWindow", f"{self.time_previous(self.match_details[0]['info']['gameEndTimestamp'])}"))
+            _translate("MainWindow",
+                       f"{self.time_previous(self.Summoner.match_details[0]['info']['gameEndTimestamp'])}"))
         try:
             self.label_4.setText(_translate("MainWindow", "Ranked solo"))
         except KeyError:
@@ -1418,35 +1432,37 @@ class Ui_MainWindow(object):
         try:
             self.label_2.setText(
                 _translate("MainWindow",
-                           f"{self.win_or_lose(self.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}"))
+                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}"))
         except KeyError:
             self.label_2.setText(_translate("MainWindow", "N/A"))
         try:
             self.label_3.setText(_translate("MainWindow",
-                                            f"{int(self.match_details[0]['info']['gameDuration'] / 60)}m {self.match_details[0]['info']['gameDuration'] % 60}s"))
+                                            f"{int(self.Summoner.match_details[0]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_3.setText(_translate("MainWindow", "N/Am N/As"))
-
         try:
-            self.label_18.setText(_translate("MainWindow", f"lv : {self.summonerInfo['summonerLevel']}"))
+            self.label_18.setText(_translate("MainWindow", f"lv : {self.Summoner.me['summonerLevel']}"))
         except KeyError:
             self.label_18.setText(_translate("MainWindow", "lv : N/A"))
         try:
-            self.label_19.setText(_translate("MainWindow", f"{self.summonerName}"))
+            self.label_19.setText(_translate("MainWindow", f"{self.Summoner.summonerName}"))
         except KeyError:
             self.label_19.setText(_translate("MainWindow", "N/A"))
         try:
-            self.label_20.setText(_translate("MainWindow", f"{self.summonerRank}"))
+            self.label_20.setText(_translate("MainWindow", f"{self.Summoner.rankedInfo[0]['tier']}"))
         except KeyError:
             self.label_20.setText(_translate("MainWindow", "N/A"))
+
+    # create images relates to all image display in league of legends match history page
     def present_img(self):
-        champID = self.match_details[0]['info']['participants'][self.find_self_participant()]['championId']
+        champID = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['championId']
         items = []
         champs = []
         for i in range(7):
-            items.append(self.match_details[0]['info']['participants'][self.find_self_participant()][f'item{i}'])
+            items.append(
+                self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()][f'item{i}'])
         for x in range(10):
-            champs.append(self.match_details[0]['info']['participants'][x]['championId'])
+            champs.append(self.Summoner.match_details[0]['info']['participants'][x]['championId'])
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champID}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_25.setIcon(icon)
@@ -1455,7 +1471,6 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(f"item/{items[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_18.setIcon(icon)
-
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(f"item/{items[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_19.setIcon(icon1)
@@ -1489,7 +1504,6 @@ class Ui_MainWindow(object):
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_31.setIcon(icon8)
-
         icon9 = QtGui.QIcon()
         icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_32.setIcon(icon9)
@@ -1524,14 +1538,16 @@ class Ui_MainWindow(object):
         self.pushButton_39.setIcon(icon16)
 
         icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap(f"profileicon/{self.summonerInfo['profileIconId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon17.addPixmap(QtGui.QPixmap(f"profileicon/{self.Summoner.me['profileIconId']}.png"), QtGui.QIcon.Normal,
+                         QtGui.QIcon.Off)
         self.pushButton_17.setIcon(icon17)
-
         icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.summonerRank}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.Summoner.rankedInfo[0]['tier']}.png"),
+                         QtGui.QIcon.Normal,
+                         QtGui.QIcon.Off)
         self.pushButton_41.setIcon(icon18)
-        # function to calculate KDA points
 
+    # calculate the KDA given kill death assists
     def cal_KDA(self, kill, death, assist):
         if (death == 0):
             return "Perfect KDA"
@@ -1550,6 +1566,9 @@ class Ui_MainWindow(object):
         print(self.summonerSpell['data']['SummonerBarrier'])
         return None
 
+    def identify_queue(self, queueID):
+        print(self.queues[queueID])
+
 
 if __name__ == "__main__":
     import sys
@@ -1560,6 +1579,6 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     ui.get_summonerSpell()
     ui.get_queues()
-    ui.output()
+    ui.identify_queue(420)
     MainWindow.show()
     sys.exit(app.exec_())
