@@ -6,8 +6,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
 import searchMatch
+import chart_test
 import time
 import json
 
@@ -1293,6 +1295,7 @@ class Ui_MainWindow(object):
             if not self.Summoner.searchComplete:
                 print("wrong name entered")
             else:
+                self.win_rate_count()
                 self.present_info()
                 self.present_img()
                 self.stackedWidget.setCurrentIndex(2)
@@ -1346,66 +1349,77 @@ class Ui_MainWindow(object):
                            f"{self.Summoner.match_details[0]['info']['participants'][0]['summonerName']}"))
         except KeyError:
             self.label_8.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_9.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][1]['summonerName']}"))
         except KeyError:
             self.label_9.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_10.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][2]['summonerName']}"))
         except KeyError:
             self.label_10.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_11.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][3]['summonerName']}"))
         except KeyError:
             self.label_11.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_12.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][4]['summonerName']}"))
         except KeyError:
             self.label_12.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_13.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][5]['summonerName']}"))
         except KeyError:
             self.label_13.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_14.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][6]['summonerName']}"))
         except KeyError:
             self.label_14.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_15.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][7]['summonerName']}"))
         except KeyError:
             self.label_15.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_16.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][8]['summonerName']}"))
         except KeyError:
             self.label_16.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_17.setText(
                 _translate("MainWindow",
                            f"{self.Summoner.match_details[0]['info']['participants'][9]['summonerName']}"))
         except KeyError:
             self.label_17.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_5.setText(
                 _translate("MainWindow",
                            f"lv:{self.Summoner.match_details[0]['info']['participants'][0]['champLevel']}"))
         except KeyError:
             self.label_5.setText(_translate("MainWindow", "lv:"))
+
         try:
             self.label_6.setText(_translate("MainWindow",
                                             f"{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']} "
@@ -1413,6 +1427,7 @@ class Ui_MainWindow(object):
                                             f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
         except KeyError:
             self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
+
         try:
             kill = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']
             death = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']
@@ -1425,37 +1440,46 @@ class Ui_MainWindow(object):
         self.label.setText(
             _translate("MainWindow",
                        f"{self.time_previous(self.Summoner.match_details[0]['info']['gameEndTimestamp'])}"))
+
         try:
-            self.label_4.setText(_translate("MainWindow", "Ranked solo"))
+            self.label_4.setText(
+                _translate("MainWindow", self.identify_queue(self.Summoner.match_details[0]['info']['queueId'])))
         except KeyError:
-            self.label_4.setText(_translate("MainWindow", "Ranked solo"))
+            self.label_4.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_2.setText(
                 _translate("MainWindow",
                            f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}"))
         except KeyError:
             self.label_2.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_3.setText(_translate("MainWindow",
                                             f"{int(self.Summoner.match_details[0]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_3.setText(_translate("MainWindow", "N/Am N/As"))
+
         try:
             self.label_18.setText(_translate("MainWindow", f"lv : {self.Summoner.me['summonerLevel']}"))
         except KeyError:
             self.label_18.setText(_translate("MainWindow", "lv : N/A"))
+
         try:
             self.label_19.setText(_translate("MainWindow", f"{self.Summoner.summonerName}"))
         except KeyError:
             self.label_19.setText(_translate("MainWindow", "N/A"))
+
         try:
             self.label_20.setText(_translate("MainWindow", f"{self.Summoner.rankedInfo[0]['tier']}"))
         except KeyError:
             self.label_20.setText(_translate("MainWindow", "N/A"))
+        except IndexError:
+            self.label_20.setText(_translate("MainWindow", "N/A"))
 
     # create images relates to all image display in league of legends match history page
     def present_img(self):
-        champID = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['championId']
+        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]
         items = []
         champs = []
         for i in range(7):
@@ -1464,7 +1488,8 @@ class Ui_MainWindow(object):
         for x in range(10):
             champs.append(self.Summoner.match_details[0]['info']['participants'][x]['championId'])
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champID}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant['championId']}.png"), QtGui.QIcon.Normal,
+                       QtGui.QIcon.Off)
         self.pushButton_25.setIcon(icon)
 
         # set the in-game items graphics
@@ -1537,37 +1562,126 @@ class Ui_MainWindow(object):
         icon16.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_39.setIcon(icon16)
 
+        # display profile icon
         icon17 = QtGui.QIcon()
         icon17.addPixmap(QtGui.QPixmap(f"profileicon/{self.Summoner.me['profileIconId']}.png"), QtGui.QIcon.Normal,
                          QtGui.QIcon.Off)
         self.pushButton_17.setIcon(icon17)
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.Summoner.rankedInfo[0]['tier']}.png"),
-                         QtGui.QIcon.Normal,
-                         QtGui.QIcon.Off)
-        self.pushButton_41.setIcon(icon18)
+
+        # display ranked emblem image of summoner
+        if len(self.Summoner.rankedInfo) != 0:
+            icon18 = QtGui.QIcon()
+            icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.Summoner.rankedInfo[0]['tier']}.png"),
+                             QtGui.QIcon.Normal,
+                             QtGui.QIcon.Off)
+            self.pushButton_41.setIcon(icon18)
+        else:
+
+            self.pushButton_41.setIcon(QtGui.QIcon("items/7050.png"))
+
+        # first summoner Spell display
+        summonerSpell1 = QtGui.QIcon()
+        summonerSpell1.addPixmap(
+            QtGui.QPixmap(f"summonerSpell/{self.identify_Summoner_spell(self_Participant['summoner1Id'])}"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off)
+        self.pushButton_26.setIcon(summonerSpell1)
+
+        # second summoner Spell display
+        summonerSpell2 = QtGui.QIcon()
+        summonerSpell2.addPixmap(
+            QtGui.QPixmap(f"summonerSpell/{self.identify_Summoner_spell(self_Participant['summoner2Id'])}"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off)
+        self.pushButton_27.setIcon(summonerSpell2)
+
+        # primary rune display
+        runeUrlPath = 'https://ddragon.canisback.com/img/'
+        rune1 = QtGui.QIcon()
+        primaryRunePath = self.identify_runes(
+            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['perks']['styles'][0][
+                'selections'][0]['perk'])
+        primaryRuneimg = QtGui.QImage()
+        primaryRuneimg.loadFromData(requests.get(runeUrlPath + primaryRunePath).content)
+        rune1.addPixmap(QtGui.QPixmap(primaryRuneimg),
+                        QtGui.QIcon.Normal,
+                        QtGui.QIcon.Off)
+        self.pushButton_28.setIcon(rune1)
+
+        # sub rune display
+        runeUrlPath = 'https://ddragon.canisback.com/img/'
+        rune2 = QtGui.QIcon()
+        subRunePath = self.identify_runes(
+            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['perks']['styles'][1][
+                'style'])
+        subRuneimg = QtGui.QImage()
+        subRuneimg.loadFromData(requests.get(runeUrlPath + subRunePath).content)
+        rune2.addPixmap(QtGui.QPixmap(subRuneimg),
+                        QtGui.QIcon.Normal,
+                        QtGui.QIcon.Off)
+        self.pushButton_29.setIcon(rune2)
+
+        # set win rate graph display
+        # graph = chart_test.WinLoseCircleGraph(self.win_rate_count())
+        win_rate_graph = QtGui.QIcon()
+        win_rate_graph.addPixmap(
+            QtGui.QPixmap("win_rate.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off)
+        self.pushButton_42.setIcon(win_rate_graph)
 
     # calculate the KDA given kill death assists
     def cal_KDA(self, kill, death, assist):
-        if (death == 0):
+        if death == 0:
             return "Perfect KDA"
         else:
-            return ((kill + assist) / death)
+            return round((kill + assist) / death, 1)
 
+    # extract queues data from json file
     def get_queues(self):
         with open('queues.json') as json_file:
             self.queues = json.load(json_file)
 
+    # extract summoner Spells data from json file
     def get_summonerSpell(self):
         with open('summoner.json') as json_file:
             self.summonerSpell = json.load(json_file)
 
-    def output(self):
-        print(self.summonerSpell['data']['SummonerBarrier'])
-        return None
+    # extract runes data from json file
+    def get_runes(self):
+        with open('runesReforged.json') as json_file:
+            self.runes = json.load(json_file)
 
+    # return description of queue given queueID
     def identify_queue(self, queueID):
-        print(self.queues[queueID])
+        for queue in self.queues:
+            if queue['queueId'] == queueID:
+                return queue['description']
+
+    # return image path of summoner spell given spellKey
+    def identify_Summoner_spell(self, spellKey):
+        for i in self.summonerSpell['data'].values():
+            if i['key'] == str(spellKey):
+                return i["image"]['full']
+
+    # return runes path given runeId
+    def identify_runes(self, runeId):
+        for i in self.runes:
+            if i['id'] == runeId:
+                return i['icon']
+            for j in i['slots'][0]['runes']:
+                if j['id'] == runeId:
+                    return j["icon"]
+
+    # calculate the win rate of the summoner then graph the win rate graph using function from chart_test
+    def win_rate_count(self):
+        win_count = 0
+        for i in self.Summoner.match_details:
+            if i['info']['participants'][self.find_self_participant()]['win']:
+                win_count += 1
+        if len(self.Summoner.match_details) == 0:
+            return "No available match"
+        graph = chart_test.WinLoseCircleGraph(round(win_count/len(self.Summoner.match_details), 2))
 
 
 if __name__ == "__main__":
@@ -1576,9 +1690,9 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
     ui.get_summonerSpell()
     ui.get_queues()
-    ui.identify_queue(420)
+    ui.get_runes()
+    ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

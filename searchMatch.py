@@ -41,8 +41,6 @@ class SearchMatch:
             for match in my_matches:
                 match_detail = watcher.match.by_id(self.region, match)
                 # print(match_detail['info']['participants'][0].keys())
-                # print(match_detail['info']['gameDuration'])
-                # matchDisplay(match_detail)
                 self.match_details.append(match_detail)
         elif self.gameType == "tft":
             watcher = TftWatcher(tftApiKey)
@@ -115,4 +113,5 @@ class SearchMatch:
 
 
 # hi = SearchMatch("North America", "lol", "llama smoothie")
+
 

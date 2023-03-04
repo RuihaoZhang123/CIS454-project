@@ -1,7 +1,7 @@
 import requests
-e = requests.get(f"http://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/summoner.json")
+e = requests.get(f"http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/runesReforged.json")
 errorcode = e.status_code
-with open(f"summoner.json", "wb") as file:
+with open(f"runesReforged.json", "wb") as file:
     file.write(e.content)
 """
 for i in range(1000):
