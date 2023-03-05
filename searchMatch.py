@@ -48,7 +48,7 @@ class SearchMatch:
                 self.me = watcher.summoner.by_name(self.region, self.summonerName)
             except ApiError:
                 return -1
-            # print(me)
+            # print(self.me)
             # get list of tft matches of the summoner
             my_matches = watcher.match.by_puuid(self.region, self.me['puuid'])
             # print(my_matches)
@@ -58,7 +58,13 @@ class SearchMatch:
                 # print(match_detail['info']["participants"][0]["traits"])
                 # print(match_detail['info']['participants'][0].keys())
                 self.match_details.append(match_detail)
+            """print(self.match_details[0]['metadata']['participants'])
+            print(self.match_details[0]['info']['game_datetime'])
+            print(self.match_details[0]['info']['participants'][1].keys())
+            print(self.match_details[0]['info']['participants'][2]['augments'])
+            print(self.match_details[0]['info']['participants'][2]['units'])"""
 
+    # translate region given to api readable region
     def _translateRegion(self, region):
         if region == "Brazil":
             return "br1"
@@ -112,6 +118,6 @@ class SearchMatch:
         return
 
 
-# hi = SearchMatch("North America", "lol", "llama smoothie")
+# hi = SearchMatch("North America", "tft", "vanyang smoothie")
 
 
