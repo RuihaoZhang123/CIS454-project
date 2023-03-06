@@ -1,5 +1,5 @@
 import requests
-from riotwatcher import LolWatcher, ApiError, TftWatcher
+from riotwatcher import LolWatcher, TftWatcher
 import pandas as pd
 
 lolApiKey = "RGAPI-0175be55-dcd4-4c8d-a300-57d5232f50e6"
@@ -46,12 +46,14 @@ class SearchMatch:
             watcher = TftWatcher(tftApiKey)
             try:
                 self.me = watcher.summoner.by_name(self.region, self.summonerName)
-            except ApiError:
+            except requests.exceptions.HTTPError as err:
+                self.errorCase = err
+                self.searchComplete = False
                 return -1
-            # print(self.me)
+            self.rankedInfo = self.rankedInfo = watcher.league.by_summoner(self.region, self.me['id'])
+            self.summonerName = self.me['name']
             # get list of tft matches of the summoner
             my_matches = watcher.match.by_puuid(self.region, self.me['puuid'])
-            # print(my_matches)
             # fetch at most 20 match detail
             for match in my_matches:
                 match_detail = watcher.match.by_id(self.region, match)
@@ -62,7 +64,7 @@ class SearchMatch:
             print(self.match_details[0]['info']['game_datetime'])
             print(self.match_details[0]['info']['participants'][1].keys())
             print(self.match_details[0]['info']['participants'][2]['augments'])
-            print(self.match_details[0]['info']['participants'][2]['units'])"""
+            print(self.match_details[0]['info']['participants'][2]['traits'])"""
 
     # translate region given to api readable region
     def _translateRegion(self, region):

@@ -55,6 +55,8 @@ class gameStat:
 
     # return runes path given runeId
     def identify_runes(self, runeId):
+        if runeId == 8369:
+            return "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png"
         for i in self.runes:
             if i['id'] == runeId:
                 return i['icon']
