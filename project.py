@@ -5,17 +5,21 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
+from typing import List
 
 import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QPushButton
+
 import searchMatch
 import chart_test
 import time
 import gameStat
 
 
-
 class Ui_MainWindow(object):
+    levelButtons: list[QPushButton]
+
     def setupUi(self, MainWindow):
         self.gameStat = gameStat.gameStat()
         MainWindow.setObjectName("MainWindow")
@@ -42,11 +46,11 @@ class Ui_MainWindow(object):
         self.frame_2.setSizePolicy(sizePolicy)
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 100))
         self.frame_2.setStyleSheet("#frame_2{\n"
-"    \n"
-"    background-color: rgb(170, 255, 255);\n"
-"    \n"
-"    border-bottom: 3px solid rgb(0, 170, 255);\n"
-"}")
+                                   "    \n"
+                                   "    background-color: rgb(170, 255, 255);\n"
+                                   "    \n"
+                                   "    border-bottom: 3px solid rgb(0, 170, 255);\n"
+                                   "}")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -56,7 +60,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_5 = QtWidgets.QFrame(self.frame_2)
         self.frame_5.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.frame_5.setStyleSheet("")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -71,11 +74,10 @@ class Ui_MainWindow(object):
         self.formLayout_2.setObjectName("formLayout_2")
         self.pushButton = QtWidgets.QPushButton(self.frame_6)
         self.pushButton.setStyleSheet("#pushButton{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton.setText("")
+                                      "    border:none;\n"
+                                      "    \n"
+                                      "    \n"
+                                      "}")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("picture/24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
@@ -155,19 +157,19 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("#pushButton_2{\n"
-"    color : rgb(255, 255, 255);\n"
-"    \n"
-"    background-color: rgb(170, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                        "    color : rgb(255, 255, 255);\n"
+                                        "    \n"
+                                        "    background-color: rgb(170, 255, 255);\n"
+                                        "    border : none;\n"
+                                        "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_4.addWidget(self.pushButton_2)
         self.horizontalLayout.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
         self.frame_8.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_8.setStyleSheet("#frame_8{\n"
-"    border:none;\n"
-"}")
+                                   "    border:none;\n"
+                                   "}")
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
@@ -175,11 +177,10 @@ class Ui_MainWindow(object):
         self.formLayout.setObjectName("formLayout")
         self.pushButton_3 = QtWidgets.QPushButton(self.frame_8)
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_3.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("picture/23.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon1)
@@ -190,9 +191,9 @@ class Ui_MainWindow(object):
         self.frame_9 = QtWidgets.QFrame(self.frame_2)
         self.frame_9.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_9.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                   "    padding-top:5px;\n"
+                                   "    padding-left:5px;\n"
+                                   "}")
         self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
@@ -200,11 +201,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.pushButton_6 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_6.setStyleSheet("#pushButton_6{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_6.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("picture/27.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_6.setIcon(icon2)
@@ -213,11 +213,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.pushButton_6)
         self.pushButton_5 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_5.setStyleSheet("#pushButton_5{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_5.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("picture/26.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon3)
@@ -226,11 +225,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.pushButton_5)
         self.pushButton_4 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_4.setStyleSheet("#pushButton_4{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_4.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("picture/25.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_4.setIcon(icon4)
@@ -259,9 +257,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
         self.frame_13.setSizePolicy(sizePolicy)
         self.frame_13.setStyleSheet("#frame_13{\n"
-"    background-color:rgb(170, 255, 255);\n"
-"    border-right: 3px solid rgb(0, 170, 255);\n"
-"}")
+                                    "    background-color:rgb(170, 255, 255);\n"
+                                    "    border-right: 3px solid rgb(0, 170, 255);\n"
+                                    "}")
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_13.setObjectName("frame_13")
@@ -276,9 +274,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_15.sizePolicy().hasHeightForWidth())
         self.frame_15.setSizePolicy(sizePolicy)
         self.frame_15.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
@@ -293,13 +291,13 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_9.setFont(font)
         self.pushButton_9.setStyleSheet("#pushButton_9{\n"
-"    color:rgb(255, 255, 255);\n"
-"    border:none;\n"
-"    background-color: rgb(170, 255, 255);\n"
-"\n"
-"\n"
-"}    \n"
-"")
+                                        "    color:rgb(255, 255, 255);\n"
+                                        "    border:none;\n"
+                                        "    background-color: rgb(170, 255, 255);\n"
+                                        "\n"
+                                        "\n"
+                                        "}    \n"
+                                        "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("picture/29.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_9.setIcon(icon5)
@@ -314,9 +312,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_16.sizePolicy().hasHeightForWidth())
         self.frame_16.setSizePolicy(sizePolicy)
         self.frame_16.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
@@ -331,12 +329,12 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_10.setFont(font)
         self.pushButton_10.setStyleSheet("#pushButton_10{\n"
-"    color:rgb(255, 255, 255);\n"
-"    border:none;\n"
-"    background-color: rgb(170, 255, 255);\n"
-"\n"
-"}\n"
-"")
+                                         "    color:rgb(255, 255, 255);\n"
+                                         "    border:none;\n"
+                                         "    background-color: rgb(170, 255, 255);\n"
+                                         "\n"
+                                         "}\n"
+                                         "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("picture/30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_10.setIcon(icon6)
@@ -372,9 +370,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
         self.frame_14.setSizePolicy(sizePolicy)
         self.frame_14.setStyleSheet("#frame_14{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                    "    \n"
+                                    "    background-color: rgb(255, 255, 255);\n"
+                                    "}")
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
@@ -382,29 +380,28 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.stackedWidget = QtWidgets.QStackedWidget(self.frame_14)
         self.stackedWidget.setStyleSheet("#page{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_2{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_3{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"#page_4{\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_2{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_3{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}\n"
+                                         "\n"
+                                         "#page_4{\n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "}")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.pushButton_11 = QtWidgets.QPushButton(self.page)
         self.pushButton_11.setGeometry(QtCore.QRect(30, 100, 281, 261))
         self.pushButton_11.setStyleSheet("\n"
-"background-color: rgb(255, 255, 255);\n"
-"border:none")
-        self.pushButton_11.setText("")
+                                         "background-color: rgb(255, 255, 255);\n"
+                                         "border:none")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("picture/yasuo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_11.setIcon(icon7)
@@ -413,8 +410,8 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.page)
         self.lineEdit.setGeometry(QtCore.QRect(530, 210, 371, 71))
         self.lineEdit.setStyleSheet("\n"
-"    border : 3px solid rgb(211, 217, 255);\n"
-"")
+                                    "    border : 3px solid rgb(211, 217, 255);\n"
+                                    "")
         self.lineEdit.setObjectName("lineEdit")
         self.pushButton_12 = QtWidgets.QPushButton(self.page)
         self.pushButton_12.setGeometry(QtCore.QRect(350, 0, 461, 81))
@@ -482,11 +479,11 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_12.setFont(font)
         self.pushButton_12.setStyleSheet("#pushButton_12{\n"
-"    color : rgb(0, 0, 0);\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                         "    color : rgb(0, 0, 0);\n"
+                                         "    \n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "    border : none;\n"
+                                         "}")
         self.pushButton_12.setObjectName("pushButton_12")
         self.comboBox_3 = QtWidgets.QComboBox(self.page)
         self.comboBox_3.setGeometry(QtCore.QRect(390, 210, 141, 71))
@@ -496,7 +493,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_3.setFont(font)
         self.comboBox_3.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-"    border : 3px solid rgb(211, 217, 255);")
+                                      "    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_3.setObjectName("comboBox_3")
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
@@ -541,8 +538,8 @@ class Ui_MainWindow(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.page_2)
         self.lineEdit_2.setGeometry(QtCore.QRect(550, 220, 371, 71))
         self.lineEdit_2.setStyleSheet("\n"
-"    border : 3px solid rgb(211, 217, 255);\n"
-"")
+                                      "    border : 3px solid rgb(211, 217, 255);\n"
+                                      "")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.comboBox_2 = QtWidgets.QComboBox(self.page_2)
         self.comboBox_2.setGeometry(QtCore.QRect(410, 220, 141, 71))
@@ -552,7 +549,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_2.setFont(font)
         self.comboBox_2.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-"    border : 3px solid rgb(211, 217, 255);")
+                                      "    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_2.setObjectName("comboBox_2")
         self.comboBox_2.addItem("")
         self.comboBox_2.addItem("")
@@ -637,18 +634,17 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_13.setFont(font)
         self.pushButton_13.setStyleSheet("#pushButton_13{\n"
-"    color : rgb(0, 0, 0);\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border : none;\n"
-"}")
+                                         "    color : rgb(0, 0, 0);\n"
+                                         "    \n"
+                                         "    background-color: rgb(255, 255, 255);\n"
+                                         "    border : none;\n"
+                                         "}")
         self.pushButton_13.setObjectName("pushButton_13")
         self.pushButton_14 = QtWidgets.QPushButton(self.page_2)
         self.pushButton_14.setGeometry(QtCore.QRect(30, 100, 261, 251))
         self.pushButton_14.setStyleSheet("\n"
-"background-color: rgb(255, 255, 255);\n"
-"border:none")
-        self.pushButton_14.setText("")
+                                         "background-color: rgb(255, 255, 255);\n"
+                                         "border:none")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("picture/TFT.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_14.setIcon(icon8)
@@ -685,18 +681,16 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
         self.scrollArea.setSizePolicy(sizePolicy)
-        self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(-11, -81, 967, 1290))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 967, 1290))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.groupBox_2 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_2.setMinimumSize(QtCore.QSize(941, 171))
         self.groupBox_2.setMaximumSize(QtCore.QSize(941, 171))
-        self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.groupBox_2)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
@@ -739,7 +733,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_40.setFont(font)
         self.pushButton_40.setStyleSheet("background-color: rgb(137, 194, 255);\n"
-"color : rgb(255, 255, 255);")
+                                         "color : rgb(255, 255, 255);")
         self.pushButton_40.setObjectName("pushButton_40")
         self.horizontalLayout_9.addWidget(self.frame_26)
         self.frame_27 = QtWidgets.QFrame(self.groupBox_2)
@@ -753,7 +747,6 @@ class Ui_MainWindow(object):
         self.frame_27.setObjectName("frame_27")
         self.pushButton_41 = QtWidgets.QPushButton(self.frame_27)
         self.pushButton_41.setGeometry(QtCore.QRect(40, 0, 101, 101))
-        self.pushButton_41.setText("")
         icon10 = QtGui.QIcon()
         icon10.addPixmap(QtGui.QPixmap("profileicon/5290.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_41.setIcon(icon10)
@@ -781,7 +774,6 @@ class Ui_MainWindow(object):
         self.frame_28.setObjectName("frame_28")
         self.pushButton_42 = QtWidgets.QPushButton(self.frame_28)
         self.pushButton_42.setGeometry(QtCore.QRect(40, 0, 131, 131))
-        self.pushButton_42.setText("")
         icon11 = QtGui.QIcon()
         icon11.addPixmap(QtGui.QPixmap("profileicon/4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_42.setIcon(icon11)
@@ -816,7 +808,6 @@ class Ui_MainWindow(object):
         self.groupBox.setMinimumSize(QtCore.QSize(941, 191))
         self.groupBox.setMaximumSize(QtCore.QSize(16777215, 191))
         self.groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
-        self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.frame_23 = QtWidgets.QFrame(self.groupBox)
         self.frame_23.setGeometry(QtCore.QRect(649, 20, 281, 161))
@@ -832,7 +823,6 @@ class Ui_MainWindow(object):
         self.frame_24.setObjectName("frame_24")
         self.pushButton_30 = QtWidgets.QPushButton(self.frame_24)
         self.pushButton_30.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_30.setText("")
         icon12 = QtGui.QIcon()
         icon12.addPixmap(QtGui.QPixmap("champion-icon/26.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_30.setIcon(icon12)
@@ -840,25 +830,21 @@ class Ui_MainWindow(object):
         self.pushButton_30.setObjectName("pushButton_30")
         self.pushButton_31 = QtWidgets.QPushButton(self.frame_24)
         self.pushButton_31.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_31.setText("")
         self.pushButton_31.setIcon(icon12)
         self.pushButton_31.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_31.setObjectName("pushButton_31")
         self.pushButton_32 = QtWidgets.QPushButton(self.frame_24)
         self.pushButton_32.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_32.setText("")
         self.pushButton_32.setIcon(icon12)
         self.pushButton_32.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_32.setObjectName("pushButton_32")
         self.pushButton_33 = QtWidgets.QPushButton(self.frame_24)
         self.pushButton_33.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_33.setText("")
         self.pushButton_33.setIcon(icon12)
         self.pushButton_33.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_33.setObjectName("pushButton_33")
         self.pushButton_34 = QtWidgets.QPushButton(self.frame_24)
         self.pushButton_34.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_34.setText("")
         self.pushButton_34.setIcon(icon12)
         self.pushButton_34.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_34.setObjectName("pushButton_34")
@@ -889,31 +875,26 @@ class Ui_MainWindow(object):
         self.frame_25.setObjectName("frame_25")
         self.pushButton_35 = QtWidgets.QPushButton(self.frame_25)
         self.pushButton_35.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_35.setText("")
         self.pushButton_35.setIcon(icon12)
         self.pushButton_35.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_35.setObjectName("pushButton_35")
         self.pushButton_36 = QtWidgets.QPushButton(self.frame_25)
         self.pushButton_36.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_36.setText("")
         self.pushButton_36.setIcon(icon12)
         self.pushButton_36.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_36.setObjectName("pushButton_36")
         self.pushButton_37 = QtWidgets.QPushButton(self.frame_25)
         self.pushButton_37.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_37.setText("")
         self.pushButton_37.setIcon(icon12)
         self.pushButton_37.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_37.setObjectName("pushButton_37")
         self.pushButton_38 = QtWidgets.QPushButton(self.frame_25)
         self.pushButton_38.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_38.setText("")
         self.pushButton_38.setIcon(icon12)
         self.pushButton_38.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_38.setObjectName("pushButton_38")
         self.pushButton_39 = QtWidgets.QPushButton(self.frame_25)
         self.pushButton_39.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_39.setText("")
         self.pushButton_39.setIcon(icon12)
         self.pushButton_39.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_39.setObjectName("pushButton_39")
@@ -956,10 +937,9 @@ class Ui_MainWindow(object):
         self.pushButton_25 = QtWidgets.QPushButton(self.frame_21)
         self.pushButton_25.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_25.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_25.setText("")
+                                         "        border-radius: 50px;\n"
+                                         "        \n"
+                                         "    }")
         icon13 = QtGui.QIcon()
         icon13.addPixmap(QtGui.QPixmap("champion-icon/13.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_25.setIcon(icon13)
@@ -974,13 +954,11 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName("label_5")
         self.pushButton_26 = QtWidgets.QPushButton(self.frame_21)
         self.pushButton_26.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_26.setText("")
         self.pushButton_26.setIcon(icon11)
         self.pushButton_26.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_26.setObjectName("pushButton_26")
         self.pushButton_27 = QtWidgets.QPushButton(self.frame_21)
         self.pushButton_27.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_27.setText("")
         icon14 = QtGui.QIcon()
         icon14.addPixmap(QtGui.QPixmap("profileicon/5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_27.setIcon(icon14)
@@ -1005,13 +983,11 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.pushButton_28 = QtWidgets.QPushButton(self.frame_21)
         self.pushButton_28.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_28.setText("")
         self.pushButton_28.setIcon(icon9)
         self.pushButton_28.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_28.setObjectName("pushButton_28")
         self.pushButton_29 = QtWidgets.QPushButton(self.frame_21)
         self.pushButton_29.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_29.setText("")
         icon15 = QtGui.QIcon()
         icon15.addPixmap(QtGui.QPixmap("profileicon/10.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_29.setIcon(icon15)
@@ -1029,13 +1005,11 @@ class Ui_MainWindow(object):
         self.frame_22.setObjectName("frame_22")
         self.pushButton_18 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_18.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_18.setText("")
         self.pushButton_18.setIcon(icon12)
         self.pushButton_18.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_18.setObjectName("pushButton_18")
         self.pushButton_19 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_19.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_19.setText("")
         icon16 = QtGui.QIcon()
         icon16.addPixmap(QtGui.QPixmap("champion-icon/6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_19.setIcon(icon16)
@@ -1043,7 +1017,6 @@ class Ui_MainWindow(object):
         self.pushButton_19.setObjectName("pushButton_19")
         self.pushButton_20 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_20.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_20.setText("")
         icon17 = QtGui.QIcon()
         icon17.addPixmap(QtGui.QPixmap("champion-icon/1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_20.setIcon(icon17)
@@ -1051,7 +1024,6 @@ class Ui_MainWindow(object):
         self.pushButton_20.setObjectName("pushButton_20")
         self.pushButton_21 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_21.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_21.setText("")
         icon18 = QtGui.QIcon()
         icon18.addPixmap(QtGui.QPixmap("champion-icon/8.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_21.setIcon(icon18)
@@ -1059,7 +1031,6 @@ class Ui_MainWindow(object):
         self.pushButton_21.setObjectName("pushButton_21")
         self.pushButton_22 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_22.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_22.setText("")
         icon19 = QtGui.QIcon()
         icon19.addPixmap(QtGui.QPixmap("champion-icon/11.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_22.setIcon(icon19)
@@ -1067,7 +1038,6 @@ class Ui_MainWindow(object):
         self.pushButton_22.setObjectName("pushButton_22")
         self.pushButton_23 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_23.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_23.setText("")
         icon20 = QtGui.QIcon()
         icon20.addPixmap(QtGui.QPixmap("champion-icon/3.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_23.setIcon(icon20)
@@ -1076,12 +1046,11 @@ class Ui_MainWindow(object):
         self.pushButton_24 = QtWidgets.QPushButton(self.frame_22)
         self.pushButton_24.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_24.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_24.setText("")
+                                         "        border-radius: 16px;\n"
+                                         "        \n"
+                                         "        \n"
+                                         "    background-color: rgb(0, 170, 255);\n"
+                                         "    }")
         icon21 = QtGui.QIcon()
         icon21.addPixmap(QtGui.QPixmap("profileicon/5506.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_24.setIcon(icon21)
@@ -1145,7 +1114,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addWidget(self.groupBox)
         self.groupBox_3 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_3.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_3.setTitle("")
+        self.groupBox_3.setStyleSheet("background-color: rgb(255, 103, 89);")
         self.groupBox_3.setObjectName("groupBox_3")
         self.layoutWidget_11 = QtWidgets.QWidget(self.groupBox_3)
         self.layoutWidget_11.setGeometry(QtCore.QRect(10, 10, 191, 161))
@@ -1219,10 +1188,9 @@ class Ui_MainWindow(object):
         self.pushButton_174 = QtWidgets.QPushButton(self.frame_57)
         self.pushButton_174.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_174.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_174.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_174.setIcon(icon13)
         self.pushButton_174.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_174.setObjectName("pushButton_174")
@@ -1235,13 +1203,11 @@ class Ui_MainWindow(object):
         self.label_79.setObjectName("label_79")
         self.pushButton_175 = QtWidgets.QPushButton(self.frame_57)
         self.pushButton_175.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_175.setText("")
         self.pushButton_175.setIcon(icon11)
         self.pushButton_175.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_175.setObjectName("pushButton_175")
         self.pushButton_176 = QtWidgets.QPushButton(self.frame_57)
         self.pushButton_176.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_176.setText("")
         self.pushButton_176.setIcon(icon14)
         self.pushButton_176.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_176.setObjectName("pushButton_176")
@@ -1264,13 +1230,11 @@ class Ui_MainWindow(object):
         self.label_81.setObjectName("label_81")
         self.pushButton_177 = QtWidgets.QPushButton(self.frame_57)
         self.pushButton_177.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_177.setText("")
         self.pushButton_177.setIcon(icon9)
         self.pushButton_177.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_177.setObjectName("pushButton_177")
         self.pushButton_178 = QtWidgets.QPushButton(self.frame_57)
         self.pushButton_178.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_178.setText("")
         self.pushButton_178.setIcon(icon15)
         self.pushButton_178.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_178.setObjectName("pushButton_178")
@@ -1286,49 +1250,42 @@ class Ui_MainWindow(object):
         self.frame_58.setObjectName("frame_58")
         self.pushButton_179 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_179.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_179.setText("")
         self.pushButton_179.setIcon(icon12)
         self.pushButton_179.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_179.setObjectName("pushButton_179")
         self.pushButton_180 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_180.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_180.setText("")
         self.pushButton_180.setIcon(icon16)
         self.pushButton_180.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_180.setObjectName("pushButton_180")
         self.pushButton_181 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_181.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_181.setText("")
         self.pushButton_181.setIcon(icon17)
         self.pushButton_181.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_181.setObjectName("pushButton_181")
         self.pushButton_182 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_182.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_182.setText("")
         self.pushButton_182.setIcon(icon18)
         self.pushButton_182.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_182.setObjectName("pushButton_182")
         self.pushButton_183 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_183.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_183.setText("")
         self.pushButton_183.setIcon(icon19)
         self.pushButton_183.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_183.setObjectName("pushButton_183")
         self.pushButton_184 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_184.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_184.setText("")
         self.pushButton_184.setIcon(icon20)
         self.pushButton_184.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_184.setObjectName("pushButton_184")
         self.pushButton_185 = QtWidgets.QPushButton(self.frame_58)
         self.pushButton_185.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_185.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_185.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_185.setIcon(icon21)
         self.pushButton_185.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_185.setObjectName("pushButton_185")
@@ -1347,31 +1304,26 @@ class Ui_MainWindow(object):
         self.frame_74.setObjectName("frame_74")
         self.pushButton_186 = QtWidgets.QPushButton(self.frame_74)
         self.pushButton_186.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_186.setText("")
         self.pushButton_186.setIcon(icon12)
         self.pushButton_186.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_186.setObjectName("pushButton_186")
         self.pushButton_187 = QtWidgets.QPushButton(self.frame_74)
         self.pushButton_187.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_187.setText("")
         self.pushButton_187.setIcon(icon12)
         self.pushButton_187.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_187.setObjectName("pushButton_187")
         self.pushButton_188 = QtWidgets.QPushButton(self.frame_74)
         self.pushButton_188.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_188.setText("")
         self.pushButton_188.setIcon(icon12)
         self.pushButton_188.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_188.setObjectName("pushButton_188")
         self.pushButton_189 = QtWidgets.QPushButton(self.frame_74)
         self.pushButton_189.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_189.setText("")
         self.pushButton_189.setIcon(icon12)
         self.pushButton_189.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_189.setObjectName("pushButton_189")
         self.pushButton_190 = QtWidgets.QPushButton(self.frame_74)
         self.pushButton_190.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_190.setText("")
         self.pushButton_190.setIcon(icon12)
         self.pushButton_190.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_190.setObjectName("pushButton_190")
@@ -1402,31 +1354,26 @@ class Ui_MainWindow(object):
         self.frame_75.setObjectName("frame_75")
         self.pushButton_191 = QtWidgets.QPushButton(self.frame_75)
         self.pushButton_191.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_191.setText("")
         self.pushButton_191.setIcon(icon12)
         self.pushButton_191.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_191.setObjectName("pushButton_191")
         self.pushButton_192 = QtWidgets.QPushButton(self.frame_75)
         self.pushButton_192.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_192.setText("")
         self.pushButton_192.setIcon(icon12)
         self.pushButton_192.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_192.setObjectName("pushButton_192")
         self.pushButton_193 = QtWidgets.QPushButton(self.frame_75)
         self.pushButton_193.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_193.setText("")
         self.pushButton_193.setIcon(icon12)
         self.pushButton_193.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_193.setObjectName("pushButton_193")
         self.pushButton_194 = QtWidgets.QPushButton(self.frame_75)
         self.pushButton_194.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_194.setText("")
         self.pushButton_194.setIcon(icon12)
         self.pushButton_194.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_194.setObjectName("pushButton_194")
         self.pushButton_195 = QtWidgets.QPushButton(self.frame_75)
         self.pushButton_195.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_195.setText("")
         self.pushButton_195.setIcon(icon12)
         self.pushButton_195.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_195.setObjectName("pushButton_195")
@@ -1454,7 +1401,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addWidget(self.groupBox_3)
         self.groupBox_5 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_5.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_5.setTitle("")
         self.groupBox_5.setObjectName("groupBox_5")
         self.layoutWidget_20 = QtWidgets.QWidget(self.groupBox_5)
         self.layoutWidget_20.setGeometry(QtCore.QRect(10, 10, 191, 161))
@@ -1528,10 +1474,9 @@ class Ui_MainWindow(object):
         self.pushButton_196 = QtWidgets.QPushButton(self.frame_99)
         self.pushButton_196.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_196.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_196.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_196.setIcon(icon13)
         self.pushButton_196.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_196.setObjectName("pushButton_196")
@@ -1544,13 +1489,11 @@ class Ui_MainWindow(object):
         self.label_187.setObjectName("label_187")
         self.pushButton_197 = QtWidgets.QPushButton(self.frame_99)
         self.pushButton_197.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_197.setText("")
         self.pushButton_197.setIcon(icon11)
         self.pushButton_197.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_197.setObjectName("pushButton_197")
         self.pushButton_268 = QtWidgets.QPushButton(self.frame_99)
         self.pushButton_268.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_268.setText("")
         self.pushButton_268.setIcon(icon14)
         self.pushButton_268.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_268.setObjectName("pushButton_268")
@@ -1573,13 +1516,11 @@ class Ui_MainWindow(object):
         self.label_189.setObjectName("label_189")
         self.pushButton_269 = QtWidgets.QPushButton(self.frame_99)
         self.pushButton_269.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_269.setText("")
         self.pushButton_269.setIcon(icon9)
         self.pushButton_269.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_269.setObjectName("pushButton_269")
         self.pushButton_270 = QtWidgets.QPushButton(self.frame_99)
         self.pushButton_270.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_270.setText("")
         self.pushButton_270.setIcon(icon15)
         self.pushButton_270.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_270.setObjectName("pushButton_270")
@@ -1595,49 +1536,42 @@ class Ui_MainWindow(object):
         self.frame_100.setObjectName("frame_100")
         self.pushButton_271 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_271.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_271.setText("")
         self.pushButton_271.setIcon(icon12)
         self.pushButton_271.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_271.setObjectName("pushButton_271")
         self.pushButton_272 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_272.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_272.setText("")
         self.pushButton_272.setIcon(icon16)
         self.pushButton_272.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_272.setObjectName("pushButton_272")
         self.pushButton_273 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_273.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_273.setText("")
         self.pushButton_273.setIcon(icon17)
         self.pushButton_273.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_273.setObjectName("pushButton_273")
         self.pushButton_274 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_274.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_274.setText("")
         self.pushButton_274.setIcon(icon18)
         self.pushButton_274.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_274.setObjectName("pushButton_274")
         self.pushButton_275 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_275.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_275.setText("")
         self.pushButton_275.setIcon(icon19)
         self.pushButton_275.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_275.setObjectName("pushButton_275")
         self.pushButton_276 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_276.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_276.setText("")
         self.pushButton_276.setIcon(icon20)
         self.pushButton_276.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_276.setObjectName("pushButton_276")
         self.pushButton_277 = QtWidgets.QPushButton(self.frame_100)
         self.pushButton_277.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_277.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_277.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_277.setIcon(icon21)
         self.pushButton_277.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_277.setObjectName("pushButton_277")
@@ -1656,31 +1590,26 @@ class Ui_MainWindow(object):
         self.frame_102.setObjectName("frame_102")
         self.pushButton_278 = QtWidgets.QPushButton(self.frame_102)
         self.pushButton_278.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_278.setText("")
         self.pushButton_278.setIcon(icon12)
         self.pushButton_278.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_278.setObjectName("pushButton_278")
         self.pushButton_279 = QtWidgets.QPushButton(self.frame_102)
         self.pushButton_279.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_279.setText("")
         self.pushButton_279.setIcon(icon12)
         self.pushButton_279.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_279.setObjectName("pushButton_279")
         self.pushButton_280 = QtWidgets.QPushButton(self.frame_102)
         self.pushButton_280.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_280.setText("")
         self.pushButton_280.setIcon(icon12)
         self.pushButton_280.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_280.setObjectName("pushButton_280")
         self.pushButton_281 = QtWidgets.QPushButton(self.frame_102)
         self.pushButton_281.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_281.setText("")
         self.pushButton_281.setIcon(icon12)
         self.pushButton_281.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_281.setObjectName("pushButton_281")
         self.pushButton_282 = QtWidgets.QPushButton(self.frame_102)
         self.pushButton_282.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_282.setText("")
         self.pushButton_282.setIcon(icon12)
         self.pushButton_282.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_282.setObjectName("pushButton_282")
@@ -1711,31 +1640,26 @@ class Ui_MainWindow(object):
         self.frame_103.setObjectName("frame_103")
         self.pushButton_283 = QtWidgets.QPushButton(self.frame_103)
         self.pushButton_283.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_283.setText("")
         self.pushButton_283.setIcon(icon12)
         self.pushButton_283.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_283.setObjectName("pushButton_283")
         self.pushButton_284 = QtWidgets.QPushButton(self.frame_103)
         self.pushButton_284.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_284.setText("")
         self.pushButton_284.setIcon(icon12)
         self.pushButton_284.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_284.setObjectName("pushButton_284")
         self.pushButton_285 = QtWidgets.QPushButton(self.frame_103)
         self.pushButton_285.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_285.setText("")
         self.pushButton_285.setIcon(icon12)
         self.pushButton_285.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_285.setObjectName("pushButton_285")
         self.pushButton_286 = QtWidgets.QPushButton(self.frame_103)
         self.pushButton_286.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_286.setText("")
         self.pushButton_286.setIcon(icon12)
         self.pushButton_286.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_286.setObjectName("pushButton_286")
         self.pushButton_287 = QtWidgets.QPushButton(self.frame_103)
         self.pushButton_287.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_287.setText("")
         self.pushButton_287.setIcon(icon12)
         self.pushButton_287.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_287.setObjectName("pushButton_287")
@@ -1763,7 +1687,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addWidget(self.groupBox_5)
         self.groupBox_12 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_12.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_12.setTitle("")
         self.groupBox_12.setObjectName("groupBox_12")
         self.layoutWidget_22 = QtWidgets.QWidget(self.groupBox_12)
         self.layoutWidget_22.setGeometry(QtCore.QRect(10, 10, 191, 161))
@@ -1837,10 +1760,9 @@ class Ui_MainWindow(object):
         self.pushButton_321 = QtWidgets.QPushButton(self.frame_108)
         self.pushButton_321.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_321.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_321.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_321.setIcon(icon13)
         self.pushButton_321.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_321.setObjectName("pushButton_321")
@@ -1853,13 +1775,11 @@ class Ui_MainWindow(object):
         self.label_210.setObjectName("label_210")
         self.pushButton_322 = QtWidgets.QPushButton(self.frame_108)
         self.pushButton_322.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_322.setText("")
         self.pushButton_322.setIcon(icon11)
         self.pushButton_322.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_322.setObjectName("pushButton_322")
         self.pushButton_323 = QtWidgets.QPushButton(self.frame_108)
         self.pushButton_323.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_323.setText("")
         self.pushButton_323.setIcon(icon14)
         self.pushButton_323.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_323.setObjectName("pushButton_323")
@@ -1882,13 +1802,11 @@ class Ui_MainWindow(object):
         self.label_212.setObjectName("label_212")
         self.pushButton_324 = QtWidgets.QPushButton(self.frame_108)
         self.pushButton_324.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_324.setText("")
         self.pushButton_324.setIcon(icon9)
         self.pushButton_324.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_324.setObjectName("pushButton_324")
         self.pushButton_325 = QtWidgets.QPushButton(self.frame_108)
         self.pushButton_325.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_325.setText("")
         self.pushButton_325.setIcon(icon15)
         self.pushButton_325.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_325.setObjectName("pushButton_325")
@@ -1904,49 +1822,42 @@ class Ui_MainWindow(object):
         self.frame_109.setObjectName("frame_109")
         self.pushButton_326 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_326.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_326.setText("")
         self.pushButton_326.setIcon(icon12)
         self.pushButton_326.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_326.setObjectName("pushButton_326")
         self.pushButton_327 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_327.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_327.setText("")
         self.pushButton_327.setIcon(icon16)
         self.pushButton_327.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_327.setObjectName("pushButton_327")
         self.pushButton_328 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_328.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_328.setText("")
         self.pushButton_328.setIcon(icon17)
         self.pushButton_328.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_328.setObjectName("pushButton_328")
         self.pushButton_329 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_329.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_329.setText("")
         self.pushButton_329.setIcon(icon18)
         self.pushButton_329.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_329.setObjectName("pushButton_329")
         self.pushButton_330 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_330.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_330.setText("")
         self.pushButton_330.setIcon(icon19)
         self.pushButton_330.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_330.setObjectName("pushButton_330")
         self.pushButton_331 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_331.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_331.setText("")
         self.pushButton_331.setIcon(icon20)
         self.pushButton_331.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_331.setObjectName("pushButton_331")
         self.pushButton_332 = QtWidgets.QPushButton(self.frame_109)
         self.pushButton_332.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_332.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_332.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_332.setIcon(icon21)
         self.pushButton_332.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_332.setObjectName("pushButton_332")
@@ -1965,31 +1876,26 @@ class Ui_MainWindow(object):
         self.frame_113.setObjectName("frame_113")
         self.pushButton_345 = QtWidgets.QPushButton(self.frame_113)
         self.pushButton_345.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_345.setText("")
         self.pushButton_345.setIcon(icon12)
         self.pushButton_345.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_345.setObjectName("pushButton_345")
         self.pushButton_346 = QtWidgets.QPushButton(self.frame_113)
         self.pushButton_346.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_346.setText("")
         self.pushButton_346.setIcon(icon12)
         self.pushButton_346.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_346.setObjectName("pushButton_346")
         self.pushButton_347 = QtWidgets.QPushButton(self.frame_113)
         self.pushButton_347.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_347.setText("")
         self.pushButton_347.setIcon(icon12)
         self.pushButton_347.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_347.setObjectName("pushButton_347")
         self.pushButton_348 = QtWidgets.QPushButton(self.frame_113)
         self.pushButton_348.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_348.setText("")
         self.pushButton_348.setIcon(icon12)
         self.pushButton_348.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_348.setObjectName("pushButton_348")
         self.pushButton_349 = QtWidgets.QPushButton(self.frame_113)
         self.pushButton_349.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_349.setText("")
         self.pushButton_349.setIcon(icon12)
         self.pushButton_349.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_349.setObjectName("pushButton_349")
@@ -2020,31 +1926,26 @@ class Ui_MainWindow(object):
         self.frame_114.setObjectName("frame_114")
         self.pushButton_350 = QtWidgets.QPushButton(self.frame_114)
         self.pushButton_350.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_350.setText("")
         self.pushButton_350.setIcon(icon12)
         self.pushButton_350.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_350.setObjectName("pushButton_350")
         self.pushButton_351 = QtWidgets.QPushButton(self.frame_114)
         self.pushButton_351.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_351.setText("")
         self.pushButton_351.setIcon(icon12)
         self.pushButton_351.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_351.setObjectName("pushButton_351")
         self.pushButton_352 = QtWidgets.QPushButton(self.frame_114)
         self.pushButton_352.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_352.setText("")
         self.pushButton_352.setIcon(icon12)
         self.pushButton_352.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_352.setObjectName("pushButton_352")
         self.pushButton_353 = QtWidgets.QPushButton(self.frame_114)
         self.pushButton_353.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_353.setText("")
         self.pushButton_353.setIcon(icon12)
         self.pushButton_353.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_353.setObjectName("pushButton_353")
         self.pushButton_354 = QtWidgets.QPushButton(self.frame_114)
         self.pushButton_354.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_354.setText("")
         self.pushButton_354.setIcon(icon12)
         self.pushButton_354.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_354.setObjectName("pushButton_354")
@@ -2072,7 +1973,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addWidget(self.groupBox_12)
         self.groupBox_13 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_13.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_13.setTitle("")
         self.groupBox_13.setObjectName("groupBox_13")
         self.layoutWidget_23 = QtWidgets.QWidget(self.groupBox_13)
         self.layoutWidget_23.setGeometry(QtCore.QRect(10, 10, 191, 161))
@@ -2146,10 +2046,9 @@ class Ui_MainWindow(object):
         self.pushButton_333 = QtWidgets.QPushButton(self.frame_110)
         self.pushButton_333.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_333.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_333.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_333.setIcon(icon13)
         self.pushButton_333.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_333.setObjectName("pushButton_333")
@@ -2162,13 +2061,11 @@ class Ui_MainWindow(object):
         self.label_213.setObjectName("label_213")
         self.pushButton_334 = QtWidgets.QPushButton(self.frame_110)
         self.pushButton_334.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_334.setText("")
         self.pushButton_334.setIcon(icon11)
         self.pushButton_334.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_334.setObjectName("pushButton_334")
         self.pushButton_335 = QtWidgets.QPushButton(self.frame_110)
         self.pushButton_335.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_335.setText("")
         self.pushButton_335.setIcon(icon14)
         self.pushButton_335.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_335.setObjectName("pushButton_335")
@@ -2191,13 +2088,11 @@ class Ui_MainWindow(object):
         self.label_215.setObjectName("label_215")
         self.pushButton_336 = QtWidgets.QPushButton(self.frame_110)
         self.pushButton_336.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_336.setText("")
         self.pushButton_336.setIcon(icon9)
         self.pushButton_336.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_336.setObjectName("pushButton_336")
         self.pushButton_337 = QtWidgets.QPushButton(self.frame_110)
         self.pushButton_337.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_337.setText("")
         self.pushButton_337.setIcon(icon15)
         self.pushButton_337.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_337.setObjectName("pushButton_337")
@@ -2213,49 +2108,42 @@ class Ui_MainWindow(object):
         self.frame_111.setObjectName("frame_111")
         self.pushButton_338 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_338.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_338.setText("")
         self.pushButton_338.setIcon(icon12)
         self.pushButton_338.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_338.setObjectName("pushButton_338")
         self.pushButton_339 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_339.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_339.setText("")
         self.pushButton_339.setIcon(icon16)
         self.pushButton_339.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_339.setObjectName("pushButton_339")
         self.pushButton_340 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_340.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_340.setText("")
         self.pushButton_340.setIcon(icon17)
         self.pushButton_340.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_340.setObjectName("pushButton_340")
         self.pushButton_341 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_341.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_341.setText("")
         self.pushButton_341.setIcon(icon18)
         self.pushButton_341.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_341.setObjectName("pushButton_341")
         self.pushButton_342 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_342.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_342.setText("")
         self.pushButton_342.setIcon(icon19)
         self.pushButton_342.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_342.setObjectName("pushButton_342")
         self.pushButton_343 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_343.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_343.setText("")
         self.pushButton_343.setIcon(icon20)
         self.pushButton_343.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_343.setObjectName("pushButton_343")
         self.pushButton_344 = QtWidgets.QPushButton(self.frame_111)
         self.pushButton_344.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_344.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_344.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_344.setIcon(icon21)
         self.pushButton_344.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_344.setObjectName("pushButton_344")
@@ -2274,31 +2162,26 @@ class Ui_MainWindow(object):
         self.frame_116.setObjectName("frame_116")
         self.pushButton_355 = QtWidgets.QPushButton(self.frame_116)
         self.pushButton_355.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_355.setText("")
         self.pushButton_355.setIcon(icon12)
         self.pushButton_355.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_355.setObjectName("pushButton_355")
         self.pushButton_356 = QtWidgets.QPushButton(self.frame_116)
         self.pushButton_356.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_356.setText("")
         self.pushButton_356.setIcon(icon12)
         self.pushButton_356.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_356.setObjectName("pushButton_356")
         self.pushButton_357 = QtWidgets.QPushButton(self.frame_116)
         self.pushButton_357.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_357.setText("")
         self.pushButton_357.setIcon(icon12)
         self.pushButton_357.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_357.setObjectName("pushButton_357")
         self.pushButton_358 = QtWidgets.QPushButton(self.frame_116)
         self.pushButton_358.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_358.setText("")
         self.pushButton_358.setIcon(icon12)
         self.pushButton_358.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_358.setObjectName("pushButton_358")
         self.pushButton_359 = QtWidgets.QPushButton(self.frame_116)
         self.pushButton_359.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_359.setText("")
         self.pushButton_359.setIcon(icon12)
         self.pushButton_359.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_359.setObjectName("pushButton_359")
@@ -2329,31 +2212,26 @@ class Ui_MainWindow(object):
         self.frame_117.setObjectName("frame_117")
         self.pushButton_360 = QtWidgets.QPushButton(self.frame_117)
         self.pushButton_360.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_360.setText("")
         self.pushButton_360.setIcon(icon12)
         self.pushButton_360.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_360.setObjectName("pushButton_360")
         self.pushButton_361 = QtWidgets.QPushButton(self.frame_117)
         self.pushButton_361.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_361.setText("")
         self.pushButton_361.setIcon(icon12)
         self.pushButton_361.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_361.setObjectName("pushButton_361")
         self.pushButton_362 = QtWidgets.QPushButton(self.frame_117)
         self.pushButton_362.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_362.setText("")
         self.pushButton_362.setIcon(icon12)
         self.pushButton_362.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_362.setObjectName("pushButton_362")
         self.pushButton_363 = QtWidgets.QPushButton(self.frame_117)
         self.pushButton_363.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_363.setText("")
         self.pushButton_363.setIcon(icon12)
         self.pushButton_363.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_363.setObjectName("pushButton_363")
         self.pushButton_364 = QtWidgets.QPushButton(self.frame_117)
         self.pushButton_364.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_364.setText("")
         self.pushButton_364.setIcon(icon12)
         self.pushButton_364.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_364.setObjectName("pushButton_364")
@@ -2399,14 +2277,13 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 993, 1703))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, -72, 993, 1703))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.groupBox_4 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
         self.groupBox_4.setMinimumSize(QtCore.QSize(0, 150))
         self.groupBox_4.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_4.setTitle("")
         self.groupBox_4.setObjectName("groupBox_4")
         self.frame_118 = QtWidgets.QFrame(self.groupBox_4)
         self.frame_118.setGeometry(QtCore.QRect(30, 0, 561, 143))
@@ -2435,11 +2312,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_366.setFont(font)
         self.pushButton_366.setStyleSheet("background-color: rgb(137, 194, 255);\n"
-"color : rgb(255, 255, 255);")
+                                          "color : rgb(255, 255, 255);")
         self.pushButton_366.setObjectName("pushButton_366")
         self.pushButton_365 = QtWidgets.QPushButton(self.frame_118)
         self.pushButton_365.setGeometry(QtCore.QRect(30, 0, 101, 101))
-        self.pushButton_365.setText("")
         self.pushButton_365.setIcon(icon10)
         self.pushButton_365.setIconSize(QtCore.QSize(198, 100))
         self.pushButton_365.setObjectName("pushButton_365")
@@ -2468,416 +2344,6 @@ class Ui_MainWindow(object):
         self.label_21.setFont(font)
         self.label_21.setObjectName("label_21")
         self.verticalLayout_8.addWidget(self.label_21)
-        self.groupBox_6 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_6.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_6.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_6.setTitle("")
-        self.groupBox_6.setObjectName("groupBox_6")
-        self.frame_29 = QtWidgets.QFrame(self.groupBox_6)
-        self.frame_29.setGeometry(QtCore.QRect(10, 40, 241, 161))
-        self.frame_29.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_29.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_29.setObjectName("frame_29")
-        self.label_22 = QtWidgets.QLabel(self.frame_29)
-        self.label_22.setGeometry(QtCore.QRect(10, 10, 141, 41))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_22.setFont(font)
-        self.label_22.setObjectName("label_22")
-        self.label_23 = QtWidgets.QLabel(self.frame_29)
-        self.label_23.setGeometry(QtCore.QRect(10, 60, 81, 41))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_23.setFont(font)
-        self.label_23.setObjectName("label_23")
-        self.label_24 = QtWidgets.QLabel(self.frame_29)
-        self.label_24.setGeometry(QtCore.QRect(10, 100, 111, 41))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_24.setFont(font)
-        self.label_24.setObjectName("label_24")
-        self.frame_30 = QtWidgets.QFrame(self.groupBox_6)
-        self.frame_30.setGeometry(QtCore.QRect(260, 10, 711, 141))
-        self.frame_30.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_30.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_30.setObjectName("frame_30")
-        self.pushButton_44 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_44.setGeometry(QtCore.QRect(0, 30, 71, 71))
-        self.pushButton_44.setStyleSheet("")
-        self.pushButton_44.setText("")
-        self.pushButton_44.setIcon(icon12)
-        self.pushButton_44.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_44.setObjectName("pushButton_44")
-        self.pushButton_53 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_53.setGeometry(QtCore.QRect(20, 0, 31, 31))
-        self.pushButton_53.setStyleSheet("")
-        self.pushButton_53.setText("")
-        icon22 = QtGui.QIcon()
-        icon22.addPixmap(QtGui.QPixmap("picture/bronze.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_53.setIcon(icon22)
-        self.pushButton_53.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_53.setObjectName("pushButton_53")
-        self.pushButton_45 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_45.setGeometry(QtCore.QRect(80, 30, 71, 71))
-        self.pushButton_45.setText("")
-        self.pushButton_45.setIcon(icon12)
-        self.pushButton_45.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_45.setObjectName("pushButton_45")
-        self.pushButton_46 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_46.setGeometry(QtCore.QRect(150, 30, 71, 71))
-        self.pushButton_46.setText("")
-        self.pushButton_46.setIcon(icon12)
-        self.pushButton_46.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_46.setObjectName("pushButton_46")
-        self.pushButton_47 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_47.setGeometry(QtCore.QRect(230, 30, 71, 71))
-        self.pushButton_47.setText("")
-        self.pushButton_47.setIcon(icon12)
-        self.pushButton_47.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_47.setObjectName("pushButton_47")
-        self.pushButton_48 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_48.setGeometry(QtCore.QRect(310, 30, 71, 71))
-        self.pushButton_48.setText("")
-        self.pushButton_48.setIcon(icon12)
-        self.pushButton_48.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_48.setObjectName("pushButton_48")
-        self.pushButton_49 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_49.setGeometry(QtCore.QRect(390, 30, 71, 71))
-        self.pushButton_49.setText("")
-        self.pushButton_49.setIcon(icon12)
-        self.pushButton_49.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_49.setObjectName("pushButton_49")
-        self.pushButton_50 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_50.setGeometry(QtCore.QRect(470, 30, 71, 71))
-        self.pushButton_50.setText("")
-        self.pushButton_50.setIcon(icon12)
-        self.pushButton_50.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_50.setObjectName("pushButton_50")
-        self.pushButton_51 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_51.setGeometry(QtCore.QRect(550, 30, 71, 71))
-        self.pushButton_51.setText("")
-        self.pushButton_51.setIcon(icon12)
-        self.pushButton_51.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_51.setObjectName("pushButton_51")
-        self.pushButton_52 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_52.setGeometry(QtCore.QRect(630, 30, 71, 71))
-        self.pushButton_52.setText("")
-        self.pushButton_52.setIcon(icon12)
-        self.pushButton_52.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_52.setObjectName("pushButton_52")
-        self.pushButton_54 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_54.setGeometry(QtCore.QRect(100, 0, 31, 31))
-        self.pushButton_54.setStyleSheet("")
-        self.pushButton_54.setText("")
-        icon23 = QtGui.QIcon()
-        icon23.addPixmap(QtGui.QPixmap("picture/silver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_54.setIcon(icon23)
-        self.pushButton_54.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_54.setObjectName("pushButton_54")
-        self.pushButton_55 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_55.setGeometry(QtCore.QRect(170, 0, 31, 31))
-        self.pushButton_55.setStyleSheet("")
-        self.pushButton_55.setText("")
-        icon24 = QtGui.QIcon()
-        icon24.addPixmap(QtGui.QPixmap("picture/gold.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_55.setIcon(icon24)
-        self.pushButton_55.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_55.setObjectName("pushButton_55")
-        self.pushButton_288 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_288.setGeometry(QtCore.QRect(0, 100, 21, 21))
-        self.pushButton_288.setStyleSheet("")
-        self.pushButton_288.setText("")
-        self.pushButton_288.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_288.setObjectName("pushButton_288")
-        self.pushButton_289 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_289.setGeometry(QtCore.QRect(20, 100, 21, 21))
-        self.pushButton_289.setStyleSheet("")
-        self.pushButton_289.setText("")
-        self.pushButton_289.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_289.setObjectName("pushButton_289")
-        self.pushButton_290 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_290.setGeometry(QtCore.QRect(40, 100, 21, 21))
-        self.pushButton_290.setStyleSheet("")
-        self.pushButton_290.setText("")
-        self.pushButton_290.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_290.setObjectName("pushButton_290")
-        self.pushButton_291 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_291.setGeometry(QtCore.QRect(80, 100, 21, 21))
-        self.pushButton_291.setStyleSheet("")
-        self.pushButton_291.setText("")
-        self.pushButton_291.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_291.setObjectName("pushButton_291")
-        self.pushButton_292 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_292.setGeometry(QtCore.QRect(100, 100, 21, 21))
-        self.pushButton_292.setStyleSheet("")
-        self.pushButton_292.setText("")
-        self.pushButton_292.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_292.setObjectName("pushButton_292")
-        self.pushButton_293 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_293.setGeometry(QtCore.QRect(120, 100, 21, 21))
-        self.pushButton_293.setStyleSheet("")
-        self.pushButton_293.setText("")
-        self.pushButton_293.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_293.setObjectName("pushButton_293")
-        self.pushButton_294 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_294.setGeometry(QtCore.QRect(160, 100, 21, 21))
-        self.pushButton_294.setStyleSheet("")
-        self.pushButton_294.setText("")
-        self.pushButton_294.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_294.setObjectName("pushButton_294")
-        self.pushButton_295 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_295.setGeometry(QtCore.QRect(180, 100, 21, 21))
-        self.pushButton_295.setStyleSheet("")
-        self.pushButton_295.setText("")
-        self.pushButton_295.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_295.setObjectName("pushButton_295")
-        self.pushButton_296 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_296.setGeometry(QtCore.QRect(200, 100, 21, 21))
-        self.pushButton_296.setStyleSheet("")
-        self.pushButton_296.setText("")
-        self.pushButton_296.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_296.setObjectName("pushButton_296")
-        self.pushButton_297 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_297.setGeometry(QtCore.QRect(240, 100, 21, 21))
-        self.pushButton_297.setStyleSheet("")
-        self.pushButton_297.setText("")
-        self.pushButton_297.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_297.setObjectName("pushButton_297")
-        self.pushButton_298 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_298.setGeometry(QtCore.QRect(260, 100, 21, 21))
-        self.pushButton_298.setStyleSheet("")
-        self.pushButton_298.setText("")
-        self.pushButton_298.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_298.setObjectName("pushButton_298")
-        self.pushButton_299 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_299.setGeometry(QtCore.QRect(280, 100, 21, 21))
-        self.pushButton_299.setStyleSheet("")
-        self.pushButton_299.setText("")
-        self.pushButton_299.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_299.setObjectName("pushButton_299")
-        self.pushButton_300 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_300.setGeometry(QtCore.QRect(320, 100, 21, 21))
-        self.pushButton_300.setStyleSheet("")
-        self.pushButton_300.setText("")
-        self.pushButton_300.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_300.setObjectName("pushButton_300")
-        self.pushButton_301 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_301.setGeometry(QtCore.QRect(340, 100, 21, 21))
-        self.pushButton_301.setStyleSheet("")
-        self.pushButton_301.setText("")
-        self.pushButton_301.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_301.setObjectName("pushButton_301")
-        self.pushButton_302 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_302.setGeometry(QtCore.QRect(360, 100, 21, 21))
-        self.pushButton_302.setStyleSheet("")
-        self.pushButton_302.setText("")
-        self.pushButton_302.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_302.setObjectName("pushButton_302")
-        self.pushButton_303 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_303.setGeometry(QtCore.QRect(400, 100, 21, 21))
-        self.pushButton_303.setStyleSheet("")
-        self.pushButton_303.setText("")
-        self.pushButton_303.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_303.setObjectName("pushButton_303")
-        self.pushButton_304 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_304.setGeometry(QtCore.QRect(420, 100, 21, 21))
-        self.pushButton_304.setStyleSheet("")
-        self.pushButton_304.setText("")
-        self.pushButton_304.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_304.setObjectName("pushButton_304")
-        self.pushButton_305 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_305.setGeometry(QtCore.QRect(440, 100, 21, 21))
-        self.pushButton_305.setStyleSheet("")
-        self.pushButton_305.setText("")
-        self.pushButton_305.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_305.setObjectName("pushButton_305")
-        self.pushButton_306 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_306.setGeometry(QtCore.QRect(470, 100, 21, 21))
-        self.pushButton_306.setStyleSheet("")
-        self.pushButton_306.setText("")
-        self.pushButton_306.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_306.setObjectName("pushButton_306")
-        self.pushButton_307 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_307.setGeometry(QtCore.QRect(490, 100, 21, 21))
-        self.pushButton_307.setStyleSheet("")
-        self.pushButton_307.setText("")
-        self.pushButton_307.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_307.setObjectName("pushButton_307")
-        self.pushButton_308 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_308.setGeometry(QtCore.QRect(510, 100, 21, 21))
-        self.pushButton_308.setStyleSheet("")
-        self.pushButton_308.setText("")
-        self.pushButton_308.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_308.setObjectName("pushButton_308")
-        self.pushButton_309 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_309.setGeometry(QtCore.QRect(560, 100, 21, 21))
-        self.pushButton_309.setStyleSheet("")
-        self.pushButton_309.setText("")
-        self.pushButton_309.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_309.setObjectName("pushButton_309")
-        self.pushButton_310 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_310.setGeometry(QtCore.QRect(580, 100, 21, 21))
-        self.pushButton_310.setStyleSheet("")
-        self.pushButton_310.setText("")
-        self.pushButton_310.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_310.setObjectName("pushButton_310")
-        self.pushButton_311 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_311.setGeometry(QtCore.QRect(600, 100, 21, 21))
-        self.pushButton_311.setStyleSheet("")
-        self.pushButton_311.setText("")
-        self.pushButton_311.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_311.setObjectName("pushButton_311")
-        self.pushButton_312 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_312.setGeometry(QtCore.QRect(630, 100, 21, 21))
-        self.pushButton_312.setStyleSheet("")
-        self.pushButton_312.setText("")
-        self.pushButton_312.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_312.setObjectName("pushButton_312")
-        self.pushButton_313 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_313.setGeometry(QtCore.QRect(650, 100, 21, 21))
-        self.pushButton_313.setStyleSheet("")
-        self.pushButton_313.setText("")
-        self.pushButton_313.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_313.setObjectName("pushButton_313")
-        self.pushButton_314 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_314.setGeometry(QtCore.QRect(670, 100, 21, 21))
-        self.pushButton_314.setStyleSheet("")
-        self.pushButton_314.setText("")
-        self.pushButton_314.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_314.setObjectName("pushButton_314")
-        self.pushButton_315 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_315.setGeometry(QtCore.QRect(250, 0, 31, 31))
-        self.pushButton_315.setStyleSheet("")
-        self.pushButton_315.setText("")
-        self.pushButton_315.setIcon(icon24)
-        self.pushButton_315.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_315.setObjectName("pushButton_315")
-        self.pushButton_316 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_316.setGeometry(QtCore.QRect(330, 0, 31, 31))
-        self.pushButton_316.setStyleSheet("")
-        self.pushButton_316.setText("")
-        self.pushButton_316.setIcon(icon24)
-        self.pushButton_316.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_316.setObjectName("pushButton_316")
-        self.pushButton_317 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_317.setGeometry(QtCore.QRect(410, 0, 31, 31))
-        self.pushButton_317.setStyleSheet("")
-        self.pushButton_317.setText("")
-        self.pushButton_317.setIcon(icon24)
-        self.pushButton_317.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_317.setObjectName("pushButton_317")
-        self.pushButton_318 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_318.setGeometry(QtCore.QRect(490, 0, 31, 31))
-        self.pushButton_318.setStyleSheet("")
-        self.pushButton_318.setText("")
-        self.pushButton_318.setIcon(icon24)
-        self.pushButton_318.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_318.setObjectName("pushButton_318")
-        self.pushButton_319 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_319.setGeometry(QtCore.QRect(570, 0, 31, 31))
-        self.pushButton_319.setStyleSheet("")
-        self.pushButton_319.setText("")
-        self.pushButton_319.setIcon(icon24)
-        self.pushButton_319.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_319.setObjectName("pushButton_319")
-        self.pushButton_320 = QtWidgets.QPushButton(self.frame_30)
-        self.pushButton_320.setGeometry(QtCore.QRect(650, 0, 31, 31))
-        self.pushButton_320.setStyleSheet("")
-        self.pushButton_320.setText("")
-        self.pushButton_320.setIcon(icon24)
-        self.pushButton_320.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_320.setObjectName("pushButton_320")
-        self.frame_31 = QtWidgets.QFrame(self.groupBox_6)
-        self.frame_31.setGeometry(QtCore.QRect(310, 160, 621, 62))
-        self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_31.setObjectName("frame_31")
-        self.pushButton_56 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_56.setGeometry(QtCore.QRect(14, 7, 51, 41))
-        self.pushButton_56.setText("")
-        self.pushButton_56.setObjectName("pushButton_56")
-        self.pushButton_57 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_57.setGeometry(QtCore.QRect(81, 7, 47, 41))
-        self.pushButton_57.setText("")
-        self.pushButton_57.setObjectName("pushButton_57")
-        self.pushButton_58 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_58.setGeometry(QtCore.QRect(148, 7, 47, 41))
-        self.pushButton_58.setText("")
-        self.pushButton_58.setObjectName("pushButton_58")
-        self.pushButton_59 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_59.setGeometry(QtCore.QRect(215, 7, 47, 41))
-        self.pushButton_59.setText("")
-        self.pushButton_59.setObjectName("pushButton_59")
-        self.pushButton_60 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_60.setGeometry(QtCore.QRect(282, 7, 47, 41))
-        self.pushButton_60.setText("")
-        self.pushButton_60.setObjectName("pushButton_60")
-        self.pushButton_61 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_61.setGeometry(QtCore.QRect(348, 7, 47, 41))
-        self.pushButton_61.setText("")
-        self.pushButton_61.setObjectName("pushButton_61")
-        self.pushButton_62 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_62.setGeometry(QtCore.QRect(415, 7, 47, 41))
-        self.pushButton_62.setText("")
-        self.pushButton_62.setObjectName("pushButton_62")
-        self.pushButton_63 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_63.setGeometry(QtCore.QRect(482, 7, 47, 41))
-        self.pushButton_63.setText("")
-        self.pushButton_63.setObjectName("pushButton_63")
-        self.pushButton_64 = QtWidgets.QPushButton(self.frame_31)
-        self.pushButton_64.setGeometry(QtCore.QRect(549, 7, 47, 41))
-        self.pushButton_64.setText("")
-        self.pushButton_64.setObjectName("pushButton_64")
-        self.verticalLayout_8.addWidget(self.groupBox_6)
-        self.groupBox_7 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_7.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_7.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_7.setTitle("")
-        self.groupBox_7.setObjectName("groupBox_7")
-        self.verticalLayout_8.addWidget(self.groupBox_7)
-        self.groupBox_8 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_8.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_8.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_8.setTitle("")
-        self.groupBox_8.setObjectName("groupBox_8")
-        self.verticalLayout_8.addWidget(self.groupBox_8)
-        self.groupBox_9 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_9.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_9.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_9.setTitle("")
-        self.groupBox_9.setObjectName("groupBox_9")
-        self.verticalLayout_8.addWidget(self.groupBox_9)
-        self.groupBox_10 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_10.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_10.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_10.setTitle("")
-        self.groupBox_10.setObjectName("groupBox_10")
-        self.verticalLayout_8.addWidget(self.groupBox_10)
-        self.groupBox_11 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-        self.groupBox_11.setMinimumSize(QtCore.QSize(0, 230))
-        self.groupBox_11.setMaximumSize(QtCore.QSize(1000, 16777215))
-        self.groupBox_11.setTitle("")
-        self.groupBox_11.setObjectName("groupBox_11")
-        self.verticalLayout_8.addWidget(self.groupBox_11)
-        self.pushButton_43 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_2)
-        self.pushButton_43.setMaximumSize(QtCore.QSize(941, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_43.setFont(font)
-        self.pushButton_43.setObjectName("pushButton_43")
-        self.verticalLayout_8.addWidget(self.pushButton_43)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.stackedWidget.addWidget(self.page_4)
         self.page_5 = QtWidgets.QWidget()
@@ -2887,13 +2353,12 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 967, 1661))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, -1108, 967, 1661))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.groupBox_14 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_14.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_14.setTitle("")
         self.groupBox_14.setObjectName("groupBox_14")
         self.layoutWidget_2 = QtWidgets.QWidget(self.groupBox_14)
         self.layoutWidget_2.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -2967,10 +2432,9 @@ class Ui_MainWindow(object):
         self.pushButton_68 = QtWidgets.QPushButton(self.frame_36)
         self.pushButton_68.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_68.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_68.setText("")
+                                         "        border-radius: 50px;\n"
+                                         "        \n"
+                                         "    }")
         self.pushButton_68.setIcon(icon13)
         self.pushButton_68.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_68.setObjectName("pushButton_68")
@@ -2983,13 +2447,11 @@ class Ui_MainWindow(object):
         self.label_34.setObjectName("label_34")
         self.pushButton_69 = QtWidgets.QPushButton(self.frame_36)
         self.pushButton_69.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_69.setText("")
         self.pushButton_69.setIcon(icon11)
         self.pushButton_69.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_69.setObjectName("pushButton_69")
         self.pushButton_70 = QtWidgets.QPushButton(self.frame_36)
         self.pushButton_70.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_70.setText("")
         self.pushButton_70.setIcon(icon14)
         self.pushButton_70.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_70.setObjectName("pushButton_70")
@@ -3012,13 +2474,11 @@ class Ui_MainWindow(object):
         self.label_36.setObjectName("label_36")
         self.pushButton_71 = QtWidgets.QPushButton(self.frame_36)
         self.pushButton_71.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_71.setText("")
         self.pushButton_71.setIcon(icon9)
         self.pushButton_71.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_71.setObjectName("pushButton_71")
         self.pushButton_72 = QtWidgets.QPushButton(self.frame_36)
         self.pushButton_72.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_72.setText("")
         self.pushButton_72.setIcon(icon15)
         self.pushButton_72.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_72.setObjectName("pushButton_72")
@@ -3034,49 +2494,42 @@ class Ui_MainWindow(object):
         self.frame_37.setObjectName("frame_37")
         self.pushButton_73 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_73.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_73.setText("")
         self.pushButton_73.setIcon(icon12)
         self.pushButton_73.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_73.setObjectName("pushButton_73")
         self.pushButton_74 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_74.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_74.setText("")
         self.pushButton_74.setIcon(icon16)
         self.pushButton_74.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_74.setObjectName("pushButton_74")
         self.pushButton_75 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_75.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_75.setText("")
         self.pushButton_75.setIcon(icon17)
         self.pushButton_75.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_75.setObjectName("pushButton_75")
         self.pushButton_76 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_76.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_76.setText("")
         self.pushButton_76.setIcon(icon18)
         self.pushButton_76.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_76.setObjectName("pushButton_76")
         self.pushButton_77 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_77.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_77.setText("")
         self.pushButton_77.setIcon(icon19)
         self.pushButton_77.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_77.setObjectName("pushButton_77")
         self.pushButton_78 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_78.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_78.setText("")
         self.pushButton_78.setIcon(icon20)
         self.pushButton_78.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_78.setObjectName("pushButton_78")
         self.pushButton_79 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_79.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_79.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_79.setText("")
+                                         "        border-radius: 16px;\n"
+                                         "        \n"
+                                         "        \n"
+                                         "    background-color: rgb(0, 170, 255);\n"
+                                         "    }")
         self.pushButton_79.setIcon(icon21)
         self.pushButton_79.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_79.setObjectName("pushButton_79")
@@ -3095,31 +2548,26 @@ class Ui_MainWindow(object):
         self.frame_39.setObjectName("frame_39")
         self.pushButton_80 = QtWidgets.QPushButton(self.frame_39)
         self.pushButton_80.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_80.setText("")
         self.pushButton_80.setIcon(icon12)
         self.pushButton_80.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_80.setObjectName("pushButton_80")
         self.pushButton_81 = QtWidgets.QPushButton(self.frame_39)
         self.pushButton_81.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_81.setText("")
         self.pushButton_81.setIcon(icon12)
         self.pushButton_81.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_81.setObjectName("pushButton_81")
         self.pushButton_82 = QtWidgets.QPushButton(self.frame_39)
         self.pushButton_82.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_82.setText("")
         self.pushButton_82.setIcon(icon12)
         self.pushButton_82.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_82.setObjectName("pushButton_82")
         self.pushButton_83 = QtWidgets.QPushButton(self.frame_39)
         self.pushButton_83.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_83.setText("")
         self.pushButton_83.setIcon(icon12)
         self.pushButton_83.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_83.setObjectName("pushButton_83")
         self.pushButton_84 = QtWidgets.QPushButton(self.frame_39)
         self.pushButton_84.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_84.setText("")
         self.pushButton_84.setIcon(icon12)
         self.pushButton_84.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_84.setObjectName("pushButton_84")
@@ -3150,31 +2598,26 @@ class Ui_MainWindow(object):
         self.frame_40.setObjectName("frame_40")
         self.pushButton_85 = QtWidgets.QPushButton(self.frame_40)
         self.pushButton_85.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_85.setText("")
         self.pushButton_85.setIcon(icon12)
         self.pushButton_85.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_85.setObjectName("pushButton_85")
         self.pushButton_86 = QtWidgets.QPushButton(self.frame_40)
         self.pushButton_86.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_86.setText("")
         self.pushButton_86.setIcon(icon12)
         self.pushButton_86.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_86.setObjectName("pushButton_86")
         self.pushButton_87 = QtWidgets.QPushButton(self.frame_40)
         self.pushButton_87.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_87.setText("")
         self.pushButton_87.setIcon(icon12)
         self.pushButton_87.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_87.setObjectName("pushButton_87")
         self.pushButton_88 = QtWidgets.QPushButton(self.frame_40)
         self.pushButton_88.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_88.setText("")
         self.pushButton_88.setIcon(icon12)
         self.pushButton_88.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_88.setObjectName("pushButton_88")
         self.pushButton_89 = QtWidgets.QPushButton(self.frame_40)
         self.pushButton_89.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_89.setText("")
         self.pushButton_89.setIcon(icon12)
         self.pushButton_89.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_89.setObjectName("pushButton_89")
@@ -3202,7 +2645,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_14)
         self.groupBox_15 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_15.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_15.setTitle("")
         self.groupBox_15.setObjectName("groupBox_15")
         self.layoutWidget_4 = QtWidgets.QWidget(self.groupBox_15)
         self.layoutWidget_4.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -3276,10 +2718,9 @@ class Ui_MainWindow(object):
         self.pushButton_90 = QtWidgets.QPushButton(self.frame_59)
         self.pushButton_90.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_90.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_90.setText("")
+                                         "        border-radius: 50px;\n"
+                                         "        \n"
+                                         "    }")
         self.pushButton_90.setIcon(icon13)
         self.pushButton_90.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_90.setObjectName("pushButton_90")
@@ -3292,13 +2733,11 @@ class Ui_MainWindow(object):
         self.label_83.setObjectName("label_83")
         self.pushButton_91 = QtWidgets.QPushButton(self.frame_59)
         self.pushButton_91.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_91.setText("")
         self.pushButton_91.setIcon(icon11)
         self.pushButton_91.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_91.setObjectName("pushButton_91")
         self.pushButton_92 = QtWidgets.QPushButton(self.frame_59)
         self.pushButton_92.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_92.setText("")
         self.pushButton_92.setIcon(icon14)
         self.pushButton_92.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_92.setObjectName("pushButton_92")
@@ -3321,13 +2760,11 @@ class Ui_MainWindow(object):
         self.label_85.setObjectName("label_85")
         self.pushButton_93 = QtWidgets.QPushButton(self.frame_59)
         self.pushButton_93.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_93.setText("")
         self.pushButton_93.setIcon(icon9)
         self.pushButton_93.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_93.setObjectName("pushButton_93")
         self.pushButton_94 = QtWidgets.QPushButton(self.frame_59)
         self.pushButton_94.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_94.setText("")
         self.pushButton_94.setIcon(icon15)
         self.pushButton_94.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_94.setObjectName("pushButton_94")
@@ -3343,49 +2780,42 @@ class Ui_MainWindow(object):
         self.frame_60.setObjectName("frame_60")
         self.pushButton_95 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_95.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_95.setText("")
         self.pushButton_95.setIcon(icon12)
         self.pushButton_95.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_95.setObjectName("pushButton_95")
         self.pushButton_96 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_96.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_96.setText("")
         self.pushButton_96.setIcon(icon16)
         self.pushButton_96.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_96.setObjectName("pushButton_96")
         self.pushButton_97 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_97.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_97.setText("")
         self.pushButton_97.setIcon(icon17)
         self.pushButton_97.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_97.setObjectName("pushButton_97")
         self.pushButton_98 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_98.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_98.setText("")
         self.pushButton_98.setIcon(icon18)
         self.pushButton_98.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_98.setObjectName("pushButton_98")
         self.pushButton_99 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_99.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_99.setText("")
         self.pushButton_99.setIcon(icon19)
         self.pushButton_99.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_99.setObjectName("pushButton_99")
         self.pushButton_100 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_100.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_100.setText("")
         self.pushButton_100.setIcon(icon20)
         self.pushButton_100.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_100.setObjectName("pushButton_100")
         self.pushButton_101 = QtWidgets.QPushButton(self.frame_60)
         self.pushButton_101.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_101.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_101.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_101.setIcon(icon21)
         self.pushButton_101.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_101.setObjectName("pushButton_101")
@@ -3404,31 +2834,26 @@ class Ui_MainWindow(object):
         self.frame_78.setObjectName("frame_78")
         self.pushButton_198 = QtWidgets.QPushButton(self.frame_78)
         self.pushButton_198.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_198.setText("")
         self.pushButton_198.setIcon(icon12)
         self.pushButton_198.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_198.setObjectName("pushButton_198")
         self.pushButton_199 = QtWidgets.QPushButton(self.frame_78)
         self.pushButton_199.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_199.setText("")
         self.pushButton_199.setIcon(icon12)
         self.pushButton_199.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_199.setObjectName("pushButton_199")
         self.pushButton_200 = QtWidgets.QPushButton(self.frame_78)
         self.pushButton_200.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_200.setText("")
         self.pushButton_200.setIcon(icon12)
         self.pushButton_200.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_200.setObjectName("pushButton_200")
         self.pushButton_201 = QtWidgets.QPushButton(self.frame_78)
         self.pushButton_201.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_201.setText("")
         self.pushButton_201.setIcon(icon12)
         self.pushButton_201.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_201.setObjectName("pushButton_201")
         self.pushButton_202 = QtWidgets.QPushButton(self.frame_78)
         self.pushButton_202.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_202.setText("")
         self.pushButton_202.setIcon(icon12)
         self.pushButton_202.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_202.setObjectName("pushButton_202")
@@ -3459,31 +2884,26 @@ class Ui_MainWindow(object):
         self.frame_79.setObjectName("frame_79")
         self.pushButton_203 = QtWidgets.QPushButton(self.frame_79)
         self.pushButton_203.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_203.setText("")
         self.pushButton_203.setIcon(icon12)
         self.pushButton_203.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_203.setObjectName("pushButton_203")
         self.pushButton_204 = QtWidgets.QPushButton(self.frame_79)
         self.pushButton_204.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_204.setText("")
         self.pushButton_204.setIcon(icon12)
         self.pushButton_204.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_204.setObjectName("pushButton_204")
         self.pushButton_205 = QtWidgets.QPushButton(self.frame_79)
         self.pushButton_205.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_205.setText("")
         self.pushButton_205.setIcon(icon12)
         self.pushButton_205.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_205.setObjectName("pushButton_205")
         self.pushButton_206 = QtWidgets.QPushButton(self.frame_79)
         self.pushButton_206.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_206.setText("")
         self.pushButton_206.setIcon(icon12)
         self.pushButton_206.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_206.setObjectName("pushButton_206")
         self.pushButton_207 = QtWidgets.QPushButton(self.frame_79)
         self.pushButton_207.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_207.setText("")
         self.pushButton_207.setIcon(icon12)
         self.pushButton_207.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_207.setObjectName("pushButton_207")
@@ -3511,7 +2931,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_15)
         self.groupBox_16 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_16.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_16.setTitle("")
         self.groupBox_16.setObjectName("groupBox_16")
         self.layoutWidget_5 = QtWidgets.QWidget(self.groupBox_16)
         self.layoutWidget_5.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -3585,10 +3004,9 @@ class Ui_MainWindow(object):
         self.pushButton_102 = QtWidgets.QPushButton(self.frame_61)
         self.pushButton_102.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_102.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_102.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_102.setIcon(icon13)
         self.pushButton_102.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_102.setObjectName("pushButton_102")
@@ -3601,13 +3019,11 @@ class Ui_MainWindow(object):
         self.label_86.setObjectName("label_86")
         self.pushButton_103 = QtWidgets.QPushButton(self.frame_61)
         self.pushButton_103.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_103.setText("")
         self.pushButton_103.setIcon(icon11)
         self.pushButton_103.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_103.setObjectName("pushButton_103")
         self.pushButton_104 = QtWidgets.QPushButton(self.frame_61)
         self.pushButton_104.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_104.setText("")
         self.pushButton_104.setIcon(icon14)
         self.pushButton_104.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_104.setObjectName("pushButton_104")
@@ -3630,13 +3046,11 @@ class Ui_MainWindow(object):
         self.label_88.setObjectName("label_88")
         self.pushButton_105 = QtWidgets.QPushButton(self.frame_61)
         self.pushButton_105.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_105.setText("")
         self.pushButton_105.setIcon(icon9)
         self.pushButton_105.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_105.setObjectName("pushButton_105")
         self.pushButton_106 = QtWidgets.QPushButton(self.frame_61)
         self.pushButton_106.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_106.setText("")
         self.pushButton_106.setIcon(icon15)
         self.pushButton_106.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_106.setObjectName("pushButton_106")
@@ -3652,49 +3066,42 @@ class Ui_MainWindow(object):
         self.frame_62.setObjectName("frame_62")
         self.pushButton_107 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_107.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_107.setText("")
         self.pushButton_107.setIcon(icon12)
         self.pushButton_107.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_107.setObjectName("pushButton_107")
         self.pushButton_108 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_108.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_108.setText("")
         self.pushButton_108.setIcon(icon16)
         self.pushButton_108.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_108.setObjectName("pushButton_108")
         self.pushButton_109 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_109.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_109.setText("")
         self.pushButton_109.setIcon(icon17)
         self.pushButton_109.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_109.setObjectName("pushButton_109")
         self.pushButton_110 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_110.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_110.setText("")
         self.pushButton_110.setIcon(icon18)
         self.pushButton_110.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_110.setObjectName("pushButton_110")
         self.pushButton_111 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_111.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_111.setText("")
         self.pushButton_111.setIcon(icon19)
         self.pushButton_111.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_111.setObjectName("pushButton_111")
         self.pushButton_112 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_112.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_112.setText("")
         self.pushButton_112.setIcon(icon20)
         self.pushButton_112.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_112.setObjectName("pushButton_112")
         self.pushButton_113 = QtWidgets.QPushButton(self.frame_62)
         self.pushButton_113.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_113.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_113.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_113.setIcon(icon21)
         self.pushButton_113.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_113.setObjectName("pushButton_113")
@@ -3713,31 +3120,26 @@ class Ui_MainWindow(object):
         self.frame_81.setObjectName("frame_81")
         self.pushButton_208 = QtWidgets.QPushButton(self.frame_81)
         self.pushButton_208.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_208.setText("")
         self.pushButton_208.setIcon(icon12)
         self.pushButton_208.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_208.setObjectName("pushButton_208")
         self.pushButton_209 = QtWidgets.QPushButton(self.frame_81)
         self.pushButton_209.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_209.setText("")
         self.pushButton_209.setIcon(icon12)
         self.pushButton_209.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_209.setObjectName("pushButton_209")
         self.pushButton_210 = QtWidgets.QPushButton(self.frame_81)
         self.pushButton_210.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_210.setText("")
         self.pushButton_210.setIcon(icon12)
         self.pushButton_210.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_210.setObjectName("pushButton_210")
         self.pushButton_211 = QtWidgets.QPushButton(self.frame_81)
         self.pushButton_211.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_211.setText("")
         self.pushButton_211.setIcon(icon12)
         self.pushButton_211.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_211.setObjectName("pushButton_211")
         self.pushButton_212 = QtWidgets.QPushButton(self.frame_81)
         self.pushButton_212.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_212.setText("")
         self.pushButton_212.setIcon(icon12)
         self.pushButton_212.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_212.setObjectName("pushButton_212")
@@ -3768,31 +3170,26 @@ class Ui_MainWindow(object):
         self.frame_82.setObjectName("frame_82")
         self.pushButton_213 = QtWidgets.QPushButton(self.frame_82)
         self.pushButton_213.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_213.setText("")
         self.pushButton_213.setIcon(icon12)
         self.pushButton_213.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_213.setObjectName("pushButton_213")
         self.pushButton_214 = QtWidgets.QPushButton(self.frame_82)
         self.pushButton_214.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_214.setText("")
         self.pushButton_214.setIcon(icon12)
         self.pushButton_214.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_214.setObjectName("pushButton_214")
         self.pushButton_215 = QtWidgets.QPushButton(self.frame_82)
         self.pushButton_215.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_215.setText("")
         self.pushButton_215.setIcon(icon12)
         self.pushButton_215.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_215.setObjectName("pushButton_215")
         self.pushButton_216 = QtWidgets.QPushButton(self.frame_82)
         self.pushButton_216.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_216.setText("")
         self.pushButton_216.setIcon(icon12)
         self.pushButton_216.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_216.setObjectName("pushButton_216")
         self.pushButton_217 = QtWidgets.QPushButton(self.frame_82)
         self.pushButton_217.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_217.setText("")
         self.pushButton_217.setIcon(icon12)
         self.pushButton_217.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_217.setObjectName("pushButton_217")
@@ -3820,7 +3217,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_16)
         self.groupBox_17 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_17.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_17.setTitle("")
         self.groupBox_17.setObjectName("groupBox_17")
         self.layoutWidget_6 = QtWidgets.QWidget(self.groupBox_17)
         self.layoutWidget_6.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -3894,10 +3290,9 @@ class Ui_MainWindow(object):
         self.pushButton_114 = QtWidgets.QPushButton(self.frame_63)
         self.pushButton_114.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_114.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_114.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_114.setIcon(icon13)
         self.pushButton_114.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_114.setObjectName("pushButton_114")
@@ -3910,13 +3305,11 @@ class Ui_MainWindow(object):
         self.label_89.setObjectName("label_89")
         self.pushButton_115 = QtWidgets.QPushButton(self.frame_63)
         self.pushButton_115.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_115.setText("")
         self.pushButton_115.setIcon(icon11)
         self.pushButton_115.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_115.setObjectName("pushButton_115")
         self.pushButton_116 = QtWidgets.QPushButton(self.frame_63)
         self.pushButton_116.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_116.setText("")
         self.pushButton_116.setIcon(icon14)
         self.pushButton_116.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_116.setObjectName("pushButton_116")
@@ -3939,13 +3332,11 @@ class Ui_MainWindow(object):
         self.label_91.setObjectName("label_91")
         self.pushButton_117 = QtWidgets.QPushButton(self.frame_63)
         self.pushButton_117.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_117.setText("")
         self.pushButton_117.setIcon(icon9)
         self.pushButton_117.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_117.setObjectName("pushButton_117")
         self.pushButton_118 = QtWidgets.QPushButton(self.frame_63)
         self.pushButton_118.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_118.setText("")
         self.pushButton_118.setIcon(icon15)
         self.pushButton_118.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_118.setObjectName("pushButton_118")
@@ -3961,49 +3352,42 @@ class Ui_MainWindow(object):
         self.frame_64.setObjectName("frame_64")
         self.pushButton_119 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_119.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_119.setText("")
         self.pushButton_119.setIcon(icon12)
         self.pushButton_119.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_119.setObjectName("pushButton_119")
         self.pushButton_120 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_120.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_120.setText("")
         self.pushButton_120.setIcon(icon16)
         self.pushButton_120.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_120.setObjectName("pushButton_120")
         self.pushButton_121 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_121.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_121.setText("")
         self.pushButton_121.setIcon(icon17)
         self.pushButton_121.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_121.setObjectName("pushButton_121")
         self.pushButton_122 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_122.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_122.setText("")
         self.pushButton_122.setIcon(icon18)
         self.pushButton_122.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_122.setObjectName("pushButton_122")
         self.pushButton_123 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_123.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_123.setText("")
         self.pushButton_123.setIcon(icon19)
         self.pushButton_123.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_123.setObjectName("pushButton_123")
         self.pushButton_124 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_124.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_124.setText("")
         self.pushButton_124.setIcon(icon20)
         self.pushButton_124.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_124.setObjectName("pushButton_124")
         self.pushButton_125 = QtWidgets.QPushButton(self.frame_64)
         self.pushButton_125.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_125.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_125.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_125.setIcon(icon21)
         self.pushButton_125.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_125.setObjectName("pushButton_125")
@@ -4022,31 +3406,26 @@ class Ui_MainWindow(object):
         self.frame_84.setObjectName("frame_84")
         self.pushButton_218 = QtWidgets.QPushButton(self.frame_84)
         self.pushButton_218.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_218.setText("")
         self.pushButton_218.setIcon(icon12)
         self.pushButton_218.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_218.setObjectName("pushButton_218")
         self.pushButton_219 = QtWidgets.QPushButton(self.frame_84)
         self.pushButton_219.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_219.setText("")
         self.pushButton_219.setIcon(icon12)
         self.pushButton_219.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_219.setObjectName("pushButton_219")
         self.pushButton_220 = QtWidgets.QPushButton(self.frame_84)
         self.pushButton_220.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_220.setText("")
         self.pushButton_220.setIcon(icon12)
         self.pushButton_220.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_220.setObjectName("pushButton_220")
         self.pushButton_221 = QtWidgets.QPushButton(self.frame_84)
         self.pushButton_221.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_221.setText("")
         self.pushButton_221.setIcon(icon12)
         self.pushButton_221.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_221.setObjectName("pushButton_221")
         self.pushButton_222 = QtWidgets.QPushButton(self.frame_84)
         self.pushButton_222.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_222.setText("")
         self.pushButton_222.setIcon(icon12)
         self.pushButton_222.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_222.setObjectName("pushButton_222")
@@ -4077,31 +3456,26 @@ class Ui_MainWindow(object):
         self.frame_85.setObjectName("frame_85")
         self.pushButton_223 = QtWidgets.QPushButton(self.frame_85)
         self.pushButton_223.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_223.setText("")
         self.pushButton_223.setIcon(icon12)
         self.pushButton_223.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_223.setObjectName("pushButton_223")
         self.pushButton_224 = QtWidgets.QPushButton(self.frame_85)
         self.pushButton_224.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_224.setText("")
         self.pushButton_224.setIcon(icon12)
         self.pushButton_224.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_224.setObjectName("pushButton_224")
         self.pushButton_225 = QtWidgets.QPushButton(self.frame_85)
         self.pushButton_225.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_225.setText("")
         self.pushButton_225.setIcon(icon12)
         self.pushButton_225.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_225.setObjectName("pushButton_225")
         self.pushButton_226 = QtWidgets.QPushButton(self.frame_85)
         self.pushButton_226.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_226.setText("")
         self.pushButton_226.setIcon(icon12)
         self.pushButton_226.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_226.setObjectName("pushButton_226")
         self.pushButton_227 = QtWidgets.QPushButton(self.frame_85)
         self.pushButton_227.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_227.setText("")
         self.pushButton_227.setIcon(icon12)
         self.pushButton_227.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_227.setObjectName("pushButton_227")
@@ -4129,7 +3503,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_17)
         self.groupBox_18 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_18.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_18.setTitle("")
         self.groupBox_18.setObjectName("groupBox_18")
         self.layoutWidget_7 = QtWidgets.QWidget(self.groupBox_18)
         self.layoutWidget_7.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -4203,10 +3576,9 @@ class Ui_MainWindow(object):
         self.pushButton_126 = QtWidgets.QPushButton(self.frame_65)
         self.pushButton_126.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_126.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_126.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_126.setIcon(icon13)
         self.pushButton_126.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_126.setObjectName("pushButton_126")
@@ -4219,13 +3591,11 @@ class Ui_MainWindow(object):
         self.label_92.setObjectName("label_92")
         self.pushButton_127 = QtWidgets.QPushButton(self.frame_65)
         self.pushButton_127.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_127.setText("")
         self.pushButton_127.setIcon(icon11)
         self.pushButton_127.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_127.setObjectName("pushButton_127")
         self.pushButton_128 = QtWidgets.QPushButton(self.frame_65)
         self.pushButton_128.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_128.setText("")
         self.pushButton_128.setIcon(icon14)
         self.pushButton_128.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_128.setObjectName("pushButton_128")
@@ -4248,13 +3618,11 @@ class Ui_MainWindow(object):
         self.label_94.setObjectName("label_94")
         self.pushButton_129 = QtWidgets.QPushButton(self.frame_65)
         self.pushButton_129.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_129.setText("")
         self.pushButton_129.setIcon(icon9)
         self.pushButton_129.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_129.setObjectName("pushButton_129")
         self.pushButton_130 = QtWidgets.QPushButton(self.frame_65)
         self.pushButton_130.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_130.setText("")
         self.pushButton_130.setIcon(icon15)
         self.pushButton_130.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_130.setObjectName("pushButton_130")
@@ -4270,49 +3638,42 @@ class Ui_MainWindow(object):
         self.frame_66.setObjectName("frame_66")
         self.pushButton_131 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_131.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_131.setText("")
         self.pushButton_131.setIcon(icon12)
         self.pushButton_131.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_131.setObjectName("pushButton_131")
         self.pushButton_132 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_132.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_132.setText("")
         self.pushButton_132.setIcon(icon16)
         self.pushButton_132.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_132.setObjectName("pushButton_132")
         self.pushButton_133 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_133.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_133.setText("")
         self.pushButton_133.setIcon(icon17)
         self.pushButton_133.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_133.setObjectName("pushButton_133")
         self.pushButton_134 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_134.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_134.setText("")
         self.pushButton_134.setIcon(icon18)
         self.pushButton_134.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_134.setObjectName("pushButton_134")
         self.pushButton_135 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_135.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_135.setText("")
         self.pushButton_135.setIcon(icon19)
         self.pushButton_135.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_135.setObjectName("pushButton_135")
         self.pushButton_136 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_136.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_136.setText("")
         self.pushButton_136.setIcon(icon20)
         self.pushButton_136.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_136.setObjectName("pushButton_136")
         self.pushButton_137 = QtWidgets.QPushButton(self.frame_66)
         self.pushButton_137.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_137.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_137.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_137.setIcon(icon21)
         self.pushButton_137.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_137.setObjectName("pushButton_137")
@@ -4331,31 +3692,26 @@ class Ui_MainWindow(object):
         self.frame_87.setObjectName("frame_87")
         self.pushButton_228 = QtWidgets.QPushButton(self.frame_87)
         self.pushButton_228.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_228.setText("")
         self.pushButton_228.setIcon(icon12)
         self.pushButton_228.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_228.setObjectName("pushButton_228")
         self.pushButton_229 = QtWidgets.QPushButton(self.frame_87)
         self.pushButton_229.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_229.setText("")
         self.pushButton_229.setIcon(icon12)
         self.pushButton_229.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_229.setObjectName("pushButton_229")
         self.pushButton_230 = QtWidgets.QPushButton(self.frame_87)
         self.pushButton_230.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_230.setText("")
         self.pushButton_230.setIcon(icon12)
         self.pushButton_230.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_230.setObjectName("pushButton_230")
         self.pushButton_231 = QtWidgets.QPushButton(self.frame_87)
         self.pushButton_231.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_231.setText("")
         self.pushButton_231.setIcon(icon12)
         self.pushButton_231.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_231.setObjectName("pushButton_231")
         self.pushButton_232 = QtWidgets.QPushButton(self.frame_87)
         self.pushButton_232.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_232.setText("")
         self.pushButton_232.setIcon(icon12)
         self.pushButton_232.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_232.setObjectName("pushButton_232")
@@ -4386,31 +3742,26 @@ class Ui_MainWindow(object):
         self.frame_88.setObjectName("frame_88")
         self.pushButton_233 = QtWidgets.QPushButton(self.frame_88)
         self.pushButton_233.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_233.setText("")
         self.pushButton_233.setIcon(icon12)
         self.pushButton_233.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_233.setObjectName("pushButton_233")
         self.pushButton_234 = QtWidgets.QPushButton(self.frame_88)
         self.pushButton_234.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_234.setText("")
         self.pushButton_234.setIcon(icon12)
         self.pushButton_234.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_234.setObjectName("pushButton_234")
         self.pushButton_235 = QtWidgets.QPushButton(self.frame_88)
         self.pushButton_235.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_235.setText("")
         self.pushButton_235.setIcon(icon12)
         self.pushButton_235.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_235.setObjectName("pushButton_235")
         self.pushButton_236 = QtWidgets.QPushButton(self.frame_88)
         self.pushButton_236.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_236.setText("")
         self.pushButton_236.setIcon(icon12)
         self.pushButton_236.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_236.setObjectName("pushButton_236")
         self.pushButton_237 = QtWidgets.QPushButton(self.frame_88)
         self.pushButton_237.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_237.setText("")
         self.pushButton_237.setIcon(icon12)
         self.pushButton_237.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_237.setObjectName("pushButton_237")
@@ -4438,7 +3789,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_18)
         self.groupBox_19 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_19.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_19.setTitle("")
         self.groupBox_19.setObjectName("groupBox_19")
         self.layoutWidget_8 = QtWidgets.QWidget(self.groupBox_19)
         self.layoutWidget_8.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -4512,10 +3862,9 @@ class Ui_MainWindow(object):
         self.pushButton_138 = QtWidgets.QPushButton(self.frame_67)
         self.pushButton_138.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_138.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_138.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_138.setIcon(icon13)
         self.pushButton_138.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_138.setObjectName("pushButton_138")
@@ -4528,13 +3877,11 @@ class Ui_MainWindow(object):
         self.label_95.setObjectName("label_95")
         self.pushButton_139 = QtWidgets.QPushButton(self.frame_67)
         self.pushButton_139.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_139.setText("")
         self.pushButton_139.setIcon(icon11)
         self.pushButton_139.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_139.setObjectName("pushButton_139")
         self.pushButton_140 = QtWidgets.QPushButton(self.frame_67)
         self.pushButton_140.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_140.setText("")
         self.pushButton_140.setIcon(icon14)
         self.pushButton_140.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_140.setObjectName("pushButton_140")
@@ -4557,13 +3904,11 @@ class Ui_MainWindow(object):
         self.label_97.setObjectName("label_97")
         self.pushButton_141 = QtWidgets.QPushButton(self.frame_67)
         self.pushButton_141.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_141.setText("")
         self.pushButton_141.setIcon(icon9)
         self.pushButton_141.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_141.setObjectName("pushButton_141")
         self.pushButton_142 = QtWidgets.QPushButton(self.frame_67)
         self.pushButton_142.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_142.setText("")
         self.pushButton_142.setIcon(icon15)
         self.pushButton_142.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_142.setObjectName("pushButton_142")
@@ -4579,49 +3924,42 @@ class Ui_MainWindow(object):
         self.frame_68.setObjectName("frame_68")
         self.pushButton_143 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_143.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_143.setText("")
         self.pushButton_143.setIcon(icon12)
         self.pushButton_143.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_143.setObjectName("pushButton_143")
         self.pushButton_144 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_144.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_144.setText("")
         self.pushButton_144.setIcon(icon16)
         self.pushButton_144.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_144.setObjectName("pushButton_144")
         self.pushButton_145 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_145.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_145.setText("")
         self.pushButton_145.setIcon(icon17)
         self.pushButton_145.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_145.setObjectName("pushButton_145")
         self.pushButton_146 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_146.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_146.setText("")
         self.pushButton_146.setIcon(icon18)
         self.pushButton_146.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_146.setObjectName("pushButton_146")
         self.pushButton_147 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_147.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_147.setText("")
         self.pushButton_147.setIcon(icon19)
         self.pushButton_147.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_147.setObjectName("pushButton_147")
         self.pushButton_148 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_148.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_148.setText("")
         self.pushButton_148.setIcon(icon20)
         self.pushButton_148.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_148.setObjectName("pushButton_148")
         self.pushButton_149 = QtWidgets.QPushButton(self.frame_68)
         self.pushButton_149.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_149.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_149.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_149.setIcon(icon21)
         self.pushButton_149.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_149.setObjectName("pushButton_149")
@@ -4640,31 +3978,26 @@ class Ui_MainWindow(object):
         self.frame_90.setObjectName("frame_90")
         self.pushButton_238 = QtWidgets.QPushButton(self.frame_90)
         self.pushButton_238.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_238.setText("")
         self.pushButton_238.setIcon(icon12)
         self.pushButton_238.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_238.setObjectName("pushButton_238")
         self.pushButton_239 = QtWidgets.QPushButton(self.frame_90)
         self.pushButton_239.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_239.setText("")
         self.pushButton_239.setIcon(icon12)
         self.pushButton_239.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_239.setObjectName("pushButton_239")
         self.pushButton_240 = QtWidgets.QPushButton(self.frame_90)
         self.pushButton_240.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_240.setText("")
         self.pushButton_240.setIcon(icon12)
         self.pushButton_240.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_240.setObjectName("pushButton_240")
         self.pushButton_241 = QtWidgets.QPushButton(self.frame_90)
         self.pushButton_241.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_241.setText("")
         self.pushButton_241.setIcon(icon12)
         self.pushButton_241.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_241.setObjectName("pushButton_241")
         self.pushButton_242 = QtWidgets.QPushButton(self.frame_90)
         self.pushButton_242.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_242.setText("")
         self.pushButton_242.setIcon(icon12)
         self.pushButton_242.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_242.setObjectName("pushButton_242")
@@ -4695,31 +4028,26 @@ class Ui_MainWindow(object):
         self.frame_91.setObjectName("frame_91")
         self.pushButton_243 = QtWidgets.QPushButton(self.frame_91)
         self.pushButton_243.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_243.setText("")
         self.pushButton_243.setIcon(icon12)
         self.pushButton_243.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_243.setObjectName("pushButton_243")
         self.pushButton_244 = QtWidgets.QPushButton(self.frame_91)
         self.pushButton_244.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_244.setText("")
         self.pushButton_244.setIcon(icon12)
         self.pushButton_244.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_244.setObjectName("pushButton_244")
         self.pushButton_245 = QtWidgets.QPushButton(self.frame_91)
         self.pushButton_245.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_245.setText("")
         self.pushButton_245.setIcon(icon12)
         self.pushButton_245.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_245.setObjectName("pushButton_245")
         self.pushButton_246 = QtWidgets.QPushButton(self.frame_91)
         self.pushButton_246.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_246.setText("")
         self.pushButton_246.setIcon(icon12)
         self.pushButton_246.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_246.setObjectName("pushButton_246")
         self.pushButton_247 = QtWidgets.QPushButton(self.frame_91)
         self.pushButton_247.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_247.setText("")
         self.pushButton_247.setIcon(icon12)
         self.pushButton_247.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_247.setObjectName("pushButton_247")
@@ -4747,7 +4075,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_19)
         self.groupBox_20 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_20.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_20.setTitle("")
         self.groupBox_20.setObjectName("groupBox_20")
         self.layoutWidget_9 = QtWidgets.QWidget(self.groupBox_20)
         self.layoutWidget_9.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -4821,10 +4148,9 @@ class Ui_MainWindow(object):
         self.pushButton_150 = QtWidgets.QPushButton(self.frame_69)
         self.pushButton_150.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_150.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_150.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_150.setIcon(icon13)
         self.pushButton_150.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_150.setObjectName("pushButton_150")
@@ -4837,13 +4163,11 @@ class Ui_MainWindow(object):
         self.label_98.setObjectName("label_98")
         self.pushButton_151 = QtWidgets.QPushButton(self.frame_69)
         self.pushButton_151.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_151.setText("")
         self.pushButton_151.setIcon(icon11)
         self.pushButton_151.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_151.setObjectName("pushButton_151")
         self.pushButton_152 = QtWidgets.QPushButton(self.frame_69)
         self.pushButton_152.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_152.setText("")
         self.pushButton_152.setIcon(icon14)
         self.pushButton_152.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_152.setObjectName("pushButton_152")
@@ -4866,13 +4190,11 @@ class Ui_MainWindow(object):
         self.label_100.setObjectName("label_100")
         self.pushButton_153 = QtWidgets.QPushButton(self.frame_69)
         self.pushButton_153.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_153.setText("")
         self.pushButton_153.setIcon(icon9)
         self.pushButton_153.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_153.setObjectName("pushButton_153")
         self.pushButton_154 = QtWidgets.QPushButton(self.frame_69)
         self.pushButton_154.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_154.setText("")
         self.pushButton_154.setIcon(icon15)
         self.pushButton_154.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_154.setObjectName("pushButton_154")
@@ -4888,49 +4210,42 @@ class Ui_MainWindow(object):
         self.frame_70.setObjectName("frame_70")
         self.pushButton_155 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_155.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_155.setText("")
         self.pushButton_155.setIcon(icon12)
         self.pushButton_155.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_155.setObjectName("pushButton_155")
         self.pushButton_156 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_156.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_156.setText("")
         self.pushButton_156.setIcon(icon16)
         self.pushButton_156.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_156.setObjectName("pushButton_156")
         self.pushButton_157 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_157.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_157.setText("")
         self.pushButton_157.setIcon(icon17)
         self.pushButton_157.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_157.setObjectName("pushButton_157")
         self.pushButton_158 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_158.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_158.setText("")
         self.pushButton_158.setIcon(icon18)
         self.pushButton_158.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_158.setObjectName("pushButton_158")
         self.pushButton_159 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_159.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_159.setText("")
         self.pushButton_159.setIcon(icon19)
         self.pushButton_159.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_159.setObjectName("pushButton_159")
         self.pushButton_160 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_160.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_160.setText("")
         self.pushButton_160.setIcon(icon20)
         self.pushButton_160.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_160.setObjectName("pushButton_160")
         self.pushButton_161 = QtWidgets.QPushButton(self.frame_70)
         self.pushButton_161.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_161.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_161.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_161.setIcon(icon21)
         self.pushButton_161.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_161.setObjectName("pushButton_161")
@@ -4949,31 +4264,26 @@ class Ui_MainWindow(object):
         self.frame_93.setObjectName("frame_93")
         self.pushButton_248 = QtWidgets.QPushButton(self.frame_93)
         self.pushButton_248.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_248.setText("")
         self.pushButton_248.setIcon(icon12)
         self.pushButton_248.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_248.setObjectName("pushButton_248")
         self.pushButton_249 = QtWidgets.QPushButton(self.frame_93)
         self.pushButton_249.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_249.setText("")
         self.pushButton_249.setIcon(icon12)
         self.pushButton_249.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_249.setObjectName("pushButton_249")
         self.pushButton_250 = QtWidgets.QPushButton(self.frame_93)
         self.pushButton_250.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_250.setText("")
         self.pushButton_250.setIcon(icon12)
         self.pushButton_250.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_250.setObjectName("pushButton_250")
         self.pushButton_251 = QtWidgets.QPushButton(self.frame_93)
         self.pushButton_251.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_251.setText("")
         self.pushButton_251.setIcon(icon12)
         self.pushButton_251.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_251.setObjectName("pushButton_251")
         self.pushButton_252 = QtWidgets.QPushButton(self.frame_93)
         self.pushButton_252.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_252.setText("")
         self.pushButton_252.setIcon(icon12)
         self.pushButton_252.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_252.setObjectName("pushButton_252")
@@ -5004,31 +4314,26 @@ class Ui_MainWindow(object):
         self.frame_94.setObjectName("frame_94")
         self.pushButton_253 = QtWidgets.QPushButton(self.frame_94)
         self.pushButton_253.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_253.setText("")
         self.pushButton_253.setIcon(icon12)
         self.pushButton_253.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_253.setObjectName("pushButton_253")
         self.pushButton_254 = QtWidgets.QPushButton(self.frame_94)
         self.pushButton_254.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_254.setText("")
         self.pushButton_254.setIcon(icon12)
         self.pushButton_254.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_254.setObjectName("pushButton_254")
         self.pushButton_255 = QtWidgets.QPushButton(self.frame_94)
         self.pushButton_255.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_255.setText("")
         self.pushButton_255.setIcon(icon12)
         self.pushButton_255.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_255.setObjectName("pushButton_255")
         self.pushButton_256 = QtWidgets.QPushButton(self.frame_94)
         self.pushButton_256.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_256.setText("")
         self.pushButton_256.setIcon(icon12)
         self.pushButton_256.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_256.setObjectName("pushButton_256")
         self.pushButton_257 = QtWidgets.QPushButton(self.frame_94)
         self.pushButton_257.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_257.setText("")
         self.pushButton_257.setIcon(icon12)
         self.pushButton_257.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_257.setObjectName("pushButton_257")
@@ -5056,7 +4361,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.addWidget(self.groupBox_20)
         self.groupBox_21 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
         self.groupBox_21.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_21.setTitle("")
         self.groupBox_21.setObjectName("groupBox_21")
         self.layoutWidget_10 = QtWidgets.QWidget(self.groupBox_21)
         self.layoutWidget_10.setGeometry(QtCore.QRect(20, 10, 191, 161))
@@ -5130,10 +4434,9 @@ class Ui_MainWindow(object):
         self.pushButton_162 = QtWidgets.QPushButton(self.frame_71)
         self.pushButton_162.setGeometry(QtCore.QRect(30, 0, 61, 61))
         self.pushButton_162.setStyleSheet("    QPushButton {\n"
-"        border-radius: 50px;\n"
-"        \n"
-"    }")
-        self.pushButton_162.setText("")
+                                          "        border-radius: 50px;\n"
+                                          "        \n"
+                                          "    }")
         self.pushButton_162.setIcon(icon13)
         self.pushButton_162.setIconSize(QtCore.QSize(70, 70))
         self.pushButton_162.setObjectName("pushButton_162")
@@ -5146,13 +4449,11 @@ class Ui_MainWindow(object):
         self.label_101.setObjectName("label_101")
         self.pushButton_163 = QtWidgets.QPushButton(self.frame_71)
         self.pushButton_163.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_163.setText("")
         self.pushButton_163.setIcon(icon11)
         self.pushButton_163.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_163.setObjectName("pushButton_163")
         self.pushButton_164 = QtWidgets.QPushButton(self.frame_71)
         self.pushButton_164.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_164.setText("")
         self.pushButton_164.setIcon(icon14)
         self.pushButton_164.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_164.setObjectName("pushButton_164")
@@ -5175,13 +4476,11 @@ class Ui_MainWindow(object):
         self.label_103.setObjectName("label_103")
         self.pushButton_165 = QtWidgets.QPushButton(self.frame_71)
         self.pushButton_165.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_165.setText("")
         self.pushButton_165.setIcon(icon9)
         self.pushButton_165.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_165.setObjectName("pushButton_165")
         self.pushButton_166 = QtWidgets.QPushButton(self.frame_71)
         self.pushButton_166.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_166.setText("")
         self.pushButton_166.setIcon(icon15)
         self.pushButton_166.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_166.setObjectName("pushButton_166")
@@ -5197,49 +4496,42 @@ class Ui_MainWindow(object):
         self.frame_72.setObjectName("frame_72")
         self.pushButton_167 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_167.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_167.setText("")
         self.pushButton_167.setIcon(icon12)
         self.pushButton_167.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_167.setObjectName("pushButton_167")
         self.pushButton_168 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_168.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_168.setText("")
         self.pushButton_168.setIcon(icon16)
         self.pushButton_168.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_168.setObjectName("pushButton_168")
         self.pushButton_169 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_169.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_169.setText("")
         self.pushButton_169.setIcon(icon17)
         self.pushButton_169.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_169.setObjectName("pushButton_169")
         self.pushButton_170 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_170.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_170.setText("")
         self.pushButton_170.setIcon(icon18)
         self.pushButton_170.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_170.setObjectName("pushButton_170")
         self.pushButton_171 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_171.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_171.setText("")
         self.pushButton_171.setIcon(icon19)
         self.pushButton_171.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_171.setObjectName("pushButton_171")
         self.pushButton_172 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_172.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_172.setText("")
         self.pushButton_172.setIcon(icon20)
         self.pushButton_172.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_172.setObjectName("pushButton_172")
         self.pushButton_173 = QtWidgets.QPushButton(self.frame_72)
         self.pushButton_173.setGeometry(QtCore.QRect(280, 10, 41, 41))
         self.pushButton_173.setStyleSheet("    QPushButton {\n"
-"        border-radius: 16px;\n"
-"        \n"
-"        \n"
-"    background-color: rgb(0, 170, 255);\n"
-"    }")
-        self.pushButton_173.setText("")
+                                          "        border-radius: 16px;\n"
+                                          "        \n"
+                                          "        \n"
+                                          "    background-color: rgb(0, 170, 255);\n"
+                                          "    }")
         self.pushButton_173.setIcon(icon21)
         self.pushButton_173.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_173.setObjectName("pushButton_173")
@@ -5258,31 +4550,26 @@ class Ui_MainWindow(object):
         self.frame_96.setObjectName("frame_96")
         self.pushButton_258 = QtWidgets.QPushButton(self.frame_96)
         self.pushButton_258.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_258.setText("")
         self.pushButton_258.setIcon(icon12)
         self.pushButton_258.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_258.setObjectName("pushButton_258")
         self.pushButton_259 = QtWidgets.QPushButton(self.frame_96)
         self.pushButton_259.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_259.setText("")
         self.pushButton_259.setIcon(icon12)
         self.pushButton_259.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_259.setObjectName("pushButton_259")
         self.pushButton_260 = QtWidgets.QPushButton(self.frame_96)
         self.pushButton_260.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_260.setText("")
         self.pushButton_260.setIcon(icon12)
         self.pushButton_260.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_260.setObjectName("pushButton_260")
         self.pushButton_261 = QtWidgets.QPushButton(self.frame_96)
         self.pushButton_261.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_261.setText("")
         self.pushButton_261.setIcon(icon12)
         self.pushButton_261.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_261.setObjectName("pushButton_261")
         self.pushButton_262 = QtWidgets.QPushButton(self.frame_96)
         self.pushButton_262.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_262.setText("")
         self.pushButton_262.setIcon(icon12)
         self.pushButton_262.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_262.setObjectName("pushButton_262")
@@ -5313,31 +4600,26 @@ class Ui_MainWindow(object):
         self.frame_97.setObjectName("frame_97")
         self.pushButton_263 = QtWidgets.QPushButton(self.frame_97)
         self.pushButton_263.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_263.setText("")
         self.pushButton_263.setIcon(icon12)
         self.pushButton_263.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_263.setObjectName("pushButton_263")
         self.pushButton_264 = QtWidgets.QPushButton(self.frame_97)
         self.pushButton_264.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_264.setText("")
         self.pushButton_264.setIcon(icon12)
         self.pushButton_264.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_264.setObjectName("pushButton_264")
         self.pushButton_265 = QtWidgets.QPushButton(self.frame_97)
         self.pushButton_265.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_265.setText("")
         self.pushButton_265.setIcon(icon12)
         self.pushButton_265.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_265.setObjectName("pushButton_265")
         self.pushButton_266 = QtWidgets.QPushButton(self.frame_97)
         self.pushButton_266.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_266.setText("")
         self.pushButton_266.setIcon(icon12)
         self.pushButton_266.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_266.setObjectName("pushButton_266")
         self.pushButton_267 = QtWidgets.QPushButton(self.frame_97)
         self.pushButton_267.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_267.setText("")
         self.pushButton_267.setIcon(icon12)
         self.pushButton_267.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_267.setObjectName("pushButton_267")
@@ -5382,48 +4664,40 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, -88, 967, 1573))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 967, 1573))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.groupBox_24 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_24.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_24.setTitle("")
         self.groupBox_24.setObjectName("groupBox_24")
         self.verticalLayout_11.addWidget(self.groupBox_24)
         self.groupBox_25 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_25.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_25.setTitle("")
         self.groupBox_25.setObjectName("groupBox_25")
         self.verticalLayout_11.addWidget(self.groupBox_25)
         self.groupBox_26 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_26.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_26.setTitle("")
         self.groupBox_26.setObjectName("groupBox_26")
         self.verticalLayout_11.addWidget(self.groupBox_26)
         self.groupBox_27 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_27.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_27.setTitle("")
         self.groupBox_27.setObjectName("groupBox_27")
         self.verticalLayout_11.addWidget(self.groupBox_27)
         self.groupBox_28 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_28.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_28.setTitle("")
         self.groupBox_28.setObjectName("groupBox_28")
         self.verticalLayout_11.addWidget(self.groupBox_28)
         self.groupBox_29 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_29.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_29.setTitle("")
         self.groupBox_29.setObjectName("groupBox_29")
         self.verticalLayout_11.addWidget(self.groupBox_29)
         self.groupBox_30 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_30.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_30.setTitle("")
         self.groupBox_30.setObjectName("groupBox_30")
         self.verticalLayout_11.addWidget(self.groupBox_30)
         self.groupBox_31 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
         self.groupBox_31.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_31.setTitle("")
         self.groupBox_31.setObjectName("groupBox_31")
         self.verticalLayout_11.addWidget(self.groupBox_31)
         self.pushButton_67 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_4)
@@ -5451,9 +4725,9 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.frame_4.setFont(font)
         self.frame_4.setStyleSheet("#frame_4{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
+                                   "    \n"
+                                   "    background-color: rgb(255, 255, 255);\n"
+                                   "}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -5464,21 +4738,20 @@ class Ui_MainWindow(object):
         self.frame_10 = QtWidgets.QFrame(self.frame_4)
         self.frame_10.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_10.setStyleSheet("QPushButton:pressed{\n"
-"    padding-top:5px;\n"
-"    padding-left:5px;\n"
-"}")
+                                    "    padding-top:5px;\n"
+                                    "    padding-left:5px;\n"
+                                    "}")
         self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
         self.pushButton_7 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_7.setGeometry(QtCore.QRect(30, 10, 41, 41))
         self.pushButton_7.setStyleSheet("#pushButton_7{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_7.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon25 = QtGui.QIcon()
         icon25.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_7.setIcon(icon25)
@@ -5487,11 +4760,10 @@ class Ui_MainWindow(object):
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_8.setGeometry(QtCore.QRect(80, 10, 41, 41))
         self.pushButton_8.setStyleSheet("#pushButton_8{\n"
-"    border:none;\n"
-"    \n"
-"    \n"
-"}")
-        self.pushButton_8.setText("")
+                                        "    border:none;\n"
+                                        "    \n"
+                                        "    \n"
+                                        "}")
         icon26 = QtGui.QIcon()
         icon26.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_8.setIcon(icon26)
@@ -5517,34 +4789,8 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-        # All functions
-        # button functions
-        self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
-        self.pushButton_10.clicked.connect(self.display)
-        self.pushButton_9.clicked.connect(self.display2)
-        self.pushButton_15.clicked.connect(self.search_lol_name)
-        self.pushButton_40.clicked.connect(self.search_lol_name)
-        self.pushButton_16.clicked.connect(self.search_tft_name)
-        self.pushButton_366.clicked.connect(self.search_lol_name)
-        self.label_200.hide()
-        self.label_201.hide()
-
-    # change region buttons
-    def display(self):
-        self.stackedWidget.setCurrentIndex(1)
-
-    def display2(self):
-        self.stackedWidget.setCurrentIndex(0)
-
-    def showLabel(self):
-        self.label_200.show()
-        QtCore.QTimer.singleShot(3000, self.hideLabel)
-
-    def hideLabel(self):
-        self.label_200.hide()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -5572,6 +4818,7 @@ class Ui_MainWindow(object):
         self.comboBox_3.setItemText(16, _translate("MainWindow", "Vietnam"))
         self.pushButton_15.setText(_translate("MainWindow", "Search"))
         self.label_200.setText(_translate("MainWindow", "Wrong name searched"))
+        self.lineEdit_2.setText(_translate("MainWindow", ""))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "North America"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Brazil"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "EU Nordic & East"))
@@ -5592,243 +4839,30 @@ class Ui_MainWindow(object):
         self.pushButton_13.setText(_translate("MainWindow", "Search for Teamfight Tactics"))
         self.pushButton_16.setText(_translate("MainWindow", "Search"))
         self.label_201.setText(_translate("MainWindow", "Wrong name searched"))
-        self.label_18.setText(_translate("MainWindow", "lv : "))
-        self.label_19.setText(_translate("MainWindow", "Hide on bush"))
         self.pushButton_40.setText(_translate("MainWindow", "Renew"))
-        self.label_20.setText(_translate("MainWindow", "Challenger"))
-        self.label_25.setText(_translate("MainWindow", "Match History"))
-        self.label_8.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_9.setText(_translate("MainWindow", "TextLabel"))
-        self.label_10.setText(_translate("MainWindow", "TextLabel"))
-        self.label_11.setText(_translate("MainWindow", "TextLabel"))
-        self.label_12.setText(_translate("MainWindow", "TextLabel"))
-        self.label_13.setText(_translate("MainWindow", "TextLabel"))
-        self.label_14.setText(_translate("MainWindow", "TextLabel"))
-        self.label_15.setText(_translate("MainWindow", "TextLabel"))
-        self.label_16.setText(_translate("MainWindow", "TextLabel"))
-        self.label_17.setText(_translate("MainWindow", "TextLabel"))
-        self.label_5.setText(_translate("MainWindow", "lv:17"))
-        self.label_6.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_7.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label.setText(_translate("MainWindow", "hours ago"))
-        self.label_4.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_2.setText(_translate("MainWindow", "Victory"))
-        self.label_3.setText(_translate("MainWindow", "40m 10s"))
-        self.label_75.setText(_translate("MainWindow", "hours ago"))
-        self.label_76.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_77.setText(_translate("MainWindow", "Victory"))
-        self.label_78.setText(_translate("MainWindow", "40m 10s"))
-        self.label_79.setText(_translate("MainWindow", "lv:17"))
-        self.label_80.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_81.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_82.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_104.setText(_translate("MainWindow", "TextLabel"))
-        self.label_105.setText(_translate("MainWindow", "TextLabel"))
-        self.label_106.setText(_translate("MainWindow", "TextLabel"))
-        self.label_107.setText(_translate("MainWindow", "TextLabel"))
-        self.label_108.setText(_translate("MainWindow", "TextLabel"))
-        self.label_109.setText(_translate("MainWindow", "TextLabel"))
-        self.label_180.setText(_translate("MainWindow", "TextLabel"))
-        self.label_181.setText(_translate("MainWindow", "TextLabel"))
-        self.label_182.setText(_translate("MainWindow", "TextLabel"))
-        self.label_183.setText(_translate("MainWindow", "hours ago"))
-        self.label_184.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_185.setText(_translate("MainWindow", "Victory"))
-        self.label_186.setText(_translate("MainWindow", "40m 10s"))
-        self.label_187.setText(_translate("MainWindow", "lv:17"))
-        self.label_188.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_189.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_190.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_191.setText(_translate("MainWindow", "TextLabel"))
-        self.label_192.setText(_translate("MainWindow", "TextLabel"))
-        self.label_193.setText(_translate("MainWindow", "TextLabel"))
-        self.label_194.setText(_translate("MainWindow", "TextLabel"))
-        self.label_195.setText(_translate("MainWindow", "TextLabel"))
-        self.label_196.setText(_translate("MainWindow", "TextLabel"))
-        self.label_197.setText(_translate("MainWindow", "TextLabel"))
-        self.label_198.setText(_translate("MainWindow", "TextLabel"))
-        self.label_199.setText(_translate("MainWindow", "TextLabel"))
-        self.label_202.setText(_translate("MainWindow", "hours ago"))
-        self.label_203.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_204.setText(_translate("MainWindow", "Victory"))
-        self.label_205.setText(_translate("MainWindow", "40m 10s"))
-        self.label_210.setText(_translate("MainWindow", "lv:17"))
-        self.label_211.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_212.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_216.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_217.setText(_translate("MainWindow", "TextLabel"))
-        self.label_218.setText(_translate("MainWindow", "TextLabel"))
-        self.label_219.setText(_translate("MainWindow", "TextLabel"))
-        self.label_220.setText(_translate("MainWindow", "TextLabel"))
-        self.label_221.setText(_translate("MainWindow", "TextLabel"))
-        self.label_222.setText(_translate("MainWindow", "TextLabel"))
-        self.label_223.setText(_translate("MainWindow", "TextLabel"))
-        self.label_224.setText(_translate("MainWindow", "TextLabel"))
-        self.label_225.setText(_translate("MainWindow", "TextLabel"))
-        self.label_206.setText(_translate("MainWindow", "hours ago"))
-        self.label_207.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_208.setText(_translate("MainWindow", "Victory"))
-        self.label_209.setText(_translate("MainWindow", "40m 10s"))
-        self.label_213.setText(_translate("MainWindow", "lv:17"))
-        self.label_214.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_215.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_226.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_227.setText(_translate("MainWindow", "TextLabel"))
-        self.label_228.setText(_translate("MainWindow", "TextLabel"))
-        self.label_229.setText(_translate("MainWindow", "TextLabel"))
-        self.label_230.setText(_translate("MainWindow", "TextLabel"))
-        self.label_231.setText(_translate("MainWindow", "TextLabel"))
-        self.label_232.setText(_translate("MainWindow", "TextLabel"))
-        self.label_233.setText(_translate("MainWindow", "TextLabel"))
-        self.label_234.setText(_translate("MainWindow", "TextLabel"))
-        self.label_235.setText(_translate("MainWindow", "TextLabel"))
         self.pushButton_65.setText(_translate("MainWindow", "View more history"))
-        self.label_237.setText(_translate("MainWindow", "Hide on bush"))
         self.pushButton_366.setText(_translate("MainWindow", "Renew"))
-        self.label_236.setText(_translate("MainWindow", "Challenger"))
         self.label_21.setText(_translate("MainWindow", "Match History"))
-        self.label_22.setText(_translate("MainWindow", "4th place"))
-        self.label_23.setText(_translate("MainWindow", "Rank "))
-        self.label_24.setText(_translate("MainWindow", "1 days ago"))
-        self.pushButton_43.setText(_translate("MainWindow", "View more history"))
-        self.label_30.setText(_translate("MainWindow", "hours ago"))
-        self.label_31.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_32.setText(_translate("MainWindow", "Victory"))
-        self.label_33.setText(_translate("MainWindow", "40m 10s"))
-        self.label_34.setText(_translate("MainWindow", "lv:17"))
-        self.label_35.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_36.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_37.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_38.setText(_translate("MainWindow", "TextLabel"))
-        self.label_39.setText(_translate("MainWindow", "TextLabel"))
-        self.label_40.setText(_translate("MainWindow", "TextLabel"))
-        self.label_41.setText(_translate("MainWindow", "TextLabel"))
-        self.label_42.setText(_translate("MainWindow", "TextLabel"))
-        self.label_43.setText(_translate("MainWindow", "TextLabel"))
-        self.label_44.setText(_translate("MainWindow", "TextLabel"))
-        self.label_45.setText(_translate("MainWindow", "TextLabel"))
-        self.label_46.setText(_translate("MainWindow", "TextLabel"))
-        self.label_47.setText(_translate("MainWindow", "hours ago"))
-        self.label_48.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_49.setText(_translate("MainWindow", "Victory"))
-        self.label_50.setText(_translate("MainWindow", "40m 10s"))
-        self.label_83.setText(_translate("MainWindow", "lv:17"))
-        self.label_84.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_85.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_110.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_111.setText(_translate("MainWindow", "TextLabel"))
-        self.label_112.setText(_translate("MainWindow", "TextLabel"))
-        self.label_113.setText(_translate("MainWindow", "TextLabel"))
-        self.label_114.setText(_translate("MainWindow", "TextLabel"))
-        self.label_115.setText(_translate("MainWindow", "TextLabel"))
-        self.label_116.setText(_translate("MainWindow", "TextLabel"))
-        self.label_117.setText(_translate("MainWindow", "TextLabel"))
-        self.label_118.setText(_translate("MainWindow", "TextLabel"))
-        self.label_119.setText(_translate("MainWindow", "TextLabel"))
-        self.label_51.setText(_translate("MainWindow", "hours ago"))
-        self.label_52.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_53.setText(_translate("MainWindow", "Victory"))
-        self.label_54.setText(_translate("MainWindow", "40m 10s"))
-        self.label_86.setText(_translate("MainWindow", "lv:17"))
-        self.label_87.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_88.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_120.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_121.setText(_translate("MainWindow", "TextLabel"))
-        self.label_122.setText(_translate("MainWindow", "TextLabel"))
-        self.label_123.setText(_translate("MainWindow", "TextLabel"))
-        self.label_124.setText(_translate("MainWindow", "TextLabel"))
-        self.label_125.setText(_translate("MainWindow", "TextLabel"))
-        self.label_126.setText(_translate("MainWindow", "TextLabel"))
-        self.label_127.setText(_translate("MainWindow", "TextLabel"))
-        self.label_128.setText(_translate("MainWindow", "TextLabel"))
-        self.label_129.setText(_translate("MainWindow", "TextLabel"))
-        self.label_55.setText(_translate("MainWindow", "hours ago"))
-        self.label_56.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_57.setText(_translate("MainWindow", "Victory"))
-        self.label_58.setText(_translate("MainWindow", "40m 10s"))
-        self.label_89.setText(_translate("MainWindow", "lv:17"))
-        self.label_90.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_91.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_130.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_131.setText(_translate("MainWindow", "TextLabel"))
-        self.label_132.setText(_translate("MainWindow", "TextLabel"))
-        self.label_133.setText(_translate("MainWindow", "TextLabel"))
-        self.label_134.setText(_translate("MainWindow", "TextLabel"))
-        self.label_135.setText(_translate("MainWindow", "TextLabel"))
-        self.label_136.setText(_translate("MainWindow", "TextLabel"))
-        self.label_137.setText(_translate("MainWindow", "TextLabel"))
-        self.label_138.setText(_translate("MainWindow", "TextLabel"))
-        self.label_139.setText(_translate("MainWindow", "TextLabel"))
-        self.label_59.setText(_translate("MainWindow", "hours ago"))
-        self.label_60.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_61.setText(_translate("MainWindow", "Victory"))
-        self.label_62.setText(_translate("MainWindow", "40m 10s"))
-        self.label_92.setText(_translate("MainWindow", "lv:17"))
-        self.label_93.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_94.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_140.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_141.setText(_translate("MainWindow", "TextLabel"))
-        self.label_142.setText(_translate("MainWindow", "TextLabel"))
-        self.label_143.setText(_translate("MainWindow", "TextLabel"))
-        self.label_144.setText(_translate("MainWindow", "TextLabel"))
-        self.label_145.setText(_translate("MainWindow", "TextLabel"))
-        self.label_146.setText(_translate("MainWindow", "TextLabel"))
-        self.label_147.setText(_translate("MainWindow", "TextLabel"))
-        self.label_148.setText(_translate("MainWindow", "TextLabel"))
-        self.label_149.setText(_translate("MainWindow", "TextLabel"))
-        self.label_63.setText(_translate("MainWindow", "hours ago"))
-        self.label_64.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_65.setText(_translate("MainWindow", "Victory"))
-        self.label_66.setText(_translate("MainWindow", "40m 10s"))
-        self.label_95.setText(_translate("MainWindow", "lv:17"))
-        self.label_96.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_97.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_150.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_151.setText(_translate("MainWindow", "TextLabel"))
-        self.label_152.setText(_translate("MainWindow", "TextLabel"))
-        self.label_153.setText(_translate("MainWindow", "TextLabel"))
-        self.label_154.setText(_translate("MainWindow", "TextLabel"))
-        self.label_155.setText(_translate("MainWindow", "TextLabel"))
-        self.label_156.setText(_translate("MainWindow", "TextLabel"))
-        self.label_157.setText(_translate("MainWindow", "TextLabel"))
-        self.label_158.setText(_translate("MainWindow", "TextLabel"))
-        self.label_159.setText(_translate("MainWindow", "TextLabel"))
-        self.label_67.setText(_translate("MainWindow", "hours ago"))
-        self.label_68.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_69.setText(_translate("MainWindow", "Victory"))
-        self.label_70.setText(_translate("MainWindow", "40m 10s"))
-        self.label_98.setText(_translate("MainWindow", "lv:17"))
-        self.label_99.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_100.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_160.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_161.setText(_translate("MainWindow", "TextLabel"))
-        self.label_162.setText(_translate("MainWindow", "TextLabel"))
-        self.label_163.setText(_translate("MainWindow", "TextLabel"))
-        self.label_164.setText(_translate("MainWindow", "TextLabel"))
-        self.label_165.setText(_translate("MainWindow", "TextLabel"))
-        self.label_166.setText(_translate("MainWindow", "TextLabel"))
-        self.label_167.setText(_translate("MainWindow", "TextLabel"))
-        self.label_168.setText(_translate("MainWindow", "TextLabel"))
-        self.label_169.setText(_translate("MainWindow", "TextLabel"))
-        self.label_71.setText(_translate("MainWindow", "hours ago"))
-        self.label_72.setText(_translate("MainWindow", "Ranked solo"))
-        self.label_73.setText(_translate("MainWindow", "Victory"))
-        self.label_74.setText(_translate("MainWindow", "40m 10s"))
-        self.label_101.setText(_translate("MainWindow", "lv:17"))
-        self.label_102.setText(_translate("MainWindow", "12 / 0 / 11"))
-        self.label_103.setText(_translate("MainWindow", "9.0 KDA"))
-        self.label_170.setText(_translate("MainWindow", "sadssadsdssd"))
-        self.label_171.setText(_translate("MainWindow", "TextLabel"))
-        self.label_172.setText(_translate("MainWindow", "TextLabel"))
-        self.label_173.setText(_translate("MainWindow", "TextLabel"))
-        self.label_174.setText(_translate("MainWindow", "TextLabel"))
-        self.label_175.setText(_translate("MainWindow", "TextLabel"))
-        self.label_176.setText(_translate("MainWindow", "TextLabel"))
-        self.label_177.setText(_translate("MainWindow", "TextLabel"))
-        self.label_178.setText(_translate("MainWindow", "TextLabel"))
-        self.label_179.setText(_translate("MainWindow", "TextLabel"))
         self.pushButton_66.setText(_translate("MainWindow", "View more history"))
         self.pushButton_67.setText(_translate("MainWindow", "View more history"))
+        # All functions
+        # button functions
+        self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
+        self.pushButton_10.clicked.connect(self.display)
+        self.pushButton_9.clicked.connect(self.display2)
+        self.pushButton_15.clicked.connect(self.search_lol_name)
+        self.pushButton_40.clicked.connect(self.search_lol_name)
+        self.pushButton_16.clicked.connect(self.search_tft_name)
+        self.pushButton_366.clicked.connect(self.search_lol_name)
+        self.label_200.hide()
+        self.label_201.hide()
+
+    # change region buttons
+    def display(self):
+        self.stackedWidget.setCurrentIndex(1)
+
+    def display2(self):
+        self.stackedWidget.setCurrentIndex(0)
 
     # functions after user clicked search button
     # retrieve information for two input bar to create searchMatch based on given information
@@ -5866,14 +4900,30 @@ class Ui_MainWindow(object):
                 QtCore.QTimer.singleShot(3000, self.label_201.hide)
                 print("wrong name entered")
             else:
-                self.tft_present_info()
-                self.tft_present_img()
+                self.groupBoxes = []
+                # create groupboxes and layout for each match
+                for i in range(9):  # range(len(self.Summoner.match_details)):
+                    groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
+                    groupBox.setMinimumSize(QtCore.QSize(0, 230))
+                    groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
+                    self.groupBoxes.append(groupBox)
+                    self.tft_groupBox(i)
+                # view more history button on the bottom of the scroll area
+                self.pushButton_43 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_2)
+                self.pushButton_43.setMaximumSize(QtCore.QSize(941, 16777215))
+                font = QtGui.QFont()
+                font.setFamily("Bodoni MT Black")
+                font.setPointSize(10)
+                font.setWeight(75)
+                self.pushButton_43.setFont(font)
+                self.pushButton_43.setText("View more history")
+                self.verticalLayout_8.addWidget(self.pushButton_43)
                 self.stackedWidget.setCurrentIndex(3)
                 print("right name entered")
 
     # return the index of the in-match data of the summoner being searched
-    def find_self_participant(self):
-        participants_list = self.Summoner.match_details[0]['info']['participants']
+    def find_self_participant(self, index):
+        participants_list = self.Summoner.match_details[index]['info']['participants']
         # find index of summoner in lol game
         if self.Summoner.gameType == 'lol':
             for participant in participants_list:
@@ -5906,6 +4956,7 @@ class Ui_MainWindow(object):
     # create images relates to all text display in league of legends match history page
     def lol_present_info(self):
         _translate = QtCore.QCoreApplication.translate
+        self.pushButton_65.setText(_translate("MainWindow", "View more history"))
         try:
             self.label_8.setText(
                 _translate("MainWindow",
@@ -5979,22 +5030,22 @@ class Ui_MainWindow(object):
         try:
             self.label_5.setText(
                 _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[0]['info']['participants'][0]['champLevel']}"))
+                           f"lv:{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['champLevel']}"))
         except KeyError:
             self.label_5.setText(_translate("MainWindow", "lv:"))
 
         try:
             self.label_6.setText(_translate("MainWindow",
-                                            f"{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']} "
-                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']} "
-                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['assists']}"))
+                                            f"{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['kills']} "
+                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['deaths']} "
+                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['assists']}"))
         except KeyError:
             self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
 
         try:
-            kill = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['kills']
-            death = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['deaths']
-            assist = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['assists']
+            kill = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['kills']
+            death = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['deaths']
+            assist = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['assists']
             kda = self.cal_KDA(kill, death, assist)
             kda_text = str(kda) + " KDA"
             self.label_7.setText(kda_text)
@@ -6014,12 +5065,12 @@ class Ui_MainWindow(object):
         try:
             self.label_2.setText(
                 _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}"))
+                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['win'])}"))
             if (_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['win'])}") == "Victory"):
-                    self.groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
+                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['win'])}") == "Victory"):
+                self.groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
             else:
-                    self.groupBox.setStyleSheet("background-color: rgb(255, 103, 89);")
+                self.groupBox.setStyleSheet("background-color: rgb(255, 103, 89);")
 
 
         except KeyError:
@@ -6048,8 +5099,7 @@ class Ui_MainWindow(object):
         except IndexError:
             self.label_20.setText(_translate("MainWindow", "N/A"))
 
-
-        #groupbox3
+        # groupbox3
         try:
             self.label_82.setText(
                 _translate("MainWindow",
@@ -6123,22 +5173,22 @@ class Ui_MainWindow(object):
         try:
             self.label_79.setText(
                 _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[1]['info']['participants'][0]['champLevel']}"))
+                           f"lv:{self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['champLevel']}"))
         except KeyError:
             self.label_79.setText(_translate("MainWindow", "lv:"))
 
         try:
             self.label_80.setText(_translate("MainWindow",
-                                            f"{self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['kills']} "
-                                            f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['deaths']} "
-                                            f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['assists']}"))
+                                             f"{self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['kills']} "
+                                             f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['deaths']} "
+                                             f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['assists']}"))
         except KeyError:
             self.label_80.setText(_translate("MainWindow", "N/A / N/A / N/A"))
 
         try:
-            kill = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['kills']
-            death = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['deaths']
-            assist = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['assists']
+            kill = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['kills']
+            death = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['deaths']
+            assist = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['assists']
             kda = self.cal_KDA(kill, death, assist)
             kda_text = str(kda) + " KDA"
             self.label_81.setText(kda_text)
@@ -6158,9 +5208,9 @@ class Ui_MainWindow(object):
         try:
             self.label_77.setText(
                 _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['win'])}"))
-            if(_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['win'])}") == "Victory"):
+                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['win'])}"))
+            if (_translate("MainWindow",
+                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['win'])}") == "Victory"):
                 self.groupBox_3.setStyleSheet("background-color: rgb(137, 194, 255);")
             else:
                 self.groupBox_3.setStyleSheet("background-color: rgb(255, 103, 89);")
@@ -6170,12 +5220,11 @@ class Ui_MainWindow(object):
 
         try:
             self.label_78.setText(_translate("MainWindow",
-                                            f"{int(self.Summoner.match_details[1]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
+                                             f"{int(self.Summoner.match_details[1]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_78.setText(_translate("MainWindow", "N/Am N/As"))
 
-
-        #groupbox5
+        # groupbox5
         try:
             self.label_190.setText(
                 _translate("MainWindow",
@@ -6249,22 +5298,22 @@ class Ui_MainWindow(object):
         try:
             self.label_187.setText(
                 _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[2]['info']['participants'][0]['champLevel']}"))
+                           f"lv:{self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['champLevel']}"))
         except KeyError:
             self.label_187.setText(_translate("MainWindow", "lv:"))
 
         try:
             self.label_188.setText(_translate("MainWindow",
-                                            f"{self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['kills']} "
-                                            f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['deaths']} "
-                                            f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['assists']}"))
+                                              f"{self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['kills']} "
+                                              f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['deaths']} "
+                                              f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['assists']}"))
         except KeyError:
             self.label_188.setText(_translate("MainWindow", "N/A / N/A / N/A"))
 
         try:
-            kill = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['kills']
-            death = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['deaths']
-            assist = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['assists']
+            kill = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['kills']
+            death = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['deaths']
+            assist = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['assists']
             kda = self.cal_KDA(kill, death, assist)
             kda_text = str(kda) + " KDA"
             self.label_189.setText(kda_text)
@@ -6284,9 +5333,9 @@ class Ui_MainWindow(object):
         try:
             self.label_185.setText(
                 _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['win'])}"))
-            if(_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['win'])}") == "Victory"):
+                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['win'])}"))
+            if (_translate("MainWindow",
+                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['win'])}") == "Victory"):
                 self.groupBox_5.setStyleSheet("background-color: rgb(137, 194, 255);")
             else:
                 self.groupBox_5.setStyleSheet("background-color: rgb(255, 103, 89);")
@@ -6296,13 +5345,11 @@ class Ui_MainWindow(object):
 
         try:
             self.label_186.setText(_translate("MainWindow",
-                                            f"{int(self.Summoner.match_details[2]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
+                                              f"{int(self.Summoner.match_details[2]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_186.setText(_translate("MainWindow", "N/Am N/As"))
 
-
-
-        #groupbox12
+        # groupbox12
         try:
             self.label_216.setText(
                 _translate("MainWindow",
@@ -6376,22 +5423,22 @@ class Ui_MainWindow(object):
         try:
             self.label_210.setText(
                 _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[3]['info']['participants'][0]['champLevel']}"))
+                           f"lv:{self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['champLevel']}"))
         except KeyError:
             self.label_210.setText(_translate("MainWindow", "lv:"))
 
         try:
             self.label_211.setText(_translate("MainWindow",
-                                            f"{self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['kills']} "
-                                            f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['deaths']} "
-                                            f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['assists']}"))
+                                              f"{self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['kills']} "
+                                              f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['deaths']} "
+                                              f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['assists']}"))
         except KeyError:
             self.label_211.setText(_translate("MainWindow", "N/A / N/A / N/A"))
 
         try:
-            kill = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['kills']
-            death = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['deaths']
-            assist = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['assists']
+            kill = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['kills']
+            death = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['deaths']
+            assist = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['assists']
             kda = self.cal_KDA(kill, death, assist)
             kda_text = str(kda) + " KDA"
             self.label_212.setText(kda_text)
@@ -6411,9 +5458,9 @@ class Ui_MainWindow(object):
         try:
             self.label_204.setText(
                 _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['win'])}"))
-            if(_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['win'])}") == "Victory"):
+                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['win'])}"))
+            if (_translate("MainWindow",
+                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['win'])}") == "Victory"):
                 self.groupBox_12.setStyleSheet("background-color: rgb(137, 194, 255);")
             else:
                 self.groupBox_12.setStyleSheet("background-color: rgb(255, 103, 89);")
@@ -6423,18 +5470,18 @@ class Ui_MainWindow(object):
 
         try:
             self.label_205.setText(_translate("MainWindow",
-                                            f"{int(self.Summoner.match_details[3]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
+                                              f"{int(self.Summoner.match_details[3]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
         except KeyError:
             self.label_205.setText(_translate("MainWindow", "N/Am N/As"))
 
     # create images relates to all image display in league of legends match history page
     def lol_present_img(self):
-        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]
+        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]
         items = []
         champs = []
         for i in range(7):
             items.append(
-                self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()][f'item{i}'])
+                self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)][f'item{i}'])
         for x in range(10):
             champs.append(self.Summoner.match_details[0]['info']['participants'][x]['championId'])
         icon = QtGui.QIcon()
@@ -6549,7 +5596,7 @@ class Ui_MainWindow(object):
         runeUrlPath = 'https://ddragon.canisback.com/img/'
         rune1 = QtGui.QIcon()
         primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['perks']['styles'][0][
+            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][0][
                 'selections'][0]['perk'])
         primaryRuneimg = QtGui.QImage()
         primaryRuneimg.loadFromData(requests.get(runeUrlPath + primaryRunePath).content)
@@ -6562,7 +5609,7 @@ class Ui_MainWindow(object):
         runeUrlPath = 'https://ddragon.canisback.com/img/'
         rune2 = QtGui.QIcon()
         subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['perks']['styles'][1][
+            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][1][
                 'style'])
         subRuneimg = QtGui.QImage()
         subRuneimg.loadFromData(requests.get(runeUrlPath + subRunePath).content)
@@ -6580,22 +5627,20 @@ class Ui_MainWindow(object):
             QtGui.QIcon.Off)
         self.pushButton_42.setIcon(win_rate_graph)
 
-
-
         # groupbox 3 img
-        self_Participant2 = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]
+        self_Participant2 = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]
         items2 = []
         champs2 = []
         for i in range(7):
-                items2.append(
-                        self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()][
-                                f'item{i}'])
+            items2.append(
+                self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)][
+                    f'item{i}'])
         for x in range(10):
-                champs2.append(self.Summoner.match_details[1]['info']['participants'][x]['championId'])
+            champs2.append(self.Summoner.match_details[1]['info']['participants'][x]['championId'])
 
         g2_icon = QtGui.QIcon()
         g2_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant2['championId']}.png"), QtGui.QIcon.Normal,
-                       QtGui.QIcon.Off)
+                          QtGui.QIcon.Off)
         self.pushButton_174.setIcon(g2_icon)
 
         # set the in-game items graphics
@@ -6623,7 +5668,6 @@ class Ui_MainWindow(object):
         g2_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items2[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_183.setIcon(g2_item_icon5)
 
-
         # set the in-game items graphics
         g2_item_icon6 = QtGui.QIcon()
         g2_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items2[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6643,7 +5687,6 @@ class Ui_MainWindow(object):
         g2_cp_icon2 = QtGui.QIcon()
         g2_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_187.setIcon(g2_cp_icon2)
-
 
         g2_cp_icon3 = QtGui.QIcon()
         g2_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6677,7 +5720,6 @@ class Ui_MainWindow(object):
         g2_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_195.setIcon(g2_cp_icon10)
 
-
         # first summoner Spell display
         g2_summonerSpell1 = QtGui.QIcon()
         g2_summonerSpell1.addPixmap(
@@ -6698,43 +5740,42 @@ class Ui_MainWindow(object):
         g2_runeUrlPath = 'https://ddragon.canisback.com/img/'
         g2_rune1 = QtGui.QIcon()
         g2_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['perks']['styles'][0][
+            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['perks']['styles'][0][
                 'selections'][0]['perk'])
         g2_primaryRuneimg = QtGui.QImage()
         g2_primaryRuneimg.loadFromData(requests.get(g2_runeUrlPath + g2_primaryRunePath).content)
         g2_rune1.addPixmap(QtGui.QPixmap(g2_primaryRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_177.setIcon(g2_rune1)
 
         # sub rune display
         g2_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
         g2_rune2 = QtGui.QIcon()
         g2_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant()]['perks']['styles'][1][
+            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['perks']['styles'][1][
                 'style'])
         g2_subRuneimg = QtGui.QImage()
         g2_subRuneimg.loadFromData(requests.get(g2_runeUrlPath1 + g2_subRunePath).content)
         g2_rune2.addPixmap(QtGui.QPixmap(g2_subRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_178.setIcon(g2_rune2)
 
-
         # groupbox 5 img
-        self_Participant3 = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]
+        self_Participant3 = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]
         items3 = []
         champs3 = []
         for i in range(7):
-                items3.append(
-                        self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()][
-                                f'item{i}'])
+            items3.append(
+                self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)][
+                    f'item{i}'])
         for x in range(10):
-                champs3.append(self.Summoner.match_details[2]['info']['participants'][x]['championId'])
+            champs3.append(self.Summoner.match_details[2]['info']['participants'][x]['championId'])
 
         g3_icon = QtGui.QIcon()
         g3_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant3['championId']}.png"), QtGui.QIcon.Normal,
-                       QtGui.QIcon.Off)
+                          QtGui.QIcon.Off)
         self.pushButton_196.setIcon(g3_icon)
 
         # set the in-game items graphics
@@ -6762,7 +5803,6 @@ class Ui_MainWindow(object):
         g3_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items3[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_275.setIcon(g3_item_icon5)
 
-
         # set the in-game items graphics
         g3_item_icon6 = QtGui.QIcon()
         g3_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items3[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6782,7 +5822,6 @@ class Ui_MainWindow(object):
         g3_cp_icon2 = QtGui.QIcon()
         g3_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_279.setIcon(g3_cp_icon2)
-
 
         g3_cp_icon3 = QtGui.QIcon()
         g3_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6816,7 +5855,6 @@ class Ui_MainWindow(object):
         g3_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_287.setIcon(g3_cp_icon10)
 
-
         # first summoner Spell display
         g3_summonerSpell1 = QtGui.QIcon()
         g3_summonerSpell1.addPixmap(
@@ -6837,42 +5875,42 @@ class Ui_MainWindow(object):
         g3_runeUrlPath = 'https://ddragon.canisback.com/img/'
         g3_rune1 = QtGui.QIcon()
         g3_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['perks']['styles'][0][
+            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['perks']['styles'][0][
                 'selections'][0]['perk'])
         g3_primaryRuneimg = QtGui.QImage()
         g3_primaryRuneimg.loadFromData(requests.get(g3_runeUrlPath + g3_primaryRunePath).content)
         g3_rune1.addPixmap(QtGui.QPixmap(g3_primaryRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_269.setIcon(g3_rune1)
 
         # sub rune display
         g3_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
         g3_rune2 = QtGui.QIcon()
         g3_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant()]['perks']['styles'][1][
+            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['perks']['styles'][1][
                 'style'])
         g3_subRuneimg = QtGui.QImage()
         g3_subRuneimg.loadFromData(requests.get(g3_runeUrlPath1 + g3_subRunePath).content)
         g3_rune2.addPixmap(QtGui.QPixmap(g3_subRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_270.setIcon(g3_rune2)
 
         # groupbox 12 img
-        self_Participant4 = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]
+        self_Participant4 = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]
         items4 = []
         champs4 = []
         for i in range(7):
-                items4.append(
-                        self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()][
-                                f'item{i}'])
+            items4.append(
+                self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)][
+                    f'item{i}'])
         for x in range(10):
-                champs4.append(self.Summoner.match_details[3]['info']['participants'][x]['championId'])
+            champs4.append(self.Summoner.match_details[3]['info']['participants'][x]['championId'])
 
         g4_icon = QtGui.QIcon()
-        g4_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant3['championId']}.png"), QtGui.QIcon.Normal,
-                       QtGui.QIcon.Off)
+        g4_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant4['championId']}.png"), QtGui.QIcon.Normal,
+                          QtGui.QIcon.Off)
         self.pushButton_321.setIcon(g4_icon)
 
         # set the in-game items graphics
@@ -6900,7 +5938,6 @@ class Ui_MainWindow(object):
         g4_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items4[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_330.setIcon(g4_item_icon5)
 
-
         # set the in-game items graphics
         g4_item_icon6 = QtGui.QIcon()
         g4_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items4[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6920,7 +5957,6 @@ class Ui_MainWindow(object):
         g4_cp_icon2 = QtGui.QIcon()
         g4_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_346.setIcon(g4_cp_icon2)
-
 
         g4_cp_icon3 = QtGui.QIcon()
         g4_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -6954,7 +5990,6 @@ class Ui_MainWindow(object):
         g4_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_354.setIcon(g4_cp_icon10)
 
-
         # first summoner Spell display
         g4_summonerSpell1 = QtGui.QIcon()
         g4_summonerSpell1.addPixmap(
@@ -6975,54 +6010,194 @@ class Ui_MainWindow(object):
         g4_runeUrlPath = 'https://ddragon.canisback.com/img/'
         g4_rune1 = QtGui.QIcon()
         g4_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['perks']['styles'][0][
+            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['perks']['styles'][0][
                 'selections'][0]['perk'])
         g4_primaryRuneimg = QtGui.QImage()
         g4_primaryRuneimg.loadFromData(requests.get(g4_runeUrlPath + g4_primaryRunePath).content)
-        g4_rune1.addPixmap(QtGui.QPixmap(g3_primaryRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+        g4_rune1.addPixmap(QtGui.QPixmap(g4_primaryRuneimg),
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_324.setIcon(g4_rune1)
 
         # sub rune display
         g4_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
         g4_rune2 = QtGui.QIcon()
         g4_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant()]['perks']['styles'][1][
+            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][1][
                 'style'])
         g4_subRuneimg = QtGui.QImage()
         g4_subRuneimg.loadFromData(requests.get(g4_runeUrlPath1 + g4_subRunePath).content)
         g4_rune2.addPixmap(QtGui.QPixmap(g4_subRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
+                           QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
         self.pushButton_325.setIcon(g4_rune2)
+
+    def tft_groupBox(self, index):
+        # groupBox set
+        # frame set
+        self.tft_frames = []
+        for i in range(3):
+            frame = QtWidgets.QFrame(self.groupBoxes[index])
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            self.tft_frames.append(frame)
+        self.tft_frames[0].setGeometry(QtCore.QRect(10, 40, 241, 161))
+        self.tft_frames[1].setGeometry(QtCore.QRect(260, 10, 711, 141))
+        self.tft_frames[2].setGeometry(QtCore.QRect(310, 160, 621, 71))
+
+        # label set
+        # label of 1 frame
+        self.matchInfo = []
+        for i in range(3):
+            info = QtWidgets.QLabel(self.tft_frames[0])
+            self.matchInfo.append(info)
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        # match placement of summoner
+        self.matchInfo[0].setGeometry(QtCore.QRect(10, 10, 141, 41))
+        self.matchInfo[0].setFont(font)
+        self.matchInfo[0].setText(self.placement_trans(
+            self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(0)]['placement']))
+        # game queue name
+        self.matchInfo[1].setGeometry(QtCore.QRect(10, 60, 181, 41))
+        font.setPointSize(10)
+        self.matchInfo[1].setFont(font)
+        self.matchInfo[1].setText(self.gameStat.identify_tft_queue(
+            self.Summoner.match_details[index]['info']['queue_id']))
+        # game time period
+        self.matchInfo[2].setText(
+            self.time_previous(self.Summoner.match_details[index]['info']['game_datetime']))
+        self.matchInfo[2].setGeometry(QtCore.QRect(10, 100, 191, 41))
+        self.matchInfo[2].setFont(font)
+        # rank place text
+        try:
+            self.label_236.setText(f"{self.Summoner.rankedInfo[0]['tier']}")
+        except KeyError:
+            self.label_236.setText("N/A")
+        except IndexError:
+            self.label_236.setText("N/A")
+        # summoner Name
+        self.label_237.setText(f"{self.Summoner.summonerName}")
+        # traits are labels for 3 frame
+        # traits level
+        self.traitLevels = []
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        for i in range(9):
+            traitLevel = QtWidgets.QLabel(self.tft_frames[2])
+            traitLevel.setGeometry(QtCore.QRect(40 + i * 60, 40, 31, 21))
+            traitLevel.setFont(font)
+            self.traitLevels.append(traitLevel)
+
+        # push button for 2 frame
+        # tactics icon setting
+        self.tac_icons = []
+        for i in range(9):
+            tac_icon = QtWidgets.QPushButton(self.tft_frames[1])
+            tac_icon.setGeometry(QtCore.QRect(i * 80, 30, 69, 69))
+            tac_icon.setIconSize(QtCore.QSize(60, 60))
+            self.tac_icons.append(tac_icon)
+
+        # items buttons
+        self.tac_items = []
+        for i in range(27):
+            tac_item = QtWidgets.QPushButton(self.tft_frames[1])
+            tac_item.setGeometry(QtCore.QRect(i * 20 + int(i/3) * 20, 100, 21, 21))
+            tac_item.setIconSize(QtCore.QSize(35, 35))
+            self.tac_items.append(tac_item)
+
+        self.tac_stars = []
+        for i in range(9):
+            star = QtWidgets.QPushButton(self.tft_frames[1])
+            star.setGeometry(QtCore.QRect(20 + i * 80, 0, 31, 31))
+            star.setIconSize(QtCore.QSize(35, 35))
+            self.tac_stars.append(star)
+
+        # pushButtons for 3 frame
+        # 9 buttons
+        self.traits = []
+        for i in range(9):
+            trait = QtWidgets.QPushButton(self.tft_frames[2])
+            trait.setGeometry(QtCore.QRect(30 + (i * 60), 0, 47, 41))
+            trait.setStyleSheet("background-color: rgb(0, 0, 0);")
+            self.traits.append(trait)
+
+        # add groupbox to vertical layout
+        self.verticalLayout_8.addWidget(self.groupBoxes[index])
+
+        # settings for images
+        self_Participant = self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(index)]
+        imageurl = "https://ddragon.leagueoflegends.com/cdn/13.4.1/img/"
+        numUnit = len(self_Participant['units'])
+        item_count = 0
+        # display image of champion and items
+        for i in range(numUnit if numUnit < 10 else 9):
+
+            champIcon = QtGui.QIcon()
+            unitImg = QtGui.QImage()
+            unitImg.loadFromData(requests.get(
+                imageurl + "tft-hero-augment/" + self.gameStat.identify_tft_champion(
+                    self_Participant['units'][i]['character_id'])).content)
+            champIcon.addPixmap(QtGui.QPixmap(unitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.tac_icons[i].setIcon(champIcon)
+
+            # display star image
+            starIcon = QtGui.QIcon()
+            starIcon.addPixmap(QtGui.QPixmap(self._star_trans(self_Participant['units'][i]['tier'])),
+                               QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.tac_stars[i].setIcon(starIcon)
+            for j in range(len(self_Participant['units'][i]['itemNames'])):
+                itemIcon = QtGui.QIcon()
+                itemImg = QtGui.QImage()
+                itemName = self.tft_item_trans(self_Participant['units'][i]['itemNames'][j])
+                itemImg.loadFromData(
+                    requests.get(imageurl + "tft-item/" + self.gameStat.identify_tft_item(itemName)).content)
+                itemIcon.addPixmap(QtGui.QPixmap(itemImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                self.tac_items[item_count + j].setIcon(itemIcon)
+            item_count += 3
+
+        active_traits = []
+        for i in self_Participant['traits']:
+            if i['tier_current'] != 0:
+                active_traits.append(i)
+        active_traits = sorted(active_traits, key=lambda d: d['tier_current'], reverse=True)
+        for i in range(len(active_traits) if len(active_traits) < len(self.traits) else len(self.traits)):
+            trait_icon = QtGui.QIcon()
+            traitImg = QtGui.QImage()
+            traitImg.loadFromData(requests.get(
+                imageurl + "tft-trait/" + self.gameStat.identify_tft_trait(
+                    active_traits[i]['name'])).content)
+            trait_icon.addPixmap(QtGui.QPixmap(traitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.traits[i].setIcon(trait_icon)
+
+            # display trait level text
+            self.traitLevels[i].setText(f"{active_traits[i]['num_units']}")
+        # display ranked emblem image of summoner
+        if len(self.Summoner.rankedInfo) != 0:
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(self._trans_rank()), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.pushButton_365.setIcon(icon)
+        else:
+            self.pushButton_365.setIcon(QtGui.QIcon("items/7050.png"))
+        print(f"Match {index} finished")
 
     def tft_present_info(self):
         _translate = QtCore.QCoreApplication.translate
-        self.label_22.setText(_translate("MainWindow", self.placement_trans(
-            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]['placement'])))
-        self.label_23.setText(_translate("MainWindow", self.gameStat.identify_tft_queue(
-            self.Summoner.match_details[0]['info']['queue_id'])))
-        self.label_24.setText(
-            _translate("MainWindow", self.time_previous(self.Summoner.match_details[0]['info']['game_datetime'])))
+
+    def _star_trans(self, level):
+        if level == 1:
+            return "picture/bronze.png"
+        elif level == 2:
+            return "picture/silver.png"
+        elif level == 3:
+            return "picture/gold.png"
 
     def tft_present_img(self):
-        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant()]
+        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]
         imageurl = "https://ddragon.leagueoflegends.com/cdn/13.4.1/img/"
-        # contain all the button of champ icons from left to right
-        icons = [self.pushButton_44, self.pushButton_45, self.pushButton_46, self.pushButton_47, self.pushButton_48,
-                 self.pushButton_49, self.pushButton_50, self.pushButton_51, self.pushButton_52]
-        # contains all the button of items from left to right
-        items = [self.pushButton_288, self.pushButton_289, self.pushButton_290, self.pushButton_291,
-                 self.pushButton_292, self.pushButton_293, self.pushButton_294, self.pushButton_295,
-                 self.pushButton_296, self.pushButton_297, self.pushButton_298, self.pushButton_299,
-                 self.pushButton_300, self.pushButton_301, self.pushButton_302, self.pushButton_303,
-                 self.pushButton_304, self.pushButton_305, self.pushButton_306, self.pushButton_307,
-                 self.pushButton_308, self.pushButton_309, self.pushButton_310, self.pushButton_311,
-                 self.pushButton_312, self.pushButton_313, self.pushButton_314]
-        # contains all the button of traits from left to right
-        traits = [self.pushButton_288, self.pushButton_288, self.pushButton_288, self.pushButton_288, self.pushButton_288,
-                  self.pushButton_288, self.pushButton_288, self.pushButton_288, self.pushButton_288]
         numUnit = len(self_Participant['units'])
         item_count = 0
         # display image of champion and items
@@ -7033,7 +6208,7 @@ class Ui_MainWindow(object):
                 imageurl + "tft-hero-augment/" + self.gameStat.identify_tft_champion(
                     self_Participant['units'][i]['character_id'])).content)
             champIcon.addPixmap(QtGui.QPixmap(unitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            icons[i].setIcon(champIcon)
+            self.tac_icons[i].setIcon(champIcon)
             for j in range(len(self_Participant['units'][i]['itemNames'])):
                 itemIcon = QtGui.QIcon()
                 itemImg = QtGui.QImage()
@@ -7041,7 +6216,7 @@ class Ui_MainWindow(object):
                 itemImg.loadFromData(
                     requests.get(imageurl + "tft-item/" + self.gameStat.identify_tft_item(itemName)).content)
                 itemIcon.addPixmap(QtGui.QPixmap(itemImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-                items[item_count + j].setIcon(itemIcon)
+                self.tac_items[item_count + j].setIcon(itemIcon)
             item_count += 3
 
         active_traits = []
@@ -7055,19 +6230,41 @@ class Ui_MainWindow(object):
             traitImg.loadFromData(requests.get(
                 imageurl + "tft-trait/" + self.gameStat.identify_tft_trait(
                     active_traits[i]['name'])).content)
-            traits[i].setIcon(trait_icon)
+            trait_icon.addPixmap(QtGui.QPixmap(traitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.traits[i].setIcon(trait_icon)
+
+        # display champion star level img
+
+        # display ranked emblem image of summoner
+        if len(self.Summoner.rankedInfo) != 0:
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(self._trans_rank()), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.pushButton_365.setIcon(icon)
+        else:
+            self.pushButton_365.setIcon(QtGui.QIcon("items/7050.png"))
+
         return None
 
+    # translate TFT rank given by api to fileName
+    def _trans_rank(self):
+        try:
+            rank = self.Summoner.rankedInfo[0]['tier']
+        except KeyError:
+            return "items/7050.png"
+        trans = rank[0]
+        trans += rank[1:].lower()
+        return f"tft-regalia/TFT_Regalia_{trans}.png"
+
     def tft_item_trans(self, itemName):
-            if itemName.split("_")[0] == "TFT5":
-                    return "Set5_RadiantItems/" + itemName
-            elif itemName.split("_")[0] == "TFT7":
-                    return "TFT7_ShimmerscaleItems/" + itemName
-            elif itemName.split("_")[0] == "TFT8" and itemName.split("_")[-1] == "GenAE":
-                    return "TFT8_GenAEItems/" + itemName
-            elif itemName.split("_")[0] == "TFT8":
-                    return "TFT8_EmblemItems/" + itemName
-            return itemName
+        if itemName.split("_")[0] == "TFT5":
+            return "Set5_RadiantItems/" + itemName
+        elif itemName.split("_")[0] == "TFT7":
+            return "TFT7_ShimmerscaleItems/" + itemName
+        elif itemName.split("_")[0] == "TFT8" and itemName.split("_")[-1] == "GenAE":
+            return "TFT8_GenAEItems/" + itemName
+        elif itemName.split("_")[0] == "TFT8":
+            return "TFT8_EmblemItems/" + itemName
+        return itemName
 
     # translate number placement to numerith
     def placement_trans(self, placement):
@@ -7093,7 +6290,7 @@ class Ui_MainWindow(object):
     def win_rate_count(self):
         win_count = 0
         for i in self.Summoner.match_details:
-            if i['info']['participants'][self.find_self_participant()]['win']:
+            if i['info']['participants'][self.find_self_participant(i in self.Summoner.match_details)]['win']:
                 win_count += 1
         if len(self.Summoner.match_details) == 0:
             return "No available match"
@@ -7109,4 +6306,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

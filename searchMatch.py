@@ -50,7 +50,8 @@ class SearchMatch:
                 self.errorCase = err
                 self.searchComplete = False
                 return -1
-            self.rankedInfo = self.rankedInfo = watcher.league.by_summoner(self.region, self.me['id'])
+            self.rankedInfo = watcher.league.by_summoner(self.region, self.me['id'])
+            # print(self.rankedInfo)
             self.summonerName = self.me['name']
             # get list of tft matches of the summoner
             my_matches = watcher.match.by_puuid(self.region, self.me['puuid'])
@@ -60,11 +61,11 @@ class SearchMatch:
                 # print(match_detail['info']["participants"][0]["traits"])
                 # print(match_detail['info']['participants'][0].keys())
                 self.match_details.append(match_detail)
-            """print(self.match_details[0]['metadata']['participants'])
-            print(self.match_details[0]['info']['game_datetime'])
-            print(self.match_details[0]['info']['participants'][1].keys())
-            print(self.match_details[0]['info']['participants'][2]['augments'])
-            print(self.match_details[0]['info']['participants'][2]['traits'])"""
+            # print(self.match_details[0]['metadata']['participants'])
+            # print(self.match_details[0]['info']['game_datetime'])
+            # print(self.match_details[0]['info']['participants'][1]["units"][0].keys())
+            # print(self.match_details[0]['info']['participants'][1]['units'])
+            # print(self.match_details[0]['info']['participants'][2]['traits'])
 
     # translate region given to api readable region
     def _translateRegion(self, region):
@@ -120,6 +121,5 @@ class SearchMatch:
         return
 
 
-# hi = SearchMatch("North America", "tft", "vanyang smoothie")
-
-
+# hi = SearchMatch("North America", "tft", "The Donkey")
+# hik = SearchMatch("Korea", "tft", "hide on bush")
