@@ -1,5 +1,5 @@
 import pyqtgraph as pg
-from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsEllipseItem
+from PyQt5.QtWidgets import QGraphicsEllipseItem
 from PyQt5.QtGui import QBrush, QColor, QPen
 import pyqtgraph.exporters
 
