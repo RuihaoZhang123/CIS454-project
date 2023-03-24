@@ -61,8 +61,8 @@ class SearchMatch:
                 # print(match_detail['info']["participants"][0]["traits"])
                 # print(match_detail['info']['participants'][0].keys())
                 self.match_details.append(match_detail)
-            # print(self.match_details[0]['metadata']['participants'])
-            # print(self.match_details[0]['info']['game_datetime'])
+            # print(self.match_details[0]['metadata']['data_version'])
+            # print(self.match_details[0]['info']['game_version'])
             # print(self.match_details[0]['info']['participants'][1]["units"][0].keys())
             # print(self.match_details[0]['info']['participants'][1]['units'])
             # print(self.match_details[0]['info']['participants'][2]['traits'])
@@ -71,7 +71,7 @@ class SearchMatch:
     def _translateRegion(self, region):
         if region == "Brazil":
             return "br1"
-        if region == "EU Nordic&East":
+        if region == "EU Nordic & East":
             return "eun1"
         if region == "EU West":
             return "euw1"
@@ -101,6 +101,14 @@ class SearchMatch:
             return "TW2"
         if region == "Vietnam":
             return "VN2"
+
+    def view_more(self, start_index):
+        watcher = TftWatcher(tftApiKey)
+        my_matches = watcher.match.by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
+        self.match_details = []
+        for match in my_matches:
+            match_detail = watcher.match.by_id(self.region, match)
+            self.match_details.append(match_detail)
 
     # display specific detail of the match in the terminal
     def _matchDisplay(self, match_detail):

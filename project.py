@@ -5,16 +5,16 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-from typing import List
+
+import time
 
 import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QPushButton
 
-import searchMatch
 import chart_test
-import time
 import gameStat
+import searchMatch
 
 
 class Ui_MainWindow(object):
@@ -22,6 +22,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         self.gameStat = gameStat.gameStat()
+        self.groupBoxes = []
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1234, 847)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -4787,10 +4788,19 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1234, 30))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # view more history button on the bottom of the scroll area
+        self.tft_view_more = QtWidgets.QPushButton(self.scrollAreaWidgetContents_2)
+        self.tft_view_more.setMaximumSize(QtCore.QSize(941, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setPointSize(10)
+        font.setWeight(75)
+        self.tft_view_more.setFont(font)
+        self.tft_view_more.setText("View more history")
+        self.tft_view_more.clicked.connect(self.tft_view_more_history)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -4900,26 +4910,54 @@ class Ui_MainWindow(object):
                 QtCore.QTimer.singleShot(3000, self.label_201.hide)
                 print("wrong name entered")
             else:
+                # delete all existing match groupBox
+                for i in self.groupBoxes:
+                    i.deleteLater()
+                try:
+                    self.verticalLayout_8.removeWidget(self.tft_view_more)
+                except AttributeError:
+                    pass
                 self.groupBoxes = []
+                self.viewCheck = True  # check if error caught in the range
                 # create groupboxes and layout for each match
-                for i in range(9):  # range(len(self.Summoner.match_details)):
+                for i in range(len(self.Summoner.match_details)):
                     groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
                     groupBox.setMinimumSize(QtCore.QSize(0, 230))
                     groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
                     self.groupBoxes.append(groupBox)
-                    self.tft_groupBox(i)
-                # view more history button on the bottom of the scroll area
-                self.pushButton_43 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_2)
-                self.pushButton_43.setMaximumSize(QtCore.QSize(941, 16777215))
-                font = QtGui.QFont()
-                font.setFamily("Bodoni MT Black")
-                font.setPointSize(10)
-                font.setWeight(75)
-                self.pushButton_43.setFont(font)
-                self.pushButton_43.setText("View more history")
-                self.verticalLayout_8.addWidget(self.pushButton_43)
+                    try:
+                        self.tft_groupBox(0, i)
+                    except KeyError:
+                        groupBox.hide()
+                        self.viewCheck = False
+                        break
+                if len(self.Summoner.match_details) == 20 and self.viewCheck:
+                    self.verticalLayout_8.addWidget(self.tft_view_more)
                 self.stackedWidget.setCurrentIndex(3)
                 print("right name entered")
+
+    # view more history function
+    def tft_view_more_history(self):
+        self.verticalLayout_8.removeWidget(self.tft_view_more)
+        num_match = len(self.groupBoxes)
+        # change the match details of the Summoner to new match data
+        self.Summoner.view_more(num_match)
+        self.viewCheck = True  # check if error caught in the range
+        # create groupboxes and layout for each match
+        for i in range(len(self.Summoner.match_details)):
+            groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
+            groupBox.setMinimumSize(QtCore.QSize(0, 230))
+            groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
+            self.groupBoxes.append(groupBox)
+            try:
+                self.tft_groupBox(num_match, i)
+            except KeyError:
+                groupBox.hide()
+                self.viewCheck = False
+                break
+        if len(self.Summoner.match_details) == 10 and self.viewCheck:
+            self.verticalLayout_8.addWidget(self.tft_view_more)
+        self.stackedWidget.setCurrentIndex(3)
 
     # return the index of the in-match data of the summoner being searched
     def find_self_participant(self, index):
@@ -6032,12 +6070,12 @@ class Ui_MainWindow(object):
                            QtGui.QIcon.Off)
         self.pushButton_325.setIcon(g4_rune2)
 
-    def tft_groupBox(self, index):
+    def tft_groupBox(self, start, index):
         # groupBox set
         # frame set
         self.tft_frames = []
         for i in range(3):
-            frame = QtWidgets.QFrame(self.groupBoxes[index])
+            frame = QtWidgets.QFrame(self.groupBoxes[start + index])
             frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
             frame.setFrameShadow(QtWidgets.QFrame.Raised)
             self.tft_frames.append(frame)
@@ -6060,7 +6098,7 @@ class Ui_MainWindow(object):
         self.matchInfo[0].setGeometry(QtCore.QRect(10, 10, 141, 41))
         self.matchInfo[0].setFont(font)
         self.matchInfo[0].setText(self.placement_trans(
-            self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(0)]['placement']))
+            self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(index)]['placement']))
         # game queue name
         self.matchInfo[1].setGeometry(QtCore.QRect(10, 60, 181, 41))
         font.setPointSize(10)
@@ -6109,6 +6147,7 @@ class Ui_MainWindow(object):
             tac_item.setIconSize(QtCore.QSize(35, 35))
             self.tac_items.append(tac_item)
 
+        # stars buttons
         self.tac_stars = []
         for i in range(9):
             star = QtWidgets.QPushButton(self.tft_frames[1])
@@ -6184,9 +6223,6 @@ class Ui_MainWindow(object):
             self.pushButton_365.setIcon(QtGui.QIcon("items/7050.png"))
         print(f"Match {index} finished")
 
-    def tft_present_info(self):
-        _translate = QtCore.QCoreApplication.translate
-
     def _star_trans(self, level):
         if level == 1:
             return "picture/bronze.png"
@@ -6194,56 +6230,6 @@ class Ui_MainWindow(object):
             return "picture/silver.png"
         elif level == 3:
             return "picture/gold.png"
-
-    def tft_present_img(self):
-        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]
-        imageurl = "https://ddragon.leagueoflegends.com/cdn/13.4.1/img/"
-        numUnit = len(self_Participant['units'])
-        item_count = 0
-        # display image of champion and items
-        for i in range(numUnit if numUnit < 10 else 9):
-            champIcon = QtGui.QIcon()
-            unitImg = QtGui.QImage()
-            unitImg.loadFromData(requests.get(
-                imageurl + "tft-hero-augment/" + self.gameStat.identify_tft_champion(
-                    self_Participant['units'][i]['character_id'])).content)
-            champIcon.addPixmap(QtGui.QPixmap(unitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.tac_icons[i].setIcon(champIcon)
-            for j in range(len(self_Participant['units'][i]['itemNames'])):
-                itemIcon = QtGui.QIcon()
-                itemImg = QtGui.QImage()
-                itemName = self.tft_item_trans(self_Participant['units'][i]['itemNames'][j])
-                itemImg.loadFromData(
-                    requests.get(imageurl + "tft-item/" + self.gameStat.identify_tft_item(itemName)).content)
-                itemIcon.addPixmap(QtGui.QPixmap(itemImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-                self.tac_items[item_count + j].setIcon(itemIcon)
-            item_count += 3
-
-        active_traits = []
-        for i in self_Participant['traits']:
-            if i['tier_current'] != 0:
-                active_traits.append(i)
-        active_traits = sorted(active_traits, key=lambda d: d['tier_current'], reverse=True)
-        for i in range(len(active_traits)):
-            trait_icon = QtGui.QIcon()
-            traitImg = QtGui.QImage()
-            traitImg.loadFromData(requests.get(
-                imageurl + "tft-trait/" + self.gameStat.identify_tft_trait(
-                    active_traits[i]['name'])).content)
-            trait_icon.addPixmap(QtGui.QPixmap(traitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.traits[i].setIcon(trait_icon)
-
-        # display champion star level img
-
-        # display ranked emblem image of summoner
-        if len(self.Summoner.rankedInfo) != 0:
-            icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(self._trans_rank()), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.pushButton_365.setIcon(icon)
-        else:
-            self.pushButton_365.setIcon(QtGui.QIcon("items/7050.png"))
-
-        return None
 
     # translate TFT rank given by api to fileName
     def _trans_rank(self):
@@ -6255,6 +6241,7 @@ class Ui_MainWindow(object):
         trans += rank[1:].lower()
         return f"tft-regalia/TFT_Regalia_{trans}.png"
 
+    # translate Api tft item data to json file indicator
     def tft_item_trans(self, itemName):
         if itemName.split("_")[0] == "TFT5":
             return "Set5_RadiantItems/" + itemName
@@ -6266,7 +6253,7 @@ class Ui_MainWindow(object):
             return "TFT8_EmblemItems/" + itemName
         return itemName
 
-    # translate number placement to numerith
+    # translate number placement to numeric
     def placement_trans(self, placement):
         if placement < 1:
             return "N/A"
