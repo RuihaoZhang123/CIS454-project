@@ -1,6 +1,5 @@
 import requests
 from riotwatcher import LolWatcher, TftWatcher
-import pandas as pd
 
 lolApiKey = "RGAPI-0175be55-dcd4-4c8d-a300-57d5232f50e6"
 tftApiKey = "RGAPI-00d5ca77-1f7c-4342-b8c0-0cbdebee23c7"
@@ -109,24 +108,6 @@ class SearchMatch:
         for match in my_matches:
             match_detail = watcher.match.by_id(self.region, match)
             self.match_details.append(match_detail)
-
-    # display specific detail of the match in the terminal
-    def _matchDisplay(self, match_detail):
-        # set dictionaries with useful information for chart display
-        participants = []
-        for row in match_detail['info']['participants']:
-            participants_row = {'summonerName': row['summonerName'], 'champion': row['championId'],
-                                'unrealKills': row['unrealKills'], 'spell1': row['spell1Casts'],
-                                'spell2': row['spell2Casts'], 'win': row['win'], 'kills': row['kills'],
-                                'deaths': row['deaths'], 'assists': row['assists'],
-                                'totalDamageDealt': row['totalDamageDealt'], 'goldEarned': row['goldEarned'],
-                                'champLevel': row['champLevel'], 'totalMinionsKilled': row['totalMinionsKilled'],
-                                'item0': row['item0'], 'item1': row['item1'], 'item2': row['item2'],
-                                'role': row['role'], 'item6': row['item6']}
-            participants.append(participants_row)
-        df = pd.DataFrame(data=participants)
-        print(df.to_string())
-        return
 
 
 # hi = SearchMatch("North America", "tft", "The Donkey")
