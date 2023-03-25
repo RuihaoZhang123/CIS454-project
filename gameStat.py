@@ -13,20 +13,17 @@ class gameStat:
         self.tft_tactician = {}
         self.tft_champion = {}
         self.version = "13.6.1"
-        self._get_data("13.6.1")
+        self._get_data()
 
     # private methods
     # extract queues data from json file
-    def _get_data(self, version):
-        url_base = f"http://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/"
+    def _get_data(self):
+        url_base = f"http://ddragon.leagueoflegends.com/cdn/{self.version}/data/en_US/"
         with open('data/queues.json') as json_file:
             self.queues = json.load(json_file)
 
-        with open('data/summoner.json') as json_file:
-            self.summonerSpell = json.load(json_file)
-
-        with open('data/runesReforged.json') as json_file:
-            self.runes = json.load(json_file)
+        self.summonerSpell = requests.get(url_base + "summoner.json").json()
+        self.runes = requests.get(url_base + "runesReforged.json").json()
 
         self.tft_item = requests.get(url_base + "tft-item.json").json()
         self.tft_trait = requests.get(url_base + "tft-trait.json").json()
@@ -37,8 +34,8 @@ class gameStat:
     # public methods
     # change the version searched
     def change_version(self, version):
-        self._get_data(version)
         self.version = version
+        self._get_data()
 
     # return description of queue given queueID
     def identify_queue(self, queueID):

@@ -6224,6 +6224,7 @@ class Ui_MainWindow(object):
         print(f"Match {index} finished")
 
     def _star_trans(self, level):
+        # based on the level of the given champion level produce the name of different star picture
         if level == 1:
             return "picture/bronze.png"
         elif level == 2:
@@ -6233,16 +6234,19 @@ class Ui_MainWindow(object):
 
     # translate TFT rank given by api to fileName
     def _trans_rank(self):
+        # try to get the ranked info of the summoner, if None then return address to empty picture for output
         try:
             rank = self.Summoner.rankedInfo[0]['tier']
         except KeyError:
             return "items/7050.png"
+        # translate from rank given to address to file
         trans = rank[0]
         trans += rank[1:].lower()
         return f"tft-regalia/TFT_Regalia_{trans}.png"
 
     # translate Api tft item data to json file indicator
     def tft_item_trans(self, itemName):
+        # by the information given back from Api, translate to actual item address
         if itemName.split("_")[0] == "TFT5":
             return "Set5_RadiantItems/" + itemName
         elif itemName.split("_")[0] == "TFT7":
@@ -6255,6 +6259,7 @@ class Ui_MainWindow(object):
 
     # translate number placement to numeric
     def placement_trans(self, placement):
+        # translate
         if placement < 1:
             return "N/A"
         elif placement == 1:
