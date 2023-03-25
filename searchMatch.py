@@ -1,6 +1,6 @@
 import requests
 from riotwatcher import LolWatcher, TftWatcher
-
+import json
 lolApiKey = "RGAPI-0175be55-dcd4-4c8d-a300-57d5232f50e6"
 tftApiKey = "RGAPI-00d5ca77-1f7c-4342-b8c0-0cbdebee23c7"
 
@@ -111,4 +111,5 @@ class SearchMatch:
 
 
 # hi = SearchMatch("North America", "tft", "The Donkey")
+# print(hi.match_details[0]['info']['participants'][0]['units'])
 # hik = SearchMatch("Korea", "tft", "hide on bush")

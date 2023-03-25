@@ -1,4 +1,5 @@
 import json
+import requests
 
 
 class gameStat:
@@ -11,11 +12,13 @@ class gameStat:
         self.tft_queues = {}
         self.tft_tactician = {}
         self.tft_champion = {}
-        self._get_data()
+        self.version = "13.6.1"
+        self._get_data("13.6.1")
 
     # private methods
     # extract queues data from json file
-    def _get_data(self):
+    def _get_data(self, version):
+        url_base = f"http://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/"
         with open('data/queues.json') as json_file:
             self.queues = json.load(json_file)
 
@@ -25,22 +28,18 @@ class gameStat:
         with open('data/runesReforged.json') as json_file:
             self.runes = json.load(json_file)
 
-        with open('data/tft-item.json') as json_file:
-            self.tft_item = json.load(json_file)
-
-        with open('data/tft-trait.json') as json_file:
-            self.tft_trait = json.load(json_file)
-
-        with open('data/tft-queues.json') as json_file:
-            self.tft_queues = json.load(json_file)
-
-        with open('data/tft-tactician.json') as json_file:
-            self.tft_tactician = json.load(json_file)
-
-        with open('data/tft-champion.json') as json_file:
-            self.tft_champion = json.load(json_file)
+        self.tft_item = requests.get(url_base + "tft-item.json").json()
+        self.tft_trait = requests.get(url_base + "tft-trait.json").json()
+        self.tft_queues = requests.get(url_base + "tft-queues.json").json()
+        self.tft_tactician = requests.get(url_base + "tft-tactician.json").json()
+        self.tft_champion = requests.get(url_base + "tft-champion.json").json()
 
     # public methods
+    # change the version searched
+    def change_version(self, version):
+        self._get_data(version)
+        self.version = version
+
     # return description of queue given queueID
     def identify_queue(self, queueID):
         for queue in self.queues:
@@ -79,7 +78,13 @@ class gameStat:
     # return augment image path given augment name
     def identify_tft_champion(self, augmentName):
         champ = self.tft_champion['data'][augmentName]['image']['full']
-        return champ if champ != "TFT8_WuKong.TFT_Set8.png" else "TFT8_Wukong.TFT_Set8.png"
+        if champ == "TFT8_WuKong.TFT_Set8.png":
+            return "TFT8_Wukong.TFT_Set8.png"
+        elif champ.split(".")[-2] == "TFT_Set8_Stage2":
+            split_s = champ.split('.')
+            split_s[0] = split_s[0] + "_Square"
+            champ = '.'.join(split_s)
+        return champ
 
     # return tactician image path given tactician ID
     def identify_tft_tactician(self, tacticianID):
