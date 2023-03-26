@@ -101,7 +101,7 @@ class SearchMatch:
         if region == "Vietnam":
             return "VN2"
 
-    def view_more(self, start_index):
+    def tft_view_more(self, start_index):
         watcher = TftWatcher(tftApiKey)
         my_matches = watcher.match.by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
         self.match_details = []
@@ -109,7 +109,15 @@ class SearchMatch:
             match_detail = watcher.match.by_id(self.region, match)
             self.match_details.append(match_detail)
 
+    def lol_view_more(self, start_index):
+        watcher = LolWatcher(lolApiKey)
+        my_matches = watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
+        self.match_details = []
+        for match in my_matches:
+            match_detail = watcher.match.by_id(self.region, match)
+            self.match_details.append(match_detail)
 
-# hi = SearchMatch("North America", "tft", "The Donkey")
-# print(hi.match_details[0]['info']['participants'][0]['units'])
+
+# hi = SearchMatch("North America", "lol", "llama smoothie")
+# print(hi.match_details[3]['info']['participants'][3]['item5'])
 # hik = SearchMatch("Korea", "tft", "hide on bush")
