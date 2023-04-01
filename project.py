@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'project2.ui'
+# Form implementation generated from reading ui file 'project.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
@@ -16,15 +16,12 @@ import chart_test
 import gameStat
 import searchMatch
 
-
 class Ui_MainWindow(object):
-    levelButtons: list[QPushButton]
-
     def setupUi(self, MainWindow):
         self.gameStat = gameStat.gameStat()
         self.groupBoxes = []
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1234, 847)
+        MainWindow.resize(1265, 892)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -47,11 +44,11 @@ class Ui_MainWindow(object):
         self.frame_2.setSizePolicy(sizePolicy)
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 100))
         self.frame_2.setStyleSheet("#frame_2{\n"
-                                   "    \n"
-                                   "    background-color: rgb(170, 255, 255);\n"
-                                   "    \n"
-                                   "    border-bottom: 3px solid rgb(0, 170, 255);\n"
-                                   "}")
+"    \n"
+"    background-color: rgb(170, 255, 255);\n"
+"    \n"
+"    border-bottom: 3px solid rgb(0, 170, 255);\n"
+"}")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -61,6 +58,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_5 = QtWidgets.QFrame(self.frame_2)
         self.frame_5.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.frame_5.setStyleSheet("")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -75,10 +73,11 @@ class Ui_MainWindow(object):
         self.formLayout_2.setObjectName("formLayout_2")
         self.pushButton = QtWidgets.QPushButton(self.frame_6)
         self.pushButton.setStyleSheet("#pushButton{\n"
-                                      "    border:none;\n"
-                                      "    \n"
-                                      "    \n"
-                                      "}")
+"    border:none;\n"
+"    \n"
+"    \n"
+"}")
+        self.pushButton.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("picture/24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
@@ -158,19 +157,19 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("#pushButton_2{\n"
-                                        "    color : rgb(255, 255, 255);\n"
-                                        "    \n"
-                                        "    background-color: rgb(170, 255, 255);\n"
-                                        "    border : none;\n"
-                                        "}")
+"    color : rgb(255, 255, 255);\n"
+"    \n"
+"    background-color: rgb(170, 255, 255);\n"
+"    border : none;\n"
+"}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_4.addWidget(self.pushButton_2)
         self.horizontalLayout.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
         self.frame_8.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_8.setStyleSheet("#frame_8{\n"
-                                   "    border:none;\n"
-                                   "}")
+"    border:none;\n"
+"}")
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
@@ -178,10 +177,11 @@ class Ui_MainWindow(object):
         self.formLayout.setObjectName("formLayout")
         self.pushButton_3 = QtWidgets.QPushButton(self.frame_8)
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
+"    border:none;\n"
+"    \n"
+"    \n"
+"}")
+        self.pushButton_3.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("picture/23.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon1)
@@ -192,50 +192,14 @@ class Ui_MainWindow(object):
         self.frame_9 = QtWidgets.QFrame(self.frame_2)
         self.frame_9.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_9.setStyleSheet("QPushButton:pressed{\n"
-                                   "    padding-top:5px;\n"
-                                   "    padding-left:5px;\n"
-                                   "}")
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
         self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_9)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.pushButton_6 = QtWidgets.QPushButton(self.frame_9)
-        self.pushButton_6.setStyleSheet("#pushButton_6{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("picture/27.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_6.setIcon(icon2)
-        self.pushButton_6.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.horizontalLayout_2.addWidget(self.pushButton_6)
-        self.pushButton_5 = QtWidgets.QPushButton(self.frame_9)
-        self.pushButton_5.setStyleSheet("#pushButton_5{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("picture/26.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_5.setIcon(icon3)
-        self.pushButton_5.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.horizontalLayout_2.addWidget(self.pushButton_5)
-        self.pushButton_4 = QtWidgets.QPushButton(self.frame_9)
-        self.pushButton_4.setStyleSheet("#pushButton_4{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("picture/25.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_4.setIcon(icon4)
-        self.pushButton_4.setIconSize(QtCore.QSize(60, 60))
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.horizontalLayout_2.addWidget(self.pushButton_4)
         self.horizontalLayout.addWidget(self.frame_9)
         self.verticalLayout.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(self.frame)
@@ -258,9 +222,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
         self.frame_13.setSizePolicy(sizePolicy)
         self.frame_13.setStyleSheet("#frame_13{\n"
-                                    "    background-color:rgb(170, 255, 255);\n"
-                                    "    border-right: 3px solid rgb(0, 170, 255);\n"
-                                    "}")
+"    background-color:rgb(170, 255, 255);\n"
+"    border-right: 3px solid rgb(0, 170, 255);\n"
+"}")
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_13.setObjectName("frame_13")
@@ -275,9 +239,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_15.sizePolicy().hasHeightForWidth())
         self.frame_15.setSizePolicy(sizePolicy)
         self.frame_15.setStyleSheet("QPushButton:pressed{\n"
-                                    "    padding-top:5px;\n"
-                                    "    padding-left:5px;\n"
-                                    "}")
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
         self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
@@ -292,16 +256,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_9.setFont(font)
         self.pushButton_9.setStyleSheet("#pushButton_9{\n"
-                                        "    color:rgb(255, 255, 255);\n"
-                                        "    border:none;\n"
-                                        "    background-color: rgb(170, 255, 255);\n"
-                                        "\n"
-                                        "\n"
-                                        "}    \n"
-                                        "")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("picture/29.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_9.setIcon(icon5)
+"    color:rgb(255, 255, 255);\n"
+"    border:none;\n"
+"    background-color: rgb(170, 255, 255);\n"
+"\n"
+"\n"
+"}    \n"
+"")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("picture/29.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_9.setIcon(icon2)
         self.pushButton_9.setIconSize(QtCore.QSize(50, 50))
         self.pushButton_9.setObjectName("pushButton_9")
         self.horizontalLayout_5.addWidget(self.pushButton_9)
@@ -313,9 +277,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_16.sizePolicy().hasHeightForWidth())
         self.frame_16.setSizePolicy(sizePolicy)
         self.frame_16.setStyleSheet("QPushButton:pressed{\n"
-                                    "    padding-top:5px;\n"
-                                    "    padding-left:5px;\n"
-                                    "}")
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
@@ -330,15 +294,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_10.setFont(font)
         self.pushButton_10.setStyleSheet("#pushButton_10{\n"
-                                         "    color:rgb(255, 255, 255);\n"
-                                         "    border:none;\n"
-                                         "    background-color: rgb(170, 255, 255);\n"
-                                         "\n"
-                                         "}\n"
-                                         "")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("picture/30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_10.setIcon(icon6)
+"    color:rgb(255, 255, 255);\n"
+"    border:none;\n"
+"    background-color: rgb(170, 255, 255);\n"
+"\n"
+"}\n"
+"")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("picture/30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_10.setIcon(icon3)
         self.pushButton_10.setIconSize(QtCore.QSize(55, 55))
         self.pushButton_10.setObjectName("pushButton_10")
         self.horizontalLayout_6.addWidget(self.pushButton_10)
@@ -371,9 +335,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
         self.frame_14.setSizePolicy(sizePolicy)
         self.frame_14.setStyleSheet("#frame_14{\n"
-                                    "    \n"
-                                    "    background-color: rgb(255, 255, 255);\n"
-                                    "}")
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}")
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
@@ -381,38 +345,39 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.stackedWidget = QtWidgets.QStackedWidget(self.frame_14)
         self.stackedWidget.setStyleSheet("#page{\n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "}\n"
-                                         "\n"
-                                         "#page_2{\n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "}\n"
-                                         "\n"
-                                         "#page_3{\n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "}\n"
-                                         "\n"
-                                         "#page_4{\n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "}")
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"#page_2{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"#page_3{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"#page_4{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.pushButton_11 = QtWidgets.QPushButton(self.page)
         self.pushButton_11.setGeometry(QtCore.QRect(30, 100, 281, 261))
         self.pushButton_11.setStyleSheet("\n"
-                                         "background-color: rgb(255, 255, 255);\n"
-                                         "border:none")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("picture/yasuo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_11.setIcon(icon7)
+"background-color: rgb(255, 255, 255);\n"
+"border:none")
+        self.pushButton_11.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("picture/yasuo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_11.setIcon(icon4)
         self.pushButton_11.setIconSize(QtCore.QSize(300, 300))
         self.pushButton_11.setObjectName("pushButton_11")
         self.lineEdit = QtWidgets.QLineEdit(self.page)
         self.lineEdit.setGeometry(QtCore.QRect(530, 210, 371, 71))
         self.lineEdit.setStyleSheet("\n"
-                                    "    border : 3px solid rgb(211, 217, 255);\n"
-                                    "")
+"    border : 3px solid rgb(211, 217, 255);\n"
+"")
         self.lineEdit.setObjectName("lineEdit")
         self.pushButton_12 = QtWidgets.QPushButton(self.page)
         self.pushButton_12.setGeometry(QtCore.QRect(350, 0, 461, 81))
@@ -480,11 +445,11 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_12.setFont(font)
         self.pushButton_12.setStyleSheet("#pushButton_12{\n"
-                                         "    color : rgb(0, 0, 0);\n"
-                                         "    \n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "    border : none;\n"
-                                         "}")
+"    color : rgb(0, 0, 0);\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border : none;\n"
+"}")
         self.pushButton_12.setObjectName("pushButton_12")
         self.comboBox_3 = QtWidgets.QComboBox(self.page)
         self.comboBox_3.setGeometry(QtCore.QRect(390, 210, 141, 71))
@@ -494,7 +459,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_3.setFont(font)
         self.comboBox_3.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-                                      "    border : 3px solid rgb(211, 217, 255);")
+"    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_3.setObjectName("comboBox_3")
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
@@ -539,8 +504,9 @@ class Ui_MainWindow(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.page_2)
         self.lineEdit_2.setGeometry(QtCore.QRect(550, 220, 371, 71))
         self.lineEdit_2.setStyleSheet("\n"
-                                      "    border : 3px solid rgb(211, 217, 255);\n"
-                                      "")
+"    border : 3px solid rgb(211, 217, 255);\n"
+"")
+        self.lineEdit_2.setText("")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.comboBox_2 = QtWidgets.QComboBox(self.page_2)
         self.comboBox_2.setGeometry(QtCore.QRect(410, 220, 141, 71))
@@ -550,7 +516,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.comboBox_2.setFont(font)
         self.comboBox_2.setStyleSheet("    background-color: rgb(255, 255, 255);\n"
-                                      "    border : 3px solid rgb(211, 217, 255);")
+"    border : 3px solid rgb(211, 217, 255);")
         self.comboBox_2.setObjectName("comboBox_2")
         self.comboBox_2.addItem("")
         self.comboBox_2.addItem("")
@@ -635,20 +601,21 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_13.setFont(font)
         self.pushButton_13.setStyleSheet("#pushButton_13{\n"
-                                         "    color : rgb(0, 0, 0);\n"
-                                         "    \n"
-                                         "    background-color: rgb(255, 255, 255);\n"
-                                         "    border : none;\n"
-                                         "}")
+"    color : rgb(0, 0, 0);\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border : none;\n"
+"}")
         self.pushButton_13.setObjectName("pushButton_13")
         self.pushButton_14 = QtWidgets.QPushButton(self.page_2)
         self.pushButton_14.setGeometry(QtCore.QRect(30, 100, 261, 251))
         self.pushButton_14.setStyleSheet("\n"
-                                         "background-color: rgb(255, 255, 255);\n"
-                                         "border:none")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("picture/TFT.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_14.setIcon(icon8)
+"background-color: rgb(255, 255, 255);\n"
+"border:none")
+        self.pushButton_14.setText("")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("picture/TFT.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_14.setIcon(icon5)
         self.pushButton_14.setIconSize(QtCore.QSize(200, 200))
         self.pushButton_14.setObjectName("pushButton_14")
         self.pushButton_16 = QtWidgets.QPushButton(self.page_2)
@@ -682,16 +649,18 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
         self.scrollArea.setSizePolicy(sizePolicy)
+        self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 967, 1290))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 995, 607))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.groupBox_2 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
         self.groupBox_2.setMinimumSize(QtCore.QSize(941, 171))
         self.groupBox_2.setMaximumSize(QtCore.QSize(941, 171))
+        self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.groupBox_2)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
@@ -706,9 +675,9 @@ class Ui_MainWindow(object):
         self.frame_26.setObjectName("frame_26")
         self.pushButton_17 = QtWidgets.QPushButton(self.frame_26)
         self.pushButton_17.setGeometry(QtCore.QRect(10, 0, 101, 101))
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("profileicon/6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_17.setIcon(icon9)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("profileicon/6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_17.setIcon(icon6)
         self.pushButton_17.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_17.setObjectName("pushButton_17")
         self.label_18 = QtWidgets.QLabel(self.frame_26)
@@ -734,7 +703,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_40.setFont(font)
         self.pushButton_40.setStyleSheet("background-color: rgb(137, 194, 255);\n"
-                                         "color : rgb(255, 255, 255);")
+"color : rgb(255, 255, 255);")
         self.pushButton_40.setObjectName("pushButton_40")
         self.horizontalLayout_9.addWidget(self.frame_26)
         self.frame_27 = QtWidgets.QFrame(self.groupBox_2)
@@ -748,9 +717,10 @@ class Ui_MainWindow(object):
         self.frame_27.setObjectName("frame_27")
         self.pushButton_41 = QtWidgets.QPushButton(self.frame_27)
         self.pushButton_41.setGeometry(QtCore.QRect(40, 0, 101, 101))
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("profileicon/5290.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_41.setIcon(icon10)
+        self.pushButton_41.setText("")
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("profileicon/5290.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_41.setIcon(icon7)
         self.pushButton_41.setIconSize(QtCore.QSize(198, 100))
         self.pushButton_41.setObjectName("pushButton_41")
         self.label_20 = QtWidgets.QLabel(self.frame_27)
@@ -775,9 +745,10 @@ class Ui_MainWindow(object):
         self.frame_28.setObjectName("frame_28")
         self.pushButton_42 = QtWidgets.QPushButton(self.frame_28)
         self.pushButton_42.setGeometry(QtCore.QRect(40, 0, 131, 131))
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("profileicon/4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_42.setIcon(icon11)
+        self.pushButton_42.setText("")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("profileicon/4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_42.setIcon(icon8)
         self.pushButton_42.setIconSize(QtCore.QSize(150, 150))
         self.pushButton_42.setObjectName("pushButton_42")
         self.horizontalLayout_9.addWidget(self.frame_28)
@@ -800,1474 +771,6 @@ class Ui_MainWindow(object):
         self.label_25.setFont(font)
         self.label_25.setObjectName("label_25")
         self.verticalLayout_9.addWidget(self.label_25)
-        self.groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox.sizePolicy().hasHeightForWidth())
-        self.groupBox.setSizePolicy(sizePolicy)
-        self.groupBox.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox.setMaximumSize(QtCore.QSize(16777215, 191))
-        self.groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
-        self.groupBox.setObjectName("groupBox")
-        self.frame_23 = QtWidgets.QFrame(self.groupBox)
-        self.frame_23.setGeometry(QtCore.QRect(649, 20, 281, 161))
-        self.frame_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_23.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_23.setObjectName("frame_23")
-        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.frame_23)
-        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        self.frame_24 = QtWidgets.QFrame(self.frame_23)
-        self.frame_24.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_24.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_24.setObjectName("frame_24")
-        self.pushButton_30 = QtWidgets.QPushButton(self.frame_24)
-        self.pushButton_30.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("champion-icon/26.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_30.setIcon(icon12)
-        self.pushButton_30.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_30.setObjectName("pushButton_30")
-        self.pushButton_31 = QtWidgets.QPushButton(self.frame_24)
-        self.pushButton_31.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_31.setIcon(icon12)
-        self.pushButton_31.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_31.setObjectName("pushButton_31")
-        self.pushButton_32 = QtWidgets.QPushButton(self.frame_24)
-        self.pushButton_32.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_32.setIcon(icon12)
-        self.pushButton_32.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_32.setObjectName("pushButton_32")
-        self.pushButton_33 = QtWidgets.QPushButton(self.frame_24)
-        self.pushButton_33.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_33.setIcon(icon12)
-        self.pushButton_33.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_33.setObjectName("pushButton_33")
-        self.pushButton_34 = QtWidgets.QPushButton(self.frame_24)
-        self.pushButton_34.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_34.setIcon(icon12)
-        self.pushButton_34.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_34.setObjectName("pushButton_34")
-        self.label_8 = QtWidgets.QLabel(self.frame_24)
-        self.label_8.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_8.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_8.setObjectName("label_8")
-        self.label_9 = QtWidgets.QLabel(self.frame_24)
-        self.label_9.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_9.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_9.setObjectName("label_9")
-        self.label_10 = QtWidgets.QLabel(self.frame_24)
-        self.label_10.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_10.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_10.setObjectName("label_10")
-        self.label_11 = QtWidgets.QLabel(self.frame_24)
-        self.label_11.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_11.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_11.setObjectName("label_11")
-        self.label_12 = QtWidgets.QLabel(self.frame_24)
-        self.label_12.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_12.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_12.setObjectName("label_12")
-        self.horizontalLayout_8.addWidget(self.frame_24)
-        self.frame_25 = QtWidgets.QFrame(self.frame_23)
-        self.frame_25.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_25.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_25.setObjectName("frame_25")
-        self.pushButton_35 = QtWidgets.QPushButton(self.frame_25)
-        self.pushButton_35.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_35.setIcon(icon12)
-        self.pushButton_35.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_35.setObjectName("pushButton_35")
-        self.pushButton_36 = QtWidgets.QPushButton(self.frame_25)
-        self.pushButton_36.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_36.setIcon(icon12)
-        self.pushButton_36.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_36.setObjectName("pushButton_36")
-        self.pushButton_37 = QtWidgets.QPushButton(self.frame_25)
-        self.pushButton_37.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_37.setIcon(icon12)
-        self.pushButton_37.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_37.setObjectName("pushButton_37")
-        self.pushButton_38 = QtWidgets.QPushButton(self.frame_25)
-        self.pushButton_38.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_38.setIcon(icon12)
-        self.pushButton_38.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_38.setObjectName("pushButton_38")
-        self.pushButton_39 = QtWidgets.QPushButton(self.frame_25)
-        self.pushButton_39.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_39.setIcon(icon12)
-        self.pushButton_39.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_39.setObjectName("pushButton_39")
-        self.label_13 = QtWidgets.QLabel(self.frame_25)
-        self.label_13.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_13.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_13.setObjectName("label_13")
-        self.label_14 = QtWidgets.QLabel(self.frame_25)
-        self.label_14.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_14.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_14.setObjectName("label_14")
-        self.label_15 = QtWidgets.QLabel(self.frame_25)
-        self.label_15.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_15.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_15.setObjectName("label_15")
-        self.label_16 = QtWidgets.QLabel(self.frame_25)
-        self.label_16.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_16.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_16.setObjectName("label_16")
-        self.label_17 = QtWidgets.QLabel(self.frame_25)
-        self.label_17.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_17.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_17.setObjectName("label_17")
-        self.horizontalLayout_8.addWidget(self.frame_25)
-        self.layoutWidget = QtWidgets.QWidget(self.groupBox)
-        self.layoutWidget.setGeometry(QtCore.QRect(250, 20, 371, 161))
-        self.layoutWidget.setObjectName("layoutWidget")
-        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.layoutWidget)
-        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.frame_21 = QtWidgets.QFrame(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_21.sizePolicy().hasHeightForWidth())
-        self.frame_21.setSizePolicy(sizePolicy)
-        self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_21.setObjectName("frame_21")
-        self.pushButton_25 = QtWidgets.QPushButton(self.frame_21)
-        self.pushButton_25.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_25.setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 50px;\n"
-                                         "        \n"
-                                         "    }")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("champion-icon/13.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_25.setIcon(icon13)
-        self.pushButton_25.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_25.setObjectName("pushButton_25")
-        self.label_5 = QtWidgets.QLabel(self.frame_21)
-        self.label_5.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.pushButton_26 = QtWidgets.QPushButton(self.frame_21)
-        self.pushButton_26.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_26.setIcon(icon11)
-        self.pushButton_26.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_26.setObjectName("pushButton_26")
-        self.pushButton_27 = QtWidgets.QPushButton(self.frame_21)
-        self.pushButton_27.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("profileicon/5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_27.setIcon(icon14)
-        self.pushButton_27.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_27.setObjectName("pushButton_27")
-        self.label_6 = QtWidgets.QLabel(self.frame_21)
-        self.label_6.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
-        self.label_7 = QtWidgets.QLabel(self.frame_21)
-        self.label_7.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_7.setFont(font)
-        self.label_7.setObjectName("label_7")
-        self.pushButton_28 = QtWidgets.QPushButton(self.frame_21)
-        self.pushButton_28.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_28.setIcon(icon9)
-        self.pushButton_28.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_28.setObjectName("pushButton_28")
-        self.pushButton_29 = QtWidgets.QPushButton(self.frame_21)
-        self.pushButton_29.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("profileicon/10.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_29.setIcon(icon15)
-        self.pushButton_29.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_29.setObjectName("pushButton_29")
-        self.verticalLayout_6.addWidget(self.frame_21)
-        self.frame_22 = QtWidgets.QFrame(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_22.sizePolicy().hasHeightForWidth())
-        self.frame_22.setSizePolicy(sizePolicy)
-        self.frame_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_22.setObjectName("frame_22")
-        self.pushButton_18 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_18.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_18.setIcon(icon12)
-        self.pushButton_18.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_18.setObjectName("pushButton_18")
-        self.pushButton_19 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_19.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("champion-icon/6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_19.setIcon(icon16)
-        self.pushButton_19.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_19.setObjectName("pushButton_19")
-        self.pushButton_20 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_20.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap("champion-icon/1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_20.setIcon(icon17)
-        self.pushButton_20.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_20.setObjectName("pushButton_20")
-        self.pushButton_21 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_21.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap("champion-icon/8.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_21.setIcon(icon18)
-        self.pushButton_21.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_21.setObjectName("pushButton_21")
-        self.pushButton_22 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_22.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        icon19 = QtGui.QIcon()
-        icon19.addPixmap(QtGui.QPixmap("champion-icon/11.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_22.setIcon(icon19)
-        self.pushButton_22.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_22.setObjectName("pushButton_22")
-        self.pushButton_23 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_23.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        icon20 = QtGui.QIcon()
-        icon20.addPixmap(QtGui.QPixmap("champion-icon/3.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_23.setIcon(icon20)
-        self.pushButton_23.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_23.setObjectName("pushButton_23")
-        self.pushButton_24 = QtWidgets.QPushButton(self.frame_22)
-        self.pushButton_24.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_24.setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 16px;\n"
-                                         "        \n"
-                                         "        \n"
-                                         "    background-color: rgb(0, 170, 255);\n"
-                                         "    }")
-        icon21 = QtGui.QIcon()
-        icon21.addPixmap(QtGui.QPixmap("profileicon/5506.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_24.setIcon(icon21)
-        self.pushButton_24.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_24.setObjectName("pushButton_24")
-        self.verticalLayout_6.addWidget(self.frame_22)
-        self.layoutWidget1 = QtWidgets.QWidget(self.groupBox)
-        self.layoutWidget1.setGeometry(QtCore.QRect(10, 20, 191, 161))
-        self.layoutWidget1.setObjectName("layoutWidget1")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.layoutWidget1)
-        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.frame_19 = QtWidgets.QFrame(self.layoutWidget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
-        self.frame_19.setSizePolicy(sizePolicy)
-        self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_19.setObjectName("frame_19")
-        self.label = QtWidgets.QLabel(self.frame_19)
-        self.label.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.label_4 = QtWidgets.QLabel(self.frame_19)
-        self.label_4.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.verticalLayout_7.addWidget(self.frame_19)
-        self.frame_20 = QtWidgets.QFrame(self.layoutWidget1)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_20.sizePolicy().hasHeightForWidth())
-        self.frame_20.setSizePolicy(sizePolicy)
-        self.frame_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_20.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_20.setObjectName("frame_20")
-        self.label_2 = QtWidgets.QLabel(self.frame_20)
-        self.label_2.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_20)
-        self.label_3.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.verticalLayout_7.addWidget(self.frame_20)
-        self.verticalLayout_9.addWidget(self.groupBox)
-        self.groupBox_3 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_3.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_3.setStyleSheet("background-color: rgb(255, 103, 89);")
-        self.groupBox_3.setObjectName("groupBox_3")
-        self.layoutWidget_11 = QtWidgets.QWidget(self.groupBox_3)
-        self.layoutWidget_11.setGeometry(QtCore.QRect(10, 10, 191, 161))
-        self.layoutWidget_11.setObjectName("layoutWidget_11")
-        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.layoutWidget_11)
-        self.verticalLayout_22.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_22.setObjectName("verticalLayout_22")
-        self.frame_55 = QtWidgets.QFrame(self.layoutWidget_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_55.sizePolicy().hasHeightForWidth())
-        self.frame_55.setSizePolicy(sizePolicy)
-        self.frame_55.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_55.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_55.setObjectName("frame_55")
-        self.label_75 = QtWidgets.QLabel(self.frame_55)
-        self.label_75.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_75.setFont(font)
-        self.label_75.setObjectName("label_75")
-        self.label_76 = QtWidgets.QLabel(self.frame_55)
-        self.label_76.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_76.setFont(font)
-        self.label_76.setObjectName("label_76")
-        self.verticalLayout_22.addWidget(self.frame_55)
-        self.frame_56 = QtWidgets.QFrame(self.layoutWidget_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_56.sizePolicy().hasHeightForWidth())
-        self.frame_56.setSizePolicy(sizePolicy)
-        self.frame_56.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_56.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_56.setObjectName("frame_56")
-        self.label_77 = QtWidgets.QLabel(self.frame_56)
-        self.label_77.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_77.setFont(font)
-        self.label_77.setObjectName("label_77")
-        self.label_78 = QtWidgets.QLabel(self.frame_56)
-        self.label_78.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_78.setFont(font)
-        self.label_78.setObjectName("label_78")
-        self.verticalLayout_22.addWidget(self.frame_56)
-        self.layoutWidget_12 = QtWidgets.QWidget(self.groupBox_3)
-        self.layoutWidget_12.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_12.setObjectName("layoutWidget_12")
-        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.layoutWidget_12)
-        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_23.setObjectName("verticalLayout_23")
-        self.frame_57 = QtWidgets.QFrame(self.layoutWidget_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_57.sizePolicy().hasHeightForWidth())
-        self.frame_57.setSizePolicy(sizePolicy)
-        self.frame_57.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_57.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_57.setObjectName("frame_57")
-        self.pushButton_174 = QtWidgets.QPushButton(self.frame_57)
-        self.pushButton_174.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_174.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_174.setIcon(icon13)
-        self.pushButton_174.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_174.setObjectName("pushButton_174")
-        self.label_79 = QtWidgets.QLabel(self.frame_57)
-        self.label_79.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_79.setFont(font)
-        self.label_79.setObjectName("label_79")
-        self.pushButton_175 = QtWidgets.QPushButton(self.frame_57)
-        self.pushButton_175.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_175.setIcon(icon11)
-        self.pushButton_175.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_175.setObjectName("pushButton_175")
-        self.pushButton_176 = QtWidgets.QPushButton(self.frame_57)
-        self.pushButton_176.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_176.setIcon(icon14)
-        self.pushButton_176.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_176.setObjectName("pushButton_176")
-        self.label_80 = QtWidgets.QLabel(self.frame_57)
-        self.label_80.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_80.setFont(font)
-        self.label_80.setObjectName("label_80")
-        self.label_81 = QtWidgets.QLabel(self.frame_57)
-        self.label_81.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_81.setFont(font)
-        self.label_81.setObjectName("label_81")
-        self.pushButton_177 = QtWidgets.QPushButton(self.frame_57)
-        self.pushButton_177.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_177.setIcon(icon9)
-        self.pushButton_177.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_177.setObjectName("pushButton_177")
-        self.pushButton_178 = QtWidgets.QPushButton(self.frame_57)
-        self.pushButton_178.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_178.setIcon(icon15)
-        self.pushButton_178.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_178.setObjectName("pushButton_178")
-        self.verticalLayout_23.addWidget(self.frame_57)
-        self.frame_58 = QtWidgets.QFrame(self.layoutWidget_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_58.sizePolicy().hasHeightForWidth())
-        self.frame_58.setSizePolicy(sizePolicy)
-        self.frame_58.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_58.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_58.setObjectName("frame_58")
-        self.pushButton_179 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_179.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_179.setIcon(icon12)
-        self.pushButton_179.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_179.setObjectName("pushButton_179")
-        self.pushButton_180 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_180.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_180.setIcon(icon16)
-        self.pushButton_180.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_180.setObjectName("pushButton_180")
-        self.pushButton_181 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_181.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_181.setIcon(icon17)
-        self.pushButton_181.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_181.setObjectName("pushButton_181")
-        self.pushButton_182 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_182.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_182.setIcon(icon18)
-        self.pushButton_182.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_182.setObjectName("pushButton_182")
-        self.pushButton_183 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_183.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_183.setIcon(icon19)
-        self.pushButton_183.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_183.setObjectName("pushButton_183")
-        self.pushButton_184 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_184.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_184.setIcon(icon20)
-        self.pushButton_184.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_184.setObjectName("pushButton_184")
-        self.pushButton_185 = QtWidgets.QPushButton(self.frame_58)
-        self.pushButton_185.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_185.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_185.setIcon(icon21)
-        self.pushButton_185.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_185.setObjectName("pushButton_185")
-        self.verticalLayout_23.addWidget(self.frame_58)
-        self.frame_73 = QtWidgets.QFrame(self.groupBox_3)
-        self.frame_73.setGeometry(QtCore.QRect(650, 10, 281, 161))
-        self.frame_73.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_73.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_73.setObjectName("frame_73")
-        self.horizontalLayout_18 = QtWidgets.QHBoxLayout(self.frame_73)
-        self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
-        self.frame_74 = QtWidgets.QFrame(self.frame_73)
-        self.frame_74.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_74.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_74.setObjectName("frame_74")
-        self.pushButton_186 = QtWidgets.QPushButton(self.frame_74)
-        self.pushButton_186.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_186.setIcon(icon12)
-        self.pushButton_186.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_186.setObjectName("pushButton_186")
-        self.pushButton_187 = QtWidgets.QPushButton(self.frame_74)
-        self.pushButton_187.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_187.setIcon(icon12)
-        self.pushButton_187.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_187.setObjectName("pushButton_187")
-        self.pushButton_188 = QtWidgets.QPushButton(self.frame_74)
-        self.pushButton_188.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_188.setIcon(icon12)
-        self.pushButton_188.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_188.setObjectName("pushButton_188")
-        self.pushButton_189 = QtWidgets.QPushButton(self.frame_74)
-        self.pushButton_189.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_189.setIcon(icon12)
-        self.pushButton_189.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_189.setObjectName("pushButton_189")
-        self.pushButton_190 = QtWidgets.QPushButton(self.frame_74)
-        self.pushButton_190.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_190.setIcon(icon12)
-        self.pushButton_190.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_190.setObjectName("pushButton_190")
-        self.label_82 = QtWidgets.QLabel(self.frame_74)
-        self.label_82.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_82.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_82.setObjectName("label_82")
-        self.label_104 = QtWidgets.QLabel(self.frame_74)
-        self.label_104.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_104.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_104.setObjectName("label_104")
-        self.label_105 = QtWidgets.QLabel(self.frame_74)
-        self.label_105.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_105.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_105.setObjectName("label_105")
-        self.label_106 = QtWidgets.QLabel(self.frame_74)
-        self.label_106.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_106.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_106.setObjectName("label_106")
-        self.label_107 = QtWidgets.QLabel(self.frame_74)
-        self.label_107.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_107.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_107.setObjectName("label_107")
-        self.horizontalLayout_18.addWidget(self.frame_74)
-        self.frame_75 = QtWidgets.QFrame(self.frame_73)
-        self.frame_75.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_75.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_75.setObjectName("frame_75")
-        self.pushButton_191 = QtWidgets.QPushButton(self.frame_75)
-        self.pushButton_191.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_191.setIcon(icon12)
-        self.pushButton_191.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_191.setObjectName("pushButton_191")
-        self.pushButton_192 = QtWidgets.QPushButton(self.frame_75)
-        self.pushButton_192.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_192.setIcon(icon12)
-        self.pushButton_192.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_192.setObjectName("pushButton_192")
-        self.pushButton_193 = QtWidgets.QPushButton(self.frame_75)
-        self.pushButton_193.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_193.setIcon(icon12)
-        self.pushButton_193.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_193.setObjectName("pushButton_193")
-        self.pushButton_194 = QtWidgets.QPushButton(self.frame_75)
-        self.pushButton_194.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_194.setIcon(icon12)
-        self.pushButton_194.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_194.setObjectName("pushButton_194")
-        self.pushButton_195 = QtWidgets.QPushButton(self.frame_75)
-        self.pushButton_195.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_195.setIcon(icon12)
-        self.pushButton_195.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_195.setObjectName("pushButton_195")
-        self.label_108 = QtWidgets.QLabel(self.frame_75)
-        self.label_108.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_108.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_108.setObjectName("label_108")
-        self.label_109 = QtWidgets.QLabel(self.frame_75)
-        self.label_109.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_109.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_109.setObjectName("label_109")
-        self.label_180 = QtWidgets.QLabel(self.frame_75)
-        self.label_180.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_180.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_180.setObjectName("label_180")
-        self.label_181 = QtWidgets.QLabel(self.frame_75)
-        self.label_181.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_181.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_181.setObjectName("label_181")
-        self.label_182 = QtWidgets.QLabel(self.frame_75)
-        self.label_182.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_182.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_182.setObjectName("label_182")
-        self.horizontalLayout_18.addWidget(self.frame_75)
-        self.verticalLayout_9.addWidget(self.groupBox_3)
-        self.groupBox_5 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_5.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_5.setObjectName("groupBox_5")
-        self.layoutWidget_20 = QtWidgets.QWidget(self.groupBox_5)
-        self.layoutWidget_20.setGeometry(QtCore.QRect(10, 10, 191, 161))
-        self.layoutWidget_20.setObjectName("layoutWidget_20")
-        self.verticalLayout_31 = QtWidgets.QVBoxLayout(self.layoutWidget_20)
-        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_31.setObjectName("verticalLayout_31")
-        self.frame_76 = QtWidgets.QFrame(self.layoutWidget_20)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_76.sizePolicy().hasHeightForWidth())
-        self.frame_76.setSizePolicy(sizePolicy)
-        self.frame_76.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_76.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_76.setObjectName("frame_76")
-        self.label_183 = QtWidgets.QLabel(self.frame_76)
-        self.label_183.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_183.setFont(font)
-        self.label_183.setObjectName("label_183")
-        self.label_184 = QtWidgets.QLabel(self.frame_76)
-        self.label_184.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_184.setFont(font)
-        self.label_184.setObjectName("label_184")
-        self.verticalLayout_31.addWidget(self.frame_76)
-        self.frame_98 = QtWidgets.QFrame(self.layoutWidget_20)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_98.sizePolicy().hasHeightForWidth())
-        self.frame_98.setSizePolicy(sizePolicy)
-        self.frame_98.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_98.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_98.setObjectName("frame_98")
-        self.label_185 = QtWidgets.QLabel(self.frame_98)
-        self.label_185.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_185.setFont(font)
-        self.label_185.setObjectName("label_185")
-        self.label_186 = QtWidgets.QLabel(self.frame_98)
-        self.label_186.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_186.setFont(font)
-        self.label_186.setObjectName("label_186")
-        self.verticalLayout_31.addWidget(self.frame_98)
-        self.layoutWidget_21 = QtWidgets.QWidget(self.groupBox_5)
-        self.layoutWidget_21.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_21.setObjectName("layoutWidget_21")
-        self.verticalLayout_32 = QtWidgets.QVBoxLayout(self.layoutWidget_21)
-        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_32.setObjectName("verticalLayout_32")
-        self.frame_99 = QtWidgets.QFrame(self.layoutWidget_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_99.sizePolicy().hasHeightForWidth())
-        self.frame_99.setSizePolicy(sizePolicy)
-        self.frame_99.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_99.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_99.setObjectName("frame_99")
-        self.pushButton_196 = QtWidgets.QPushButton(self.frame_99)
-        self.pushButton_196.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_196.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_196.setIcon(icon13)
-        self.pushButton_196.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_196.setObjectName("pushButton_196")
-        self.label_187 = QtWidgets.QLabel(self.frame_99)
-        self.label_187.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_187.setFont(font)
-        self.label_187.setObjectName("label_187")
-        self.pushButton_197 = QtWidgets.QPushButton(self.frame_99)
-        self.pushButton_197.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_197.setIcon(icon11)
-        self.pushButton_197.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_197.setObjectName("pushButton_197")
-        self.pushButton_268 = QtWidgets.QPushButton(self.frame_99)
-        self.pushButton_268.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_268.setIcon(icon14)
-        self.pushButton_268.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_268.setObjectName("pushButton_268")
-        self.label_188 = QtWidgets.QLabel(self.frame_99)
-        self.label_188.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_188.setFont(font)
-        self.label_188.setObjectName("label_188")
-        self.label_189 = QtWidgets.QLabel(self.frame_99)
-        self.label_189.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_189.setFont(font)
-        self.label_189.setObjectName("label_189")
-        self.pushButton_269 = QtWidgets.QPushButton(self.frame_99)
-        self.pushButton_269.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_269.setIcon(icon9)
-        self.pushButton_269.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_269.setObjectName("pushButton_269")
-        self.pushButton_270 = QtWidgets.QPushButton(self.frame_99)
-        self.pushButton_270.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_270.setIcon(icon15)
-        self.pushButton_270.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_270.setObjectName("pushButton_270")
-        self.verticalLayout_32.addWidget(self.frame_99)
-        self.frame_100 = QtWidgets.QFrame(self.layoutWidget_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_100.sizePolicy().hasHeightForWidth())
-        self.frame_100.setSizePolicy(sizePolicy)
-        self.frame_100.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_100.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_100.setObjectName("frame_100")
-        self.pushButton_271 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_271.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_271.setIcon(icon12)
-        self.pushButton_271.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_271.setObjectName("pushButton_271")
-        self.pushButton_272 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_272.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_272.setIcon(icon16)
-        self.pushButton_272.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_272.setObjectName("pushButton_272")
-        self.pushButton_273 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_273.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_273.setIcon(icon17)
-        self.pushButton_273.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_273.setObjectName("pushButton_273")
-        self.pushButton_274 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_274.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_274.setIcon(icon18)
-        self.pushButton_274.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_274.setObjectName("pushButton_274")
-        self.pushButton_275 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_275.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_275.setIcon(icon19)
-        self.pushButton_275.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_275.setObjectName("pushButton_275")
-        self.pushButton_276 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_276.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_276.setIcon(icon20)
-        self.pushButton_276.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_276.setObjectName("pushButton_276")
-        self.pushButton_277 = QtWidgets.QPushButton(self.frame_100)
-        self.pushButton_277.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_277.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_277.setIcon(icon21)
-        self.pushButton_277.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_277.setObjectName("pushButton_277")
-        self.verticalLayout_32.addWidget(self.frame_100)
-        self.frame_101 = QtWidgets.QFrame(self.groupBox_5)
-        self.frame_101.setGeometry(QtCore.QRect(650, 10, 281, 161))
-        self.frame_101.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_101.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_101.setObjectName("frame_101")
-        self.horizontalLayout_19 = QtWidgets.QHBoxLayout(self.frame_101)
-        self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_19.setObjectName("horizontalLayout_19")
-        self.frame_102 = QtWidgets.QFrame(self.frame_101)
-        self.frame_102.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_102.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_102.setObjectName("frame_102")
-        self.pushButton_278 = QtWidgets.QPushButton(self.frame_102)
-        self.pushButton_278.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_278.setIcon(icon12)
-        self.pushButton_278.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_278.setObjectName("pushButton_278")
-        self.pushButton_279 = QtWidgets.QPushButton(self.frame_102)
-        self.pushButton_279.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_279.setIcon(icon12)
-        self.pushButton_279.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_279.setObjectName("pushButton_279")
-        self.pushButton_280 = QtWidgets.QPushButton(self.frame_102)
-        self.pushButton_280.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_280.setIcon(icon12)
-        self.pushButton_280.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_280.setObjectName("pushButton_280")
-        self.pushButton_281 = QtWidgets.QPushButton(self.frame_102)
-        self.pushButton_281.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_281.setIcon(icon12)
-        self.pushButton_281.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_281.setObjectName("pushButton_281")
-        self.pushButton_282 = QtWidgets.QPushButton(self.frame_102)
-        self.pushButton_282.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_282.setIcon(icon12)
-        self.pushButton_282.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_282.setObjectName("pushButton_282")
-        self.label_190 = QtWidgets.QLabel(self.frame_102)
-        self.label_190.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_190.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_190.setObjectName("label_190")
-        self.label_191 = QtWidgets.QLabel(self.frame_102)
-        self.label_191.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_191.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_191.setObjectName("label_191")
-        self.label_192 = QtWidgets.QLabel(self.frame_102)
-        self.label_192.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_192.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_192.setObjectName("label_192")
-        self.label_193 = QtWidgets.QLabel(self.frame_102)
-        self.label_193.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_193.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_193.setObjectName("label_193")
-        self.label_194 = QtWidgets.QLabel(self.frame_102)
-        self.label_194.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_194.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_194.setObjectName("label_194")
-        self.horizontalLayout_19.addWidget(self.frame_102)
-        self.frame_103 = QtWidgets.QFrame(self.frame_101)
-        self.frame_103.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_103.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_103.setObjectName("frame_103")
-        self.pushButton_283 = QtWidgets.QPushButton(self.frame_103)
-        self.pushButton_283.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_283.setIcon(icon12)
-        self.pushButton_283.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_283.setObjectName("pushButton_283")
-        self.pushButton_284 = QtWidgets.QPushButton(self.frame_103)
-        self.pushButton_284.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_284.setIcon(icon12)
-        self.pushButton_284.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_284.setObjectName("pushButton_284")
-        self.pushButton_285 = QtWidgets.QPushButton(self.frame_103)
-        self.pushButton_285.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_285.setIcon(icon12)
-        self.pushButton_285.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_285.setObjectName("pushButton_285")
-        self.pushButton_286 = QtWidgets.QPushButton(self.frame_103)
-        self.pushButton_286.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_286.setIcon(icon12)
-        self.pushButton_286.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_286.setObjectName("pushButton_286")
-        self.pushButton_287 = QtWidgets.QPushButton(self.frame_103)
-        self.pushButton_287.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_287.setIcon(icon12)
-        self.pushButton_287.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_287.setObjectName("pushButton_287")
-        self.label_195 = QtWidgets.QLabel(self.frame_103)
-        self.label_195.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_195.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_195.setObjectName("label_195")
-        self.label_196 = QtWidgets.QLabel(self.frame_103)
-        self.label_196.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_196.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_196.setObjectName("label_196")
-        self.label_197 = QtWidgets.QLabel(self.frame_103)
-        self.label_197.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_197.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_197.setObjectName("label_197")
-        self.label_198 = QtWidgets.QLabel(self.frame_103)
-        self.label_198.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_198.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_198.setObjectName("label_198")
-        self.label_199 = QtWidgets.QLabel(self.frame_103)
-        self.label_199.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_199.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_199.setObjectName("label_199")
-        self.horizontalLayout_19.addWidget(self.frame_103)
-        self.verticalLayout_9.addWidget(self.groupBox_5)
-        self.groupBox_12 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_12.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_12.setObjectName("groupBox_12")
-        self.layoutWidget_22 = QtWidgets.QWidget(self.groupBox_12)
-        self.layoutWidget_22.setGeometry(QtCore.QRect(10, 10, 191, 161))
-        self.layoutWidget_22.setObjectName("layoutWidget_22")
-        self.verticalLayout_33 = QtWidgets.QVBoxLayout(self.layoutWidget_22)
-        self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_33.setObjectName("verticalLayout_33")
-        self.frame_104 = QtWidgets.QFrame(self.layoutWidget_22)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_104.sizePolicy().hasHeightForWidth())
-        self.frame_104.setSizePolicy(sizePolicy)
-        self.frame_104.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_104.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_104.setObjectName("frame_104")
-        self.label_202 = QtWidgets.QLabel(self.frame_104)
-        self.label_202.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_202.setFont(font)
-        self.label_202.setObjectName("label_202")
-        self.label_203 = QtWidgets.QLabel(self.frame_104)
-        self.label_203.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_203.setFont(font)
-        self.label_203.setObjectName("label_203")
-        self.verticalLayout_33.addWidget(self.frame_104)
-        self.frame_105 = QtWidgets.QFrame(self.layoutWidget_22)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_105.sizePolicy().hasHeightForWidth())
-        self.frame_105.setSizePolicy(sizePolicy)
-        self.frame_105.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_105.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_105.setObjectName("frame_105")
-        self.label_204 = QtWidgets.QLabel(self.frame_105)
-        self.label_204.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_204.setFont(font)
-        self.label_204.setObjectName("label_204")
-        self.label_205 = QtWidgets.QLabel(self.frame_105)
-        self.label_205.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_205.setFont(font)
-        self.label_205.setObjectName("label_205")
-        self.verticalLayout_33.addWidget(self.frame_105)
-        self.layoutWidget_24 = QtWidgets.QWidget(self.groupBox_12)
-        self.layoutWidget_24.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_24.setObjectName("layoutWidget_24")
-        self.verticalLayout_35 = QtWidgets.QVBoxLayout(self.layoutWidget_24)
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_35.setObjectName("verticalLayout_35")
-        self.frame_108 = QtWidgets.QFrame(self.layoutWidget_24)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_108.sizePolicy().hasHeightForWidth())
-        self.frame_108.setSizePolicy(sizePolicy)
-        self.frame_108.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_108.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_108.setObjectName("frame_108")
-        self.pushButton_321 = QtWidgets.QPushButton(self.frame_108)
-        self.pushButton_321.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_321.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_321.setIcon(icon13)
-        self.pushButton_321.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_321.setObjectName("pushButton_321")
-        self.label_210 = QtWidgets.QLabel(self.frame_108)
-        self.label_210.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_210.setFont(font)
-        self.label_210.setObjectName("label_210")
-        self.pushButton_322 = QtWidgets.QPushButton(self.frame_108)
-        self.pushButton_322.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_322.setIcon(icon11)
-        self.pushButton_322.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_322.setObjectName("pushButton_322")
-        self.pushButton_323 = QtWidgets.QPushButton(self.frame_108)
-        self.pushButton_323.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_323.setIcon(icon14)
-        self.pushButton_323.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_323.setObjectName("pushButton_323")
-        self.label_211 = QtWidgets.QLabel(self.frame_108)
-        self.label_211.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_211.setFont(font)
-        self.label_211.setObjectName("label_211")
-        self.label_212 = QtWidgets.QLabel(self.frame_108)
-        self.label_212.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_212.setFont(font)
-        self.label_212.setObjectName("label_212")
-        self.pushButton_324 = QtWidgets.QPushButton(self.frame_108)
-        self.pushButton_324.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_324.setIcon(icon9)
-        self.pushButton_324.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_324.setObjectName("pushButton_324")
-        self.pushButton_325 = QtWidgets.QPushButton(self.frame_108)
-        self.pushButton_325.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_325.setIcon(icon15)
-        self.pushButton_325.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_325.setObjectName("pushButton_325")
-        self.verticalLayout_35.addWidget(self.frame_108)
-        self.frame_109 = QtWidgets.QFrame(self.layoutWidget_24)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_109.sizePolicy().hasHeightForWidth())
-        self.frame_109.setSizePolicy(sizePolicy)
-        self.frame_109.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_109.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_109.setObjectName("frame_109")
-        self.pushButton_326 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_326.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_326.setIcon(icon12)
-        self.pushButton_326.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_326.setObjectName("pushButton_326")
-        self.pushButton_327 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_327.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_327.setIcon(icon16)
-        self.pushButton_327.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_327.setObjectName("pushButton_327")
-        self.pushButton_328 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_328.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_328.setIcon(icon17)
-        self.pushButton_328.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_328.setObjectName("pushButton_328")
-        self.pushButton_329 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_329.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_329.setIcon(icon18)
-        self.pushButton_329.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_329.setObjectName("pushButton_329")
-        self.pushButton_330 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_330.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_330.setIcon(icon19)
-        self.pushButton_330.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_330.setObjectName("pushButton_330")
-        self.pushButton_331 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_331.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_331.setIcon(icon20)
-        self.pushButton_331.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_331.setObjectName("pushButton_331")
-        self.pushButton_332 = QtWidgets.QPushButton(self.frame_109)
-        self.pushButton_332.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_332.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_332.setIcon(icon21)
-        self.pushButton_332.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_332.setObjectName("pushButton_332")
-        self.verticalLayout_35.addWidget(self.frame_109)
-        self.frame_112 = QtWidgets.QFrame(self.groupBox_12)
-        self.frame_112.setGeometry(QtCore.QRect(650, 10, 281, 161))
-        self.frame_112.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_112.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_112.setObjectName("frame_112")
-        self.horizontalLayout_20 = QtWidgets.QHBoxLayout(self.frame_112)
-        self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_20.setObjectName("horizontalLayout_20")
-        self.frame_113 = QtWidgets.QFrame(self.frame_112)
-        self.frame_113.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_113.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_113.setObjectName("frame_113")
-        self.pushButton_345 = QtWidgets.QPushButton(self.frame_113)
-        self.pushButton_345.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_345.setIcon(icon12)
-        self.pushButton_345.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_345.setObjectName("pushButton_345")
-        self.pushButton_346 = QtWidgets.QPushButton(self.frame_113)
-        self.pushButton_346.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_346.setIcon(icon12)
-        self.pushButton_346.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_346.setObjectName("pushButton_346")
-        self.pushButton_347 = QtWidgets.QPushButton(self.frame_113)
-        self.pushButton_347.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_347.setIcon(icon12)
-        self.pushButton_347.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_347.setObjectName("pushButton_347")
-        self.pushButton_348 = QtWidgets.QPushButton(self.frame_113)
-        self.pushButton_348.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_348.setIcon(icon12)
-        self.pushButton_348.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_348.setObjectName("pushButton_348")
-        self.pushButton_349 = QtWidgets.QPushButton(self.frame_113)
-        self.pushButton_349.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_349.setIcon(icon12)
-        self.pushButton_349.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_349.setObjectName("pushButton_349")
-        self.label_216 = QtWidgets.QLabel(self.frame_113)
-        self.label_216.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_216.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_216.setObjectName("label_216")
-        self.label_217 = QtWidgets.QLabel(self.frame_113)
-        self.label_217.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_217.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_217.setObjectName("label_217")
-        self.label_218 = QtWidgets.QLabel(self.frame_113)
-        self.label_218.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_218.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_218.setObjectName("label_218")
-        self.label_219 = QtWidgets.QLabel(self.frame_113)
-        self.label_219.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_219.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_219.setObjectName("label_219")
-        self.label_220 = QtWidgets.QLabel(self.frame_113)
-        self.label_220.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_220.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_220.setObjectName("label_220")
-        self.horizontalLayout_20.addWidget(self.frame_113)
-        self.frame_114 = QtWidgets.QFrame(self.frame_112)
-        self.frame_114.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_114.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_114.setObjectName("frame_114")
-        self.pushButton_350 = QtWidgets.QPushButton(self.frame_114)
-        self.pushButton_350.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_350.setIcon(icon12)
-        self.pushButton_350.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_350.setObjectName("pushButton_350")
-        self.pushButton_351 = QtWidgets.QPushButton(self.frame_114)
-        self.pushButton_351.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_351.setIcon(icon12)
-        self.pushButton_351.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_351.setObjectName("pushButton_351")
-        self.pushButton_352 = QtWidgets.QPushButton(self.frame_114)
-        self.pushButton_352.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_352.setIcon(icon12)
-        self.pushButton_352.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_352.setObjectName("pushButton_352")
-        self.pushButton_353 = QtWidgets.QPushButton(self.frame_114)
-        self.pushButton_353.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_353.setIcon(icon12)
-        self.pushButton_353.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_353.setObjectName("pushButton_353")
-        self.pushButton_354 = QtWidgets.QPushButton(self.frame_114)
-        self.pushButton_354.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_354.setIcon(icon12)
-        self.pushButton_354.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_354.setObjectName("pushButton_354")
-        self.label_221 = QtWidgets.QLabel(self.frame_114)
-        self.label_221.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_221.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_221.setObjectName("label_221")
-        self.label_222 = QtWidgets.QLabel(self.frame_114)
-        self.label_222.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_222.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_222.setObjectName("label_222")
-        self.label_223 = QtWidgets.QLabel(self.frame_114)
-        self.label_223.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_223.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_223.setObjectName("label_223")
-        self.label_224 = QtWidgets.QLabel(self.frame_114)
-        self.label_224.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_224.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_224.setObjectName("label_224")
-        self.label_225 = QtWidgets.QLabel(self.frame_114)
-        self.label_225.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_225.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_225.setObjectName("label_225")
-        self.horizontalLayout_20.addWidget(self.frame_114)
-        self.verticalLayout_9.addWidget(self.groupBox_12)
-        self.groupBox_13 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-        self.groupBox_13.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_13.setObjectName("groupBox_13")
-        self.layoutWidget_23 = QtWidgets.QWidget(self.groupBox_13)
-        self.layoutWidget_23.setGeometry(QtCore.QRect(10, 10, 191, 161))
-        self.layoutWidget_23.setObjectName("layoutWidget_23")
-        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.layoutWidget_23)
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_34.setObjectName("verticalLayout_34")
-        self.frame_106 = QtWidgets.QFrame(self.layoutWidget_23)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_106.sizePolicy().hasHeightForWidth())
-        self.frame_106.setSizePolicy(sizePolicy)
-        self.frame_106.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_106.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_106.setObjectName("frame_106")
-        self.label_206 = QtWidgets.QLabel(self.frame_106)
-        self.label_206.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_206.setFont(font)
-        self.label_206.setObjectName("label_206")
-        self.label_207 = QtWidgets.QLabel(self.frame_106)
-        self.label_207.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_207.setFont(font)
-        self.label_207.setObjectName("label_207")
-        self.verticalLayout_34.addWidget(self.frame_106)
-        self.frame_107 = QtWidgets.QFrame(self.layoutWidget_23)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_107.sizePolicy().hasHeightForWidth())
-        self.frame_107.setSizePolicy(sizePolicy)
-        self.frame_107.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_107.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_107.setObjectName("frame_107")
-        self.label_208 = QtWidgets.QLabel(self.frame_107)
-        self.label_208.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_208.setFont(font)
-        self.label_208.setObjectName("label_208")
-        self.label_209 = QtWidgets.QLabel(self.frame_107)
-        self.label_209.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_209.setFont(font)
-        self.label_209.setObjectName("label_209")
-        self.verticalLayout_34.addWidget(self.frame_107)
-        self.layoutWidget_25 = QtWidgets.QWidget(self.groupBox_13)
-        self.layoutWidget_25.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_25.setObjectName("layoutWidget_25")
-        self.verticalLayout_36 = QtWidgets.QVBoxLayout(self.layoutWidget_25)
-        self.verticalLayout_36.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_36.setObjectName("verticalLayout_36")
-        self.frame_110 = QtWidgets.QFrame(self.layoutWidget_25)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_110.sizePolicy().hasHeightForWidth())
-        self.frame_110.setSizePolicy(sizePolicy)
-        self.frame_110.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_110.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_110.setObjectName("frame_110")
-        self.pushButton_333 = QtWidgets.QPushButton(self.frame_110)
-        self.pushButton_333.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_333.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_333.setIcon(icon13)
-        self.pushButton_333.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_333.setObjectName("pushButton_333")
-        self.label_213 = QtWidgets.QLabel(self.frame_110)
-        self.label_213.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_213.setFont(font)
-        self.label_213.setObjectName("label_213")
-        self.pushButton_334 = QtWidgets.QPushButton(self.frame_110)
-        self.pushButton_334.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_334.setIcon(icon11)
-        self.pushButton_334.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_334.setObjectName("pushButton_334")
-        self.pushButton_335 = QtWidgets.QPushButton(self.frame_110)
-        self.pushButton_335.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_335.setIcon(icon14)
-        self.pushButton_335.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_335.setObjectName("pushButton_335")
-        self.label_214 = QtWidgets.QLabel(self.frame_110)
-        self.label_214.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_214.setFont(font)
-        self.label_214.setObjectName("label_214")
-        self.label_215 = QtWidgets.QLabel(self.frame_110)
-        self.label_215.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_215.setFont(font)
-        self.label_215.setObjectName("label_215")
-        self.pushButton_336 = QtWidgets.QPushButton(self.frame_110)
-        self.pushButton_336.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_336.setIcon(icon9)
-        self.pushButton_336.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_336.setObjectName("pushButton_336")
-        self.pushButton_337 = QtWidgets.QPushButton(self.frame_110)
-        self.pushButton_337.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_337.setIcon(icon15)
-        self.pushButton_337.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_337.setObjectName("pushButton_337")
-        self.verticalLayout_36.addWidget(self.frame_110)
-        self.frame_111 = QtWidgets.QFrame(self.layoutWidget_25)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_111.sizePolicy().hasHeightForWidth())
-        self.frame_111.setSizePolicy(sizePolicy)
-        self.frame_111.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_111.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_111.setObjectName("frame_111")
-        self.pushButton_338 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_338.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_338.setIcon(icon12)
-        self.pushButton_338.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_338.setObjectName("pushButton_338")
-        self.pushButton_339 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_339.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_339.setIcon(icon16)
-        self.pushButton_339.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_339.setObjectName("pushButton_339")
-        self.pushButton_340 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_340.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_340.setIcon(icon17)
-        self.pushButton_340.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_340.setObjectName("pushButton_340")
-        self.pushButton_341 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_341.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_341.setIcon(icon18)
-        self.pushButton_341.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_341.setObjectName("pushButton_341")
-        self.pushButton_342 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_342.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_342.setIcon(icon19)
-        self.pushButton_342.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_342.setObjectName("pushButton_342")
-        self.pushButton_343 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_343.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_343.setIcon(icon20)
-        self.pushButton_343.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_343.setObjectName("pushButton_343")
-        self.pushButton_344 = QtWidgets.QPushButton(self.frame_111)
-        self.pushButton_344.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_344.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_344.setIcon(icon21)
-        self.pushButton_344.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_344.setObjectName("pushButton_344")
-        self.verticalLayout_36.addWidget(self.frame_111)
-        self.frame_115 = QtWidgets.QFrame(self.groupBox_13)
-        self.frame_115.setGeometry(QtCore.QRect(650, 10, 281, 161))
-        self.frame_115.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_115.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_115.setObjectName("frame_115")
-        self.horizontalLayout_21 = QtWidgets.QHBoxLayout(self.frame_115)
-        self.horizontalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_21.setObjectName("horizontalLayout_21")
-        self.frame_116 = QtWidgets.QFrame(self.frame_115)
-        self.frame_116.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_116.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_116.setObjectName("frame_116")
-        self.pushButton_355 = QtWidgets.QPushButton(self.frame_116)
-        self.pushButton_355.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_355.setIcon(icon12)
-        self.pushButton_355.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_355.setObjectName("pushButton_355")
-        self.pushButton_356 = QtWidgets.QPushButton(self.frame_116)
-        self.pushButton_356.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_356.setIcon(icon12)
-        self.pushButton_356.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_356.setObjectName("pushButton_356")
-        self.pushButton_357 = QtWidgets.QPushButton(self.frame_116)
-        self.pushButton_357.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_357.setIcon(icon12)
-        self.pushButton_357.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_357.setObjectName("pushButton_357")
-        self.pushButton_358 = QtWidgets.QPushButton(self.frame_116)
-        self.pushButton_358.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_358.setIcon(icon12)
-        self.pushButton_358.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_358.setObjectName("pushButton_358")
-        self.pushButton_359 = QtWidgets.QPushButton(self.frame_116)
-        self.pushButton_359.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_359.setIcon(icon12)
-        self.pushButton_359.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_359.setObjectName("pushButton_359")
-        self.label_226 = QtWidgets.QLabel(self.frame_116)
-        self.label_226.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_226.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_226.setObjectName("label_226")
-        self.label_227 = QtWidgets.QLabel(self.frame_116)
-        self.label_227.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_227.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_227.setObjectName("label_227")
-        self.label_228 = QtWidgets.QLabel(self.frame_116)
-        self.label_228.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_228.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_228.setObjectName("label_228")
-        self.label_229 = QtWidgets.QLabel(self.frame_116)
-        self.label_229.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_229.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_229.setObjectName("label_229")
-        self.label_230 = QtWidgets.QLabel(self.frame_116)
-        self.label_230.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_230.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_230.setObjectName("label_230")
-        self.horizontalLayout_21.addWidget(self.frame_116)
-        self.frame_117 = QtWidgets.QFrame(self.frame_115)
-        self.frame_117.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_117.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_117.setObjectName("frame_117")
-        self.pushButton_360 = QtWidgets.QPushButton(self.frame_117)
-        self.pushButton_360.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_360.setIcon(icon12)
-        self.pushButton_360.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_360.setObjectName("pushButton_360")
-        self.pushButton_361 = QtWidgets.QPushButton(self.frame_117)
-        self.pushButton_361.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_361.setIcon(icon12)
-        self.pushButton_361.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_361.setObjectName("pushButton_361")
-        self.pushButton_362 = QtWidgets.QPushButton(self.frame_117)
-        self.pushButton_362.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_362.setIcon(icon12)
-        self.pushButton_362.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_362.setObjectName("pushButton_362")
-        self.pushButton_363 = QtWidgets.QPushButton(self.frame_117)
-        self.pushButton_363.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_363.setIcon(icon12)
-        self.pushButton_363.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_363.setObjectName("pushButton_363")
-        self.pushButton_364 = QtWidgets.QPushButton(self.frame_117)
-        self.pushButton_364.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_364.setIcon(icon12)
-        self.pushButton_364.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_364.setObjectName("pushButton_364")
-        self.label_231 = QtWidgets.QLabel(self.frame_117)
-        self.label_231.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_231.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_231.setObjectName("label_231")
-        self.label_232 = QtWidgets.QLabel(self.frame_117)
-        self.label_232.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_232.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_232.setObjectName("label_232")
-        self.label_233 = QtWidgets.QLabel(self.frame_117)
-        self.label_233.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_233.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_233.setObjectName("label_233")
-        self.label_234 = QtWidgets.QLabel(self.frame_117)
-        self.label_234.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_234.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_234.setObjectName("label_234")
-        self.label_235 = QtWidgets.QLabel(self.frame_117)
-        self.label_235.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_235.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_235.setObjectName("label_235")
-        self.horizontalLayout_21.addWidget(self.frame_117)
-        self.verticalLayout_9.addWidget(self.groupBox_13)
-        self.pushButton_65 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.pushButton_65.setMaximumSize(QtCore.QSize(1000, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_65.setFont(font)
-        self.pushButton_65.setObjectName("pushButton_65")
-        self.verticalLayout_9.addWidget(self.pushButton_65)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout_5.addWidget(self.scrollArea)
         self.stackedWidget.addWidget(self.page_3)
@@ -2278,13 +781,14 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, -72, 993, 1703))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1019, 599))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.groupBox_4 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
         self.groupBox_4.setMinimumSize(QtCore.QSize(0, 150))
         self.groupBox_4.setMaximumSize(QtCore.QSize(1000, 16777215))
+        self.groupBox_4.setTitle("")
         self.groupBox_4.setObjectName("groupBox_4")
         self.frame_118 = QtWidgets.QFrame(self.groupBox_4)
         self.frame_118.setGeometry(QtCore.QRect(30, 0, 561, 143))
@@ -2313,11 +817,12 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_366.setFont(font)
         self.pushButton_366.setStyleSheet("background-color: rgb(137, 194, 255);\n"
-                                          "color : rgb(255, 255, 255);")
+"color : rgb(255, 255, 255);")
         self.pushButton_366.setObjectName("pushButton_366")
         self.pushButton_365 = QtWidgets.QPushButton(self.frame_118)
         self.pushButton_365.setGeometry(QtCore.QRect(30, 0, 101, 101))
-        self.pushButton_365.setIcon(icon10)
+        self.pushButton_365.setText("")
+        self.pushButton_365.setIcon(icon7)
         self.pushButton_365.setIconSize(QtCore.QSize(198, 100))
         self.pushButton_365.setObjectName("pushButton_365")
         self.label_236 = QtWidgets.QLabel(self.frame_118)
@@ -2347,2372 +852,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.addWidget(self.label_21)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.stackedWidget.addWidget(self.page_4)
-        self.page_5 = QtWidgets.QWidget()
-        self.page_5.setObjectName("page_5")
-        self.scrollArea_3 = QtWidgets.QScrollArea(self.page_5)
-        self.scrollArea_3.setGeometry(QtCore.QRect(10, 10, 971, 581))
-        self.scrollArea_3.setWidgetResizable(True)
-        self.scrollArea_3.setObjectName("scrollArea_3")
-        self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, -1108, 967, 1661))
-        self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
-        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
-        self.verticalLayout_10.setObjectName("verticalLayout_10")
-        self.groupBox_14 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_14.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_14.setObjectName("groupBox_14")
-        self.layoutWidget_2 = QtWidgets.QWidget(self.groupBox_14)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_2.setObjectName("layoutWidget_2")
-        self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.layoutWidget_2)
-        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_13.setObjectName("verticalLayout_13")
-        self.frame_34 = QtWidgets.QFrame(self.layoutWidget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_34.sizePolicy().hasHeightForWidth())
-        self.frame_34.setSizePolicy(sizePolicy)
-        self.frame_34.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_34.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_34.setObjectName("frame_34")
-        self.label_30 = QtWidgets.QLabel(self.frame_34)
-        self.label_30.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_30.setFont(font)
-        self.label_30.setObjectName("label_30")
-        self.label_31 = QtWidgets.QLabel(self.frame_34)
-        self.label_31.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_31.setFont(font)
-        self.label_31.setObjectName("label_31")
-        self.verticalLayout_13.addWidget(self.frame_34)
-        self.frame_35 = QtWidgets.QFrame(self.layoutWidget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_35.sizePolicy().hasHeightForWidth())
-        self.frame_35.setSizePolicy(sizePolicy)
-        self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_35.setObjectName("frame_35")
-        self.label_32 = QtWidgets.QLabel(self.frame_35)
-        self.label_32.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_32.setFont(font)
-        self.label_32.setObjectName("label_32")
-        self.label_33 = QtWidgets.QLabel(self.frame_35)
-        self.label_33.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_33.setFont(font)
-        self.label_33.setObjectName("label_33")
-        self.verticalLayout_13.addWidget(self.frame_35)
-        self.layoutWidget_3 = QtWidgets.QWidget(self.groupBox_14)
-        self.layoutWidget_3.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_3.setObjectName("layoutWidget_3")
-        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.layoutWidget_3)
-        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_14.setObjectName("verticalLayout_14")
-        self.frame_36 = QtWidgets.QFrame(self.layoutWidget_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_36.sizePolicy().hasHeightForWidth())
-        self.frame_36.setSizePolicy(sizePolicy)
-        self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_36.setObjectName("frame_36")
-        self.pushButton_68 = QtWidgets.QPushButton(self.frame_36)
-        self.pushButton_68.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_68.setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 50px;\n"
-                                         "        \n"
-                                         "    }")
-        self.pushButton_68.setIcon(icon13)
-        self.pushButton_68.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_68.setObjectName("pushButton_68")
-        self.label_34 = QtWidgets.QLabel(self.frame_36)
-        self.label_34.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_34.setFont(font)
-        self.label_34.setObjectName("label_34")
-        self.pushButton_69 = QtWidgets.QPushButton(self.frame_36)
-        self.pushButton_69.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_69.setIcon(icon11)
-        self.pushButton_69.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_69.setObjectName("pushButton_69")
-        self.pushButton_70 = QtWidgets.QPushButton(self.frame_36)
-        self.pushButton_70.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_70.setIcon(icon14)
-        self.pushButton_70.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_70.setObjectName("pushButton_70")
-        self.label_35 = QtWidgets.QLabel(self.frame_36)
-        self.label_35.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_35.setFont(font)
-        self.label_35.setObjectName("label_35")
-        self.label_36 = QtWidgets.QLabel(self.frame_36)
-        self.label_36.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_36.setFont(font)
-        self.label_36.setObjectName("label_36")
-        self.pushButton_71 = QtWidgets.QPushButton(self.frame_36)
-        self.pushButton_71.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_71.setIcon(icon9)
-        self.pushButton_71.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_71.setObjectName("pushButton_71")
-        self.pushButton_72 = QtWidgets.QPushButton(self.frame_36)
-        self.pushButton_72.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_72.setIcon(icon15)
-        self.pushButton_72.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_72.setObjectName("pushButton_72")
-        self.verticalLayout_14.addWidget(self.frame_36)
-        self.frame_37 = QtWidgets.QFrame(self.layoutWidget_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_37.sizePolicy().hasHeightForWidth())
-        self.frame_37.setSizePolicy(sizePolicy)
-        self.frame_37.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_37.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_37.setObjectName("frame_37")
-        self.pushButton_73 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_73.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_73.setIcon(icon12)
-        self.pushButton_73.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_73.setObjectName("pushButton_73")
-        self.pushButton_74 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_74.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_74.setIcon(icon16)
-        self.pushButton_74.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_74.setObjectName("pushButton_74")
-        self.pushButton_75 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_75.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_75.setIcon(icon17)
-        self.pushButton_75.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_75.setObjectName("pushButton_75")
-        self.pushButton_76 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_76.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_76.setIcon(icon18)
-        self.pushButton_76.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_76.setObjectName("pushButton_76")
-        self.pushButton_77 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_77.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_77.setIcon(icon19)
-        self.pushButton_77.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_77.setObjectName("pushButton_77")
-        self.pushButton_78 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_78.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_78.setIcon(icon20)
-        self.pushButton_78.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_78.setObjectName("pushButton_78")
-        self.pushButton_79 = QtWidgets.QPushButton(self.frame_37)
-        self.pushButton_79.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_79.setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 16px;\n"
-                                         "        \n"
-                                         "        \n"
-                                         "    background-color: rgb(0, 170, 255);\n"
-                                         "    }")
-        self.pushButton_79.setIcon(icon21)
-        self.pushButton_79.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_79.setObjectName("pushButton_79")
-        self.verticalLayout_14.addWidget(self.frame_37)
-        self.frame_38 = QtWidgets.QFrame(self.groupBox_14)
-        self.frame_38.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_38.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_38.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_38.setObjectName("frame_38")
-        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.frame_38)
-        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
-        self.frame_39 = QtWidgets.QFrame(self.frame_38)
-        self.frame_39.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_39.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_39.setObjectName("frame_39")
-        self.pushButton_80 = QtWidgets.QPushButton(self.frame_39)
-        self.pushButton_80.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_80.setIcon(icon12)
-        self.pushButton_80.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_80.setObjectName("pushButton_80")
-        self.pushButton_81 = QtWidgets.QPushButton(self.frame_39)
-        self.pushButton_81.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_81.setIcon(icon12)
-        self.pushButton_81.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_81.setObjectName("pushButton_81")
-        self.pushButton_82 = QtWidgets.QPushButton(self.frame_39)
-        self.pushButton_82.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_82.setIcon(icon12)
-        self.pushButton_82.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_82.setObjectName("pushButton_82")
-        self.pushButton_83 = QtWidgets.QPushButton(self.frame_39)
-        self.pushButton_83.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_83.setIcon(icon12)
-        self.pushButton_83.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_83.setObjectName("pushButton_83")
-        self.pushButton_84 = QtWidgets.QPushButton(self.frame_39)
-        self.pushButton_84.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_84.setIcon(icon12)
-        self.pushButton_84.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_84.setObjectName("pushButton_84")
-        self.label_37 = QtWidgets.QLabel(self.frame_39)
-        self.label_37.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_37.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_37.setObjectName("label_37")
-        self.label_38 = QtWidgets.QLabel(self.frame_39)
-        self.label_38.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_38.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_38.setObjectName("label_38")
-        self.label_39 = QtWidgets.QLabel(self.frame_39)
-        self.label_39.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_39.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_39.setObjectName("label_39")
-        self.label_40 = QtWidgets.QLabel(self.frame_39)
-        self.label_40.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_40.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_40.setObjectName("label_40")
-        self.label_41 = QtWidgets.QLabel(self.frame_39)
-        self.label_41.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_41.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_41.setObjectName("label_41")
-        self.horizontalLayout_10.addWidget(self.frame_39)
-        self.frame_40 = QtWidgets.QFrame(self.frame_38)
-        self.frame_40.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_40.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_40.setObjectName("frame_40")
-        self.pushButton_85 = QtWidgets.QPushButton(self.frame_40)
-        self.pushButton_85.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_85.setIcon(icon12)
-        self.pushButton_85.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_85.setObjectName("pushButton_85")
-        self.pushButton_86 = QtWidgets.QPushButton(self.frame_40)
-        self.pushButton_86.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_86.setIcon(icon12)
-        self.pushButton_86.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_86.setObjectName("pushButton_86")
-        self.pushButton_87 = QtWidgets.QPushButton(self.frame_40)
-        self.pushButton_87.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_87.setIcon(icon12)
-        self.pushButton_87.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_87.setObjectName("pushButton_87")
-        self.pushButton_88 = QtWidgets.QPushButton(self.frame_40)
-        self.pushButton_88.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_88.setIcon(icon12)
-        self.pushButton_88.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_88.setObjectName("pushButton_88")
-        self.pushButton_89 = QtWidgets.QPushButton(self.frame_40)
-        self.pushButton_89.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_89.setIcon(icon12)
-        self.pushButton_89.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_89.setObjectName("pushButton_89")
-        self.label_42 = QtWidgets.QLabel(self.frame_40)
-        self.label_42.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_42.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_42.setObjectName("label_42")
-        self.label_43 = QtWidgets.QLabel(self.frame_40)
-        self.label_43.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_43.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_43.setObjectName("label_43")
-        self.label_44 = QtWidgets.QLabel(self.frame_40)
-        self.label_44.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_44.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_44.setObjectName("label_44")
-        self.label_45 = QtWidgets.QLabel(self.frame_40)
-        self.label_45.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_45.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_45.setObjectName("label_45")
-        self.label_46 = QtWidgets.QLabel(self.frame_40)
-        self.label_46.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_46.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_46.setObjectName("label_46")
-        self.horizontalLayout_10.addWidget(self.frame_40)
-        self.verticalLayout_10.addWidget(self.groupBox_14)
-        self.groupBox_15 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_15.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_15.setObjectName("groupBox_15")
-        self.layoutWidget_4 = QtWidgets.QWidget(self.groupBox_15)
-        self.layoutWidget_4.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_4.setObjectName("layoutWidget_4")
-        self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.layoutWidget_4)
-        self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_15.setObjectName("verticalLayout_15")
-        self.frame_41 = QtWidgets.QFrame(self.layoutWidget_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_41.sizePolicy().hasHeightForWidth())
-        self.frame_41.setSizePolicy(sizePolicy)
-        self.frame_41.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_41.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_41.setObjectName("frame_41")
-        self.label_47 = QtWidgets.QLabel(self.frame_41)
-        self.label_47.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_47.setFont(font)
-        self.label_47.setObjectName("label_47")
-        self.label_48 = QtWidgets.QLabel(self.frame_41)
-        self.label_48.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_48.setFont(font)
-        self.label_48.setObjectName("label_48")
-        self.verticalLayout_15.addWidget(self.frame_41)
-        self.frame_42 = QtWidgets.QFrame(self.layoutWidget_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_42.sizePolicy().hasHeightForWidth())
-        self.frame_42.setSizePolicy(sizePolicy)
-        self.frame_42.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_42.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_42.setObjectName("frame_42")
-        self.label_49 = QtWidgets.QLabel(self.frame_42)
-        self.label_49.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_49.setFont(font)
-        self.label_49.setObjectName("label_49")
-        self.label_50 = QtWidgets.QLabel(self.frame_42)
-        self.label_50.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_50.setFont(font)
-        self.label_50.setObjectName("label_50")
-        self.verticalLayout_15.addWidget(self.frame_42)
-        self.layoutWidget_13 = QtWidgets.QWidget(self.groupBox_15)
-        self.layoutWidget_13.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_13.setObjectName("layoutWidget_13")
-        self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.layoutWidget_13)
-        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_24.setObjectName("verticalLayout_24")
-        self.frame_59 = QtWidgets.QFrame(self.layoutWidget_13)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_59.sizePolicy().hasHeightForWidth())
-        self.frame_59.setSizePolicy(sizePolicy)
-        self.frame_59.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_59.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_59.setObjectName("frame_59")
-        self.pushButton_90 = QtWidgets.QPushButton(self.frame_59)
-        self.pushButton_90.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_90.setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 50px;\n"
-                                         "        \n"
-                                         "    }")
-        self.pushButton_90.setIcon(icon13)
-        self.pushButton_90.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_90.setObjectName("pushButton_90")
-        self.label_83 = QtWidgets.QLabel(self.frame_59)
-        self.label_83.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_83.setFont(font)
-        self.label_83.setObjectName("label_83")
-        self.pushButton_91 = QtWidgets.QPushButton(self.frame_59)
-        self.pushButton_91.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_91.setIcon(icon11)
-        self.pushButton_91.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_91.setObjectName("pushButton_91")
-        self.pushButton_92 = QtWidgets.QPushButton(self.frame_59)
-        self.pushButton_92.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_92.setIcon(icon14)
-        self.pushButton_92.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_92.setObjectName("pushButton_92")
-        self.label_84 = QtWidgets.QLabel(self.frame_59)
-        self.label_84.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_84.setFont(font)
-        self.label_84.setObjectName("label_84")
-        self.label_85 = QtWidgets.QLabel(self.frame_59)
-        self.label_85.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_85.setFont(font)
-        self.label_85.setObjectName("label_85")
-        self.pushButton_93 = QtWidgets.QPushButton(self.frame_59)
-        self.pushButton_93.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_93.setIcon(icon9)
-        self.pushButton_93.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_93.setObjectName("pushButton_93")
-        self.pushButton_94 = QtWidgets.QPushButton(self.frame_59)
-        self.pushButton_94.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_94.setIcon(icon15)
-        self.pushButton_94.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_94.setObjectName("pushButton_94")
-        self.verticalLayout_24.addWidget(self.frame_59)
-        self.frame_60 = QtWidgets.QFrame(self.layoutWidget_13)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_60.sizePolicy().hasHeightForWidth())
-        self.frame_60.setSizePolicy(sizePolicy)
-        self.frame_60.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_60.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_60.setObjectName("frame_60")
-        self.pushButton_95 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_95.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_95.setIcon(icon12)
-        self.pushButton_95.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_95.setObjectName("pushButton_95")
-        self.pushButton_96 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_96.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_96.setIcon(icon16)
-        self.pushButton_96.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_96.setObjectName("pushButton_96")
-        self.pushButton_97 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_97.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_97.setIcon(icon17)
-        self.pushButton_97.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_97.setObjectName("pushButton_97")
-        self.pushButton_98 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_98.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_98.setIcon(icon18)
-        self.pushButton_98.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_98.setObjectName("pushButton_98")
-        self.pushButton_99 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_99.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_99.setIcon(icon19)
-        self.pushButton_99.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_99.setObjectName("pushButton_99")
-        self.pushButton_100 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_100.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_100.setIcon(icon20)
-        self.pushButton_100.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_100.setObjectName("pushButton_100")
-        self.pushButton_101 = QtWidgets.QPushButton(self.frame_60)
-        self.pushButton_101.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_101.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_101.setIcon(icon21)
-        self.pushButton_101.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_101.setObjectName("pushButton_101")
-        self.verticalLayout_24.addWidget(self.frame_60)
-        self.frame_77 = QtWidgets.QFrame(self.groupBox_15)
-        self.frame_77.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_77.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_77.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_77.setObjectName("frame_77")
-        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.frame_77)
-        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
-        self.frame_78 = QtWidgets.QFrame(self.frame_77)
-        self.frame_78.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_78.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_78.setObjectName("frame_78")
-        self.pushButton_198 = QtWidgets.QPushButton(self.frame_78)
-        self.pushButton_198.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_198.setIcon(icon12)
-        self.pushButton_198.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_198.setObjectName("pushButton_198")
-        self.pushButton_199 = QtWidgets.QPushButton(self.frame_78)
-        self.pushButton_199.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_199.setIcon(icon12)
-        self.pushButton_199.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_199.setObjectName("pushButton_199")
-        self.pushButton_200 = QtWidgets.QPushButton(self.frame_78)
-        self.pushButton_200.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_200.setIcon(icon12)
-        self.pushButton_200.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_200.setObjectName("pushButton_200")
-        self.pushButton_201 = QtWidgets.QPushButton(self.frame_78)
-        self.pushButton_201.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_201.setIcon(icon12)
-        self.pushButton_201.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_201.setObjectName("pushButton_201")
-        self.pushButton_202 = QtWidgets.QPushButton(self.frame_78)
-        self.pushButton_202.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_202.setIcon(icon12)
-        self.pushButton_202.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_202.setObjectName("pushButton_202")
-        self.label_110 = QtWidgets.QLabel(self.frame_78)
-        self.label_110.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_110.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_110.setObjectName("label_110")
-        self.label_111 = QtWidgets.QLabel(self.frame_78)
-        self.label_111.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_111.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_111.setObjectName("label_111")
-        self.label_112 = QtWidgets.QLabel(self.frame_78)
-        self.label_112.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_112.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_112.setObjectName("label_112")
-        self.label_113 = QtWidgets.QLabel(self.frame_78)
-        self.label_113.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_113.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_113.setObjectName("label_113")
-        self.label_114 = QtWidgets.QLabel(self.frame_78)
-        self.label_114.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_114.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_114.setObjectName("label_114")
-        self.horizontalLayout_11.addWidget(self.frame_78)
-        self.frame_79 = QtWidgets.QFrame(self.frame_77)
-        self.frame_79.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_79.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_79.setObjectName("frame_79")
-        self.pushButton_203 = QtWidgets.QPushButton(self.frame_79)
-        self.pushButton_203.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_203.setIcon(icon12)
-        self.pushButton_203.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_203.setObjectName("pushButton_203")
-        self.pushButton_204 = QtWidgets.QPushButton(self.frame_79)
-        self.pushButton_204.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_204.setIcon(icon12)
-        self.pushButton_204.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_204.setObjectName("pushButton_204")
-        self.pushButton_205 = QtWidgets.QPushButton(self.frame_79)
-        self.pushButton_205.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_205.setIcon(icon12)
-        self.pushButton_205.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_205.setObjectName("pushButton_205")
-        self.pushButton_206 = QtWidgets.QPushButton(self.frame_79)
-        self.pushButton_206.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_206.setIcon(icon12)
-        self.pushButton_206.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_206.setObjectName("pushButton_206")
-        self.pushButton_207 = QtWidgets.QPushButton(self.frame_79)
-        self.pushButton_207.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_207.setIcon(icon12)
-        self.pushButton_207.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_207.setObjectName("pushButton_207")
-        self.label_115 = QtWidgets.QLabel(self.frame_79)
-        self.label_115.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_115.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_115.setObjectName("label_115")
-        self.label_116 = QtWidgets.QLabel(self.frame_79)
-        self.label_116.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_116.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_116.setObjectName("label_116")
-        self.label_117 = QtWidgets.QLabel(self.frame_79)
-        self.label_117.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_117.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_117.setObjectName("label_117")
-        self.label_118 = QtWidgets.QLabel(self.frame_79)
-        self.label_118.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_118.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_118.setObjectName("label_118")
-        self.label_119 = QtWidgets.QLabel(self.frame_79)
-        self.label_119.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_119.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_119.setObjectName("label_119")
-        self.horizontalLayout_11.addWidget(self.frame_79)
-        self.verticalLayout_10.addWidget(self.groupBox_15)
-        self.groupBox_16 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_16.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_16.setObjectName("groupBox_16")
-        self.layoutWidget_5 = QtWidgets.QWidget(self.groupBox_16)
-        self.layoutWidget_5.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_5.setObjectName("layoutWidget_5")
-        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.layoutWidget_5)
-        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_16.setObjectName("verticalLayout_16")
-        self.frame_43 = QtWidgets.QFrame(self.layoutWidget_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_43.sizePolicy().hasHeightForWidth())
-        self.frame_43.setSizePolicy(sizePolicy)
-        self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_43.setObjectName("frame_43")
-        self.label_51 = QtWidgets.QLabel(self.frame_43)
-        self.label_51.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_51.setFont(font)
-        self.label_51.setObjectName("label_51")
-        self.label_52 = QtWidgets.QLabel(self.frame_43)
-        self.label_52.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_52.setFont(font)
-        self.label_52.setObjectName("label_52")
-        self.verticalLayout_16.addWidget(self.frame_43)
-        self.frame_44 = QtWidgets.QFrame(self.layoutWidget_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_44.sizePolicy().hasHeightForWidth())
-        self.frame_44.setSizePolicy(sizePolicy)
-        self.frame_44.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_44.setObjectName("frame_44")
-        self.label_53 = QtWidgets.QLabel(self.frame_44)
-        self.label_53.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_53.setFont(font)
-        self.label_53.setObjectName("label_53")
-        self.label_54 = QtWidgets.QLabel(self.frame_44)
-        self.label_54.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_54.setFont(font)
-        self.label_54.setObjectName("label_54")
-        self.verticalLayout_16.addWidget(self.frame_44)
-        self.layoutWidget_14 = QtWidgets.QWidget(self.groupBox_16)
-        self.layoutWidget_14.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_14.setObjectName("layoutWidget_14")
-        self.verticalLayout_25 = QtWidgets.QVBoxLayout(self.layoutWidget_14)
-        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_25.setObjectName("verticalLayout_25")
-        self.frame_61 = QtWidgets.QFrame(self.layoutWidget_14)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_61.sizePolicy().hasHeightForWidth())
-        self.frame_61.setSizePolicy(sizePolicy)
-        self.frame_61.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_61.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_61.setObjectName("frame_61")
-        self.pushButton_102 = QtWidgets.QPushButton(self.frame_61)
-        self.pushButton_102.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_102.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_102.setIcon(icon13)
-        self.pushButton_102.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_102.setObjectName("pushButton_102")
-        self.label_86 = QtWidgets.QLabel(self.frame_61)
-        self.label_86.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_86.setFont(font)
-        self.label_86.setObjectName("label_86")
-        self.pushButton_103 = QtWidgets.QPushButton(self.frame_61)
-        self.pushButton_103.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_103.setIcon(icon11)
-        self.pushButton_103.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_103.setObjectName("pushButton_103")
-        self.pushButton_104 = QtWidgets.QPushButton(self.frame_61)
-        self.pushButton_104.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_104.setIcon(icon14)
-        self.pushButton_104.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_104.setObjectName("pushButton_104")
-        self.label_87 = QtWidgets.QLabel(self.frame_61)
-        self.label_87.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_87.setFont(font)
-        self.label_87.setObjectName("label_87")
-        self.label_88 = QtWidgets.QLabel(self.frame_61)
-        self.label_88.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_88.setFont(font)
-        self.label_88.setObjectName("label_88")
-        self.pushButton_105 = QtWidgets.QPushButton(self.frame_61)
-        self.pushButton_105.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_105.setIcon(icon9)
-        self.pushButton_105.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_105.setObjectName("pushButton_105")
-        self.pushButton_106 = QtWidgets.QPushButton(self.frame_61)
-        self.pushButton_106.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_106.setIcon(icon15)
-        self.pushButton_106.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_106.setObjectName("pushButton_106")
-        self.verticalLayout_25.addWidget(self.frame_61)
-        self.frame_62 = QtWidgets.QFrame(self.layoutWidget_14)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_62.sizePolicy().hasHeightForWidth())
-        self.frame_62.setSizePolicy(sizePolicy)
-        self.frame_62.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_62.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_62.setObjectName("frame_62")
-        self.pushButton_107 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_107.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_107.setIcon(icon12)
-        self.pushButton_107.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_107.setObjectName("pushButton_107")
-        self.pushButton_108 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_108.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_108.setIcon(icon16)
-        self.pushButton_108.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_108.setObjectName("pushButton_108")
-        self.pushButton_109 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_109.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_109.setIcon(icon17)
-        self.pushButton_109.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_109.setObjectName("pushButton_109")
-        self.pushButton_110 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_110.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_110.setIcon(icon18)
-        self.pushButton_110.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_110.setObjectName("pushButton_110")
-        self.pushButton_111 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_111.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_111.setIcon(icon19)
-        self.pushButton_111.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_111.setObjectName("pushButton_111")
-        self.pushButton_112 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_112.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_112.setIcon(icon20)
-        self.pushButton_112.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_112.setObjectName("pushButton_112")
-        self.pushButton_113 = QtWidgets.QPushButton(self.frame_62)
-        self.pushButton_113.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_113.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_113.setIcon(icon21)
-        self.pushButton_113.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_113.setObjectName("pushButton_113")
-        self.verticalLayout_25.addWidget(self.frame_62)
-        self.frame_80 = QtWidgets.QFrame(self.groupBox_16)
-        self.frame_80.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_80.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_80.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_80.setObjectName("frame_80")
-        self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.frame_80)
-        self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_12.setObjectName("horizontalLayout_12")
-        self.frame_81 = QtWidgets.QFrame(self.frame_80)
-        self.frame_81.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_81.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_81.setObjectName("frame_81")
-        self.pushButton_208 = QtWidgets.QPushButton(self.frame_81)
-        self.pushButton_208.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_208.setIcon(icon12)
-        self.pushButton_208.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_208.setObjectName("pushButton_208")
-        self.pushButton_209 = QtWidgets.QPushButton(self.frame_81)
-        self.pushButton_209.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_209.setIcon(icon12)
-        self.pushButton_209.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_209.setObjectName("pushButton_209")
-        self.pushButton_210 = QtWidgets.QPushButton(self.frame_81)
-        self.pushButton_210.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_210.setIcon(icon12)
-        self.pushButton_210.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_210.setObjectName("pushButton_210")
-        self.pushButton_211 = QtWidgets.QPushButton(self.frame_81)
-        self.pushButton_211.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_211.setIcon(icon12)
-        self.pushButton_211.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_211.setObjectName("pushButton_211")
-        self.pushButton_212 = QtWidgets.QPushButton(self.frame_81)
-        self.pushButton_212.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_212.setIcon(icon12)
-        self.pushButton_212.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_212.setObjectName("pushButton_212")
-        self.label_120 = QtWidgets.QLabel(self.frame_81)
-        self.label_120.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_120.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_120.setObjectName("label_120")
-        self.label_121 = QtWidgets.QLabel(self.frame_81)
-        self.label_121.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_121.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_121.setObjectName("label_121")
-        self.label_122 = QtWidgets.QLabel(self.frame_81)
-        self.label_122.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_122.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_122.setObjectName("label_122")
-        self.label_123 = QtWidgets.QLabel(self.frame_81)
-        self.label_123.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_123.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_123.setObjectName("label_123")
-        self.label_124 = QtWidgets.QLabel(self.frame_81)
-        self.label_124.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_124.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_124.setObjectName("label_124")
-        self.horizontalLayout_12.addWidget(self.frame_81)
-        self.frame_82 = QtWidgets.QFrame(self.frame_80)
-        self.frame_82.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_82.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_82.setObjectName("frame_82")
-        self.pushButton_213 = QtWidgets.QPushButton(self.frame_82)
-        self.pushButton_213.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_213.setIcon(icon12)
-        self.pushButton_213.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_213.setObjectName("pushButton_213")
-        self.pushButton_214 = QtWidgets.QPushButton(self.frame_82)
-        self.pushButton_214.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_214.setIcon(icon12)
-        self.pushButton_214.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_214.setObjectName("pushButton_214")
-        self.pushButton_215 = QtWidgets.QPushButton(self.frame_82)
-        self.pushButton_215.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_215.setIcon(icon12)
-        self.pushButton_215.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_215.setObjectName("pushButton_215")
-        self.pushButton_216 = QtWidgets.QPushButton(self.frame_82)
-        self.pushButton_216.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_216.setIcon(icon12)
-        self.pushButton_216.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_216.setObjectName("pushButton_216")
-        self.pushButton_217 = QtWidgets.QPushButton(self.frame_82)
-        self.pushButton_217.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_217.setIcon(icon12)
-        self.pushButton_217.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_217.setObjectName("pushButton_217")
-        self.label_125 = QtWidgets.QLabel(self.frame_82)
-        self.label_125.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_125.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_125.setObjectName("label_125")
-        self.label_126 = QtWidgets.QLabel(self.frame_82)
-        self.label_126.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_126.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_126.setObjectName("label_126")
-        self.label_127 = QtWidgets.QLabel(self.frame_82)
-        self.label_127.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_127.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_127.setObjectName("label_127")
-        self.label_128 = QtWidgets.QLabel(self.frame_82)
-        self.label_128.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_128.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_128.setObjectName("label_128")
-        self.label_129 = QtWidgets.QLabel(self.frame_82)
-        self.label_129.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_129.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_129.setObjectName("label_129")
-        self.horizontalLayout_12.addWidget(self.frame_82)
-        self.verticalLayout_10.addWidget(self.groupBox_16)
-        self.groupBox_17 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_17.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_17.setObjectName("groupBox_17")
-        self.layoutWidget_6 = QtWidgets.QWidget(self.groupBox_17)
-        self.layoutWidget_6.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_6.setObjectName("layoutWidget_6")
-        self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.layoutWidget_6)
-        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_17.setObjectName("verticalLayout_17")
-        self.frame_45 = QtWidgets.QFrame(self.layoutWidget_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_45.sizePolicy().hasHeightForWidth())
-        self.frame_45.setSizePolicy(sizePolicy)
-        self.frame_45.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_45.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_45.setObjectName("frame_45")
-        self.label_55 = QtWidgets.QLabel(self.frame_45)
-        self.label_55.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_55.setFont(font)
-        self.label_55.setObjectName("label_55")
-        self.label_56 = QtWidgets.QLabel(self.frame_45)
-        self.label_56.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_56.setFont(font)
-        self.label_56.setObjectName("label_56")
-        self.verticalLayout_17.addWidget(self.frame_45)
-        self.frame_46 = QtWidgets.QFrame(self.layoutWidget_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_46.sizePolicy().hasHeightForWidth())
-        self.frame_46.setSizePolicy(sizePolicy)
-        self.frame_46.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_46.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_46.setObjectName("frame_46")
-        self.label_57 = QtWidgets.QLabel(self.frame_46)
-        self.label_57.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_57.setFont(font)
-        self.label_57.setObjectName("label_57")
-        self.label_58 = QtWidgets.QLabel(self.frame_46)
-        self.label_58.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_58.setFont(font)
-        self.label_58.setObjectName("label_58")
-        self.verticalLayout_17.addWidget(self.frame_46)
-        self.layoutWidget_15 = QtWidgets.QWidget(self.groupBox_17)
-        self.layoutWidget_15.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_15.setObjectName("layoutWidget_15")
-        self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.layoutWidget_15)
-        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_26.setObjectName("verticalLayout_26")
-        self.frame_63 = QtWidgets.QFrame(self.layoutWidget_15)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_63.sizePolicy().hasHeightForWidth())
-        self.frame_63.setSizePolicy(sizePolicy)
-        self.frame_63.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_63.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_63.setObjectName("frame_63")
-        self.pushButton_114 = QtWidgets.QPushButton(self.frame_63)
-        self.pushButton_114.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_114.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_114.setIcon(icon13)
-        self.pushButton_114.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_114.setObjectName("pushButton_114")
-        self.label_89 = QtWidgets.QLabel(self.frame_63)
-        self.label_89.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_89.setFont(font)
-        self.label_89.setObjectName("label_89")
-        self.pushButton_115 = QtWidgets.QPushButton(self.frame_63)
-        self.pushButton_115.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_115.setIcon(icon11)
-        self.pushButton_115.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_115.setObjectName("pushButton_115")
-        self.pushButton_116 = QtWidgets.QPushButton(self.frame_63)
-        self.pushButton_116.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_116.setIcon(icon14)
-        self.pushButton_116.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_116.setObjectName("pushButton_116")
-        self.label_90 = QtWidgets.QLabel(self.frame_63)
-        self.label_90.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_90.setFont(font)
-        self.label_90.setObjectName("label_90")
-        self.label_91 = QtWidgets.QLabel(self.frame_63)
-        self.label_91.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_91.setFont(font)
-        self.label_91.setObjectName("label_91")
-        self.pushButton_117 = QtWidgets.QPushButton(self.frame_63)
-        self.pushButton_117.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_117.setIcon(icon9)
-        self.pushButton_117.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_117.setObjectName("pushButton_117")
-        self.pushButton_118 = QtWidgets.QPushButton(self.frame_63)
-        self.pushButton_118.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_118.setIcon(icon15)
-        self.pushButton_118.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_118.setObjectName("pushButton_118")
-        self.verticalLayout_26.addWidget(self.frame_63)
-        self.frame_64 = QtWidgets.QFrame(self.layoutWidget_15)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_64.sizePolicy().hasHeightForWidth())
-        self.frame_64.setSizePolicy(sizePolicy)
-        self.frame_64.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_64.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_64.setObjectName("frame_64")
-        self.pushButton_119 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_119.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_119.setIcon(icon12)
-        self.pushButton_119.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_119.setObjectName("pushButton_119")
-        self.pushButton_120 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_120.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_120.setIcon(icon16)
-        self.pushButton_120.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_120.setObjectName("pushButton_120")
-        self.pushButton_121 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_121.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_121.setIcon(icon17)
-        self.pushButton_121.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_121.setObjectName("pushButton_121")
-        self.pushButton_122 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_122.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_122.setIcon(icon18)
-        self.pushButton_122.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_122.setObjectName("pushButton_122")
-        self.pushButton_123 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_123.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_123.setIcon(icon19)
-        self.pushButton_123.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_123.setObjectName("pushButton_123")
-        self.pushButton_124 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_124.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_124.setIcon(icon20)
-        self.pushButton_124.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_124.setObjectName("pushButton_124")
-        self.pushButton_125 = QtWidgets.QPushButton(self.frame_64)
-        self.pushButton_125.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_125.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_125.setIcon(icon21)
-        self.pushButton_125.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_125.setObjectName("pushButton_125")
-        self.verticalLayout_26.addWidget(self.frame_64)
-        self.frame_83 = QtWidgets.QFrame(self.groupBox_17)
-        self.frame_83.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_83.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_83.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_83.setObjectName("frame_83")
-        self.horizontalLayout_13 = QtWidgets.QHBoxLayout(self.frame_83)
-        self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
-        self.frame_84 = QtWidgets.QFrame(self.frame_83)
-        self.frame_84.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_84.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_84.setObjectName("frame_84")
-        self.pushButton_218 = QtWidgets.QPushButton(self.frame_84)
-        self.pushButton_218.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_218.setIcon(icon12)
-        self.pushButton_218.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_218.setObjectName("pushButton_218")
-        self.pushButton_219 = QtWidgets.QPushButton(self.frame_84)
-        self.pushButton_219.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_219.setIcon(icon12)
-        self.pushButton_219.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_219.setObjectName("pushButton_219")
-        self.pushButton_220 = QtWidgets.QPushButton(self.frame_84)
-        self.pushButton_220.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_220.setIcon(icon12)
-        self.pushButton_220.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_220.setObjectName("pushButton_220")
-        self.pushButton_221 = QtWidgets.QPushButton(self.frame_84)
-        self.pushButton_221.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_221.setIcon(icon12)
-        self.pushButton_221.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_221.setObjectName("pushButton_221")
-        self.pushButton_222 = QtWidgets.QPushButton(self.frame_84)
-        self.pushButton_222.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_222.setIcon(icon12)
-        self.pushButton_222.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_222.setObjectName("pushButton_222")
-        self.label_130 = QtWidgets.QLabel(self.frame_84)
-        self.label_130.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_130.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_130.setObjectName("label_130")
-        self.label_131 = QtWidgets.QLabel(self.frame_84)
-        self.label_131.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_131.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_131.setObjectName("label_131")
-        self.label_132 = QtWidgets.QLabel(self.frame_84)
-        self.label_132.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_132.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_132.setObjectName("label_132")
-        self.label_133 = QtWidgets.QLabel(self.frame_84)
-        self.label_133.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_133.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_133.setObjectName("label_133")
-        self.label_134 = QtWidgets.QLabel(self.frame_84)
-        self.label_134.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_134.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_134.setObjectName("label_134")
-        self.horizontalLayout_13.addWidget(self.frame_84)
-        self.frame_85 = QtWidgets.QFrame(self.frame_83)
-        self.frame_85.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_85.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_85.setObjectName("frame_85")
-        self.pushButton_223 = QtWidgets.QPushButton(self.frame_85)
-        self.pushButton_223.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_223.setIcon(icon12)
-        self.pushButton_223.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_223.setObjectName("pushButton_223")
-        self.pushButton_224 = QtWidgets.QPushButton(self.frame_85)
-        self.pushButton_224.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_224.setIcon(icon12)
-        self.pushButton_224.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_224.setObjectName("pushButton_224")
-        self.pushButton_225 = QtWidgets.QPushButton(self.frame_85)
-        self.pushButton_225.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_225.setIcon(icon12)
-        self.pushButton_225.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_225.setObjectName("pushButton_225")
-        self.pushButton_226 = QtWidgets.QPushButton(self.frame_85)
-        self.pushButton_226.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_226.setIcon(icon12)
-        self.pushButton_226.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_226.setObjectName("pushButton_226")
-        self.pushButton_227 = QtWidgets.QPushButton(self.frame_85)
-        self.pushButton_227.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_227.setIcon(icon12)
-        self.pushButton_227.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_227.setObjectName("pushButton_227")
-        self.label_135 = QtWidgets.QLabel(self.frame_85)
-        self.label_135.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_135.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_135.setObjectName("label_135")
-        self.label_136 = QtWidgets.QLabel(self.frame_85)
-        self.label_136.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_136.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_136.setObjectName("label_136")
-        self.label_137 = QtWidgets.QLabel(self.frame_85)
-        self.label_137.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_137.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_137.setObjectName("label_137")
-        self.label_138 = QtWidgets.QLabel(self.frame_85)
-        self.label_138.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_138.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_138.setObjectName("label_138")
-        self.label_139 = QtWidgets.QLabel(self.frame_85)
-        self.label_139.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_139.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_139.setObjectName("label_139")
-        self.horizontalLayout_13.addWidget(self.frame_85)
-        self.verticalLayout_10.addWidget(self.groupBox_17)
-        self.groupBox_18 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_18.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_18.setObjectName("groupBox_18")
-        self.layoutWidget_7 = QtWidgets.QWidget(self.groupBox_18)
-        self.layoutWidget_7.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_7.setObjectName("layoutWidget_7")
-        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.layoutWidget_7)
-        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_18.setObjectName("verticalLayout_18")
-        self.frame_47 = QtWidgets.QFrame(self.layoutWidget_7)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_47.sizePolicy().hasHeightForWidth())
-        self.frame_47.setSizePolicy(sizePolicy)
-        self.frame_47.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_47.setObjectName("frame_47")
-        self.label_59 = QtWidgets.QLabel(self.frame_47)
-        self.label_59.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_59.setFont(font)
-        self.label_59.setObjectName("label_59")
-        self.label_60 = QtWidgets.QLabel(self.frame_47)
-        self.label_60.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_60.setFont(font)
-        self.label_60.setObjectName("label_60")
-        self.verticalLayout_18.addWidget(self.frame_47)
-        self.frame_48 = QtWidgets.QFrame(self.layoutWidget_7)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_48.sizePolicy().hasHeightForWidth())
-        self.frame_48.setSizePolicy(sizePolicy)
-        self.frame_48.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_48.setObjectName("frame_48")
-        self.label_61 = QtWidgets.QLabel(self.frame_48)
-        self.label_61.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_61.setFont(font)
-        self.label_61.setObjectName("label_61")
-        self.label_62 = QtWidgets.QLabel(self.frame_48)
-        self.label_62.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_62.setFont(font)
-        self.label_62.setObjectName("label_62")
-        self.verticalLayout_18.addWidget(self.frame_48)
-        self.layoutWidget_16 = QtWidgets.QWidget(self.groupBox_18)
-        self.layoutWidget_16.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_16.setObjectName("layoutWidget_16")
-        self.verticalLayout_27 = QtWidgets.QVBoxLayout(self.layoutWidget_16)
-        self.verticalLayout_27.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_27.setObjectName("verticalLayout_27")
-        self.frame_65 = QtWidgets.QFrame(self.layoutWidget_16)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_65.sizePolicy().hasHeightForWidth())
-        self.frame_65.setSizePolicy(sizePolicy)
-        self.frame_65.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_65.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_65.setObjectName("frame_65")
-        self.pushButton_126 = QtWidgets.QPushButton(self.frame_65)
-        self.pushButton_126.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_126.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_126.setIcon(icon13)
-        self.pushButton_126.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_126.setObjectName("pushButton_126")
-        self.label_92 = QtWidgets.QLabel(self.frame_65)
-        self.label_92.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_92.setFont(font)
-        self.label_92.setObjectName("label_92")
-        self.pushButton_127 = QtWidgets.QPushButton(self.frame_65)
-        self.pushButton_127.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_127.setIcon(icon11)
-        self.pushButton_127.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_127.setObjectName("pushButton_127")
-        self.pushButton_128 = QtWidgets.QPushButton(self.frame_65)
-        self.pushButton_128.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_128.setIcon(icon14)
-        self.pushButton_128.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_128.setObjectName("pushButton_128")
-        self.label_93 = QtWidgets.QLabel(self.frame_65)
-        self.label_93.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_93.setFont(font)
-        self.label_93.setObjectName("label_93")
-        self.label_94 = QtWidgets.QLabel(self.frame_65)
-        self.label_94.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_94.setFont(font)
-        self.label_94.setObjectName("label_94")
-        self.pushButton_129 = QtWidgets.QPushButton(self.frame_65)
-        self.pushButton_129.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_129.setIcon(icon9)
-        self.pushButton_129.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_129.setObjectName("pushButton_129")
-        self.pushButton_130 = QtWidgets.QPushButton(self.frame_65)
-        self.pushButton_130.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_130.setIcon(icon15)
-        self.pushButton_130.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_130.setObjectName("pushButton_130")
-        self.verticalLayout_27.addWidget(self.frame_65)
-        self.frame_66 = QtWidgets.QFrame(self.layoutWidget_16)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_66.sizePolicy().hasHeightForWidth())
-        self.frame_66.setSizePolicy(sizePolicy)
-        self.frame_66.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_66.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_66.setObjectName("frame_66")
-        self.pushButton_131 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_131.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_131.setIcon(icon12)
-        self.pushButton_131.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_131.setObjectName("pushButton_131")
-        self.pushButton_132 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_132.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_132.setIcon(icon16)
-        self.pushButton_132.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_132.setObjectName("pushButton_132")
-        self.pushButton_133 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_133.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_133.setIcon(icon17)
-        self.pushButton_133.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_133.setObjectName("pushButton_133")
-        self.pushButton_134 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_134.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_134.setIcon(icon18)
-        self.pushButton_134.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_134.setObjectName("pushButton_134")
-        self.pushButton_135 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_135.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_135.setIcon(icon19)
-        self.pushButton_135.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_135.setObjectName("pushButton_135")
-        self.pushButton_136 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_136.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_136.setIcon(icon20)
-        self.pushButton_136.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_136.setObjectName("pushButton_136")
-        self.pushButton_137 = QtWidgets.QPushButton(self.frame_66)
-        self.pushButton_137.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_137.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_137.setIcon(icon21)
-        self.pushButton_137.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_137.setObjectName("pushButton_137")
-        self.verticalLayout_27.addWidget(self.frame_66)
-        self.frame_86 = QtWidgets.QFrame(self.groupBox_18)
-        self.frame_86.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_86.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_86.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_86.setObjectName("frame_86")
-        self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.frame_86)
-        self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_14.setObjectName("horizontalLayout_14")
-        self.frame_87 = QtWidgets.QFrame(self.frame_86)
-        self.frame_87.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_87.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_87.setObjectName("frame_87")
-        self.pushButton_228 = QtWidgets.QPushButton(self.frame_87)
-        self.pushButton_228.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_228.setIcon(icon12)
-        self.pushButton_228.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_228.setObjectName("pushButton_228")
-        self.pushButton_229 = QtWidgets.QPushButton(self.frame_87)
-        self.pushButton_229.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_229.setIcon(icon12)
-        self.pushButton_229.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_229.setObjectName("pushButton_229")
-        self.pushButton_230 = QtWidgets.QPushButton(self.frame_87)
-        self.pushButton_230.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_230.setIcon(icon12)
-        self.pushButton_230.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_230.setObjectName("pushButton_230")
-        self.pushButton_231 = QtWidgets.QPushButton(self.frame_87)
-        self.pushButton_231.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_231.setIcon(icon12)
-        self.pushButton_231.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_231.setObjectName("pushButton_231")
-        self.pushButton_232 = QtWidgets.QPushButton(self.frame_87)
-        self.pushButton_232.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_232.setIcon(icon12)
-        self.pushButton_232.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_232.setObjectName("pushButton_232")
-        self.label_140 = QtWidgets.QLabel(self.frame_87)
-        self.label_140.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_140.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_140.setObjectName("label_140")
-        self.label_141 = QtWidgets.QLabel(self.frame_87)
-        self.label_141.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_141.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_141.setObjectName("label_141")
-        self.label_142 = QtWidgets.QLabel(self.frame_87)
-        self.label_142.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_142.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_142.setObjectName("label_142")
-        self.label_143 = QtWidgets.QLabel(self.frame_87)
-        self.label_143.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_143.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_143.setObjectName("label_143")
-        self.label_144 = QtWidgets.QLabel(self.frame_87)
-        self.label_144.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_144.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_144.setObjectName("label_144")
-        self.horizontalLayout_14.addWidget(self.frame_87)
-        self.frame_88 = QtWidgets.QFrame(self.frame_86)
-        self.frame_88.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_88.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_88.setObjectName("frame_88")
-        self.pushButton_233 = QtWidgets.QPushButton(self.frame_88)
-        self.pushButton_233.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_233.setIcon(icon12)
-        self.pushButton_233.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_233.setObjectName("pushButton_233")
-        self.pushButton_234 = QtWidgets.QPushButton(self.frame_88)
-        self.pushButton_234.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_234.setIcon(icon12)
-        self.pushButton_234.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_234.setObjectName("pushButton_234")
-        self.pushButton_235 = QtWidgets.QPushButton(self.frame_88)
-        self.pushButton_235.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_235.setIcon(icon12)
-        self.pushButton_235.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_235.setObjectName("pushButton_235")
-        self.pushButton_236 = QtWidgets.QPushButton(self.frame_88)
-        self.pushButton_236.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_236.setIcon(icon12)
-        self.pushButton_236.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_236.setObjectName("pushButton_236")
-        self.pushButton_237 = QtWidgets.QPushButton(self.frame_88)
-        self.pushButton_237.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_237.setIcon(icon12)
-        self.pushButton_237.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_237.setObjectName("pushButton_237")
-        self.label_145 = QtWidgets.QLabel(self.frame_88)
-        self.label_145.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_145.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_145.setObjectName("label_145")
-        self.label_146 = QtWidgets.QLabel(self.frame_88)
-        self.label_146.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_146.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_146.setObjectName("label_146")
-        self.label_147 = QtWidgets.QLabel(self.frame_88)
-        self.label_147.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_147.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_147.setObjectName("label_147")
-        self.label_148 = QtWidgets.QLabel(self.frame_88)
-        self.label_148.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_148.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_148.setObjectName("label_148")
-        self.label_149 = QtWidgets.QLabel(self.frame_88)
-        self.label_149.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_149.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_149.setObjectName("label_149")
-        self.horizontalLayout_14.addWidget(self.frame_88)
-        self.verticalLayout_10.addWidget(self.groupBox_18)
-        self.groupBox_19 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_19.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_19.setObjectName("groupBox_19")
-        self.layoutWidget_8 = QtWidgets.QWidget(self.groupBox_19)
-        self.layoutWidget_8.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_8.setObjectName("layoutWidget_8")
-        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.layoutWidget_8)
-        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_19.setObjectName("verticalLayout_19")
-        self.frame_49 = QtWidgets.QFrame(self.layoutWidget_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_49.sizePolicy().hasHeightForWidth())
-        self.frame_49.setSizePolicy(sizePolicy)
-        self.frame_49.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_49.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_49.setObjectName("frame_49")
-        self.label_63 = QtWidgets.QLabel(self.frame_49)
-        self.label_63.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_63.setFont(font)
-        self.label_63.setObjectName("label_63")
-        self.label_64 = QtWidgets.QLabel(self.frame_49)
-        self.label_64.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_64.setFont(font)
-        self.label_64.setObjectName("label_64")
-        self.verticalLayout_19.addWidget(self.frame_49)
-        self.frame_50 = QtWidgets.QFrame(self.layoutWidget_8)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_50.sizePolicy().hasHeightForWidth())
-        self.frame_50.setSizePolicy(sizePolicy)
-        self.frame_50.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_50.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_50.setObjectName("frame_50")
-        self.label_65 = QtWidgets.QLabel(self.frame_50)
-        self.label_65.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_65.setFont(font)
-        self.label_65.setObjectName("label_65")
-        self.label_66 = QtWidgets.QLabel(self.frame_50)
-        self.label_66.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_66.setFont(font)
-        self.label_66.setObjectName("label_66")
-        self.verticalLayout_19.addWidget(self.frame_50)
-        self.layoutWidget_17 = QtWidgets.QWidget(self.groupBox_19)
-        self.layoutWidget_17.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_17.setObjectName("layoutWidget_17")
-        self.verticalLayout_28 = QtWidgets.QVBoxLayout(self.layoutWidget_17)
-        self.verticalLayout_28.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_28.setObjectName("verticalLayout_28")
-        self.frame_67 = QtWidgets.QFrame(self.layoutWidget_17)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_67.sizePolicy().hasHeightForWidth())
-        self.frame_67.setSizePolicy(sizePolicy)
-        self.frame_67.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_67.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_67.setObjectName("frame_67")
-        self.pushButton_138 = QtWidgets.QPushButton(self.frame_67)
-        self.pushButton_138.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_138.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_138.setIcon(icon13)
-        self.pushButton_138.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_138.setObjectName("pushButton_138")
-        self.label_95 = QtWidgets.QLabel(self.frame_67)
-        self.label_95.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_95.setFont(font)
-        self.label_95.setObjectName("label_95")
-        self.pushButton_139 = QtWidgets.QPushButton(self.frame_67)
-        self.pushButton_139.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_139.setIcon(icon11)
-        self.pushButton_139.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_139.setObjectName("pushButton_139")
-        self.pushButton_140 = QtWidgets.QPushButton(self.frame_67)
-        self.pushButton_140.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_140.setIcon(icon14)
-        self.pushButton_140.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_140.setObjectName("pushButton_140")
-        self.label_96 = QtWidgets.QLabel(self.frame_67)
-        self.label_96.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_96.setFont(font)
-        self.label_96.setObjectName("label_96")
-        self.label_97 = QtWidgets.QLabel(self.frame_67)
-        self.label_97.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_97.setFont(font)
-        self.label_97.setObjectName("label_97")
-        self.pushButton_141 = QtWidgets.QPushButton(self.frame_67)
-        self.pushButton_141.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_141.setIcon(icon9)
-        self.pushButton_141.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_141.setObjectName("pushButton_141")
-        self.pushButton_142 = QtWidgets.QPushButton(self.frame_67)
-        self.pushButton_142.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_142.setIcon(icon15)
-        self.pushButton_142.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_142.setObjectName("pushButton_142")
-        self.verticalLayout_28.addWidget(self.frame_67)
-        self.frame_68 = QtWidgets.QFrame(self.layoutWidget_17)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_68.sizePolicy().hasHeightForWidth())
-        self.frame_68.setSizePolicy(sizePolicy)
-        self.frame_68.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_68.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_68.setObjectName("frame_68")
-        self.pushButton_143 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_143.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_143.setIcon(icon12)
-        self.pushButton_143.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_143.setObjectName("pushButton_143")
-        self.pushButton_144 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_144.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_144.setIcon(icon16)
-        self.pushButton_144.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_144.setObjectName("pushButton_144")
-        self.pushButton_145 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_145.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_145.setIcon(icon17)
-        self.pushButton_145.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_145.setObjectName("pushButton_145")
-        self.pushButton_146 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_146.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_146.setIcon(icon18)
-        self.pushButton_146.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_146.setObjectName("pushButton_146")
-        self.pushButton_147 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_147.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_147.setIcon(icon19)
-        self.pushButton_147.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_147.setObjectName("pushButton_147")
-        self.pushButton_148 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_148.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_148.setIcon(icon20)
-        self.pushButton_148.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_148.setObjectName("pushButton_148")
-        self.pushButton_149 = QtWidgets.QPushButton(self.frame_68)
-        self.pushButton_149.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_149.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_149.setIcon(icon21)
-        self.pushButton_149.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_149.setObjectName("pushButton_149")
-        self.verticalLayout_28.addWidget(self.frame_68)
-        self.frame_89 = QtWidgets.QFrame(self.groupBox_19)
-        self.frame_89.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_89.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_89.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_89.setObjectName("frame_89")
-        self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.frame_89)
-        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        self.frame_90 = QtWidgets.QFrame(self.frame_89)
-        self.frame_90.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_90.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_90.setObjectName("frame_90")
-        self.pushButton_238 = QtWidgets.QPushButton(self.frame_90)
-        self.pushButton_238.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_238.setIcon(icon12)
-        self.pushButton_238.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_238.setObjectName("pushButton_238")
-        self.pushButton_239 = QtWidgets.QPushButton(self.frame_90)
-        self.pushButton_239.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_239.setIcon(icon12)
-        self.pushButton_239.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_239.setObjectName("pushButton_239")
-        self.pushButton_240 = QtWidgets.QPushButton(self.frame_90)
-        self.pushButton_240.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_240.setIcon(icon12)
-        self.pushButton_240.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_240.setObjectName("pushButton_240")
-        self.pushButton_241 = QtWidgets.QPushButton(self.frame_90)
-        self.pushButton_241.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_241.setIcon(icon12)
-        self.pushButton_241.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_241.setObjectName("pushButton_241")
-        self.pushButton_242 = QtWidgets.QPushButton(self.frame_90)
-        self.pushButton_242.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_242.setIcon(icon12)
-        self.pushButton_242.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_242.setObjectName("pushButton_242")
-        self.label_150 = QtWidgets.QLabel(self.frame_90)
-        self.label_150.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_150.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_150.setObjectName("label_150")
-        self.label_151 = QtWidgets.QLabel(self.frame_90)
-        self.label_151.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_151.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_151.setObjectName("label_151")
-        self.label_152 = QtWidgets.QLabel(self.frame_90)
-        self.label_152.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_152.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_152.setObjectName("label_152")
-        self.label_153 = QtWidgets.QLabel(self.frame_90)
-        self.label_153.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_153.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_153.setObjectName("label_153")
-        self.label_154 = QtWidgets.QLabel(self.frame_90)
-        self.label_154.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_154.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_154.setObjectName("label_154")
-        self.horizontalLayout_15.addWidget(self.frame_90)
-        self.frame_91 = QtWidgets.QFrame(self.frame_89)
-        self.frame_91.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_91.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_91.setObjectName("frame_91")
-        self.pushButton_243 = QtWidgets.QPushButton(self.frame_91)
-        self.pushButton_243.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_243.setIcon(icon12)
-        self.pushButton_243.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_243.setObjectName("pushButton_243")
-        self.pushButton_244 = QtWidgets.QPushButton(self.frame_91)
-        self.pushButton_244.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_244.setIcon(icon12)
-        self.pushButton_244.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_244.setObjectName("pushButton_244")
-        self.pushButton_245 = QtWidgets.QPushButton(self.frame_91)
-        self.pushButton_245.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_245.setIcon(icon12)
-        self.pushButton_245.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_245.setObjectName("pushButton_245")
-        self.pushButton_246 = QtWidgets.QPushButton(self.frame_91)
-        self.pushButton_246.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_246.setIcon(icon12)
-        self.pushButton_246.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_246.setObjectName("pushButton_246")
-        self.pushButton_247 = QtWidgets.QPushButton(self.frame_91)
-        self.pushButton_247.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_247.setIcon(icon12)
-        self.pushButton_247.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_247.setObjectName("pushButton_247")
-        self.label_155 = QtWidgets.QLabel(self.frame_91)
-        self.label_155.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_155.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_155.setObjectName("label_155")
-        self.label_156 = QtWidgets.QLabel(self.frame_91)
-        self.label_156.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_156.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_156.setObjectName("label_156")
-        self.label_157 = QtWidgets.QLabel(self.frame_91)
-        self.label_157.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_157.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_157.setObjectName("label_157")
-        self.label_158 = QtWidgets.QLabel(self.frame_91)
-        self.label_158.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_158.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_158.setObjectName("label_158")
-        self.label_159 = QtWidgets.QLabel(self.frame_91)
-        self.label_159.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_159.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_159.setObjectName("label_159")
-        self.horizontalLayout_15.addWidget(self.frame_91)
-        self.verticalLayout_10.addWidget(self.groupBox_19)
-        self.groupBox_20 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_20.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_20.setObjectName("groupBox_20")
-        self.layoutWidget_9 = QtWidgets.QWidget(self.groupBox_20)
-        self.layoutWidget_9.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_9.setObjectName("layoutWidget_9")
-        self.verticalLayout_20 = QtWidgets.QVBoxLayout(self.layoutWidget_9)
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_20.setObjectName("verticalLayout_20")
-        self.frame_51 = QtWidgets.QFrame(self.layoutWidget_9)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_51.sizePolicy().hasHeightForWidth())
-        self.frame_51.setSizePolicy(sizePolicy)
-        self.frame_51.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_51.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_51.setObjectName("frame_51")
-        self.label_67 = QtWidgets.QLabel(self.frame_51)
-        self.label_67.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_67.setFont(font)
-        self.label_67.setObjectName("label_67")
-        self.label_68 = QtWidgets.QLabel(self.frame_51)
-        self.label_68.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_68.setFont(font)
-        self.label_68.setObjectName("label_68")
-        self.verticalLayout_20.addWidget(self.frame_51)
-        self.frame_52 = QtWidgets.QFrame(self.layoutWidget_9)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_52.sizePolicy().hasHeightForWidth())
-        self.frame_52.setSizePolicy(sizePolicy)
-        self.frame_52.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_52.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_52.setObjectName("frame_52")
-        self.label_69 = QtWidgets.QLabel(self.frame_52)
-        self.label_69.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_69.setFont(font)
-        self.label_69.setObjectName("label_69")
-        self.label_70 = QtWidgets.QLabel(self.frame_52)
-        self.label_70.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_70.setFont(font)
-        self.label_70.setObjectName("label_70")
-        self.verticalLayout_20.addWidget(self.frame_52)
-        self.layoutWidget_18 = QtWidgets.QWidget(self.groupBox_20)
-        self.layoutWidget_18.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_18.setObjectName("layoutWidget_18")
-        self.verticalLayout_29 = QtWidgets.QVBoxLayout(self.layoutWidget_18)
-        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_29.setObjectName("verticalLayout_29")
-        self.frame_69 = QtWidgets.QFrame(self.layoutWidget_18)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_69.sizePolicy().hasHeightForWidth())
-        self.frame_69.setSizePolicy(sizePolicy)
-        self.frame_69.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_69.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_69.setObjectName("frame_69")
-        self.pushButton_150 = QtWidgets.QPushButton(self.frame_69)
-        self.pushButton_150.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_150.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_150.setIcon(icon13)
-        self.pushButton_150.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_150.setObjectName("pushButton_150")
-        self.label_98 = QtWidgets.QLabel(self.frame_69)
-        self.label_98.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_98.setFont(font)
-        self.label_98.setObjectName("label_98")
-        self.pushButton_151 = QtWidgets.QPushButton(self.frame_69)
-        self.pushButton_151.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_151.setIcon(icon11)
-        self.pushButton_151.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_151.setObjectName("pushButton_151")
-        self.pushButton_152 = QtWidgets.QPushButton(self.frame_69)
-        self.pushButton_152.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_152.setIcon(icon14)
-        self.pushButton_152.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_152.setObjectName("pushButton_152")
-        self.label_99 = QtWidgets.QLabel(self.frame_69)
-        self.label_99.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_99.setFont(font)
-        self.label_99.setObjectName("label_99")
-        self.label_100 = QtWidgets.QLabel(self.frame_69)
-        self.label_100.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_100.setFont(font)
-        self.label_100.setObjectName("label_100")
-        self.pushButton_153 = QtWidgets.QPushButton(self.frame_69)
-        self.pushButton_153.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_153.setIcon(icon9)
-        self.pushButton_153.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_153.setObjectName("pushButton_153")
-        self.pushButton_154 = QtWidgets.QPushButton(self.frame_69)
-        self.pushButton_154.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_154.setIcon(icon15)
-        self.pushButton_154.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_154.setObjectName("pushButton_154")
-        self.verticalLayout_29.addWidget(self.frame_69)
-        self.frame_70 = QtWidgets.QFrame(self.layoutWidget_18)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_70.sizePolicy().hasHeightForWidth())
-        self.frame_70.setSizePolicy(sizePolicy)
-        self.frame_70.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_70.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_70.setObjectName("frame_70")
-        self.pushButton_155 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_155.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_155.setIcon(icon12)
-        self.pushButton_155.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_155.setObjectName("pushButton_155")
-        self.pushButton_156 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_156.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_156.setIcon(icon16)
-        self.pushButton_156.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_156.setObjectName("pushButton_156")
-        self.pushButton_157 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_157.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_157.setIcon(icon17)
-        self.pushButton_157.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_157.setObjectName("pushButton_157")
-        self.pushButton_158 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_158.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_158.setIcon(icon18)
-        self.pushButton_158.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_158.setObjectName("pushButton_158")
-        self.pushButton_159 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_159.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_159.setIcon(icon19)
-        self.pushButton_159.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_159.setObjectName("pushButton_159")
-        self.pushButton_160 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_160.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_160.setIcon(icon20)
-        self.pushButton_160.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_160.setObjectName("pushButton_160")
-        self.pushButton_161 = QtWidgets.QPushButton(self.frame_70)
-        self.pushButton_161.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_161.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_161.setIcon(icon21)
-        self.pushButton_161.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_161.setObjectName("pushButton_161")
-        self.verticalLayout_29.addWidget(self.frame_70)
-        self.frame_92 = QtWidgets.QFrame(self.groupBox_20)
-        self.frame_92.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_92.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_92.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_92.setObjectName("frame_92")
-        self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.frame_92)
-        self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
-        self.frame_93 = QtWidgets.QFrame(self.frame_92)
-        self.frame_93.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_93.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_93.setObjectName("frame_93")
-        self.pushButton_248 = QtWidgets.QPushButton(self.frame_93)
-        self.pushButton_248.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_248.setIcon(icon12)
-        self.pushButton_248.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_248.setObjectName("pushButton_248")
-        self.pushButton_249 = QtWidgets.QPushButton(self.frame_93)
-        self.pushButton_249.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_249.setIcon(icon12)
-        self.pushButton_249.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_249.setObjectName("pushButton_249")
-        self.pushButton_250 = QtWidgets.QPushButton(self.frame_93)
-        self.pushButton_250.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_250.setIcon(icon12)
-        self.pushButton_250.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_250.setObjectName("pushButton_250")
-        self.pushButton_251 = QtWidgets.QPushButton(self.frame_93)
-        self.pushButton_251.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_251.setIcon(icon12)
-        self.pushButton_251.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_251.setObjectName("pushButton_251")
-        self.pushButton_252 = QtWidgets.QPushButton(self.frame_93)
-        self.pushButton_252.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_252.setIcon(icon12)
-        self.pushButton_252.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_252.setObjectName("pushButton_252")
-        self.label_160 = QtWidgets.QLabel(self.frame_93)
-        self.label_160.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_160.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_160.setObjectName("label_160")
-        self.label_161 = QtWidgets.QLabel(self.frame_93)
-        self.label_161.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_161.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_161.setObjectName("label_161")
-        self.label_162 = QtWidgets.QLabel(self.frame_93)
-        self.label_162.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_162.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_162.setObjectName("label_162")
-        self.label_163 = QtWidgets.QLabel(self.frame_93)
-        self.label_163.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_163.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_163.setObjectName("label_163")
-        self.label_164 = QtWidgets.QLabel(self.frame_93)
-        self.label_164.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_164.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_164.setObjectName("label_164")
-        self.horizontalLayout_16.addWidget(self.frame_93)
-        self.frame_94 = QtWidgets.QFrame(self.frame_92)
-        self.frame_94.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_94.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_94.setObjectName("frame_94")
-        self.pushButton_253 = QtWidgets.QPushButton(self.frame_94)
-        self.pushButton_253.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_253.setIcon(icon12)
-        self.pushButton_253.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_253.setObjectName("pushButton_253")
-        self.pushButton_254 = QtWidgets.QPushButton(self.frame_94)
-        self.pushButton_254.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_254.setIcon(icon12)
-        self.pushButton_254.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_254.setObjectName("pushButton_254")
-        self.pushButton_255 = QtWidgets.QPushButton(self.frame_94)
-        self.pushButton_255.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_255.setIcon(icon12)
-        self.pushButton_255.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_255.setObjectName("pushButton_255")
-        self.pushButton_256 = QtWidgets.QPushButton(self.frame_94)
-        self.pushButton_256.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_256.setIcon(icon12)
-        self.pushButton_256.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_256.setObjectName("pushButton_256")
-        self.pushButton_257 = QtWidgets.QPushButton(self.frame_94)
-        self.pushButton_257.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_257.setIcon(icon12)
-        self.pushButton_257.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_257.setObjectName("pushButton_257")
-        self.label_165 = QtWidgets.QLabel(self.frame_94)
-        self.label_165.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_165.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_165.setObjectName("label_165")
-        self.label_166 = QtWidgets.QLabel(self.frame_94)
-        self.label_166.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_166.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_166.setObjectName("label_166")
-        self.label_167 = QtWidgets.QLabel(self.frame_94)
-        self.label_167.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_167.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_167.setObjectName("label_167")
-        self.label_168 = QtWidgets.QLabel(self.frame_94)
-        self.label_168.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_168.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_168.setObjectName("label_168")
-        self.label_169 = QtWidgets.QLabel(self.frame_94)
-        self.label_169.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_169.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_169.setObjectName("label_169")
-        self.horizontalLayout_16.addWidget(self.frame_94)
-        self.verticalLayout_10.addWidget(self.groupBox_20)
-        self.groupBox_21 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_3)
-        self.groupBox_21.setMinimumSize(QtCore.QSize(941, 191))
-        self.groupBox_21.setObjectName("groupBox_21")
-        self.layoutWidget_10 = QtWidgets.QWidget(self.groupBox_21)
-        self.layoutWidget_10.setGeometry(QtCore.QRect(20, 10, 191, 161))
-        self.layoutWidget_10.setObjectName("layoutWidget_10")
-        self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.layoutWidget_10)
-        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_21.setObjectName("verticalLayout_21")
-        self.frame_53 = QtWidgets.QFrame(self.layoutWidget_10)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_53.sizePolicy().hasHeightForWidth())
-        self.frame_53.setSizePolicy(sizePolicy)
-        self.frame_53.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_53.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_53.setObjectName("frame_53")
-        self.label_71 = QtWidgets.QLabel(self.frame_53)
-        self.label_71.setGeometry(QtCore.QRect(10, 40, 181, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_71.setFont(font)
-        self.label_71.setObjectName("label_71")
-        self.label_72 = QtWidgets.QLabel(self.frame_53)
-        self.label_72.setGeometry(QtCore.QRect(10, 10, 111, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_72.setFont(font)
-        self.label_72.setObjectName("label_72")
-        self.verticalLayout_21.addWidget(self.frame_53)
-        self.frame_54 = QtWidgets.QFrame(self.layoutWidget_10)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_54.sizePolicy().hasHeightForWidth())
-        self.frame_54.setSizePolicy(sizePolicy)
-        self.frame_54.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_54.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_54.setObjectName("frame_54")
-        self.label_73 = QtWidgets.QLabel(self.frame_54)
-        self.label_73.setGeometry(QtCore.QRect(10, 10, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_73.setFont(font)
-        self.label_73.setObjectName("label_73")
-        self.label_74 = QtWidgets.QLabel(self.frame_54)
-        self.label_74.setGeometry(QtCore.QRect(10, 40, 70, 18))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_74.setFont(font)
-        self.label_74.setObjectName("label_74")
-        self.verticalLayout_21.addWidget(self.frame_54)
-        self.layoutWidget_19 = QtWidgets.QWidget(self.groupBox_21)
-        self.layoutWidget_19.setGeometry(QtCore.QRect(250, 10, 371, 161))
-        self.layoutWidget_19.setObjectName("layoutWidget_19")
-        self.verticalLayout_30 = QtWidgets.QVBoxLayout(self.layoutWidget_19)
-        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_30.setObjectName("verticalLayout_30")
-        self.frame_71 = QtWidgets.QFrame(self.layoutWidget_19)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(5)
-        sizePolicy.setHeightForWidth(self.frame_71.sizePolicy().hasHeightForWidth())
-        self.frame_71.setSizePolicy(sizePolicy)
-        self.frame_71.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_71.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_71.setObjectName("frame_71")
-        self.pushButton_162 = QtWidgets.QPushButton(self.frame_71)
-        self.pushButton_162.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.pushButton_162.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 50px;\n"
-                                          "        \n"
-                                          "    }")
-        self.pushButton_162.setIcon(icon13)
-        self.pushButton_162.setIconSize(QtCore.QSize(70, 70))
-        self.pushButton_162.setObjectName("pushButton_162")
-        self.label_101 = QtWidgets.QLabel(self.frame_71)
-        self.label_101.setGeometry(QtCore.QRect(30, 70, 61, 20))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_101.setFont(font)
-        self.label_101.setObjectName("label_101")
-        self.pushButton_163 = QtWidgets.QPushButton(self.frame_71)
-        self.pushButton_163.setGeometry(QtCore.QRect(100, 0, 31, 34))
-        self.pushButton_163.setIcon(icon11)
-        self.pushButton_163.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_163.setObjectName("pushButton_163")
-        self.pushButton_164 = QtWidgets.QPushButton(self.frame_71)
-        self.pushButton_164.setGeometry(QtCore.QRect(100, 30, 31, 34))
-        self.pushButton_164.setIcon(icon14)
-        self.pushButton_164.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_164.setObjectName("pushButton_164")
-        self.label_102 = QtWidgets.QLabel(self.frame_71)
-        self.label_102.setGeometry(QtCore.QRect(230, 20, 131, 20))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_102.setFont(font)
-        self.label_102.setObjectName("label_102")
-        self.label_103 = QtWidgets.QLabel(self.frame_71)
-        self.label_103.setGeometry(QtCore.QRect(240, 60, 121, 20))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_103.setFont(font)
-        self.label_103.setObjectName("label_103")
-        self.pushButton_165 = QtWidgets.QPushButton(self.frame_71)
-        self.pushButton_165.setGeometry(QtCore.QRect(140, 0, 31, 34))
-        self.pushButton_165.setIcon(icon9)
-        self.pushButton_165.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_165.setObjectName("pushButton_165")
-        self.pushButton_166 = QtWidgets.QPushButton(self.frame_71)
-        self.pushButton_166.setGeometry(QtCore.QRect(140, 30, 31, 34))
-        self.pushButton_166.setIcon(icon15)
-        self.pushButton_166.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_166.setObjectName("pushButton_166")
-        self.verticalLayout_30.addWidget(self.frame_71)
-        self.frame_72 = QtWidgets.QFrame(self.layoutWidget_19)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(3)
-        sizePolicy.setHeightForWidth(self.frame_72.sizePolicy().hasHeightForWidth())
-        self.frame_72.setSizePolicy(sizePolicy)
-        self.frame_72.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_72.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_72.setObjectName("frame_72")
-        self.pushButton_167 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_167.setGeometry(QtCore.QRect(30, 10, 41, 41))
-        self.pushButton_167.setIcon(icon12)
-        self.pushButton_167.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_167.setObjectName("pushButton_167")
-        self.pushButton_168 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_168.setGeometry(QtCore.QRect(70, 10, 41, 41))
-        self.pushButton_168.setIcon(icon16)
-        self.pushButton_168.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_168.setObjectName("pushButton_168")
-        self.pushButton_169 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_169.setGeometry(QtCore.QRect(110, 10, 41, 41))
-        self.pushButton_169.setIcon(icon17)
-        self.pushButton_169.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_169.setObjectName("pushButton_169")
-        self.pushButton_170 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_170.setGeometry(QtCore.QRect(150, 10, 41, 41))
-        self.pushButton_170.setIcon(icon18)
-        self.pushButton_170.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_170.setObjectName("pushButton_170")
-        self.pushButton_171 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_171.setGeometry(QtCore.QRect(190, 10, 41, 41))
-        self.pushButton_171.setIcon(icon19)
-        self.pushButton_171.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_171.setObjectName("pushButton_171")
-        self.pushButton_172 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_172.setGeometry(QtCore.QRect(230, 10, 41, 41))
-        self.pushButton_172.setIcon(icon20)
-        self.pushButton_172.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_172.setObjectName("pushButton_172")
-        self.pushButton_173 = QtWidgets.QPushButton(self.frame_72)
-        self.pushButton_173.setGeometry(QtCore.QRect(280, 10, 41, 41))
-        self.pushButton_173.setStyleSheet("    QPushButton {\n"
-                                          "        border-radius: 16px;\n"
-                                          "        \n"
-                                          "        \n"
-                                          "    background-color: rgb(0, 170, 255);\n"
-                                          "    }")
-        self.pushButton_173.setIcon(icon21)
-        self.pushButton_173.setIconSize(QtCore.QSize(30, 30))
-        self.pushButton_173.setObjectName("pushButton_173")
-        self.verticalLayout_30.addWidget(self.frame_72)
-        self.frame_95 = QtWidgets.QFrame(self.groupBox_21)
-        self.frame_95.setGeometry(QtCore.QRect(640, 10, 281, 161))
-        self.frame_95.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_95.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_95.setObjectName("frame_95")
-        self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.frame_95)
-        self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_17.setObjectName("horizontalLayout_17")
-        self.frame_96 = QtWidgets.QFrame(self.frame_95)
-        self.frame_96.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_96.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_96.setObjectName("frame_96")
-        self.pushButton_258 = QtWidgets.QPushButton(self.frame_96)
-        self.pushButton_258.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_258.setIcon(icon12)
-        self.pushButton_258.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_258.setObjectName("pushButton_258")
-        self.pushButton_259 = QtWidgets.QPushButton(self.frame_96)
-        self.pushButton_259.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_259.setIcon(icon12)
-        self.pushButton_259.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_259.setObjectName("pushButton_259")
-        self.pushButton_260 = QtWidgets.QPushButton(self.frame_96)
-        self.pushButton_260.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_260.setIcon(icon12)
-        self.pushButton_260.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_260.setObjectName("pushButton_260")
-        self.pushButton_261 = QtWidgets.QPushButton(self.frame_96)
-        self.pushButton_261.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_261.setIcon(icon12)
-        self.pushButton_261.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_261.setObjectName("pushButton_261")
-        self.pushButton_262 = QtWidgets.QPushButton(self.frame_96)
-        self.pushButton_262.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_262.setIcon(icon12)
-        self.pushButton_262.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_262.setObjectName("pushButton_262")
-        self.label_170 = QtWidgets.QLabel(self.frame_96)
-        self.label_170.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_170.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_170.setObjectName("label_170")
-        self.label_171 = QtWidgets.QLabel(self.frame_96)
-        self.label_171.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_171.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_171.setObjectName("label_171")
-        self.label_172 = QtWidgets.QLabel(self.frame_96)
-        self.label_172.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_172.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_172.setObjectName("label_172")
-        self.label_173 = QtWidgets.QLabel(self.frame_96)
-        self.label_173.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_173.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_173.setObjectName("label_173")
-        self.label_174 = QtWidgets.QLabel(self.frame_96)
-        self.label_174.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_174.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_174.setObjectName("label_174")
-        self.horizontalLayout_17.addWidget(self.frame_96)
-        self.frame_97 = QtWidgets.QFrame(self.frame_95)
-        self.frame_97.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_97.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_97.setObjectName("frame_97")
-        self.pushButton_263 = QtWidgets.QPushButton(self.frame_97)
-        self.pushButton_263.setGeometry(QtCore.QRect(0, 0, 31, 31))
-        self.pushButton_263.setIcon(icon12)
-        self.pushButton_263.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_263.setObjectName("pushButton_263")
-        self.pushButton_264 = QtWidgets.QPushButton(self.frame_97)
-        self.pushButton_264.setGeometry(QtCore.QRect(0, 30, 31, 31))
-        self.pushButton_264.setIcon(icon12)
-        self.pushButton_264.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_264.setObjectName("pushButton_264")
-        self.pushButton_265 = QtWidgets.QPushButton(self.frame_97)
-        self.pushButton_265.setGeometry(QtCore.QRect(0, 60, 31, 31))
-        self.pushButton_265.setIcon(icon12)
-        self.pushButton_265.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_265.setObjectName("pushButton_265")
-        self.pushButton_266 = QtWidgets.QPushButton(self.frame_97)
-        self.pushButton_266.setGeometry(QtCore.QRect(0, 90, 31, 31))
-        self.pushButton_266.setIcon(icon12)
-        self.pushButton_266.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_266.setObjectName("pushButton_266")
-        self.pushButton_267 = QtWidgets.QPushButton(self.frame_97)
-        self.pushButton_267.setGeometry(QtCore.QRect(0, 120, 31, 31))
-        self.pushButton_267.setIcon(icon12)
-        self.pushButton_267.setIconSize(QtCore.QSize(25, 25))
-        self.pushButton_267.setObjectName("pushButton_267")
-        self.label_175 = QtWidgets.QLabel(self.frame_97)
-        self.label_175.setGeometry(QtCore.QRect(40, 10, 90, 18))
-        self.label_175.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_175.setObjectName("label_175")
-        self.label_176 = QtWidgets.QLabel(self.frame_97)
-        self.label_176.setGeometry(QtCore.QRect(40, 40, 90, 18))
-        self.label_176.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_176.setObjectName("label_176")
-        self.label_177 = QtWidgets.QLabel(self.frame_97)
-        self.label_177.setGeometry(QtCore.QRect(40, 70, 90, 18))
-        self.label_177.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_177.setObjectName("label_177")
-        self.label_178 = QtWidgets.QLabel(self.frame_97)
-        self.label_178.setGeometry(QtCore.QRect(40, 100, 90, 18))
-        self.label_178.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_178.setObjectName("label_178")
-        self.label_179 = QtWidgets.QLabel(self.frame_97)
-        self.label_179.setGeometry(QtCore.QRect(40, 130, 90, 18))
-        self.label_179.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.label_179.setObjectName("label_179")
-        self.horizontalLayout_17.addWidget(self.frame_97)
-        self.verticalLayout_10.addWidget(self.groupBox_21)
-        self.pushButton_66 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_3)
-        self.pushButton_66.setMaximumSize(QtCore.QSize(941, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_66.setFont(font)
-        self.pushButton_66.setObjectName("pushButton_66")
-        self.verticalLayout_10.addWidget(self.pushButton_66)
-        self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
-        self.stackedWidget.addWidget(self.page_5)
-        self.page_6 = QtWidgets.QWidget()
-        self.page_6.setObjectName("page_6")
-        self.scrollArea_4 = QtWidgets.QScrollArea(self.page_6)
-        self.scrollArea_4.setGeometry(QtCore.QRect(10, 10, 981, 581))
-        self.scrollArea_4.setWidgetResizable(True)
-        self.scrollArea_4.setObjectName("scrollArea_4")
-        self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 967, 1573))
-        self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
-        self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
-        self.verticalLayout_11.setObjectName("verticalLayout_11")
-        self.groupBox_24 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_24.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_24.setObjectName("groupBox_24")
-        self.verticalLayout_11.addWidget(self.groupBox_24)
-        self.groupBox_25 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_25.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_25.setObjectName("groupBox_25")
-        self.verticalLayout_11.addWidget(self.groupBox_25)
-        self.groupBox_26 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_26.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_26.setObjectName("groupBox_26")
-        self.verticalLayout_11.addWidget(self.groupBox_26)
-        self.groupBox_27 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_27.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_27.setObjectName("groupBox_27")
-        self.verticalLayout_11.addWidget(self.groupBox_27)
-        self.groupBox_28 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_28.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_28.setObjectName("groupBox_28")
-        self.verticalLayout_11.addWidget(self.groupBox_28)
-        self.groupBox_29 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_29.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_29.setObjectName("groupBox_29")
-        self.verticalLayout_11.addWidget(self.groupBox_29)
-        self.groupBox_30 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_30.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_30.setObjectName("groupBox_30")
-        self.verticalLayout_11.addWidget(self.groupBox_30)
-        self.groupBox_31 = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_4)
-        self.groupBox_31.setMinimumSize(QtCore.QSize(941, 180))
-        self.groupBox_31.setObjectName("groupBox_31")
-        self.verticalLayout_11.addWidget(self.groupBox_31)
-        self.pushButton_67 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_4)
-        self.pushButton_67.setMaximumSize(QtCore.QSize(941, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_67.setFont(font)
-        self.pushButton_67.setObjectName("pushButton_67")
-        self.verticalLayout_11.addWidget(self.pushButton_67)
-        self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
-        self.stackedWidget.addWidget(self.page_6)
         self.horizontalLayout_7.addWidget(self.stackedWidget)
         self.horizontalLayout_4.addWidget(self.frame_14)
         self.verticalLayout.addWidget(self.frame_3)
@@ -4726,9 +865,9 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.frame_4.setFont(font)
         self.frame_4.setStyleSheet("#frame_4{\n"
-                                   "    \n"
-                                   "    background-color: rgb(255, 255, 255);\n"
-                                   "}")
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -4739,35 +878,37 @@ class Ui_MainWindow(object):
         self.frame_10 = QtWidgets.QFrame(self.frame_4)
         self.frame_10.setMaximumSize(QtCore.QSize(200, 16777215))
         self.frame_10.setStyleSheet("QPushButton:pressed{\n"
-                                    "    padding-top:5px;\n"
-                                    "    padding-left:5px;\n"
-                                    "}")
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
         self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
         self.pushButton_7 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_7.setGeometry(QtCore.QRect(30, 10, 41, 41))
         self.pushButton_7.setStyleSheet("#pushButton_7{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
-        icon25 = QtGui.QIcon()
-        icon25.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_7.setIcon(icon25)
+"    border:none;\n"
+"    \n"
+"    \n"
+"    \n"
+"}")
+        self.pushButton_7.setText("")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("picture/音乐开始.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_7.setIcon(icon9)
         self.pushButton_7.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_7.setObjectName("pushButton_7")
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_10)
         self.pushButton_8.setGeometry(QtCore.QRect(80, 10, 41, 41))
         self.pushButton_8.setStyleSheet("#pushButton_8{\n"
-                                        "    border:none;\n"
-                                        "    \n"
-                                        "    \n"
-                                        "}")
-        icon26 = QtGui.QIcon()
-        icon26.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_8.setIcon(icon26)
+"    border:none;\n"
+"    \n"
+"    \n"
+"}")
+        self.pushButton_8.setText("")
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("picture/28.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_8.setIcon(icon10)
         self.pushButton_8.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_8.setObjectName("pushButton_8")
         self.horizontalLayout_3.addWidget(self.frame_10)
@@ -4785,12 +926,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.frame)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1234, 30))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1265, 30))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
+
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
         # view more history button on the bottom of the scroll area
         self.tft_view_more = QtWidgets.QPushButton(self.scrollAreaWidgetContents_2)
         self.tft_view_more.setMaximumSize(QtCore.QSize(941, 16777215))
@@ -4801,7 +944,21 @@ class Ui_MainWindow(object):
         self.tft_view_more.setFont(font)
         self.tft_view_more.setText("View more history")
         self.tft_view_more.clicked.connect(self.tft_view_more_history)
+        self.tft_view_more.hide()
 
+        self.lol_view_more = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        self.lol_view_more.setMaximumSize(QtCore.QSize(1000, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lol_view_more.setFont(font)
+        self.lol_view_more.setText("View more history")
+        self.lol_view_more.clicked.connect(self.lol_view_more_history)
+        self.lol_view_more.hide()
+
+    # text settings autogenerated by pyqt5 designer
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -4850,20 +1007,18 @@ class Ui_MainWindow(object):
         self.pushButton_16.setText(_translate("MainWindow", "Search"))
         self.label_201.setText(_translate("MainWindow", "Wrong name searched"))
         self.pushButton_40.setText(_translate("MainWindow", "Renew"))
-        self.pushButton_65.setText(_translate("MainWindow", "View more history"))
         self.pushButton_366.setText(_translate("MainWindow", "Renew"))
         self.label_21.setText(_translate("MainWindow", "Match History"))
-        self.pushButton_66.setText(_translate("MainWindow", "View more history"))
-        self.pushButton_67.setText(_translate("MainWindow", "View more history"))
+
         # All functions
         # button functions
-        self.pushButton_4.clicked.connect(QtCore.QCoreApplication.instance().quit)
+
         self.pushButton_10.clicked.connect(self.display)
         self.pushButton_9.clicked.connect(self.display2)
         self.pushButton_15.clicked.connect(self.search_lol_name)
         self.pushButton_40.clicked.connect(self.search_lol_name)
         self.pushButton_16.clicked.connect(self.search_tft_name)
-        self.pushButton_366.clicked.connect(self.search_lol_name)
+        self.pushButton_366.clicked.connect(self.search_tft_name)
         self.label_200.hide()
         self.label_201.hide()
 
@@ -4890,13 +1045,15 @@ class Ui_MainWindow(object):
                 QtCore.QTimer.singleShot(3000, self.label_200.hide)
                 print("wrong name entered")
             else:
+                # delete all existing match groupBox
+                for i in self.groupBoxes:
+                    i.deleteLater()
+                # generate win rate graph
                 self.win_rate_count()
-                for i in range(len(self.Summoner.match_details)):
-                    groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
-                    groupBox.setMinimumSize(QtCore.QSize(941, 191))
-                    groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
-                    self.groupBoxes.append(groupBox)
-                    self.lol_groupBox(0, i)
+                # generate static data of Summoner
+                self.lol_stat()
+                # generate at most 20 match group boxes
+                self.lol_generate_boxes(20)
                 self.stackedWidget.setCurrentIndex(2)
                 print("right name entered")
 
@@ -4917,26 +1074,9 @@ class Ui_MainWindow(object):
                 # delete all existing match groupBox
                 for i in self.groupBoxes:
                     i.deleteLater()
-                try:
-                    self.verticalLayout_8.removeWidget(self.tft_view_more)
-                except AttributeError:
-                    pass
-                self.groupBoxes = []
-                self.viewCheck = True  # check if error caught in the range
-                # create groupboxes and layout for each match
-                for i in range(len(self.Summoner.match_details)):
-                    groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
-                    groupBox.setMinimumSize(QtCore.QSize(0, 230))
-                    groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
-                    self.groupBoxes.append(groupBox)
-                    try:
-                        self.tft_groupBox(0, i)
-                    except KeyError:
-                        groupBox.hide()
-                        self.viewCheck = False
-                        break
-                if len(self.Summoner.match_details) == 20 and self.viewCheck:
-                    self.verticalLayout_8.addWidget(self.tft_view_more)
+
+                # generate 20 boxes and append to the scroll widget
+                self.tft_generate_boxes(20)
                 self.stackedWidget.setCurrentIndex(3)
                 print("right name entered")
 
@@ -4945,7 +1085,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.removeWidget(self.tft_view_more)
         num_match = len(self.groupBoxes)
         # change the match details of the Summoner to new match data
-        self.Summoner.view_more(num_match)
+        self.Summoner.tft_view_more(num_match)
+        # generate 10 boxes and append to the scroll widget
+        self.tft_generate_boxes(10)
+        self.stackedWidget.setCurrentIndex(3)
+
+    def lol_view_more_history(self):
+        self.verticalLayout_9.removeWidget(self.tft_view_more)
+        num_match = len(self.groupBoxes)
+        # change the match details of the Summoner to new match data
+        self.Summoner.lol_view_more(num_match)
+        # generate 10 boxes and append to the scroll widget
+        self.lol_generate_boxes(10)
+        self.stackedWidget.setCurrentIndex(2)
+
+    def lol_generate_boxes(self, num):
+        # remove the view more button if the button exist
+        try:
+            self.verticalLayout_9.removeWidget(self.lol_view_more)
+            self.lol_view_more.hide()
+        except AttributeError:
+            pass
+        self.groupBoxes = []
+        self.viewCheck = True  # check if error caught in the range
+        # create groupboxes and layout for each match
+        for i in range(len(self.Summoner.match_details)):
+            groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
+            groupBox.setMinimumSize(QtCore.QSize(941, 191))
+            self.groupBoxes.append(groupBox)
+            self.lol_groupBox(0, i)
+        if len(self.Summoner.match_details) == num and self.viewCheck:
+            self.verticalLayout_9.addWidget(self.lol_view_more)
+            self.lol_view_more.show()
+
+    # generate groupboxes and attach to the main windows
+    def tft_generate_boxes(self, num):
+        # remove the view more button if the button exist
+        try:
+            self.verticalLayout_8.removeWidget(self.tft_view_more)
+            self.tft_view_more.hide()
+        except AttributeError:
+            pass
+        self.groupBoxes = []
         self.viewCheck = True  # check if error caught in the range
         # create groupboxes and layout for each match
         for i in range(len(self.Summoner.match_details)):
@@ -4954,16 +1135,21 @@ class Ui_MainWindow(object):
             groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
             self.groupBoxes.append(groupBox)
             try:
-                self.tft_groupBox(num_match, i)
+                self.tft_groupBox(0, i)
             except KeyError:
-                groupBox.hide()
-                self.viewCheck = False
-                break
-        if len(self.Summoner.match_details) == 10 and self.viewCheck:
+                self.gameStat.change_version("13.4.1")
+                try:
+                    self.tft_groupBox(0, i)
+                except KeyError:
+                    groupBox.hide()
+                    self.viewCheck = False
+                    break
+        self.gameStat.change_version("13.6.1")
+        if len(self.Summoner.match_details) == num and self.viewCheck:
             self.verticalLayout_8.addWidget(self.tft_view_more)
-        self.stackedWidget.setCurrentIndex(3)
+            self.tft_view_more.show()
 
-    # return the index of the in-match data in match_details of the summoner being searched
+    # return the index of the in-match data of the summoner being searched
     def find_self_participant(self, index):
         participants_list = self.Summoner.match_details[index]['info']['participants']
         # find index of summoner in lol game
@@ -4994,1376 +1180,6 @@ class Ui_MainWindow(object):
             return f"{int(timeDiff / 3600)} hours ago"
         elif timeDiff > 86400:
             return f"{int(timeDiff / 86400)} days ago"
-
-    # create images relates to all text display in league of legends match history page
-    def lol_present_info(self):
-        _translate = QtCore.QCoreApplication.translate
-        self.pushButton_65.setText(_translate("MainWindow", "View more history"))
-        try:
-            self.label_8.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][0]['summonerName']}"))
-        except KeyError:
-            self.label_8.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_9.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][1]['summonerName']}"))
-        except KeyError:
-            self.label_9.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_10.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][2]['summonerName']}"))
-        except KeyError:
-            self.label_10.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_11.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][3]['summonerName']}"))
-        except KeyError:
-            self.label_11.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_12.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][4]['summonerName']}"))
-        except KeyError:
-            self.label_12.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_13.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][5]['summonerName']}"))
-        except KeyError:
-            self.label_13.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_14.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][6]['summonerName']}"))
-        except KeyError:
-            self.label_14.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_15.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][7]['summonerName']}"))
-        except KeyError:
-            self.label_15.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_16.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][8]['summonerName']}"))
-        except KeyError:
-            self.label_16.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_17.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][9]['summonerName']}"))
-        except KeyError:
-            self.label_17.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_5.setText(
-                _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['champLevel']}"))
-        except KeyError:
-            self.label_5.setText(_translate("MainWindow", "lv:"))
-
-        try:
-            self.label_6.setText(_translate("MainWindow",
-                                            f"{self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['kills']} "
-                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['deaths']} "
-                                            f"/ {self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['assists']}"))
-        except KeyError:
-            self.label_6.setText(_translate("MainWindow", "N/A / N/A / N/A"))
-
-        try:
-            kill = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['kills']
-            death = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['deaths']
-            assist = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['assists']
-            kda = self.cal_KDA(kill, death, assist)
-            kda_text = str(kda) + " KDA"
-            self.label_7.setText(kda_text)
-        except KeyError:
-            self.label_7.setText(_translate("MainWindow", "N/A KDA"))
-        self.label.setText(
-            _translate("MainWindow",
-                       f"{self.time_previous(self.Summoner.match_details[0]['info']['gameEndTimestamp'])}"))
-
-        try:
-            self.label_4.setText(
-                _translate("MainWindow",
-                           self.gameStat.identify_queue(self.Summoner.match_details[0]['info']['queueId'])))
-        except KeyError:
-            self.label_4.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_2.setText(
-                _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['win'])}"))
-            if (_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['win'])}") == "Victory"):
-                self.groupBox.setStyleSheet("background-color: rgb(137, 194, 255);")
-            else:
-                self.groupBox.setStyleSheet("background-color: rgb(255, 103, 89);")
-
-
-        except KeyError:
-            self.label_2.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_3.setText(_translate("MainWindow",
-                                            f"{int(self.Summoner.match_details[0]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
-        except KeyError:
-            self.label_3.setText(_translate("MainWindow", "N/Am N/As"))
-
-        try:
-            self.label_18.setText(_translate("MainWindow", f"lv : {self.Summoner.me['summonerLevel']}"))
-        except KeyError:
-            self.label_18.setText(_translate("MainWindow", "lv : N/A"))
-
-        try:
-            self.label_19.setText(_translate("MainWindow", f"{self.Summoner.summonerName}"))
-        except KeyError:
-            self.label_19.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_20.setText(_translate("MainWindow", f"{self.Summoner.rankedInfo[0]['tier']}"))
-        except KeyError:
-            self.label_20.setText(_translate("MainWindow", "N/A"))
-        except IndexError:
-            self.label_20.setText(_translate("MainWindow", "N/A"))
-
-        # groupbox3
-        try:
-            self.label_82.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][0]['summonerName']}"))
-        except KeyError:
-            self.label_82.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_104.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][1]['summonerName']}"))
-        except KeyError:
-            self.label_104.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_105.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][2]['summonerName']}"))
-        except KeyError:
-            self.label_105.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_106.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][3]['summonerName']}"))
-        except KeyError:
-            self.label_106.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_107.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][4]['summonerName']}"))
-        except KeyError:
-            self.label_107.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_108.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][5]['summonerName']}"))
-        except KeyError:
-            self.label_108.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_109.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][6]['summonerName']}"))
-        except KeyError:
-            self.label_109.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_180.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][7]['summonerName']}"))
-        except KeyError:
-            self.label_180.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_181.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[1]['info']['participants'][8]['summonerName']}"))
-        except KeyError:
-            self.label_181.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_182.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[0]['info']['participants'][9]['summonerName']}"))
-        except KeyError:
-            self.label_182.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_79.setText(
-                _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['champLevel']}"))
-        except KeyError:
-            self.label_79.setText(_translate("MainWindow", "lv:"))
-
-        try:
-            self.label_80.setText(_translate("MainWindow",
-                                             f"{self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['kills']} "
-                                             f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['deaths']} "
-                                             f"/ {self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['assists']}"))
-        except KeyError:
-            self.label_80.setText(_translate("MainWindow", "N/A / N/A / N/A"))
-
-        try:
-            kill = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['kills']
-            death = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['deaths']
-            assist = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['assists']
-            kda = self.cal_KDA(kill, death, assist)
-            kda_text = str(kda) + " KDA"
-            self.label_81.setText(kda_text)
-        except KeyError:
-            self.label_81.setText(_translate("MainWindow", "N/A KDA"))
-        self.label_75.setText(
-            _translate("MainWindow",
-                       f"{self.time_previous(self.Summoner.match_details[1]['info']['gameEndTimestamp'])}"))
-
-        try:
-            self.label_76.setText(
-                _translate("MainWindow",
-                           self.gameStat.identify_queue(self.Summoner.match_details[1]['info']['queueId'])))
-        except KeyError:
-            self.label_76.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_77.setText(
-                _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['win'])}"))
-            if (_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['win'])}") == "Victory"):
-                self.groupBox_3.setStyleSheet("background-color: rgb(137, 194, 255);")
-            else:
-                self.groupBox_3.setStyleSheet("background-color: rgb(255, 103, 89);")
-
-        except KeyError:
-            self.label_77.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_78.setText(_translate("MainWindow",
-                                             f"{int(self.Summoner.match_details[1]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
-        except KeyError:
-            self.label_78.setText(_translate("MainWindow", "N/Am N/As"))
-
-        # groupbox5
-        try:
-            self.label_190.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][0]['summonerName']}"))
-        except KeyError:
-            self.label_190.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_191.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][1]['summonerName']}"))
-        except KeyError:
-            self.label_191.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_192.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][2]['summonerName']}"))
-        except KeyError:
-            self.label_192.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_193.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][3]['summonerName']}"))
-        except KeyError:
-            self.label_193.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_194.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][4]['summonerName']}"))
-        except KeyError:
-            self.label_194.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_195.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][5]['summonerName']}"))
-        except KeyError:
-            self.label_195.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_196.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][6]['summonerName']}"))
-        except KeyError:
-            self.label_196.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_197.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][7]['summonerName']}"))
-        except KeyError:
-            self.label_197.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_198.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][8]['summonerName']}"))
-        except KeyError:
-            self.label_198.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_199.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[2]['info']['participants'][9]['summonerName']}"))
-        except KeyError:
-            self.label_199.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_187.setText(
-                _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['champLevel']}"))
-        except KeyError:
-            self.label_187.setText(_translate("MainWindow", "lv:"))
-
-        try:
-            self.label_188.setText(_translate("MainWindow",
-                                              f"{self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['kills']} "
-                                              f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['deaths']} "
-                                              f"/ {self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['assists']}"))
-        except KeyError:
-            self.label_188.setText(_translate("MainWindow", "N/A / N/A / N/A"))
-
-        try:
-            kill = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['kills']
-            death = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['deaths']
-            assist = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['assists']
-            kda = self.cal_KDA(kill, death, assist)
-            kda_text = str(kda) + " KDA"
-            self.label_189.setText(kda_text)
-        except KeyError:
-            self.label_189.setText(_translate("MainWindow", "N/A KDA"))
-        self.label_183.setText(
-            _translate("MainWindow",
-                       f"{self.time_previous(self.Summoner.match_details[2]['info']['gameEndTimestamp'])}"))
-
-        try:
-            self.label_184.setText(
-                _translate("MainWindow",
-                           self.gameStat.identify_queue(self.Summoner.match_details[2]['info']['queueId'])))
-        except KeyError:
-            self.label_184.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_185.setText(
-                _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['win'])}"))
-            if (_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['win'])}") == "Victory"):
-                self.groupBox_5.setStyleSheet("background-color: rgb(137, 194, 255);")
-            else:
-                self.groupBox_5.setStyleSheet("background-color: rgb(255, 103, 89);")
-
-        except KeyError:
-            self.label_185.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_186.setText(_translate("MainWindow",
-                                              f"{int(self.Summoner.match_details[2]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
-        except KeyError:
-            self.label_186.setText(_translate("MainWindow", "N/Am N/As"))
-
-        # groupbox12
-        try:
-            self.label_216.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][0]['summonerName']}"))
-        except KeyError:
-            self.label_216.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_217.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][1]['summonerName']}"))
-        except KeyError:
-            self.label_217.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_218.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][2]['summonerName']}"))
-        except KeyError:
-            self.label_218.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_219.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][3]['summonerName']}"))
-        except KeyError:
-            self.label_219.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_220.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][4]['summonerName']}"))
-        except KeyError:
-            self.label_220.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_221.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][5]['summonerName']}"))
-        except KeyError:
-            self.label_221.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_222.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][6]['summonerName']}"))
-        except KeyError:
-            self.label_222.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_223.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][7]['summonerName']}"))
-        except KeyError:
-            self.label_223.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_224.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][8]['summonerName']}"))
-        except KeyError:
-            self.label_224.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_225.setText(
-                _translate("MainWindow",
-                           f"{self.Summoner.match_details[3]['info']['participants'][9]['summonerName']}"))
-        except KeyError:
-            self.label_225.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_210.setText(
-                _translate("MainWindow",
-                           f"lv:{self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['champLevel']}"))
-        except KeyError:
-            self.label_210.setText(_translate("MainWindow", "lv:"))
-
-        try:
-            self.label_211.setText(_translate("MainWindow",
-                                              f"{self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['kills']} "
-                                              f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['deaths']} "
-                                              f"/ {self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['assists']}"))
-        except KeyError:
-            self.label_211.setText(_translate("MainWindow", "N/A / N/A / N/A"))
-
-        try:
-            kill = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['kills']
-            death = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['deaths']
-            assist = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['assists']
-            kda = self.cal_KDA(kill, death, assist)
-            kda_text = str(kda) + " KDA"
-            self.label_212.setText(kda_text)
-        except KeyError:
-            self.label_212.setText(_translate("MainWindow", "N/A KDA"))
-        self.label_202.setText(
-            _translate("MainWindow",
-                       f"{self.time_previous(self.Summoner.match_details[3]['info']['gameEndTimestamp'])}"))
-
-        try:
-            self.label_203.setText(
-                _translate("MainWindow",
-                           self.gameStat.identify_queue(self.Summoner.match_details[3]['info']['queueId'])))
-        except KeyError:
-            self.label_203.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_204.setText(
-                _translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['win'])}"))
-            if (_translate("MainWindow",
-                           f"{self.win_or_lose(self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['win'])}") == "Victory"):
-                self.groupBox_12.setStyleSheet("background-color: rgb(137, 194, 255);")
-            else:
-                self.groupBox_12.setStyleSheet("background-color: rgb(255, 103, 89);")
-
-        except KeyError:
-            self.label_204.setText(_translate("MainWindow", "N/A"))
-
-        try:
-            self.label_205.setText(_translate("MainWindow",
-                                              f"{int(self.Summoner.match_details[3]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[0]['info']['gameDuration'] % 60}s"))
-        except KeyError:
-            self.label_205.setText(_translate("MainWindow", "N/Am N/As"))
-
-    # create images relates to all image display in league of legends match history page
-    def lol_present_img(self):
-        self_Participant = self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]
-        items = []
-        champs = []
-        for i in range(7):
-            items.append(self_Participant[f'item{i}'])
-        for x in range(10):
-            champs.append(self.Summoner.match_details[0]['info']['participants'][x]['championId'])
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant['championId']}.png"), QtGui.QIcon.Normal,
-                       QtGui.QIcon.Off)
-        self.pushButton_25.setIcon(icon)
-
-        # set the in-game items graphics
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(f"item/{items[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_18.setIcon(icon)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(f"item/{items[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_19.setIcon(icon1)
-
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(f"item/{items[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_20.setIcon(icon2)
-
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(f"item/{items[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_21.setIcon(icon3)
-
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(f"item/{items[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_22.setIcon(icon4)
-
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(f"item/{items[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_23.setIcon(icon5)
-
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(f"item/{items[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_24.setIcon(icon6)
-
-        # champions graphic on the right side
-        # left half
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_30.setIcon(icon7)
-
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_31.setIcon(icon8)
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_32.setIcon(icon9)
-
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_33.setIcon(icon10)
-
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_34.setIcon(icon11)
-
-        # right half
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_35.setIcon(icon12)
-
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_36.setIcon(icon13)
-
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[7]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_37.setIcon(icon14)
-
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[8]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_38.setIcon(icon15)
-
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap(f"champion-icon/{champs[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_39.setIcon(icon16)
-
-        # display profile icon
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap(f"profileicon/{self.Summoner.me['profileIconId']}.png"), QtGui.QIcon.Normal,
-                         QtGui.QIcon.Off)
-        self.pushButton_17.setIcon(icon17)
-
-        # display ranked emblem image of summoner
-        if len(self.Summoner.rankedInfo) != 0:
-            icon18 = QtGui.QIcon()
-            icon18.addPixmap(QtGui.QPixmap(f"ranked-emblem/emblem-{self.Summoner.rankedInfo[0]['tier']}.png"),
-                             QtGui.QIcon.Normal,
-                             QtGui.QIcon.Off)
-            self.pushButton_41.setIcon(icon18)
-        else:
-
-            self.pushButton_41.setIcon(QtGui.QIcon("items/7050.png"))
-
-        # first summoner Spell display
-        summonerSpell1 = QtGui.QIcon()
-        summonerSpell1.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant['summoner1Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_26.setIcon(summonerSpell1)
-
-        # second summoner Spell display
-        summonerSpell2 = QtGui.QIcon()
-        summonerSpell2.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant['summoner2Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_27.setIcon(summonerSpell2)
-
-        # primary rune display
-        runeUrlPath = 'https://ddragon.canisback.com/img/'
-        rune1 = QtGui.QIcon()
-        primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][0][
-                'selections'][0]['perk'])
-        primaryRuneimg = QtGui.QImage()
-        primaryRuneimg.loadFromData(requests.get(runeUrlPath + primaryRunePath).content)
-        rune1.addPixmap(QtGui.QPixmap(primaryRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
-        self.pushButton_28.setIcon(rune1)
-
-        # sub rune display
-        runeUrlPath = 'https://ddragon.canisback.com/img/'
-        rune2 = QtGui.QIcon()
-        subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[0]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][1][
-                'style'])
-        subRuneimg = QtGui.QImage()
-        subRuneimg.loadFromData(requests.get(runeUrlPath + subRunePath).content)
-        rune2.addPixmap(QtGui.QPixmap(subRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
-        self.pushButton_29.setIcon(rune2)
-
-        # set win rate graph display
-        # graph = chart_test.WinLoseCircleGraph(self.win_rate_count())
-        win_rate_graph = QtGui.QIcon()
-        win_rate_graph.addPixmap(
-            QtGui.QPixmap("win_rate.png"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_42.setIcon(win_rate_graph)
-
-        # groupbox 3 img
-        self_Participant2 = self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]
-        items2 = []
-        champs2 = []
-        for i in range(7):
-            items2.append(
-                self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)][
-                    f'item{i}'])
-        for x in range(10):
-            champs2.append(self.Summoner.match_details[1]['info']['participants'][x]['championId'])
-
-        g2_icon = QtGui.QIcon()
-        g2_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant2['championId']}.png"), QtGui.QIcon.Normal,
-                          QtGui.QIcon.Off)
-        self.pushButton_174.setIcon(g2_icon)
-
-        # set the in-game items graphics
-        g2_item_icon = QtGui.QIcon()
-        g2_item_icon.addPixmap(QtGui.QPixmap(f"item/{items2[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_179.setIcon(g2_item_icon)
-
-        # set the in-game items graphics
-        g2_item_icon2 = QtGui.QIcon()
-        g2_item_icon2.addPixmap(QtGui.QPixmap(f"item/{items2[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_180.setIcon(g2_item_icon2)
-
-        # set the in-game items graphics
-        g2_item_icon3 = QtGui.QIcon()
-        g2_item_icon3.addPixmap(QtGui.QPixmap(f"item/{items2[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_181.setIcon(g2_item_icon3)
-
-        # set the in-game items graphics
-        g2_item_icon4 = QtGui.QIcon()
-        g2_item_icon4.addPixmap(QtGui.QPixmap(f"item/{items2[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_182.setIcon(g2_item_icon4)
-
-        # set the in-game items graphics
-        g2_item_icon5 = QtGui.QIcon()
-        g2_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items2[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_183.setIcon(g2_item_icon5)
-
-        # set the in-game items graphics
-        g2_item_icon6 = QtGui.QIcon()
-        g2_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items2[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_184.setIcon(g2_item_icon6)
-
-        # set the in-game items graphics
-        g2_item_icon7 = QtGui.QIcon()
-        g2_item_icon7.addPixmap(QtGui.QPixmap(f"item/{items2[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_185.setIcon(g2_item_icon7)
-
-        # champions graphic on the right side
-        # left half
-        g2_cp_icon = QtGui.QIcon()
-        g2_cp_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_186.setIcon(g2_cp_icon)
-
-        g2_cp_icon2 = QtGui.QIcon()
-        g2_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_187.setIcon(g2_cp_icon2)
-
-        g2_cp_icon3 = QtGui.QIcon()
-        g2_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_188.setIcon(g2_cp_icon3)
-
-        g2_cp_icon4 = QtGui.QIcon()
-        g2_cp_icon4.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_189.setIcon(g2_cp_icon4)
-
-        g2_cp_icon5 = QtGui.QIcon()
-        g2_cp_icon5.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_190.setIcon(g2_cp_icon5)
-
-        g2_cp_icon6 = QtGui.QIcon()
-        g2_cp_icon6.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_191.setIcon(g2_cp_icon6)
-
-        g2_cp_icon7 = QtGui.QIcon()
-        g2_cp_icon7.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_192.setIcon(g2_cp_icon7)
-
-        g2_cp_icon8 = QtGui.QIcon()
-        g2_cp_icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[7]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_193.setIcon(g2_cp_icon8)
-
-        g2_cp_icon9 = QtGui.QIcon()
-        g2_cp_icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[8]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_194.setIcon(g2_cp_icon9)
-
-        g2_cp_icon10 = QtGui.QIcon()
-        g2_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs2[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_195.setIcon(g2_cp_icon10)
-
-        # first summoner Spell display
-        g2_summonerSpell1 = QtGui.QIcon()
-        g2_summonerSpell1.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant2['summoner1Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_175.setIcon(g2_summonerSpell1)
-
-        # second summoner Spell display
-        g2_summonerSpell2 = QtGui.QIcon()
-        g2_summonerSpell2.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant2['summoner2Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_176.setIcon(g2_summonerSpell2)
-
-        # primary rune display
-        g2_runeUrlPath = 'https://ddragon.canisback.com/img/'
-        g2_rune1 = QtGui.QIcon()
-        g2_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['perks']['styles'][0][
-                'selections'][0]['perk'])
-        g2_primaryRuneimg = QtGui.QImage()
-        g2_primaryRuneimg.loadFromData(requests.get(g2_runeUrlPath + g2_primaryRunePath).content)
-        g2_rune1.addPixmap(QtGui.QPixmap(g2_primaryRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_177.setIcon(g2_rune1)
-
-        # sub rune display
-        g2_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
-        g2_rune2 = QtGui.QIcon()
-        g2_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[1]['info']['participants'][self.find_self_participant(1)]['perks']['styles'][1][
-                'style'])
-        g2_subRuneimg = QtGui.QImage()
-        g2_subRuneimg.loadFromData(requests.get(g2_runeUrlPath1 + g2_subRunePath).content)
-        g2_rune2.addPixmap(QtGui.QPixmap(g2_subRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_178.setIcon(g2_rune2)
-
-        # groupbox 5 img
-        self_Participant3 = self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]
-        items3 = []
-        champs3 = []
-        for i in range(7):
-            items3.append(
-                self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)][
-                    f'item{i}'])
-        for x in range(10):
-            champs3.append(self.Summoner.match_details[2]['info']['participants'][x]['championId'])
-
-        g3_icon = QtGui.QIcon()
-        g3_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant3['championId']}.png"), QtGui.QIcon.Normal,
-                          QtGui.QIcon.Off)
-        self.pushButton_196.setIcon(g3_icon)
-
-        # set the in-game items graphics
-        g3_item_icon = QtGui.QIcon()
-        g3_item_icon.addPixmap(QtGui.QPixmap(f"item/{items3[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_271.setIcon(g3_item_icon)
-
-        # set the in-game items graphics
-        g3_item_icon2 = QtGui.QIcon()
-        g3_item_icon2.addPixmap(QtGui.QPixmap(f"item/{items3[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_272.setIcon(g3_item_icon2)
-
-        # set the in-game items graphics
-        g3_item_icon3 = QtGui.QIcon()
-        g3_item_icon3.addPixmap(QtGui.QPixmap(f"item/{items3[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_273.setIcon(g3_item_icon3)
-
-        # set the in-game items graphics
-        g3_item_icon4 = QtGui.QIcon()
-        g3_item_icon4.addPixmap(QtGui.QPixmap(f"item/{items3[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_274.setIcon(g3_item_icon4)
-
-        # set the in-game items graphics
-        g3_item_icon5 = QtGui.QIcon()
-        g3_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items3[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_275.setIcon(g3_item_icon5)
-
-        # set the in-game items graphics
-        g3_item_icon6 = QtGui.QIcon()
-        g3_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items3[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_276.setIcon(g3_item_icon6)
-
-        # set the in-game items graphics
-        g3_item_icon7 = QtGui.QIcon()
-        g3_item_icon7.addPixmap(QtGui.QPixmap(f"item/{items3[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_277.setIcon(g3_item_icon7)
-
-        # champions graphic on the right side
-        # left half
-        g3_cp_icon = QtGui.QIcon()
-        g3_cp_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_278.setIcon(g3_cp_icon)
-
-        g3_cp_icon2 = QtGui.QIcon()
-        g3_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_279.setIcon(g3_cp_icon2)
-
-        g3_cp_icon3 = QtGui.QIcon()
-        g3_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_280.setIcon(g3_cp_icon3)
-
-        g3_cp_icon4 = QtGui.QIcon()
-        g3_cp_icon4.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_281.setIcon(g3_cp_icon4)
-
-        g3_cp_icon5 = QtGui.QIcon()
-        g3_cp_icon5.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_282.setIcon(g3_cp_icon5)
-
-        g3_cp_icon6 = QtGui.QIcon()
-        g3_cp_icon6.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_283.setIcon(g3_cp_icon6)
-
-        g3_cp_icon7 = QtGui.QIcon()
-        g3_cp_icon7.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_284.setIcon(g3_cp_icon7)
-
-        g3_cp_icon8 = QtGui.QIcon()
-        g3_cp_icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[7]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_285.setIcon(g3_cp_icon8)
-
-        g3_cp_icon9 = QtGui.QIcon()
-        g3_cp_icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[8]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_286.setIcon(g3_cp_icon9)
-
-        g3_cp_icon10 = QtGui.QIcon()
-        g3_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs3[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_287.setIcon(g3_cp_icon10)
-
-        # first summoner Spell display
-        g3_summonerSpell1 = QtGui.QIcon()
-        g3_summonerSpell1.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant3['summoner1Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_197.setIcon(g3_summonerSpell1)
-
-        # second summoner Spell display
-        g3_summonerSpell2 = QtGui.QIcon()
-        g3_summonerSpell2.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant3['summoner2Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_268.setIcon(g3_summonerSpell2)
-
-        # primary rune display
-        g3_runeUrlPath = 'https://ddragon.canisback.com/img/'
-        g3_rune1 = QtGui.QIcon()
-        g3_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['perks']['styles'][0][
-                'selections'][0]['perk'])
-        g3_primaryRuneimg = QtGui.QImage()
-        g3_primaryRuneimg.loadFromData(requests.get(g3_runeUrlPath + g3_primaryRunePath).content)
-        g3_rune1.addPixmap(QtGui.QPixmap(g3_primaryRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_269.setIcon(g3_rune1)
-
-        # sub rune display
-        g3_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
-        g3_rune2 = QtGui.QIcon()
-        g3_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[2]['info']['participants'][self.find_self_participant(2)]['perks']['styles'][1][
-                'style'])
-        g3_subRuneimg = QtGui.QImage()
-        g3_subRuneimg.loadFromData(requests.get(g3_runeUrlPath1 + g3_subRunePath).content)
-        g3_rune2.addPixmap(QtGui.QPixmap(g3_subRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_270.setIcon(g3_rune2)
-
-        # groupbox 12 img
-        self_Participant4 = self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]
-        items4 = []
-        champs4 = []
-        for i in range(7):
-            items4.append(
-                self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)][
-                    f'item{i}'])
-        for x in range(10):
-            champs4.append(self.Summoner.match_details[3]['info']['participants'][x]['championId'])
-
-        g4_icon = QtGui.QIcon()
-        g4_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant4['championId']}.png"), QtGui.QIcon.Normal,
-                          QtGui.QIcon.Off)
-        self.pushButton_321.setIcon(g4_icon)
-
-        # set the in-game items graphics
-        g4_item_icon = QtGui.QIcon()
-        g4_item_icon.addPixmap(QtGui.QPixmap(f"item/{items4[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_326.setIcon(g4_item_icon)
-
-        # set the in-game items graphics
-        g4_item_icon2 = QtGui.QIcon()
-        g4_item_icon2.addPixmap(QtGui.QPixmap(f"item/{items4[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_327.setIcon(g4_item_icon2)
-
-        # set the in-game items graphics
-        g4_item_icon3 = QtGui.QIcon()
-        g4_item_icon3.addPixmap(QtGui.QPixmap(f"item/{items4[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_328.setIcon(g4_item_icon3)
-
-        # set the in-game items graphics
-        g4_item_icon4 = QtGui.QIcon()
-        g4_item_icon4.addPixmap(QtGui.QPixmap(f"item/{items4[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_329.setIcon(g4_item_icon4)
-
-        # set the in-game items graphics
-        g4_item_icon5 = QtGui.QIcon()
-        g4_item_icon5.addPixmap(QtGui.QPixmap(f"item/{items4[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_330.setIcon(g4_item_icon5)
-
-        # set the in-game items graphics
-        g4_item_icon6 = QtGui.QIcon()
-        g4_item_icon6.addPixmap(QtGui.QPixmap(f"item/{items4[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_331.setIcon(g4_item_icon6)
-
-        # set the in-game items graphics
-        g4_item_icon7 = QtGui.QIcon()
-        g4_item_icon7.addPixmap(QtGui.QPixmap(f"item/{items4[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_332.setIcon(g4_item_icon7)
-
-        # champions graphic on the right side
-        # left half
-        g4_cp_icon = QtGui.QIcon()
-        g4_cp_icon.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[0]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_345.setIcon(g4_cp_icon)
-
-        g4_cp_icon2 = QtGui.QIcon()
-        g4_cp_icon2.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[1]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_346.setIcon(g4_cp_icon2)
-
-        g4_cp_icon3 = QtGui.QIcon()
-        g4_cp_icon3.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[2]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_347.setIcon(g4_cp_icon3)
-
-        g4_cp_icon4 = QtGui.QIcon()
-        g4_cp_icon4.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[3]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_348.setIcon(g4_cp_icon4)
-
-        g4_cp_icon5 = QtGui.QIcon()
-        g4_cp_icon5.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[4]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_349.setIcon(g4_cp_icon5)
-
-        g4_cp_icon6 = QtGui.QIcon()
-        g4_cp_icon6.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[5]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_350.setIcon(g4_cp_icon6)
-
-        g4_cp_icon7 = QtGui.QIcon()
-        g4_cp_icon7.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[6]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_351.setIcon(g4_cp_icon7)
-
-        g4_cp_icon8 = QtGui.QIcon()
-        g4_cp_icon8.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[7]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_352.setIcon(g4_cp_icon8)
-
-        g4_cp_icon9 = QtGui.QIcon()
-        g4_cp_icon9.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[8]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_353.setIcon(g4_cp_icon9)
-
-        g4_cp_icon10 = QtGui.QIcon()
-        g4_cp_icon10.addPixmap(QtGui.QPixmap(f"champion-icon/{champs4[9]}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_354.setIcon(g4_cp_icon10)
-
-        # first summoner Spell display
-        g4_summonerSpell1 = QtGui.QIcon()
-        g4_summonerSpell1.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant4['summoner1Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_322.setIcon(g4_summonerSpell1)
-
-        # second summoner Spell display
-        g4_summonerSpell2 = QtGui.QIcon()
-        g4_summonerSpell2.addPixmap(
-            QtGui.QPixmap(f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant4['summoner2Id'])}"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off)
-        self.pushButton_323.setIcon(g4_summonerSpell2)
-
-        # primary rune display
-        g4_runeUrlPath = 'https://ddragon.canisback.com/img/'
-        g4_rune1 = QtGui.QIcon()
-        g4_primaryRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(3)]['perks']['styles'][0][
-                'selections'][0]['perk'])
-        g4_primaryRuneimg = QtGui.QImage()
-        g4_primaryRuneimg.loadFromData(requests.get(g4_runeUrlPath + g4_primaryRunePath).content)
-        g4_rune1.addPixmap(QtGui.QPixmap(g4_primaryRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_324.setIcon(g4_rune1)
-
-        # sub rune display
-        g4_runeUrlPath1 = 'https://ddragon.canisback.com/img/'
-        g4_rune2 = QtGui.QIcon()
-        g4_subRunePath = self.gameStat.identify_runes(
-            self.Summoner.match_details[3]['info']['participants'][self.find_self_participant(0)]['perks']['styles'][1][
-                'style'])
-        g4_subRuneimg = QtGui.QImage()
-        g4_subRuneimg.loadFromData(requests.get(g4_runeUrlPath1 + g4_subRunePath).content)
-        g4_rune2.addPixmap(QtGui.QPixmap(g4_subRuneimg),
-                           QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-        self.pushButton_325.setIcon(g4_rune2)
-
-    def lol_groupBox(self, start, index):
-        self_Participant = self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(index)]
-        # groupBox set
-        self.lol_parentBoxes = []
-        # set vertical layout for first 2 frames ----- [0, 1]
-        layoutWidget = QtWidgets.QWidget(self.groupBoxes[start + index])
-        layoutWidget.setGeometry(QtCore.QRect(10, 20, 191, 161))
-        self.lol_parentBoxes.append(layoutWidget)
-        verticalLayout = QtWidgets.QVBoxLayout(layoutWidget)
-        verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.lol_parentBoxes.append(verticalLayout)
-        # set vertical layout for middle 2 frames ----- [2, 3]
-        layoutWidget = QtWidgets.QWidget(self.groupBoxes[start + index])
-        layoutWidget.setGeometry(QtCore.QRect(250, 20, 371, 180))
-        self.lol_parentBoxes.append(layoutWidget)
-        verticalLayout = QtWidgets.QVBoxLayout(layoutWidget)
-        verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.lol_parentBoxes.append(verticalLayout)
-        # set groupBox for all champ display groupbox ----- [4, 5]
-        frame = QtWidgets.QFrame(self.groupBoxes[start + index])
-        frame.setGeometry(QtCore.QRect(649, 20, 281, 161))
-        frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.lol_parentBoxes.append(frame)
-        horizontalLayout = QtWidgets.QHBoxLayout(frame)
-        horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.lol_parentBoxes.append(horizontalLayout)
-
-        # frame set
-        self.lol_info_frames = []
-        for i in range(2):
-            frame = QtWidgets.QFrame(self.lol_parentBoxes[0])
-            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-            frame.setFrameShadow(QtWidgets.QFrame.Raised)
-            self.lol_parentBoxes[1].addWidget(frame)
-            self.lol_info_frames.append(frame)
-        # rank solo and game history time frame
-        self.lol_info_frames[0].setGeometry(QtCore.QRect(1, 1, 189, 75))
-        # game time and win/lose frame
-        self.lol_info_frames[1].setGeometry(QtCore.QRect(1, 85, 189, 75))
-
-        # frame set
-        self.lol_Summoner_frame = []
-        for i in range(2):
-            frame = QtWidgets.QFrame(self.lol_parentBoxes[2])
-            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-            frame.setFrameShadow(QtWidgets.QFrame.Raised)
-            self.lol_parentBoxes[3].addWidget(frame)
-            self.lol_Summoner_frame.append(frame)
-        # champion image part
-        self.lol_Summoner_frame[0].setGeometry(QtCore.QRect(1, 1, 369, 96))
-        # item frame
-        self.lol_Summoner_frame[1].setGeometry(QtCore.QRect(1, 110, 369, 57))
-
-        # frame set
-        self.lol_Participants_frame = []
-        for i in range(2):
-            frame = QtWidgets.QFrame(self.lol_parentBoxes[4])
-            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-            frame.setFrameShadow(QtWidgets.QFrame.Raised)
-            self.lol_parentBoxes[5].addWidget(frame)
-            self.lol_Participants_frame.append(frame)
-        # left part summoners frame
-        self.lol_Participants_frame[0].setGeometry(QtCore.QRect(1, 1, 135, 159))
-        # right part summoners frame
-        self.lol_Participants_frame[1].setGeometry(QtCore.QRect(145, 1, 135, 159))
-
-
-        # label set in frame[0]
-        # label of one frame
-        self.lol_matchInfo = []
-        for i in range(2):
-            info = QtWidgets.QLabel(self.lol_info_frames[0])
-            self.lol_matchInfo.append(info)
-
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setWeight(75)
-
-        self.lol_matchInfo[0].setGeometry(QtCore.QRect(10, 10, 111, 18))
-        self.lol_matchInfo[0].setFont(font)
-        # set Queue name
-        self.lol_matchInfo[0].setText(self.gameStat.identify_queue(self.Summoner.match_details[index]['info']['queueId']))
-
-        # xxx hours ago label
-        self.lol_matchInfo[1].setGeometry(QtCore.QRect(10, 40, 181, 31))
-        self.lol_matchInfo[1].setFont(font)
-        # set how many time passed
-        self.lol_matchInfo[1].setText(f"{self.time_previous(self.Summoner.match_details[index]['info']['gameEndTimestamp'])}")
-
-        # label set in frame[1]
-        # label of one frame
-        # win/lose and game time info
-        self.lol_GameTime = []
-        for i in range(2):
-            info = QtWidgets.QLabel(self.lol_info_frames[1])
-            self.lol_GameTime.append(info)
-
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setWeight(75)
-
-        self.lol_GameTime[0].setGeometry(QtCore.QRect(10, 10, 70, 18))
-        self.lol_GameTime[0].setFont(font)
-        # set the text for Victory or Lost
-        self.lol_GameTime[0].setText(
-            f"{self.win_or_lose(self_Participant['win'])}")
-        # set background color for the groupbox based on win or lose of the game
-        if self_Participant['win']:
-            self.groupBoxes[start + index].setStyleSheet("background-color: rgb(137, 194, 255);")
-        else:
-            self.groupBoxes[start + index].setStyleSheet("background-color: rgb(255, 103, 89);")
-
-        self.lol_GameTime[1].setGeometry(QtCore.QRect(10, 40, 70, 18))
-        self.lol_GameTime[1].setFont(font)
-        # set game duration
-        self.lol_GameTime[1].setText(f"{int(self.Summoner.match_details[index]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[index]['info']['gameDuration'] % 60}s")
-
-
-        # pushButtons and labels in frame[2]
-        # Champ icon pushButton
-        self.lol_match_champ = QtWidgets.QPushButton(self.lol_Summoner_frame[0])
-        self.lol_match_champ.setGeometry(QtCore.QRect(30, 0, 61, 61))
-        self.lol_match_champ.setIconSize(QtCore.QSize(70, 70))
-
-        # summoner Spell
-        self.lol_Spell = []
-        for i in range(2):
-            lolSpell_icon = QtWidgets.QPushButton(self.lol_Summoner_frame[0])
-            lolSpell_icon.setGeometry(QtCore.QRect(100, i * 30, 31, 34))
-            lolSpell_icon.setIconSize(QtCore.QSize(30, 30))
-            self.lol_Spell.append(lolSpell_icon)
-
-        # text labels setting in frame[2]
-        self.lol_frame2Text = []
-        for i in range(3):
-            info = QtWidgets.QLabel(self.lol_Summoner_frame[0])
-            self.lol_frame2Text.append(info)
-
-        # level label
-        self.lol_frame2Text[0].setGeometry(QtCore.QRect(30, 70, 61, 20))
-        self.lol_frame2Text[0].setFont(font)
-        # set champion level of the summoner
-        self.lol_frame2Text[0].setText(f"lv:{self_Participant['champLevel']}")
-
-        # Kill/Death/Assist label
-        font1 = QtGui.QFont()
-        font1.setFamily("Bodoni MT Black")
-        font1.setPointSize(10)
-        font1.setBold(True)
-        font1.setWeight(75)
-
-        self.lol_frame2Text[1].setGeometry(QtCore.QRect(230, 20, 131, 20))
-        self.lol_frame2Text[1].setFont(font1)
-        # set KDA of the Summoner
-        self.lol_frame2Text[1].setText(f"{self_Participant['kills']} / {self_Participant['deaths']} / {self_Participant['assists']}")
-
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(False)
-        font.setWeight(50)
-        # total kda count
-        self.lol_frame2Text[2].setGeometry(QtCore.QRect(240, 60, 121, 20))
-        self.lol_frame2Text[2].setFont(font)
-        # Set total KDA of the summoner
-        self.lol_frame2Text[2].setText(f"{self.cal_KDA(self_Participant['kills'], self_Participant['deaths'], self_Participant['assists'])} KDA")
-
-        # Runes pushButtons
-        self.lol_Runes = []
-        for i in range(2):
-            lolRune_icon = QtWidgets.QPushButton(self.lol_Summoner_frame[0])
-            lolRune_icon.setGeometry(QtCore.QRect(140, i * 30, 31, 34))
-            lolRune_icon.setIconSize(QtCore.QSize(30, 30))
-            self.lol_Runes.append(lolRune_icon)
-
-        # frame[3]
-        # item pushButtons in frame[3]
-        self.lol_items = []
-        # 9 item icon pushButtons
-        for i in range(7):
-            lolItem_icon = QtWidgets.QPushButton(self.lol_Summoner_frame[1])
-            lolItem_icon.setGeometry(QtCore.QRect(30 + 40 * i, 10, 41, 41))
-            lolItem_icon.setIconSize(QtCore.QSize(30, 30))
-            self.lol_items.append(lolItem_icon)
-        self.lol_items[-1].setStyleSheet("    QPushButton {\n"
-                                         "        border-radius: 16px;\n"
-                                         "        \n"
-                                         "        \n"
-                                         "    background-color: rgb(0, 170, 255);\n"
-                                         "    }")
-        # frame[4]
-        # left side summoner name and icon pushButtons and labels
-        # summoner icon pushbutton
-        self.lol_left_SummonerIcon = []
-        # 5 player icon pushButtons
-        for i in range(5):
-            lolSummoner_icon = QtWidgets.QPushButton(self.lol_Participants_frame[0])
-            lolSummoner_icon.setGeometry(QtCore.QRect(0, 30 * i, 31, 31))
-            lolSummoner_icon.setIconSize(QtCore.QSize(25, 25))
-            self.lol_left_SummonerIcon.append(lolSummoner_icon)
-
-        # summoner name text label
-        self.lol_left_SummonerLabel = []
-        # 5 player icon pushButtons
-        for i in range(5):
-            lolSummoner_name = QtWidgets.QLabel(self.lol_Participants_frame[0])
-            lolSummoner_name.setGeometry(QtCore.QRect(40, 10 + 30 * i, 90, 18))
-            lolSummoner_name.setFont(font)
-            self.lol_left_SummonerLabel.append(lolSummoner_name)
-
-        # frame[5]
-        # right side summoner name and icon pushButtons and labels
-        # summoner icon pushbuttons
-        self.lol_right_SummonerIcon = []
-        # 5 player icon pushButtons
-        for i in range(5):
-            lolSummoner2_icon = QtWidgets.QPushButton(self.lol_Participants_frame[1])
-            lolSummoner2_icon.setGeometry(QtCore.QRect(0, 30 * i, 31, 31))
-            lolSummoner2_icon.setIconSize(QtCore.QSize(25, 25))
-            self.lol_right_SummonerIcon.append(lolSummoner2_icon)
-
-        # summoner name text label
-        self.lol_right_SummonerLabel = []
-        # 5 player icon pushButtons
-        for i in range(5):
-            lolSummoner_name = QtWidgets.QLabel(self.lol_Participants_frame[1])
-            lolSummoner_name.setGeometry(QtCore.QRect(40, 10 + 30 * i, 90, 18))
-            lolSummoner_name.setFont(font)
-            self.lol_right_SummonerLabel.append(lolSummoner_name)
-
-        # add groupbox to vertical layout
-        self.verticalLayout_9.addWidget(self.groupBoxes[index])
-
-        # Summoner match info img display
-        # items img display
-        for i in range(7):
-            icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(f"item/{self_Participant[f'item{i}']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.lol_items[i].setIcon(icon)
-
-            # summoner champ icon display
-            icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant['championId']}.png"), QtGui.QIcon.Normal,
-                           QtGui.QIcon.Off)
-            self.lol_match_champ.setIcon(icon)
-
-        # summoner Spell display
-        for i in range(2):
-            summonerSpell = QtGui.QIcon()
-            summonerSpell.addPixmap(
-                QtGui.QPixmap(
-                    f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant[f'summoner{i + 1}Id'])}"),
-                QtGui.QIcon.Normal,
-                QtGui.QIcon.Off)
-            self.lol_Spell[i].setIcon(summonerSpell)
-
-        # summoner Rune display
-        runeUrlPath = 'https://ddragon.canisback.com/img/'
-        rune = QtGui.QIcon()
-        primaryRunePath = self.gameStat.identify_runes(
-            self_Participant['perks']['styles'][0]['selections'][0]['perk'])
-        primaryRuneimg = QtGui.QImage()
-        primaryRuneimg.loadFromData(requests.get(runeUrlPath + primaryRunePath).content)
-        rune.addPixmap(QtGui.QPixmap(primaryRuneimg),
-                       QtGui.QIcon.Normal,
-                       QtGui.QIcon.Off)
-        self.lol_Runes[0].setIcon(rune)
-
-        rune2 = QtGui.QIcon()
-        subRunePath = self.gameStat.identify_runes(
-            self_Participant['perks']['styles'][1]['style'])
-        subRuneimg = QtGui.QImage()
-        subRuneimg.loadFromData(requests.get(runeUrlPath + subRunePath).content)
-        rune2.addPixmap(QtGui.QPixmap(subRuneimg),
-                        QtGui.QIcon.Normal,
-                        QtGui.QIcon.Off)
-        self.lol_Runes[1].setIcon(rune2)
-
-        # participants name display
-        for i in range(5):
-            self.lol_left_SummonerLabel[i].setText(self.Summoner.match_details[index]['info']['participants'][i]['summonerName'])
-            self.lol_right_SummonerLabel[i].setText(self.Summoner.match_details[index]['info']['participants'][5 + i]['summonerName'])
-        # participants champion img display
-        for i in range(5):
-            icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self.Summoner.match_details[index]['info']['participants'][i]['championId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.lol_left_SummonerIcon[i].setIcon(icon)
-            icon = QtGui.QIcon()
-            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self.Summoner.match_details[index]['info']['participants'][5 + i]['championId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-            self.lol_right_SummonerIcon[i].setIcon(icon)
-        print(f"match {index} completed")
 
     def lol_stat(self):
         # set win rate graph display
@@ -6401,7 +1217,310 @@ class Ui_MainWindow(object):
             self.label_20.setText(_translate("MainWindow", f"{self.Summoner.rankedInfo[0]['tier']}"))
         except IndexError:
             self.label_20.setText(_translate("MainWindow", "N/A"))
+        self.label_25 = QtWidgets.QLabel(self.scrollAreaWidgetContents)
+        font = QtGui.QFont()
+        font.setFamily("Bodoni MT Black")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_25.setFont(font)
+        self.label_25.setText("Match history")
+        self.verticalLayout_9.addWidget(self.label_25)
 
+    # create a match groupbox
+    def lol_groupBox(self, start, index):
+        self_Participant = self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(index)]
+        # groupBox set
+        lol_parentBoxes = []
+        # set vertical layout for first 2 frames ----- [0, 1]
+        layoutWidget = QtWidgets.QWidget(self.groupBoxes[start + index])
+        layoutWidget.setGeometry(QtCore.QRect(10, 20, 191, 161))
+        lol_parentBoxes.append(layoutWidget)
+        verticalLayout = QtWidgets.QVBoxLayout(layoutWidget)
+        verticalLayout.setContentsMargins(0, 0, 0, 0)
+        lol_parentBoxes.append(verticalLayout)
+        # set vertical layout for middle 2 frames ----- [2, 3]
+        layoutWidget = QtWidgets.QWidget(self.groupBoxes[start + index])
+        layoutWidget.setGeometry(QtCore.QRect(250, 20, 371, 180))
+        lol_parentBoxes.append(layoutWidget)
+        verticalLayout = QtWidgets.QVBoxLayout(layoutWidget)
+        verticalLayout.setContentsMargins(0, 0, 0, 0)
+        lol_parentBoxes.append(verticalLayout)
+        # set groupBox for all champ display groupbox ----- [4, 5]
+        frame = QtWidgets.QFrame(self.groupBoxes[start + index])
+        frame.setGeometry(QtCore.QRect(649, 20, 281, 161))
+        frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        lol_parentBoxes.append(frame)
+        horizontalLayout = QtWidgets.QHBoxLayout(frame)
+        horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        lol_parentBoxes.append(horizontalLayout)
+
+        # frame set
+        lol_info_frames = []
+        for i in range(2):
+            frame = QtWidgets.QFrame(lol_parentBoxes[0])
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            lol_parentBoxes[1].addWidget(frame)
+            lol_info_frames.append(frame)
+        # rank solo and game history time frame
+        lol_info_frames[0].setGeometry(QtCore.QRect(1, 1, 189, 75))
+        # game time and win/lose frame
+        lol_info_frames[1].setGeometry(QtCore.QRect(1, 85, 189, 75))
+
+        # frame set
+        lol_Summoner_frame = []
+        for i in range(2):
+            frame = QtWidgets.QFrame(lol_parentBoxes[2])
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            lol_parentBoxes[3].addWidget(frame)
+            lol_Summoner_frame.append(frame)
+        # champion image part
+        lol_Summoner_frame[0].setGeometry(QtCore.QRect(1, 1, 369, 96))
+        # item frame
+        lol_Summoner_frame[1].setGeometry(QtCore.QRect(1, 110, 369, 57))
+
+        # frame set
+        lol_Participants_frame = []
+        for i in range(2):
+            frame = QtWidgets.QFrame(lol_parentBoxes[4])
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            lol_parentBoxes[5].addWidget(frame)
+            lol_Participants_frame.append(frame)
+        # left part summoners frame
+        lol_Participants_frame[0].setGeometry(QtCore.QRect(1, 1, 135, 159))
+        # right part summoners frame
+        lol_Participants_frame[1].setGeometry(QtCore.QRect(145, 1, 135, 159))
+
+
+        # label set in frame[0]
+        # label of one frame
+        lol_matchInfo = []
+        for i in range(2):
+            info = QtWidgets.QLabel(lol_info_frames[0])
+            lol_matchInfo.append(info)
+
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setWeight(75)
+
+        lol_matchInfo[0].setGeometry(QtCore.QRect(10, 10, 111, 18))
+        lol_matchInfo[0].setFont(font)
+        # set Queue name
+        lol_matchInfo[0].setText(self.gameStat.identify_queue(self.Summoner.match_details[index]['info']['queueId']))
+
+        # xxx hours ago label
+        lol_matchInfo[1].setGeometry(QtCore.QRect(10, 40, 181, 31))
+        lol_matchInfo[1].setFont(font)
+        # set how many time passed
+        lol_matchInfo[1].setText(f"{self.time_previous(self.Summoner.match_details[index]['info']['gameEndTimestamp'])}")
+
+        # label set in frame[1]
+        # label of one frame
+        # win/lose and game time info
+        lol_GameTime = []
+        for i in range(2):
+            info = QtWidgets.QLabel(lol_info_frames[1])
+            lol_GameTime.append(info)
+
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setWeight(75)
+
+        lol_GameTime[0].setGeometry(QtCore.QRect(10, 10, 70, 18))
+        lol_GameTime[0].setFont(font)
+        # set the text for Victory or Lost
+        lol_GameTime[0].setText(
+            f"{self.win_or_lose(self_Participant['win'])}")
+        # set background color for the groupbox based on win or lose of the game
+        if self_Participant['win']:
+            self.groupBoxes[start + index].setStyleSheet("background-color: rgb(137, 194, 255);")
+        else:
+            self.groupBoxes[start + index].setStyleSheet("background-color: rgb(255, 103, 89);")
+
+        lol_GameTime[1].setGeometry(QtCore.QRect(10, 40, 70, 18))
+        lol_GameTime[1].setFont(font)
+        # set game duration
+        lol_GameTime[1].setText(f"{int(self.Summoner.match_details[index]['info']['gameDuration'] / 60)}m {self.Summoner.match_details[index]['info']['gameDuration'] % 60}s")
+
+
+        # pushButtons and labels in frame[2]
+        # Champ icon pushButton
+        lol_match_champ = QtWidgets.QPushButton(lol_Summoner_frame[0])
+        lol_match_champ.setGeometry(QtCore.QRect(30, 0, 61, 61))
+        lol_match_champ.setIconSize(QtCore.QSize(70, 70))
+
+        # summoner Spell
+        lol_Spell = []
+        for i in range(2):
+            lolSpell_icon = QtWidgets.QPushButton(lol_Summoner_frame[0])
+            lolSpell_icon.setGeometry(QtCore.QRect(100, i * 30, 31, 34))
+            lolSpell_icon.setIconSize(QtCore.QSize(30, 30))
+            lol_Spell.append(lolSpell_icon)
+
+        # text labels setting in frame[2]
+        lol_frame2Text = []
+        for i in range(3):
+            info = QtWidgets.QLabel(lol_Summoner_frame[0])
+            lol_frame2Text.append(info)
+
+        # level label
+        lol_frame2Text[0].setGeometry(QtCore.QRect(30, 70, 61, 20))
+        lol_frame2Text[0].setFont(font)
+        # set champion level of the summoner
+        lol_frame2Text[0].setText(f"lv:{self_Participant['champLevel']}")
+
+        # Kill/Death/Assist label
+        font1 = QtGui.QFont()
+        font1.setFamily("Bodoni MT Black")
+        font1.setPointSize(10)
+        font1.setBold(True)
+        font1.setWeight(75)
+
+        lol_frame2Text[1].setGeometry(QtCore.QRect(230, 20, 131, 20))
+        lol_frame2Text[1].setFont(font1)
+        # set KDA of the Summoner
+        lol_frame2Text[1].setText(f"{self_Participant['kills']} / {self_Participant['deaths']} / {self_Participant['assists']}")
+
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setBold(False)
+        font.setWeight(50)
+        # total kda count
+        lol_frame2Text[2].setGeometry(QtCore.QRect(240, 60, 121, 20))
+        lol_frame2Text[2].setFont(font)
+        # Set total KDA of the summoner
+        lol_frame2Text[2].setText(f"{self.cal_KDA(self_Participant['kills'], self_Participant['deaths'], self_Participant['assists'])} KDA")
+
+        # Runes pushButtons
+        lol_Runes = []
+        for i in range(2):
+            lolRune_icon = QtWidgets.QPushButton(lol_Summoner_frame[0])
+            lolRune_icon.setGeometry(QtCore.QRect(140, i * 30, 31, 34))
+            lolRune_icon.setIconSize(QtCore.QSize(30, 30))
+            lol_Runes.append(lolRune_icon)
+
+        # frame[3]
+        # item pushButtons in frame[3]
+        lol_items = []
+        # 9 item icon pushButtons
+        for i in range(7):
+            lolItem_icon = QtWidgets.QPushButton(lol_Summoner_frame[1])
+            lolItem_icon.setGeometry(QtCore.QRect(30 + 40 * i, 10, 41, 41))
+            lolItem_icon.setIconSize(QtCore.QSize(30, 30))
+            lol_items.append(lolItem_icon)
+        lol_items[-1].setStyleSheet("    QPushButton {\n"
+                                         "        border-radius: 16px;\n"
+                                         "        \n"
+                                         "        \n"
+                                         "    background-color: rgb(0, 170, 255);\n"
+                                         "    }")
+        # frame[4]
+        # left side summoner name and icon pushButtons and labels
+        # summoner icon pushbutton
+        lol_left_SummonerIcon = []
+        # 5 player icon pushButtons
+        for i in range(5):
+            lolSummoner_icon = QtWidgets.QPushButton(lol_Participants_frame[0])
+            lolSummoner_icon.setGeometry(QtCore.QRect(0, 30 * i, 31, 31))
+            lolSummoner_icon.setIconSize(QtCore.QSize(25, 25))
+            lol_left_SummonerIcon.append(lolSummoner_icon)
+
+        # summoner name text label
+        lol_left_SummonerLabel = []
+        # 5 player icon pushButtons
+        for i in range(5):
+            lolSummoner_name = QtWidgets.QLabel(lol_Participants_frame[0])
+            lolSummoner_name.setGeometry(QtCore.QRect(40, 10 + 30 * i, 90, 18))
+            lolSummoner_name.setFont(font)
+            lol_left_SummonerLabel.append(lolSummoner_name)
+
+        # frame[5]
+        # right side summoner name and icon pushButtons and labels
+        # summoner icon pushbuttons
+        lol_right_SummonerIcon = []
+        # 5 player icon pushButtons
+        for i in range(5):
+            lolSummoner2_icon = QtWidgets.QPushButton(lol_Participants_frame[1])
+            lolSummoner2_icon.setGeometry(QtCore.QRect(0, 30 * i, 31, 31))
+            lolSummoner2_icon.setIconSize(QtCore.QSize(25, 25))
+            lol_right_SummonerIcon.append(lolSummoner2_icon)
+
+        # summoner name text label
+        lol_right_SummonerLabel = []
+        # 5 player icon pushButtons
+        for i in range(5):
+            lolSummoner_name = QtWidgets.QLabel(lol_Participants_frame[1])
+            lolSummoner_name.setGeometry(QtCore.QRect(40, 10 + 30 * i, 90, 18))
+            lolSummoner_name.setFont(font)
+            lol_right_SummonerLabel.append(lolSummoner_name)
+
+        # add groupbox to vertical layout
+        self.verticalLayout_9.addWidget(self.groupBoxes[index])
+
+        # Summoner match info img display
+        # items img display
+        for i in range(7):
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(f"item/{self_Participant[f'item{i}']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            lol_items[i].setIcon(icon)
+
+            # summoner champ icon display
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self_Participant['championId']}.png"), QtGui.QIcon.Normal,
+                           QtGui.QIcon.Off)
+            lol_match_champ.setIcon(icon)
+
+        # summoner Spell display
+        for i in range(2):
+            summonerSpell = QtGui.QIcon()
+            summonerSpell.addPixmap(
+                QtGui.QPixmap(
+                    f"summonerSpell/{self.gameStat.identify_Summoner_spell(self_Participant[f'summoner{i + 1}Id'])}"),
+                QtGui.QIcon.Normal,
+                QtGui.QIcon.Off)
+            lol_Spell[i].setIcon(summonerSpell)
+
+        # summoner Rune display
+        runeUrlPath = 'https://ddragon.canisback.com/img/'
+        rune = QtGui.QIcon()
+        primaryRunePath = self.gameStat.identify_runes(
+            self_Participant['perks']['styles'][0]['selections'][0]['perk'])
+        primaryRuneimg = QtGui.QImage()
+        primaryRuneimg.loadFromData(requests.get(runeUrlPath + primaryRunePath).content)
+        rune.addPixmap(QtGui.QPixmap(primaryRuneimg),
+                       QtGui.QIcon.Normal,
+                       QtGui.QIcon.Off)
+        lol_Runes[0].setIcon(rune)
+
+        rune2 = QtGui.QIcon()
+        subRunePath = self.gameStat.identify_runes(
+            self_Participant['perks']['styles'][1]['style'])
+        subRuneimg = QtGui.QImage()
+        subRuneimg.loadFromData(requests.get(runeUrlPath + subRunePath).content)
+        rune2.addPixmap(QtGui.QPixmap(subRuneimg),
+                        QtGui.QIcon.Normal,
+                        QtGui.QIcon.Off)
+        lol_Runes[1].setIcon(rune2)
+
+        # participants name display
+        for i in range(5):
+            lol_left_SummonerLabel[i].setText(self.Summoner.match_details[index]['info']['participants'][i]['summonerName'])
+            lol_right_SummonerLabel[i].setText(self.Summoner.match_details[index]['info']['participants'][5 + i]['summonerName'])
+        # participants champion img display
+        for i in range(5):
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self.Summoner.match_details[index]['info']['participants'][i]['championId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            lol_left_SummonerIcon[i].setIcon(icon)
+            icon = QtGui.QIcon()
+            icon.addPixmap(QtGui.QPixmap(f"champion-icon/{self.Summoner.match_details[index]['info']['participants'][5 + i]['championId']}.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            lol_right_SummonerIcon[i].setIcon(icon)
+        print(f"match {index} completed")
+
+    # create a match groupbox
     def tft_groupBox(self, start, index):
         # groupBox set
         # frame set
@@ -6501,17 +1620,19 @@ class Ui_MainWindow(object):
 
         # settings for images
         self_Participant = self.Summoner.match_details[index]['info']['participants'][self.find_self_participant(index)]
-        imageurl = "https://ddragon.leagueoflegends.com/cdn/13.4.1/img/"
+        imageurl = f"https://ddragon.leagueoflegends.com/cdn/{self.gameStat.version}/img/"
         numUnit = len(self_Participant['units'])
         item_count = 0
         # display image of champion and items
         for i in range(numUnit if numUnit < 10 else 9):
-
             champIcon = QtGui.QIcon()
             unitImg = QtGui.QImage()
-            unitImg.loadFromData(requests.get(
-                imageurl + "tft-hero-augment/" + self.gameStat.identify_tft_champion(
-                    self_Participant['units'][i]['character_id'])).content)
+            champ = self_Participant['units'][i]['character_id']
+            if champ == "TFT8_Zac":
+                unitImg.loadFromData(requests.get('https://ddragon.leagueoflegends.com/cdn/13.4.1/img/tft-hero-augment/TFT8_Zac.TFT_Set8.png').content)
+            else:
+                unitImg.loadFromData(requests.get(
+                    imageurl + "tft-hero-augment/" + self.gameStat.identify_tft_champion(champ)).content)
             champIcon.addPixmap(QtGui.QPixmap(unitImg), QtGui.QIcon.Normal, QtGui.QIcon.Off)
             self.tac_icons[i].setIcon(champIcon)
 
@@ -6554,8 +1675,9 @@ class Ui_MainWindow(object):
         else:
             self.pushButton_365.setIcon(QtGui.QIcon("items/7050.png"))
         print(f"Match {index} finished")
-
+        
     def _star_trans(self, level):
+        # based on the level of the given champion level produce the name of different star picture
         if level == 1:
             return "picture/bronze.png"
         elif level == 2:
@@ -6565,16 +1687,19 @@ class Ui_MainWindow(object):
 
     # translate TFT rank given by api to fileName
     def _trans_rank(self):
+        # try to get the ranked info of the summoner, if None then return address to empty picture for output
         try:
             rank = self.Summoner.rankedInfo[0]['tier']
         except KeyError:
             return "items/7050.png"
+        # translate from rank given to address to file
         trans = rank[0]
         trans += rank[1:].lower()
         return f"tft-regalia/TFT_Regalia_{trans}.png"
 
     # translate Api tft item data to json file indicator
     def tft_item_trans(self, itemName):
+        # by the information given back from Api, translate to actual item address
         if itemName.split("_")[0] == "TFT5":
             return "Set5_RadiantItems/" + itemName
         elif itemName.split("_")[0] == "TFT7":
@@ -6587,6 +1712,7 @@ class Ui_MainWindow(object):
 
     # translate number placement to numeric
     def placement_trans(self, placement):
+        # translate
         if placement < 1:
             return "N/A"
         elif placement == 1:
@@ -6614,6 +1740,8 @@ class Ui_MainWindow(object):
         if len(self.Summoner.match_details) == 0:
             return "No available match"
         graph = chart_test.WinLoseCircleGraph(round(win_count / len(self.Summoner.match_details), 2))
+
+
 
 
 if __name__ == "__main__":
