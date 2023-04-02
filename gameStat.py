@@ -70,6 +70,15 @@ class gameStat:
 
     # return trait image path given item name
     def identify_tft_item(self, itemName):
+        if itemName.split("_")[0] == "TFT5":
+            itemName = "Set5_RadiantItems/" + itemName
+        elif itemName.split("_")[0] == "TFT7":
+            itemName = "TFT7_ShimmerscaleItems/" + itemName
+        elif itemName.split("_")[0] == "TFT8" and itemName.split("_")[-1] == "GenAE":
+            itemName = "TFT8_GenAEItems/" + itemName
+        elif itemName.split("_")[0] == "TFT8":
+            itemName = "TFT8_EmblemItems/" + itemName
+
         return self.tft_item['data'][itemName]['image']['full']
 
     # return augment image path given augment name
