@@ -1,6 +1,5 @@
 import requests
 from riotwatcher import LolWatcher, TftWatcher
-import json
 lolApiKey = "RGAPI-0175be55-dcd4-4c8d-a300-57d5232f50e6"
 tftApiKey = "RGAPI-00d5ca77-1f7c-4342-b8c0-0cbdebee23c7"
 
@@ -8,63 +7,59 @@ tftApiKey = "RGAPI-00d5ca77-1f7c-4342-b8c0-0cbdebee23c7"
 # class of searchMatch containing all function relate to API
 class SearchMatch:
     def __init__(self, region, gameType, summonerName):
-        self.region = self._translateRegion(region)
-        self.gameType = gameType
-        self.summonerName = summonerName
+        self.region = region     # region can only be string readable by tranlsateRegion
+        self.gameType = gameType    # lol or tft
+        self.summonerName = summonerName    # any string
         self.searchComplete = True
         self.match_details = []
         self.rankedInfo = []
         self.me = {}
         self.errorCase = ""
+        self._lol_watcher = LolWatcher(lolApiKey)
+        self._tft_watcher = TftWatcher(tftApiKey)
+        self.region = self._translateRegion(region)
         self._matchSearch()
 
     # matchSearch make requests to riot Api based on the given region, game and, summonerName Then update
-    # information of the variables
+    # information of the variables. Require self.region, self.gameType with valid input
     def _matchSearch(self):
         # identify the game mode searching for
         if self.gameType == "lol":
-            watcher = LolWatcher(lolApiKey)
             # try to request data by api with given summonerName
             try:
-                self.me = watcher.summoner.by_name(self.region, self.summonerName)
+                self.me = self._lol_watcher.summoner.by_name(self.region, self.summonerName)
             except requests.exceptions.HTTPError as err:
                 self.errorCase = err
                 self.searchComplete = False
+            # check whether
+            if not self.searchComplete:
                 return -1
-            self.rankedInfo = watcher.league.by_summoner(self.region, self.me['id'])
+            else:
+                pass
+            self.rankedInfo = self._lol_watcher.league.by_summoner(self.region, self.me['id'])
             self.summonerName = self.me['name']
-            # print(self.rankedInfo)
             # get a 20 matches' ID of the summoner
-            my_matches = watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], 0)
+            my_matches = self._lol_watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], 0)
             # print(my_matches)
             for match in my_matches:
-                match_detail = watcher.match.by_id(self.region, match)
-                # print(match_detail['info']['participants'][0].keys())
+                match_detail = self._lol_watcher.match.by_id(self.region, match)
                 self.match_details.append(match_detail)
         elif self.gameType == "tft":
-            watcher = TftWatcher(tftApiKey)
             try:
-                self.me = watcher.summoner.by_name(self.region, self.summonerName)
+                self.me = self._tft_watcher.summoner.by_name(self.region, self.summonerName)
             except requests.exceptions.HTTPError as err:
                 self.errorCase = err
                 self.searchComplete = False
                 return -1
-            self.rankedInfo = watcher.league.by_summoner(self.region, self.me['id'])
+            self.rankedInfo = self._tft_watcher.league.by_summoner(self.region, self.me['id'])
             # print(self.rankedInfo)
             self.summonerName = self.me['name']
             # get list of tft matches of the summoner
-            my_matches = watcher.match.by_puuid(self.region, self.me['puuid'])
+            my_matches = self._tft_watcher.match.by_puuid(self.region, self.me['puuid'])
             # fetch at most 20 match detail
             for match in my_matches:
-                match_detail = watcher.match.by_id(self.region, match)
-                # print(match_detail['info']["participants"][0]["traits"])
-                # print(match_detail['info']['participants'][0].keys())
+                match_detail = self._tft_watcher.match.by_id(self.region, match)
                 self.match_details.append(match_detail)
-            # print(self.match_details[0]['metadata']['data_version'])
-            # print(self.match_details[0]['info']['game_version'])
-            # print(self.match_details[0]['info']['participants'][1]["units"][0].keys())
-            # print(self.match_details[0]['info']['participants'][1]['units'])
-            # print(self.match_details[0]['info']['participants'][2]['traits'])
 
     # translate region given to api readable region
     def _translateRegion(self, region):
@@ -100,24 +95,22 @@ class SearchMatch:
             return "TW2"
         if region == "Vietnam":
             return "VN2"
+        else:
+            self.searchComplete = False
+            self.errorCase = "region Not valid"
 
-    def tft_view_more(self, start_index):
-        watcher = TftWatcher(tftApiKey)
-        my_matches = watcher.match.by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
-        self.match_details = []
-        for match in my_matches:
-            match_detail = watcher.match.by_id(self.region, match)
-            self.match_details.append(match_detail)
-
+    # based on given how many match has been provided, add details of the following 10 games to self.match_details
     def lol_view_more(self, start_index):
-        watcher = LolWatcher(lolApiKey)
-        my_matches = watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
+        my_matches = self._lol_watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
         self.match_details = []
         for match in my_matches:
-            match_detail = watcher.match.by_id(self.region, match)
+            match_detail = self._lol_watcher.match.by_id(self.region, match)
             self.match_details.append(match_detail)
 
-
-# hi = SearchMatch("North America", "lol", "llama smoothie")
-# print(hi.match_details[3]['info']['participants'][3]['item5'])
-# hik = SearchMatch("Korea", "tft", "hide on bush")
+    # based on given how many match has been provided, add details of the following 10 games to self.match_details
+    def tft_view_more(self, start_index):
+        my_matches = self._tft_watcher.match.by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
+        self.match_details = []
+        for match in my_matches:
+            match_detail = self._tft_watcher.match.by_id(self.region, match)
+            self.match_details.append(match_detail)

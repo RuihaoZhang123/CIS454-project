@@ -6,7 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import chart_test
 import gameStat
 import searchMatch
-from basicUI import Ui_MainWindow
+from asd import Ui_MainWindow
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -53,7 +53,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     # view more history function
     def lol_view_more_history(self):
-        self.verticalLayout_9.removeWidget(self.tft_view_more)
+        self.verticalLayout_9.removeWidget(self.lol_view_more)
         num_match = len(self.groupBoxes)
         # change the match details of the Summoner to new match data
         self.Summoner.lol_view_more(num_match)
@@ -419,15 +419,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.label_20.setText(_translate("MainWindow", f"{self.Summoner.rankedInfo[0]['tier']}"))
         except IndexError:
             self.label_20.setText(_translate("MainWindow", "N/A"))
-        self.label_25 = QtWidgets.QLabel(self.scrollAreaWidgetContents)
-        font = QtGui.QFont()
-        font.setFamily("Bodoni MT Black")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_25.setFont(font)
-        self.label_25.setText("Match history")
-        self.verticalLayout_9.addWidget(self.label_25)
 
     # LOL Helper Functions
 
@@ -740,5 +731,6 @@ if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
+    w.setWindowOpacity(0.9)
     w.show()
     sys.exit(app.exec_())

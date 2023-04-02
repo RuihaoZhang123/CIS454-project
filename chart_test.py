@@ -4,6 +4,7 @@ from PyQt5.QtGui import QBrush, QColor, QPen
 import pyqtgraph.exporters
 
 
+# create win rate graph and export to win_rate.png
 class WinLoseCircleGraph:
     def __init__(self, win_rate):
         self.win_rate = win_rate
@@ -54,3 +55,4 @@ class WinLoseCircleGraph:
         self.plot_widget.addItem(group_item)
         exporter = pg.exporters.ImageExporter(self.plot_widget.plotItem)
         exporter.export("win_rate.png")
+
