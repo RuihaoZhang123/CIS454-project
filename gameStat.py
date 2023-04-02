@@ -2,6 +2,7 @@ import json
 import requests
 
 
+# retrieve json files from websites
 class gameStat:
     def __init__(self):
         self.queues = []
@@ -32,7 +33,7 @@ class gameStat:
         self.tft_champion = requests.get(url_base + "tft-champion.json").json()
 
     # public methods
-    # change the version searched
+    # change the version of data searched
     def change_version(self, version):
         self.version = version
         self._get_data()
