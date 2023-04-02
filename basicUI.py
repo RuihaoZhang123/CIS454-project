@@ -627,7 +627,7 @@ class Ui_MainWindow(object):
         self.pushButton_16.setStyleSheet("    border : 3px solid rgb(211, 217, 255);")
         self.pushButton_16.setObjectName("pushButton_16")
         self.label_201 = QtWidgets.QLabel(self.page_2)
-        self.label_201.setGeometry(QtCore.QRect(600, 160, 221, 41))
+        self.label_201.setGeometry(QtCore.QRect(600, 160, 300, 41))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)

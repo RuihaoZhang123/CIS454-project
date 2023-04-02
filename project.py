@@ -480,9 +480,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         tft_region_text = self.comboBox_2.currentText()
         if tft_query == "":
             print("False")
+            self.label_201.setText("Summoner name should not be empty")
+            self.label_201.show()
+            QtCore.QTimer.singleShot(3000, self.label_201.hide)
         else:
             self.Summoner = searchMatch.SearchMatch(tft_region_text, 'tft', tft_query)
             if not self.Summoner.searchComplete:
+                self.label_201.setText(self.Summoner.errorCase)
                 self.label_201.show()
                 QtCore.QTimer.singleShot(3000, self.label_201.hide)
                 print("wrong name entered")

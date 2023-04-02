@@ -48,7 +48,7 @@ class SearchMatch:
             try:
                 self.me = self._tft_watcher.summoner.by_name(self.region, self.summonerName)
             except requests.exceptions.HTTPError as err:
-                self.errorCase = err
+                self.errorCase = "Summoner name not found in region"
                 self.searchComplete = False
                 return -1
             self.rankedInfo = self._tft_watcher.league.by_summoner(self.region, self.me['id'])
