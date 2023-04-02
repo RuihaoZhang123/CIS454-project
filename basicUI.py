@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QPushButton
 
 
 class Ui_MainWindow(object):
@@ -624,7 +623,13 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_16.setFont(font)
-        self.pushButton_16.setStyleSheet("    border : 3px solid rgb(211, 217, 255);")
+        self.pushButton_16.setStyleSheet("#pushButton_16{\n"
+                                         "    border : 3px solid rgb(211, 217, 255);\n"
+                                         "}\n"
+                                         "QPushButton:pressed{\n"
+                                         "    padding-top:5px;\n"
+                                         "    padding-left:5px;\n"
+                                         "}")
         self.pushButton_16.setObjectName("pushButton_16")
         self.label_201 = QtWidgets.QLabel(self.page_2)
         self.label_201.setGeometry(QtCore.QRect(600, 160, 300, 41))
@@ -989,10 +994,10 @@ class Ui_MainWindow(object):
         self.label_200.hide()
         self.label_201.hide()
 
-    # change region buttons
+    # set to display lol page
     def display(self):
         self.stackedWidget.setCurrentIndex(1)
 
+    # set to display tft page
     def display2(self):
         self.stackedWidget.setCurrentIndex(0)
-
