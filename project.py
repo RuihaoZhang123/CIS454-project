@@ -6,7 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import chart_test
 import gameStat
 import searchMatch
-from asd import Ui_MainWindow
+from basicUI import Ui_MainWindow
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
