@@ -29,7 +29,7 @@ class SearchMatch:
             try:
                 self.me = self._lol_watcher.summoner.by_name(self.region, self.summonerName)
             except requests.exceptions.HTTPError as err:
-                self.errorCase = err
+                self.errorCase = "Summoner name not found in region"
                 self.searchComplete = False
             # check whether
             if not self.searchComplete:
@@ -97,7 +97,7 @@ class SearchMatch:
             return "VN2"
         else:
             self.searchComplete = False
-            self.errorCase = "region Not valid"
+            self.errorCase = "region not valid"
 
     # based on given how many match has been provided, add details of the following 10 games to self.match_details
     def lol_view_more(self, start_index):

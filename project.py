@@ -25,6 +25,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     # LOL Match History page
 
     # retrieve information for two input bar to create searchMatch based on given information
+    # require input from text bar of lol page
+    # set self.Summoner and decide whether it needs to call to generate_lol_groupbox
     def search_lol_name(self):
 
         # Get the search query from the search bar
@@ -32,9 +34,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         lol_region_text = self.comboBox_3.currentText()
         if lol_query == "":
             print("False")
+            self.label_200.setText("Summoner name should not be empty")
+            self.label_200.show()
+            QtCore.QTimer.singleShot(3000, self.label_200.hide)
         else:
             self.Summoner = searchMatch.SearchMatch(lol_region_text, 'lol', lol_query)
+            # if error occur during search process show error message
             if not self.Summoner.searchComplete:
+                self.label_200.setText(self.Summoner.errorCase)
                 self.label_200.show()
                 QtCore.QTimer.singleShot(3000, self.label_200.hide)
                 print("wrong name entered")
@@ -731,6 +738,5 @@ if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
-    w.setWindowOpacity(0.9)
     w.show()
     sys.exit(app.exec_())
