@@ -49,6 +49,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 # delete all existing match groupBox
                 for i in self.groupBoxes:
                     i.deleteLater()
+                self.groupBoxes = []
                 # generate win rate graph
                 self.win_rate_count()
                 # generate static data of Summoner
@@ -64,6 +65,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         num_match = len(self.groupBoxes)
         # change the match details of the Summoner to new match data
         self.Summoner.lol_view_more(num_match)
+        print(num_match)
         # generate 10 boxes and append to the scroll widget
         self.lol_generate_boxes(10)
         self.stackedWidget.setCurrentIndex(2)
@@ -76,15 +78,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.lol_view_more.hide()
         except AttributeError:
             pass
-        self.groupBoxes = []
+        num_match = len(self.groupBoxes)
         self.viewCheck = True  # check if error caught in the range
         # create groupboxes and layout for each match
-        for i in range(len(self.Summoner.match_details)):
+        print("here")
+        for i in range(num_match, len(self.Summoner.match_details)):
             groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents)
             groupBox.setMinimumSize(QtCore.QSize(941, 191))
             self.groupBoxes.append(groupBox)
             self.lol_groupBox(0, i)
-        if len(self.Summoner.match_details) == num and self.viewCheck:
+        if len(self.Summoner.match_details) == num_match + num and self.viewCheck:
             self.verticalLayout_9.addWidget(self.lol_view_more)
             self.lol_view_more.show()
 
@@ -494,7 +497,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 # delete all existing match groupBox
                 for i in self.groupBoxes:
                     i.deleteLater()
-
+                self.groupBoxes = []
                 # generate 20 boxes and append to the scroll widget
                 self.tft_generate_boxes(20)
                 self.stackedWidget.setCurrentIndex(3)
@@ -518,10 +521,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.tft_view_more.hide()
         except AttributeError:
             pass
-        self.groupBoxes = []
+        num_match = len(self.groupBoxes)
         self.viewCheck = True  # check if error caught in the range
         # create groupboxes and layout for each match
-        for i in range(len(self.Summoner.match_details)):
+        for i in range(num_match, len(self.Summoner.match_details)):
             groupBox = QtWidgets.QGroupBox(self.scrollAreaWidgetContents_2)
             groupBox.setMinimumSize(QtCore.QSize(0, 230))
             groupBox.setMaximumSize(QtCore.QSize(1000, 16777215))
@@ -537,7 +540,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     self.viewCheck = False
                     break
         self.gameStat.change_version("13.6.1")
-        if len(self.Summoner.match_details) == num and self.viewCheck:
+        if len(self.Summoner.match_details) == num + num_match and self.viewCheck:
             self.verticalLayout_8.addWidget(self.tft_view_more)
             self.tft_view_more.show()
 

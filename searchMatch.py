@@ -102,7 +102,6 @@ class SearchMatch:
     # based on given how many match has been provided, add details of the following 10 games to self.match_details
     def lol_view_more(self, start_index):
         my_matches = self._lol_watcher.match.matchlist_by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
-        self.match_details = []
         for match in my_matches:
             match_detail = self._lol_watcher.match.by_id(self.region, match)
             self.match_details.append(match_detail)
@@ -110,7 +109,6 @@ class SearchMatch:
     # based on given how many match has been provided, add details of the following 10 games to self.match_details
     def tft_view_more(self, start_index):
         my_matches = self._tft_watcher.match.by_puuid(self.region, self.me['puuid'], start=start_index, count=10)
-        self.match_details = []
         for match in my_matches:
             match_detail = self._tft_watcher.match.by_id(self.region, match)
             self.match_details.append(match_detail)
